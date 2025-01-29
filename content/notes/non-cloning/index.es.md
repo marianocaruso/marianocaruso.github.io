@@ -4,10 +4,9 @@ title: "Teorema de no clonado" # va al índice de notas
 date: 2025-01-01
 showDate: false
 description: "non-cloning theorem" 
-showReadingTime: false
 draft: false
 summary: "Sobre la imposibilidad de cierto tipo plagio"
-tags: ["quantum"]
+tags: ['quantum', 'states']
 math:  true  
 
 ---
@@ -23,12 +22,9 @@ U:|\varphi\rangle\otimes |s\rangle\longmapsto|\varphi\rangle\otimes |\varphi\ran
 $$
 
 
-tal operador se dice que **realiza**  el procedimiento de copiado sin destruir el estado que pretende copiar, i.e. $|\varphi\rangle$.
+tal operador se dice que **realiza**  el procedimiento de copiado sin destruir el estado, $|\varphi\rangle$, que pretende copiar.
 
-En las condiciones anteriores se puede demostrar que 
-
-
-----
+En las condiciones anteriores se puede demostrar el siguiente
 
 ## Enunciado 
 $\nexists U$ que cumpla la definición tal que o bien 
@@ -38,12 +34,13 @@ $\nexists U$ que cumpla la definición tal que o bien
 
 ---
 
-### Demostración
+## Demostración
 
-#### 1. Veamos que $U$ no podría ser lineal
+#### 1. \\(U\\) no puede ser lineal
 (*por reducción al absurdo*)
 
-Supongamos que puede encontrarse un operador $U$ así y sean $|\varphi_1\rangle$, $|\varphi_2\rangle\in \mathscr{H}$, tales que 
+
+Veamos que $U$ no podría ser lineal. Supongamos que puede encontrarse un operador $U$ así y sean $|\varphi_1\rangle$, $|\varphi_2\rangle\in \mathscr{H}$, tales que 
 
 $U|\varphi_i\rangle\otimes|s\rangle=|\varphi_i\rangle\otimes|\varphi_i\rangle$, con $i=1,2$
 
@@ -67,10 +64,10 @@ $$
 comparando estas últimas dos expresiones para $U|\varphi\rangle\otimes|s\rangle$ se llega al absurdo.
 
 
-#### 2. Veamos que $U$ no podría ser unitario 
+#### 2. \\(U\\) no puede ser unitario 
 (*por reducción al absurdo*)
 
-Supongamos que puede encontrarse un operador $U$ así y sean $|\varphi_1\rangle$, $|\varphi_2\rangle\in \mathscr{H}$, tales que 
+Veamos que $U$ no podría ser unitario. Supongamos que puede encontrarse un operador $U$ así y sean $|\varphi_1\rangle$, $|\varphi_2\rangle\in \mathscr{H}$, tales que 
 
 $U|\varphi_i\rangle\otimes|s\rangle=|\varphi_i\rangle\otimes|\varphi_i\rangle$, con $i=1,2$
 

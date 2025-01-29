@@ -109,6 +109,7 @@
     <meta property="article:published_time" content="2025-01-01T00:00:00+00:00">
     <meta property="article:modified_time" content="2025-01-01T00:00:00+00:00">
     <meta property="article:tag" content="Quantum">
+    <meta property="article:tag" content="States">
     <meta property="og:image" content="https://marianocaruso.github.io/notes/non-cloning/feature.png">
 
   
@@ -139,10 +140,10 @@
     
     "dateModified": "2025-01-01T00:00:00\u002b00:00",
     
-    "keywords": ["quantum"],
+    "keywords": ["quantum","states"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "450"
+    "wordCount": "460"
   }
   </script>
     
@@ -773,6 +774,72 @@
         Teorema de no clonado
       </h1>
       
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <span title="Tiempo de lectura">3 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+      
+        
+          
+            <a
+              href="/tags/quantum/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Quantum</a
+            >
+          
+            <a
+              href="/tags/states/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >States</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+        </div>
+      
       
         <div class="prose">
           
@@ -858,12 +925,13 @@
         </li>
       </ul>
     </li>
-    <li><a href="#enunciado">Enunciado</a>
+    <li><a href="#enunciado">Enunciado</a></li>
+    <li><a href="#demostración">Demostración</a>
       <ul>
-        <li><a href="#demostración">Demostración</a>
+        <li>
           <ul>
-            <li><a href="#1-veamos-que-u-no-podría-ser-lineal">1. Veamos que  no podría ser lineal</a></li>
-            <li><a href="#2-veamos-que-u-no-podría-ser-unitario">2. Veamos que  no podría ser unitario</a></li>
+            <li><a href="#1-u-no-puede-ser-lineal">1. \(U\) no puede ser lineal</a></li>
+            <li><a href="#2-u-no-puede-ser-unitario">2. \(U\) no puede ser unitario</a></li>
           </ul>
         </li>
       </ul>
@@ -884,17 +952,16 @@
 <h5 id="operador-de-copiado" class="relative group">operador de copiado <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#operador-de-copiado" aria-label="Ancla">#</a></span></h5>$$
 U:|\varphi\rangle\otimes |s\rangle\longmapsto|\varphi\rangle\otimes |\varphi\rangle, \quad \forall \varphi \in \mathscr{H}
 $$</blockquote>
-<p>tal operador se dice que <strong>realiza</strong>  el procedimiento de copiado sin destruir el estado que pretende copiar, i.e. $|\varphi\rangle$.</p>
-<p>En las condiciones anteriores se puede demostrar que</p>
-<hr>
+<p>tal operador se dice que <strong>realiza</strong>  el procedimiento de copiado sin destruir el estado, $|\varphi\rangle$, que pretende copiar.</p>
+<p>En las condiciones anteriores se puede demostrar el siguiente</p>
 <h2 id="enunciado" class="relative group">Enunciado <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#enunciado" aria-label="Ancla">#</a></span></h2><p>$\nexists U$ que cumpla la definición tal que o bien</p>
 <ol>
 <li>$U$ sea lineal</li>
 <li>$U$ sea unitario</li>
 </ol>
 <hr>
-<h3 id="demostración" class="relative group">Demostración <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#demostraci%c3%b3n" aria-label="Ancla">#</a></span></h3><h4 id="1-veamos-que-u-no-podría-ser-lineal" class="relative group">1. Veamos que $U$ no podría ser lineal <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-veamos-que-u-no-podr%c3%ada-ser-lineal" aria-label="Ancla">#</a></span></h4><p>(<em>por reducción al absurdo</em>)</p>
-<p>Supongamos que puede encontrarse un operador $U$ así y sean $|\varphi_1\rangle$, $|\varphi_2\rangle\in \mathscr{H}$, tales que</p>
+<h2 id="demostración" class="relative group">Demostración <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#demostraci%c3%b3n" aria-label="Ancla">#</a></span></h2><h4 id="1-u-no-puede-ser-lineal" class="relative group">1. \(U\) no puede ser lineal <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-u-no-puede-ser-lineal" aria-label="Ancla">#</a></span></h4><p>(<em>por reducción al absurdo</em>)</p>
+<p>Veamos que $U$ no podría ser lineal. Supongamos que puede encontrarse un operador $U$ así y sean $|\varphi_1\rangle$, $|\varphi_2\rangle\in \mathscr{H}$, tales que</p>
 <p>$U|\varphi_i\rangle\otimes|s\rangle=|\varphi_i\rangle\otimes|\varphi_i\rangle$, con $i=1,2$</p>
 <p>luego tomemos la combinación lineal $
 |\varphi\rangle=\alpha_1|\varphi_1\rangle+\alpha_2|\varphi_2\rangle$, aquí entra cierta <strong>arbitrariedad</strong> del estado $|\varphi\rangle$ sobre el cual haremos la prueba.</p>
@@ -906,8 +973,8 @@ $$<p>mientras que, exigiendo que $U$ sea <strong>lineal</strong>:</p>
 $$
 \alpha_1|\varphi_1\rangle\otimes|\varphi_1\rangle+\alpha_2|\varphi_2\rangle\otimes|\varphi_2\rangle
 $$<p>comparando estas últimas dos expresiones para $U|\varphi\rangle\otimes|s\rangle$ se llega al absurdo.</p>
-<h4 id="2-veamos-que-u-no-podría-ser-unitario" class="relative group">2. Veamos que $U$ no podría ser unitario <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-veamos-que-u-no-podr%c3%ada-ser-unitario" aria-label="Ancla">#</a></span></h4><p>(<em>por reducción al absurdo</em>)</p>
-<p>Supongamos que puede encontrarse un operador $U$ así y sean $|\varphi_1\rangle$, $|\varphi_2\rangle\in \mathscr{H}$, tales que</p>
+<h4 id="2-u-no-puede-ser-unitario" class="relative group">2. \(U\) no puede ser unitario <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-u-no-puede-ser-unitario" aria-label="Ancla">#</a></span></h4><p>(<em>por reducción al absurdo</em>)</p>
+<p>Veamos que $U$ no podría ser unitario. Supongamos que puede encontrarse un operador $U$ así y sean $|\varphi_1\rangle$, $|\varphi_2\rangle\in \mathscr{H}$, tales que</p>
 <p>$U|\varphi_i\rangle\otimes|s\rangle=|\varphi_i\rangle\otimes|\varphi_i\rangle$, con $i=1,2$</p>
 <p>Calculemos ahora el producto interno $\langle \varphi_1\otimes s|\varphi_2\otimes s\rangle$, exigiendo que $U$ sea <strong>unitario</strong>, i.e. $U^{\dagger}U=I$: $\langle \varphi_1\otimes s|\varphi_2\otimes s\rangle =\langle \varphi_1\otimes s|I|\varphi_2\otimes s\rangle$ que finalmente es $\langle \varphi_1\otimes s|U^{\dagger}U|\varphi_2\otimes s\rangle=\langle \varphi_1\otimes \varphi_1|\varphi_2\otimes \varphi_2\rangle$
 usando que $\langle x\otimes y|z\otimes w\rangle=\langle x|z\rangle.\langle y|w\rangle$

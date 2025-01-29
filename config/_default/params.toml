@@ -56,7 +56,7 @@ description = "Research & Development"
   invertPagination = false
   showReadingTime = true
   showTableOfContents = true
-  showTaxonomies = false
+  showTaxonomies = true
   showWordCount = false
   showComments = false
   sharingLinks = ["x-twitter", "linkedin", "telegram", "email"]
@@ -65,7 +65,7 @@ description = "Research & Development"
   showBreadcrumbs = false
   showSummary = false
   showTableOfContents = false
-  showTaxonomies = false
+  showTaxonomies = true
   groupByYear = true
   paginationWidth = 1
 
