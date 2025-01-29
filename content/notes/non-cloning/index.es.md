@@ -2,10 +2,12 @@
 
 title: "Teorema de no clonado" # va al índice de notas
 date: 2025-01-01
+showDate: false
 description: "non-cloning theorem" 
 showReadingTime: false
 draft: false
-showDate: false
+summary: "Una descripción matemática sobre la imposibilidad de cierto tipo plagio"
+tags: ["quantum"]
 math:  true  
 
 ---
@@ -72,7 +74,7 @@ Supongamos que puede encontrarse un operador $U$ así y sean $|\varphi_1\rangle$
 
 $U|\varphi_i\rangle\otimes|s\rangle=|\varphi_i\rangle\otimes|\varphi_i\rangle$, con $i=1,2$
 
-Calculemos ahora el producto interno de $\langle \varphi_1\otimes s|\varphi_2\otimes s\rangle$, exigiendo que $U$ sea **unitario**, i.e. $U^{\dagger}U=I$: $\langle \varphi_1\otimes s|\varphi_2\otimes s\rangle =\langle \varphi_1\otimes s|I|\varphi_2\otimes s\rangle$ que finalmente es $\langle \varphi_1\otimes s|U^{\dagger}U|\varphi_2\otimes s\rangle=\langle \varphi_1\otimes \varphi_1|\varphi_2\otimes \varphi_2\rangle$
+Calculemos ahora el producto interno $\langle \varphi_1\otimes s|\varphi_2\otimes s\rangle$, exigiendo que $U$ sea **unitario**, i.e. $U^{\dagger}U=I$: $\langle \varphi_1\otimes s|\varphi_2\otimes s\rangle =\langle \varphi_1\otimes s|I|\varphi_2\otimes s\rangle$ que finalmente es $\langle \varphi_1\otimes s|U^{\dagger}U|\varphi_2\otimes s\rangle=\langle \varphi_1\otimes \varphi_1|\varphi_2\otimes \varphi_2\rangle$
 usando que $\langle x\otimes y|z\otimes w\rangle=\langle x|z\rangle.\langle y|w\rangle$ 
 se tiene 
 $\langle \varphi_1 |\varphi_2\rangle.\langle s |s\rangle =\langle \varphi_1 |\varphi_2\rangle.\langle \varphi_1 |\varphi_2\rangle$, luego 
