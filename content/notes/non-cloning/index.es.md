@@ -6,7 +6,8 @@ showDate: false
 description: "non-cloning theorem" 
 draft: false
 summary: "Sobre la imposibilidad de cierto tipo plagio"
-tags: ['quantum', 'states']
+tags: [quantum, states]
+
 math:  true  
 
 ---
