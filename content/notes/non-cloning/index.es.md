@@ -6,7 +6,7 @@ showDate: false
 description: "non-cloning theorem" 
 showReadingTime: false
 draft: false
-summary: "Una descripción matemática sobre la imposibilidad de cierto tipo plagio"
+summary: "Sobre la imposibilidad de cierto tipo plagio"
 tags: ["quantum"]
 math:  true  
 
