@@ -7,12 +7,33 @@
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
-    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://marianocaruso.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dot Product</title>
+      <link>https://marianocaruso.github.io/tags/dot-product/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/tags/dot-product/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kernel</title>
+      <link>https://marianocaruso.github.io/tags/kernel/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/tags/kernel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://marianocaruso.github.io/tags/llm/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/tags/llm/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Quantum</title>
       <link>https://marianocaruso.github.io/tags/quantum/</link>
-      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://marianocaruso.github.io/tags/quantum/</guid>
       <description></description>
     </item>

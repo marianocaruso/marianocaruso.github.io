@@ -3,8 +3,9 @@
 title: "Teorema de no clonado" # va al índice de notas
 date: 2025-01-01
 showDate: false
-description: "non-cloning theorem" 
-draft: false
+#description: "non-cloning theorem"  #creo que no sirve para nada
+draft: false # true="no se muestra en la web"
+showReadingTime: false
 summary: "Sobre la imposibilidad de cierto tipo plagio"
 tags: [quantum, states]
 

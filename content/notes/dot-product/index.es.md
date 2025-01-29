@@ -3,8 +3,8 @@
 title: "Cómputo eficiente del producto interno" # va al índice de notas
 date: 2025-01-02
 showDate: false
-summary: "asa"
-description: "nota 2"
+summary: "Producto interno cuántico eficiente"
+# description: "nota 2" #creo que no sirve para nada
 draft: false # true="no se muestra en la web"
 showReadingTime: false
 tags: [quantum, dot product, kernel, LLM]
@@ -15,11 +15,10 @@ math:  true
 {{< katex >}}
 
 
+## Sobre el producto interno, *a lo bruto*
 
-## Sobre el producto interno *a lo bruto*
 
-
-El producto escalar entre vectores $x$ e $y$, también conocido como producto punto o producto interno, denotado por $x\cdot y$, es una operación fundamental en machine learning, especialmente en tareas que involucran modelos de lenguaje de gran escala (LLM) y el uso de embeddings vectoriales. Los embeddings, que representan palabras, frases o incluso conceptos completos como vectores en espacios de alta dimensionalidad, permiten medir similitudes semánticas a través del producto punto, base para tareas como búsqueda de información, generación de texto y análisis de contexto. En aplicaciones modernas, los sistemas deben calcular millones de productos punto en tiempo real, por ejemplo, para comparar embeddings generados por LLMs con grandes bases de datos, lo que destaca la necesidad de métodos cada vez más eficientes y escalables.
+El producto interno o escalar entre vectores $x$ e $y$, también conocido como producto punto o producto interno, denotado por $x\cdot y$, es una operación fundamental en machine learning, especialmente en tareas que involucran modelos de lenguaje de gran escala (LLM) y el uso de embeddings vectoriales. Los embeddings, que representan palabras, frases o incluso conceptos completos como vectores en espacios de alta dimensionalidad, permiten medir similitudes semánticas a través del producto punto, base para tareas como búsqueda de información, generación de texto y análisis de contexto. En aplicaciones modernas, los sistemas deben calcular millones de productos punto en tiempo real, por ejemplo, para comparar embeddings generados por LLMs con grandes bases de datos, lo que destaca la necesidad de métodos cada vez más eficientes y escalables.
 
 
  Dados dos vectores $x,y\in\mathbb{R}^N$, también conocido como producto punto o producto interno: $x\cdot y=\sum_{i=1}^Nx_iy_i$. El producto interno (calculado a lo) **bruto**, es decir, de forma clásica requiere realizar $N$ multiplicaciones y $N-1$ sumas, suponiendo que la multiplicación y la suma son operaciones de tiempo constante, la complejidad temporal es por lo tanto $O(N)$.
@@ -94,3 +93,19 @@ El cálculo de \(\langle \psi | \phi \rangle\) puede realizarse en \(O(\log N)\)
 {{< alert >}}
 A pesar de este notable resultado, hay aún un costo \(O(N)\) remanente, que surge en la preparación inicial del estado si los datos son codificados de manera clásica. Este paso sigue siendo un desafío en la computación cuántica actual. 
 {{< /alert >}}
+
+
+P.D: algún detalle de interés
+
+[{{< spotify type="album" id="5iT3F2EhjVQVrO4PKhsP8c?" width="100%" height="160" >}}]:#
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/6RPpk7XOVcXy9m09doykhg?utm_source=generator" width="100%" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+[esto coloca un reproductor de muestras de spotify dado el id de la carpeta de spotify]:# 
+
+
+
+[3 tipos de imagen https://jpanther.github.io/congo/docs/getting-started/#feature-cover-and-thumbnail-images ]:# 
+[feature: coloca afuera y adentro esa imagen]:# 
+[thumb coloca afuera esa imagen]:# 
+[cover coloca adentro esa imagen]:# 

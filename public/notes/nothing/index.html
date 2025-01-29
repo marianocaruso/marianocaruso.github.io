@@ -17,8 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FF5733" />
   
-  <title>Teorema de no clonado &middot; Mariano Caruso</title>
-    <meta name="title" content="Teorema de no clonado &middot; Mariano Caruso" />
+  <title>Cómputo eficiente del producto interno &middot; Mariano Caruso</title>
+    <meta name="title" content="Cómputo eficiente del producto interno &middot; Mariano Caruso" />
   
   
   
@@ -76,15 +76,13 @@
   <meta
     name="description"
     content="
-      
-        Sobre la imposibilidad de cierto tipo plagio
-      
+      nota 2
     "
   />
   
   
   
-  <link rel="canonical" href="https://marianocaruso.github.io/notes/non-cloning/" />
+  <link rel="canonical" href="https://marianocaruso.github.io/notes/nothing/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -101,24 +99,24 @@
   
   
   
-  <meta property="og:url" content="https://marianocaruso.github.io/notes/non-cloning/">
+  <meta property="og:url" content="https://marianocaruso.github.io/notes/nothing/">
   <meta property="og:site_name" content="Mariano Caruso">
-  <meta property="og:title" content="Teorema de no clonado">
-  <meta property="og:description" content="Sobre la imposibilidad de cierto tipo plagio">
+  <meta property="og:title" content="Cómputo eficiente del producto interno">
+  <meta property="og:description" content="nota 2">
   <meta property="og:locale" content="es">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
-    <meta property="article:published_time" content="2025-01-01T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-01-01T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-01-02T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-01-02T00:00:00+00:00">
     <meta property="article:tag" content="Quantum">
-    <meta property="article:tag" content="States">
-    <meta property="og:image" content="https://marianocaruso.github.io/notes/non-cloning/feature-noncloning.png">
+    <meta property="article:tag" content="Dot Product">
+    <meta property="article:tag" content="Kernel">
+    <meta property="article:tag" content="LLM">
 
   
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://marianocaruso.github.io/notes/non-cloning/feature-noncloning.png">
-  <meta name="twitter:title" content="Teorema de no clonado">
-  <meta name="twitter:description" content="Sobre la imposibilidad de cierto tipo plagio">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cómputo eficiente del producto interno">
+  <meta name="twitter:description" content="nota 2">
 
   
   <script type="application/ld+json">
@@ -126,26 +124,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Notas",
-    "name": "Teorema de no clonado",
-    "headline": "Teorema de no clonado",
-    
-    "abstract": "Sobre la imposibilidad de cierto tipo plagio",
+    "name": "Cómputo eficiente del producto interno",
+    "headline": "Cómputo eficiente del producto interno",
+    "description": "nota 2",
+    "abstract": "asa",
     "inLanguage": "es",
-    "url" : "https:\/\/marianocaruso.github.io\/notes\/non-cloning\/",
+    "url" : "https:\/\/marianocaruso.github.io\/notes\/nothing\/",
     "author" : {
       "@type": "Person",
       "name": "Mariano Caruso"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-01-01T00:00:00\u002b00:00",
-    "datePublished": "2025-01-01T00:00:00\u002b00:00",
+    "dateCreated": "2025-01-02T00:00:00\u002b00:00",
+    "datePublished": "2025-01-02T00:00:00\u002b00:00",
     
-    "dateModified": "2025-01-01T00:00:00\u002b00:00",
+    "dateModified": "2025-01-02T00:00:00\u002b00:00",
     
-    "keywords": ["quantum","states"],
+    "keywords": ["quantum","dot product","kernel","LLM"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "461"
+    "wordCount": "611"
   }
   </script>
     
@@ -168,7 +166,7 @@
      },
      {
        "@type": "ListItem",
-       "name": "Teorema De No Clonado",
+       "name": "Cómputo Eficiente Del Producto Interno",
        "position": 3
      }
    ]
@@ -773,70 +771,9 @@
     <header class="max-w-prose">
       
       <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Teorema de no clonado
+        Cómputo eficiente del producto interno
       </h1>
       
-      
-        <div class="prose">
-          
-          
-          
-          
-
-
-
-
-
-
-
-
-  
-    <picture
-      class="mb-6 rounded-md"
-      
-    >
-      
-      
-      
-      
-        <source
-          
-            srcset="/notes/non-cloning/feature-noncloning_hu7718420281847672114.webp 330w,/notes/non-cloning/feature-noncloning_hu16130180824793564255.webp 660w
-            
-              ,/notes/non-cloning/feature-noncloning_hu12683304142738737389.webp 1024w
-            
-            
-              ,/notes/non-cloning/feature-noncloning_hu162625252747219671.webp 1320w
-            "
-          
-          sizes="100vw"
-          type="image/webp"
-        />
-      
-      <img
-        width="1920"
-        height="1100"
-        class="mb-6 rounded-md"
-        
-        
-        
-          src="/notes/non-cloning/feature-noncloning_hu16446638801911684839.png"
-          srcset="/notes/non-cloning/feature-noncloning_hu18145819139928087107.png 330w,/notes/non-cloning/feature-noncloning_hu16446638801911684839.png 660w
-          
-            ,/notes/non-cloning/feature-noncloning_hu7431688334514627036.png 1024w
-          
-          
-            ,/notes/non-cloning/feature-noncloning_hu15545458428903810226.png 1320w
-          "
-          sizes="100vw"
-        
-      />
-    </picture>
-  
-
-
-          
-        </div>
       
     </header>
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
@@ -852,15 +789,20 @@
   <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#enunciado">Enunciado</a></li>
-    <li><a href="#demostración">Demostración</a>
+    <li><a href="#sobre-el-producto-interno-a-lo-bruto">Sobre el producto interno <em>a lo bruto</em></a>
       <ul>
-        <li>
+        <li><a href="#enunciado">Enunciado</a></li>
+        <li><a href="#1-representación-de-los-vectores-como-estados-cuánticos">1. Representación de los vectores como estados cuánticos</a></li>
+        <li><a href="#2-operación-cuántica-para-calcular-langle-psiphirangle">2. Operación cuántica para calcular \(\langle \psi|\phi\rangle\)</a>
           <ul>
-            <li><a href="#1-u-no-puede-ser-lineal">1. \(U\) no puede ser lineal</a></li>
-            <li><a href="#2-u-no-puede-ser-unitario">2. \(U\) no puede ser unitario</a></li>
+            <li><a href="#a-construcción-del-estado-combinado">a. Construcción del estado combinado</a></li>
+            <li><a href="#b-aplicación-de-la-puerta-hadamard">b. Aplicación de la puerta Hadamard</a></li>
+            <li><a href="#c-medición-del-qubit-auxiliar">c. Medición del qubit auxiliar</a></li>
+            <li><a href="#d-complejidad-del-cálculo">d. Complejidad del cálculo</a></li>
           </ul>
         </li>
+        <li><a href="#3-preparación-del-estado-un-costo-adicional">3. Preparación del estado: un costo adicional</a></li>
+        <li><a href="#4-conclusión">4. Conclusión</a></li>
       </ul>
     </li>
   </ul>
@@ -874,60 +816,55 @@
       <div class="min-h-0 min-w-0 max-w-prose grow">
         
 
-<p>Dado un espacio de Hilbert $\mathscr{H}$, se pretende encontrar un operador  $U:\mathscr{H}\otimes \mathscr{H}\longrightarrow\mathscr{H}$ de manera que para un vector susceptible de ser  <strong>copiado</strong> $|\varphi\rangle\in\mathscr{H}$ y para un vector  de <strong>soporte</strong>  $|s\rangle\in\mathscr{H}$, (ambos vectores son de norma 1) se cumpla que</p>
-<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+<h2 id="sobre-el-producto-interno-a-lo-bruto" class="relative group">Sobre el producto interno <em>a lo bruto</em> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sobre-el-producto-interno-a-lo-bruto" aria-label="Ancla">#</a></span></h2><p>El producto escalar entre vectores $x$ e $y$, también conocido como producto punto o producto interno, denotado por $x\cdot y$, es una operación fundamental en machine learning, especialmente en tareas que involucran modelos de lenguaje de gran escala (LLM) y el uso de embeddings vectoriales. Los embeddings, que representan palabras, frases o incluso conceptos completos como vectores en espacios de alta dimensionalidad, permiten medir similitudes semánticas a través del producto punto, base para tareas como búsqueda de información, generación de texto y análisis de contexto. En aplicaciones modernas, los sistemas deben calcular millones de productos punto en tiempo real, por ejemplo, para comparar embeddings generados por LLMs con grandes bases de datos, lo que destaca la necesidad de métodos cada vez más eficientes y escalables.</p>
+<p>Dados dos vectores $x,y\in\mathbb{R}^N$, también conocido como producto punto o producto interno: $x\cdot y=\sum_{i=1}^Nx_iy_i$. El producto interno (calculado a lo) <strong>bruto</strong>, es decir, de forma clásica requiere realizar $N$ multiplicaciones y $N-1$ sumas, suponiendo que la multiplicación y la suma son operaciones de tiempo constante, la complejidad temporal es por lo tanto $O(N)$.</p>
+<h3 id="enunciado" class="relative group">Enunciado <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#enunciado" aria-label="Ancla">#</a></span></h3><div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
   <span class="pe-3 text-primary-400">
     <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
 </span>
   </span>
-  <span class="dark:text-neutral-300">$U:|\varphi\rangle\otimes |s\rangle\longmapsto|\varphi\rangle\otimes |\varphi\rangle, \quad \forall \varphi \in \mathscr{H}$ (operador de copiado)</span>
+  <span class="dark:text-neutral-300">Demostraremos que el cálculo de \(\langle \psi | \phi \rangle\) en un sistema cuántico puede realizarse en \(O(\log N)\) requiere formalizar el procedimiento bajo los supuestos adecuados.</span>
 </div>
 
-<p>Tal operador se dice que <strong>realiza</strong>  el procedimiento de copiado sin destruir el estado, $|\varphi\rangle$, que pretende copiar.</p>
-<p>En las condiciones anteriores se puede demostrar el siguiente</p>
-<h2 id="enunciado" class="relative group">Enunciado <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#enunciado" aria-label="Ancla">#</a></span></h2><p>$\nexists U$ que cumpla la definición tal que o bien</p>
-<ol>
-<li>$U$ sea lineal</li>
-<li>$U$ sea unitario</li>
+<hr>
+<h3 id="1-representación-de-los-vectores-como-estados-cuánticos" class="relative group">1. Representación de los vectores como estados cuánticos <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-representaci%c3%b3n-de-los-vectores-como-estados-cu%c3%a1nticos" aria-label="Ancla">#</a></span></h3>\[
+|\psi\rangle = \frac{1}{\|x\|} \sum_{i=1}^N x_i |i\rangle, \quad |\phi\rangle = \frac{1}{\|y\|} \sum_{i=1}^N y_i |i\rangle
+\]\[
+\langle \psi | \phi \rangle = \frac{\sum_{i=1}^N x_i y_i}{\|x\| \|y\|}
+\]<h3 id="2-operación-cuántica-para-calcular-langle-psiphirangle" class="relative group">2. Operación cuántica para calcular \(\langle \psi|\phi\rangle\) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-operaci%c3%b3n-cu%c3%a1ntica-para-calcular-langle-psiphirangle" aria-label="Ancla">#</a></span></h3><p>La computación cuántica permite estimar \(\langle \psi | \phi \rangle\) mediante interferencia cuántica. El procedimiento básico es el siguiente:</p>
+<h4 id="a-construcción-del-estado-combinado" class="relative group">a. Construcción del estado combinado <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#a-construcci%c3%b3n-del-estado-combinado" aria-label="Ancla">#</a></span></h4>\[
+|\Psi\rangle = \frac{1}{\sqrt{2}} \left( |\psi\rangle|0\rangle + |\phi\rangle|1\rangle \right)
+\]<p>
+Esto requiere un circuito que condicione la preparación de \(|\phi\rangle\) o \(|\psi\rangle\) en el valor del qubit auxiliar.</p>
+<h4 id="b-aplicación-de-la-puerta-hadamard" class="relative group">b. Aplicación de la puerta Hadamard <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#b-aplicaci%c3%b3n-de-la-puerta-hadamard" aria-label="Ancla">#</a></span></h4>\[
+H|0\rangle = \frac{1}{\sqrt{2}} (|0\rangle + |1\rangle), \quad H|1\rangle = \frac{1}{\sqrt{2}} (|0\rangle - |1\rangle)
+\]\[
+|\Psi'\rangle = \frac{1}{2} \Big( (|\psi\rangle + |\phi\rangle)|0\rangle + (|\psi\rangle - |\phi\rangle)|1\rangle \Big)
+\]<h4 id="c-medición-del-qubit-auxiliar" class="relative group">c. Medición del qubit auxiliar <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#c-medici%c3%b3n-del-qubit-auxiliar" aria-label="Ancla">#</a></span></h4>\[
+P(0) = \frac{1}{2} \left( 1 + \text{Re}(\langle \psi | \phi \rangle) \right)
+\]<p>
+Similarmente, la probabilidad de medir \(1\) está relacionada con \(1 - \text{Re}(\langle \psi | \phi \rangle)\). Mediante repeticiones, podemos estimar \(\text{Re}(\langle \psi | \phi \rangle)\).</p>
+<h4 id="d-complejidad-del-cálculo" class="relative group">d. Complejidad del cálculo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#d-complejidad-del-c%c3%a1lculo" aria-label="Ancla">#</a></span></h4><ol>
+<li>El número de qubits necesarios para representar \(|\psi\rangle\) y \(|\phi\rangle\) es \(\log N\), ya que cada índice \(i\) del vector requiere \(\log N\) bits.</li>
+<li>Las operaciones cuánticas (Hadamard, condicionamiento) actúan en paralelo sobre las amplitudes de \(|\psi\rangle\) y \(|\phi\rangle\), lo que implica que la complejidad del circuito depende del número de qubits, es decir, \(O(\log N)\).</li>
 </ol>
 <hr>
-<h2 id="demostración" class="relative group">Demostración <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#demostraci%c3%b3n" aria-label="Ancla">#</a></span></h2><h4 id="1-u-no-puede-ser-lineal" class="relative group">1. \(U\) no puede ser lineal <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-u-no-puede-ser-lineal" aria-label="Ancla">#</a></span></h4><p>(<em>por reducción al absurdo</em>)</p>
-<p>Veamos que $U$ no podría ser lineal. Supongamos que puede encontrarse un operador $U$ así y sean $|\varphi_1\rangle$, $|\varphi_2\rangle\in \mathscr{H}$, tales que</p>
-<p>$U|\varphi_i\rangle\otimes|s\rangle=|\varphi_i\rangle\otimes|\varphi_i\rangle$, con $i=1,2$</p>
-<p>luego tomemos la combinación lineal $
-|\varphi\rangle=\alpha_1|\varphi_1\rangle+\alpha_2|\varphi_2\rangle$, aquí entra cierta <strong>arbitrariedad</strong> del estado $|\varphi\rangle$ sobre el cual haremos la prueba.</p>
-<p>deberíamos esperar que para este estado $|\varphi\rangle$, escrito en término de los vectores $\{|\varphi_i\}_{i=1,2}$, se obtenga para $U|\varphi\rangle\otimes|s\rangle$</p>
-$$
-\alpha_1^2|\varphi_1\rangle\otimes|\varphi_1\rangle+\alpha_2^2|\varphi_2\rangle\otimes|\varphi_2\rangle + \alpha_1\alpha_2\Big[|\varphi_1\rangle\otimes|\varphi_2\rangle+|\varphi_2\rangle\otimes|\varphi_1\rangle\Big]
-$$<p>mientras que, exigiendo que $U$ sea <strong>lineal</strong>:</p>
-<p>$U|\varphi\rangle\otimes|s\rangle=\alpha_1U|\varphi_1\rangle\otimes|s\rangle+\alpha_2U|\varphi_2\rangle\otimes|s\rangle$ luego se obtiene para $U|\varphi\rangle\otimes|s\rangle$</p>
-$$
-\alpha_1|\varphi_1\rangle\otimes|\varphi_1\rangle+\alpha_2|\varphi_2\rangle\otimes|\varphi_2\rangle
-$$<p>comparando estas últimas dos expresiones para $U|\varphi\rangle\otimes|s\rangle$ se llega al absurdo.</p>
-<h4 id="2-u-no-puede-ser-unitario" class="relative group">2. \(U\) no puede ser unitario <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-u-no-puede-ser-unitario" aria-label="Ancla">#</a></span></h4><p>(<em>por reducción al absurdo</em>)</p>
-<p>Veamos que $U$ no podría ser unitario. Supongamos que puede encontrarse un operador $U$ así y sean $|\varphi_1\rangle$, $|\varphi_2\rangle\in \mathscr{H}$, tales que</p>
-<p>$U|\varphi_i\rangle\otimes|s\rangle=|\varphi_i\rangle\otimes|\varphi_i\rangle$, con $i=1,2$</p>
-<p>Calculemos ahora el producto interno $\langle \varphi_1\otimes s|\varphi_2\otimes s\rangle$, exigiendo que $U$ sea <strong>unitario</strong>, i.e. $U^{\dagger}U=I$: $\langle \varphi_1\otimes s|\varphi_2\otimes s\rangle =\langle \varphi_1\otimes s|I|\varphi_2\otimes s\rangle$ que finalmente es $\langle \varphi_1\otimes s|U^{\dagger}U|\varphi_2\otimes s\rangle=\langle \varphi_1\otimes \varphi_1|\varphi_2\otimes \varphi_2\rangle$
-usando que $\langle x\otimes y|z\otimes w\rangle=\langle x|z\rangle.\langle y|w\rangle$
-se tiene
-$\langle \varphi_1 |\varphi_2\rangle.\langle s |s\rangle =\langle \varphi_1 |\varphi_2\rangle.\langle \varphi_1 |\varphi_2\rangle$, luego</p>
-$$
-\langle\varphi_1 |\varphi_2\rangle=
-\langle \varphi_1 |\varphi_2\rangle^2
-$$<p>
-que es una ecuación para  $\langle \varphi_1 |\varphi_2\rangle\in \mathbb{C}$; con lo cual o bien $\langle \varphi_1 |\varphi_2\rangle=0$ o bien $\langle \varphi_1 |\varphi_2\rangle=1$. El primer caso implica que aquellos vectores no pueden ser cualquier sino solo aquellos mutuamente ortogonales, con lo cual no hay arbitrariedad. El segundo caso implica que ambos pueden  ser proporcionales. En cualquier caso no hay arbitrariedad en la elección de aquellos dos vectores $| \varphi_1 \rangle,|\varphi_2\rangle$, lo que se traduce en una no universalidad del operador $U$.</p>
-<p><strong>Notas</strong></p>
+<h3 id="3-preparación-del-estado-un-costo-adicional" class="relative group">3. Preparación del estado: un costo adicional <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-preparaci%c3%b3n-del-estado-un-costo-adicional" aria-label="Ancla">#</a></span></h3><p>La ventaja cuántica solo se logra si los estados \(|\psi\rangle\) y \(|\phi\rangle\) ya están preparados. Preparar un estado cuántico a partir de datos clásicos generalmente tiene complejidad \(O(N)\), ya que cada componente del vector debe cargarse en la superposición.</p>
+<p>Sin embargo, en escenarios donde los datos ya están disponibles en forma cuántica (como en simulaciones físicas), el costo de preparación se elimina, y el cálculo del producto interno se realiza en \(O(\log N)\).</p>
+<hr>
+<h3 id="4-conclusión" class="relative group">4. Conclusión <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-conclusi%c3%b3n" aria-label="Ancla">#</a></span></h3><p>El cálculo de \(\langle \psi | \phi \rangle\) puede realizarse en \(O(\log N)\) dentro del modelo cuántico bajo los siguientes supuestos:</p>
 <ol>
-<li>
-<p>Incluso podríamos haber generalizado el operador $U$ para incluir una fase local $\phi$ que pueda depender incluso de los estados $|\varphi\rangle,|s \rangle$, de forma que el supuesto operador de copia se redefina como $U|\varphi\rangle\otimes|s\rangle:=e^{i\phi(\varphi,s)}|\varphi\rangle\otimes|\varphi\rangle$. Aún en este caso las ideas de la demostración anterior seguiría siendo válida.</p>
-</li>
-<li>
-<p>Se ha demostrado la imposibilidad de realizar copias <strong>perfectas</strong>  del estado del sistema cuántico y sin <strong>destruir</strong> el estado original, vía un operador o bien lineal o bien unitario.</p>
-</li>
-<li>
-<p>Existen versiones que no prohíben  realizar copias imperfectas.</p>
-</li>
+<li>Los vectores están codificados como estados cuánticos \(|\psi\rangle\) y \(|\phi\rangle\).</li>
+<li>Las operaciones cuánticas (como puertas y mediciones) escalan con el número de qubits (\(\log N\)).</li>
 </ol>
+<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300">A pesar de este notable resultado, hay aún un costo \(O(N)\) remanente, que surge en la preparación inicial del estado si los datos son codificados de manera clásica. Este paso sigue siendo un desafío en la computación cuántica actual.</span>
+</div>
+
 
       </div>
     </section>
@@ -1075,7 +1012,7 @@ que es una ecuación para  $\langle \varphi_1 |\varphi_2\rangle\in \mathbb{C}$; 
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://x.com/intent/tweet/?url=https://marianocaruso.github.io/notes/non-cloning/&amp;text=Teorema%20de%20no%20clonado"
+          href="https://x.com/intent/tweet/?url=https://marianocaruso.github.io/notes/nothing/&amp;text=C%c3%b3mputo%20eficiente%20del%20producto%20interno"
           title=""
           aria-label=""
           target="_blank"
@@ -1088,7 +1025,7 @@ que es una ecuación para  $\langle \varphi_1 |\varphi_2\rangle\in \mathbb{C}$; 
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://marianocaruso.github.io/notes/non-cloning/&amp;title=Teorema%20de%20no%20clonado"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://marianocaruso.github.io/notes/nothing/&amp;title=C%c3%b3mputo%20eficiente%20del%20producto%20interno"
           title="Compartir en LinkedIn"
           aria-label="Compartir en LinkedIn"
           target="_blank"
@@ -1101,7 +1038,7 @@ que es una ecuación para  $\langle \varphi_1 |\varphi_2\rangle\in \mathbb{C}$; 
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://telegram.me/share/url?text=https://marianocaruso.github.io/notes/non-cloning/&amp;url=Teorema%20de%20no%20clonado"
+          href="https://telegram.me/share/url?text=https://marianocaruso.github.io/notes/nothing/&amp;url=C%c3%b3mputo%20eficiente%20del%20producto%20interno"
           title="Compartir en Telegram"
           aria-label="Compartir en Telegram"
           target="_blank"
@@ -1114,7 +1051,7 @@ que es una ecuación para  $\langle \varphi_1 |\varphi_2\rangle\in \mathbb{C}$; 
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="mailto:?body=https://marianocaruso.github.io/notes/non-cloning/&amp;subject=Teorema%20de%20no%20clonado"
+          href="mailto:?body=https://marianocaruso.github.io/notes/nothing/&amp;subject=C%c3%b3mputo%20eficiente%20del%20producto%20interno"
           title="Enviar vía email"
           aria-label="Enviar vía email"
           target="_blank"
@@ -1137,10 +1074,27 @@ que es una ecuación para  $\langle \varphi_1 |\varphi_2\rangle\in \mathbb{C}$; 
       <div class="flex justify-between pt-3">
         <span>
           
+            <a class="group flex" href="/notes/non-cloning/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Teorema de no clonado</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                </span>
+              </span>
+            </a>
+          
         </span>
         <span>
           
-            <a class="group flex text-right" href="/notes/nothing/">
+            <a class="group flex text-right" href="/notes/dot-product/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
