@@ -42,8 +42,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.291fb55ef7fde44f9fdc342c8bd1cc980a37b40251d9e17a06e897b6db1b9a79.css"
-    integrity="sha256-KR&#43;1Xvf95E&#43;f3DQsi9HMmAo3tAJR2eF6BuiXttsbmnk="
+    href="/css/main.bundle.min.b5ca8ab2fc9508b0c364359cb402080ca9f74515c21f82026979aea23d25dc0b.css"
+    integrity="sha256-tcqKsvyVCLDDZDWctAIIDKn3RRXCH4ICaXmuoj0l3As="
   />
   
     
@@ -143,7 +143,7 @@
     "keywords": ["quantum","states"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "460"
+    "wordCount": "461"
   }
   </script>
     
@@ -916,15 +916,6 @@
   <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
     <li><a href="#enunciado">Enunciado</a></li>
     <li><a href="#demostración">Demostración</a>
       <ul>
@@ -947,12 +938,16 @@
       <div class="min-h-0 min-w-0 max-w-prose grow">
         
 
-<p>Dado un espacio de Hilbert $\mathscr{H}$, se pretende encontrar un operador  $U:\mathscr{H}\otimes \mathscr{H}\longrightarrow\mathscr{H}$ de manera que un vector susceptible de ser  <strong>copiado</strong> $|\varphi\rangle\in\mathscr{H}$ y un vector  de <strong>soporte</strong>  $|s\rangle\in\mathscr{H}$, (ambos vectores son de norma 1) se tenga</p>
-<blockquote>
-<h5 id="operador-de-copiado" class="relative group">operador de copiado <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#operador-de-copiado" aria-label="Ancla">#</a></span></h5>$$
-U:|\varphi\rangle\otimes |s\rangle\longmapsto|\varphi\rangle\otimes |\varphi\rangle, \quad \forall \varphi \in \mathscr{H}
-$$</blockquote>
-<p>tal operador se dice que <strong>realiza</strong>  el procedimiento de copiado sin destruir el estado, $|\varphi\rangle$, que pretende copiar.</p>
+<p>Dado un espacio de Hilbert $\mathscr{H}$, se pretende encontrar un operador  $U:\mathscr{H}\otimes \mathscr{H}\longrightarrow\mathscr{H}$ de manera que para un vector susceptible de ser  <strong>copiado</strong> $|\varphi\rangle\in\mathscr{H}$ y para un vector  de <strong>soporte</strong>  $|s\rangle\in\mathscr{H}$, (ambos vectores son de norma 1) se cumpla que</p>
+<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300">$U:|\varphi\rangle\otimes |s\rangle\longmapsto|\varphi\rangle\otimes |\varphi\rangle, \quad \forall \varphi \in \mathscr{H}$ (operador de copiado)</span>
+</div>
+
+<p>Tal operador se dice que <strong>realiza</strong>  el procedimiento de copiado sin destruir el estado, $|\varphi\rangle$, que pretende copiar.</p>
 <p>En las condiciones anteriores se puede demostrar el siguiente</p>
 <h2 id="enunciado" class="relative group">Enunciado <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#enunciado" aria-label="Ancla">#</a></span></h2><p>$\nexists U$ que cumpla la definición tal que o bien</p>
 <ol>

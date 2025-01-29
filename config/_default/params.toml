@@ -5,7 +5,7 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://jpanther.github.io/congo/docs/configuration/#theme-parameters
 
-colorScheme = "Fire" # ver más temas en https://jpanther.github.io/congo/docs/getting-started/#colour-schemes
+colorScheme = "Congo" # ver más temas en https://jpanther.github.io/congo/docs/getting-started/#colour-schemes
 defaultAppearance = "dark" # valid options: light or dark
 autoSwitchAppearance = true
 

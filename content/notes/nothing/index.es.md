@@ -1,12 +1,14 @@
 ---
 
-title: "nota 2" # va al índice de notas
+title: "título" # va al índice de notas
 date: 2025-01-02
+showDate: false
+summary: "subtítulo"
 description: "nota 2"
 draft: true # true="no se muestra en la web"
-
 showReadingTime: false
-showDate: false
+tags: [tag1, tag2]
+math:  true  
 
 ---
 

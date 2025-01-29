@@ -15,15 +15,15 @@ math:  true
 {{< katex >}}
 
 
-Dado un espacio de Hilbert $\mathscr{H}$, se pretende encontrar un operador  $U:\mathscr{H}\otimes \mathscr{H}\longrightarrow\mathscr{H}$ de manera que un vector susceptible de ser  **copiado** $|\varphi\rangle\in\mathscr{H}$ y un vector  de **soporte**  $|s\rangle\in\mathscr{H}$, (ambos vectores son de norma 1) se tenga 
-
-> ##### operador de copiado
-> $$
-U:|\varphi\rangle\otimes |s\rangle\longmapsto|\varphi\rangle\otimes |\varphi\rangle, \quad \forall \varphi \in \mathscr{H}
-$$
+Dado un espacio de Hilbert $\mathscr{H}$, se pretende encontrar un operador  $U:\mathscr{H}\otimes \mathscr{H}\longrightarrow\mathscr{H}$ de manera que para un vector susceptible de ser  **copiado** $|\varphi\rangle\in\mathscr{H}$ y para un vector  de **soporte**  $|s\rangle\in\mathscr{H}$, (ambos vectores son de norma 1) se cumpla que 
 
 
-tal operador se dice que **realiza**  el procedimiento de copiado sin destruir el estado, $|\varphi\rangle$, que pretende copiar.
+{{< alert "check" >}}
+$U:|\varphi\rangle\otimes |s\rangle\longmapsto|\varphi\rangle\otimes |\varphi\rangle, \quad \forall \varphi \in \mathscr{H}$ (operador de copiado)
+{{< /alert >}}
+
+
+Tal operador se dice que **realiza**  el procedimiento de copiado sin destruir el estado, $|\varphi\rangle$, que pretende copiar.
 
 En las condiciones anteriores se puede demostrar el siguiente
 
