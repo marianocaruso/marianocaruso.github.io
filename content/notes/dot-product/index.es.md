@@ -69,7 +69,7 @@ La probabilidad de medir \(0\) en el qubit auxiliar está relacionada directamen
 \[
 P(0) = \frac{1}{2} \left( 1 + \text{Re}(\langle \psi | \phi \rangle) \right)
 \]
-Similarmente, la probabilidad de medir \(1\) está relacionada con \(1 - \text{Re}(\langle \psi | \phi \rangle)\). Mediante repeticiones, podemos estimar \(\text{Re}(\langle \psi | \phi \rangle)\).
+Similarmente, la probabilidad de medir \(1\) está relacionada con \(1 - \text{Re}(\langle \psi | \phi \rangle)\). Mediante repeticiones, podemos estimar \(\text{Re}(\langle \psi | \phi \rangle).\)
 
 #### d. Complejidad del cálculo
 1. El número de qubits necesarios para representar \(|\psi\rangle\) y \(|\phi\rangle\) es \(\log N\), ya que cada índice \(i\) del vector requiere \(\log N\) bits.
