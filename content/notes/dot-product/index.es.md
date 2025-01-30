@@ -3,7 +3,7 @@
 title: "Cómputo eficiente del producto interno" # va al índice de notas
 date: 2025-01-02
 showDate: false
-summary: "Producto interno cuántico eficiente"
+summary: "Ventajas y desafíos en el cómputo del producto interno"
 # description: "nota 2" #creo que no sirve para nada
 draft: false # true="no se muestra en la web"
 showReadingTime: false
