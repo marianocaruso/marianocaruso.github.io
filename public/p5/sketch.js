@@ -20,7 +20,7 @@ let palette = [
 ];
 
 function setup() {
-  createCanvas(600, 80);
+  createCanvas(610, 80);
   for (let i = 0; i < 100; i++) {
     let x = random(width);
     let y = random(height);
