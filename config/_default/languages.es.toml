@@ -17,6 +17,7 @@ copyright = "© Mariano Caruso"
   headline = "la inteligencia me persigue, pero yo soy más rápido"
   bio = "la inteligencia me persigue, pero yo soy más rápido"
   
+  
   links = [
     { linkedin = "https://linkedin.com/in/marianocaruso" },
   # { google-scholar = "https://scholar.google.com/citations?user=tVIaKsYAAAAJ" },
