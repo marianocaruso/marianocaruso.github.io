@@ -32,7 +32,7 @@ Demostraremos que el cálculo de \(\langle \psi | \phi \rangle\) en un sistema c
 ---
 
 ### 1. Representación de los vectores como estados cuánticos
-Supongamos que tenemos dos vectores \(x = (x_1, \dots, x_N)\) y \(y= (y_1,\dots, y_N)\). Estos se codifican como estados cuánticos:
+Especifiquemos las componentes de cada uno de los dos vectores \(x = (x_1, \dots, x_N)\), \(y= (y_1,\dots, y_N)\). Estos se codifican como estados cuánticos:
 \[
 |\psi\rangle = \frac{1}{\|x\|} \sum_{i=1}^N x_i |i\rangle, \quad |\phi\rangle = \frac{1}{\|y\|} \sum_{i=1}^N y_i |i\rangle
 \]
