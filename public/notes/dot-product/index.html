@@ -114,11 +114,11 @@
     <meta property="article:tag" content="Dot Product">
     <meta property="article:tag" content="Kernel">
     <meta property="article:tag" content="LLM">
-    <meta property="og:image" content="https://marianocaruso.github.io/notes/dot-product/feature-github-web.png">
+    <meta property="og:image" content="https://marianocaruso.github.io/notes/dot-product/feature%20github%20congo.png">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://marianocaruso.github.io/notes/dot-product/feature-github-web.png">
+  <meta name="twitter:image" content="https://marianocaruso.github.io/notes/dot-product/feature%20github%20congo.png">
   <meta name="twitter:title" content="Cómputo eficiente del producto interno">
   <meta name="twitter:description" content="Ventajas y desafíos en el cómputo del producto interno">
 
@@ -147,7 +147,7 @@
     "keywords": ["quantum","dot product","kernel","LLM"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "618"
+    "wordCount": "609"
   }
   </script>
     
@@ -803,12 +803,12 @@
       
         <source
           
-            srcset="/notes/dot-product/feature-github-web_hu13694038415234523350.webp 330w,/notes/dot-product/feature-github-web_hu5091360031258938366.webp 660w
+            srcset="/notes/dot-product/feature%20github%20congo_hu11005175369190417360.webp 330w,/notes/dot-product/feature%20github%20congo_hu14223863707296229438.webp 660w
             
-              ,/notes/dot-product/feature-github-web_hu1791927639021558285.webp 1024w
+              ,/notes/dot-product/feature%20github%20congo_hu12413118936359709097.webp 1024w
             
             
-              ,/notes/dot-product/feature-github-web_hu14713983603476110622.webp 1320w
+              ,/notes/dot-product/feature%20github%20congo_hu9463525402083538541.webp 1320w
             "
           
           sizes="100vw"
@@ -817,18 +817,18 @@
       
       <img
         width="1920"
-        height="1100"
+        height="1440"
         class="mb-6 rounded-md"
         
         
         
-          src="/notes/dot-product/feature-github-web_hu6849436168311432868.png"
-          srcset="/notes/dot-product/feature-github-web_hu8571689428010788199.png 330w,/notes/dot-product/feature-github-web_hu6849436168311432868.png 660w
+          src="/notes/dot-product/feature%20github%20congo_hu4093600874963347815.png"
+          srcset="/notes/dot-product/feature%20github%20congo_hu3594302969563620600.png 330w,/notes/dot-product/feature%20github%20congo_hu4093600874963347815.png 660w
           
-            ,/notes/dot-product/feature-github-web_hu5237407258064187390.png 1024w
+            ,/notes/dot-product/feature%20github%20congo_hu8512918786807658022.png 1024w
           
           
-            ,/notes/dot-product/feature-github-web_hu5625318739092789316.png 1320w
+            ,/notes/dot-product/feature%20github%20congo_hu11817842931621858868.png 1320w
           "
           sizes="100vw"
         
@@ -858,7 +858,7 @@
       <ul>
         <li><a href="#enunciado">Enunciado</a></li>
         <li><a href="#1-representación-de-los-vectores-como-estados-cuánticos">1. Representación de los vectores como estados cuánticos</a></li>
-        <li><a href="#2-operación-cuántica-para-calcular-langle-psiphirangle">2. Operación cuántica para calcular \(\langle \psi|\phi\rangle\)</a>
+        <li><a href="#2-operación-cuántica-para-calcular-langle-phivarphirangle">2. Operación cuántica para calcular \(\langle \phi|\varphi\rangle\)</a>
           <ul>
             <li><a href="#a-construcción-del-estado-combinado">a. Construcción del estado combinado</a></li>
             <li><a href="#b-aplicación-de-la-puerta-hadamard">b. Aplicación de la puerta Hadamard</a></li>
@@ -888,38 +888,38 @@
     <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
 </span>
   </span>
-  <span class="dark:text-neutral-300">Demostraremos que el cálculo de \(\langle \psi | \phi \rangle\) en un sistema cuántico puede realizarse en \(O(\log N)\) requiere formalizar el procedimiento bajo los supuestos adecuados.</span>
+  <span class="dark:text-neutral-300">Demostraremos que el cálculo de \(\langle \phi | \varphi \rangle\) en un sistema cuántico puede realizarse en \(O(\log N)\) requiere formalizar el procedimiento bajo los supuestos adecuados.</span>
 </div>
 
 <hr>
 <h3 id="1-representación-de-los-vectores-como-estados-cuánticos" class="relative group">1. Representación de los vectores como estados cuánticos <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-representaci%c3%b3n-de-los-vectores-como-estados-cu%c3%a1nticos" aria-label="Ancla">#</a></span></h3>\[
-|\psi\rangle = \frac{1}{\|x\|} \sum_{i=1}^N x_i |i\rangle, \quad |\phi\rangle = \frac{1}{\|y\|} \sum_{i=1}^N y_i |i\rangle
+|\phi\rangle = \frac{1}{\|x\|} \sum_{i=1}^N x_i |i\rangle, \quad |\varphi\rangle = \frac{1}{\|y\|} \sum_{i=1}^N y_i |i\rangle
 \]\[
-\langle \psi | \phi \rangle = \frac{\sum_{i=1}^N x_i y_i}{\|x\| \|y\|}
-\]<h3 id="2-operación-cuántica-para-calcular-langle-psiphirangle" class="relative group">2. Operación cuántica para calcular \(\langle \psi|\phi\rangle\) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-operaci%c3%b3n-cu%c3%a1ntica-para-calcular-langle-psiphirangle" aria-label="Ancla">#</a></span></h3><p>La computación cuántica permite estimar \(\langle \psi | \phi \rangle\) mediante interferencia cuántica. El procedimiento básico es el siguiente:</p>
+\langle \phi | \varphi \rangle = \frac{\sum_{i=1}^N x_i y_i}{\|x\| \|y\|}
+\]<h3 id="2-operación-cuántica-para-calcular-langle-phivarphirangle" class="relative group">2. Operación cuántica para calcular \(\langle \phi|\varphi\rangle\) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-operaci%c3%b3n-cu%c3%a1ntica-para-calcular-langle-phivarphirangle" aria-label="Ancla">#</a></span></h3><p>La computación cuántica permite estimar \(\langle \phi | \varphi \rangle\) mediante interferencia cuántica. El procedimiento básico es el siguiente:</p>
 <h4 id="a-construcción-del-estado-combinado" class="relative group">a. Construcción del estado combinado <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#a-construcci%c3%b3n-del-estado-combinado" aria-label="Ancla">#</a></span></h4>\[
-|\Psi\rangle = \frac{1}{\sqrt{2}} \left( |\psi\rangle|0\rangle + |\phi\rangle|1\rangle \right)
+|\Psi\rangle = \frac{1}{\sqrt{2}} \left( |\phi\rangle|0\rangle + |\varphi\rangle|1\rangle \right)
 \]<p>
-Esto requiere un circuito que condicione la preparación de \(|\phi\rangle\) o \(|\psi\rangle\) en el valor del qubit auxiliar.</p>
+Esto requiere un circuito que condicione la preparación de \(|\phi\rangle\) o \(|\varphi\rangle\) en el valor del qubit auxiliar.</p>
 <h4 id="b-aplicación-de-la-puerta-hadamard" class="relative group">b. Aplicación de la puerta Hadamard <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#b-aplicaci%c3%b3n-de-la-puerta-hadamard" aria-label="Ancla">#</a></span></h4>\[
 H|0\rangle = \frac{1}{\sqrt{2}} (|0\rangle + |1\rangle), \quad H|1\rangle = \frac{1}{\sqrt{2}} (|0\rangle - |1\rangle)
 \]\[
-|\Psi'\rangle = \frac{1}{2} \Big( (|\psi\rangle + |\phi\rangle)|0\rangle + (|\psi\rangle - |\phi\rangle)|1\rangle \Big)
+|\Psi'\rangle = \frac{1}{2} \Big( (|\phi\rangle + |\varphi\rangle)|0\rangle + (|\phi\rangle - |\varphi\rangle)|1\rangle \Big)
 \]<h4 id="c-medición-del-qubit-auxiliar" class="relative group">c. Medición del qubit auxiliar <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#c-medici%c3%b3n-del-qubit-auxiliar" aria-label="Ancla">#</a></span></h4>\[
-P(0) = \frac{1}{2} \left( 1 + \text{Re}(\langle \psi | \phi \rangle) \right)
+P(0) = \frac{1}{2} \left( 1 + \text{Re}(\langle \phi | \varphi \rangle) \right)
 \]<p>
-Similarmente, la probabilidad de medir \(1\) está relacionada con \(1 - \text{Re}(\langle \psi | \phi \rangle)\). Mediante repeticiones, podemos estimar \(\text{Re}(\langle \psi | \phi \rangle).\)</p>
+Similarmente, la probabilidad de medir \(1\) está relacionada con \(1 - \text{Re}(\langle \phi | \varphi \rangle).\) Mediante repeticiones, podemos estimar \(\text{Re}(\langle \phi | \varphi \rangle).\)</p>
 <h4 id="d-complejidad-del-cálculo" class="relative group">d. Complejidad del cálculo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#d-complejidad-del-c%c3%a1lculo" aria-label="Ancla">#</a></span></h4><ol>
-<li>El número de qubits necesarios para representar \(|\psi\rangle\) y \(|\phi\rangle\) es \(\log N\), ya que cada índice \(i\) del vector requiere \(\log N\) bits.</li>
-<li>Las operaciones cuánticas (Hadamard, condicionamiento) actúan en paralelo sobre las amplitudes de \(|\psi\rangle\) y \(|\phi\rangle\), lo que implica que la complejidad del circuito depende del número de qubits, es decir, \(O(\log N)\).</li>
+<li>El número de qubits necesarios para representar \(|\phi\rangle\) y \(|\varphi\rangle\) es \(\log N\).</li>
+<li>Las operaciones cuánticas, tales como la puerta Hadamard, actúan en paralelo sobre las amplitudes de \(|\phi\rangle\) y \(|\varphi\rangle\), lo que implica que la complejidad del circuito depende del número de qubits, luego \(O(\log N)\).</li>
 </ol>
 <hr>
-<h3 id="3-preparación-del-estado-un-costo-adicional" class="relative group">3. Preparación del estado: un costo adicional <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-preparaci%c3%b3n-del-estado-un-costo-adicional" aria-label="Ancla">#</a></span></h3><p>La ventaja cuántica solo se logra si los estados \(|\psi\rangle\) y \(|\phi\rangle\) ya están preparados. Preparar un estado cuántico a partir de datos clásicos generalmente tiene complejidad \(O(N)\), ya que cada componente del vector debe cargarse en la superposición.</p>
+<h3 id="3-preparación-del-estado-un-costo-adicional" class="relative group">3. Preparación del estado: un costo adicional <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-preparaci%c3%b3n-del-estado-un-costo-adicional" aria-label="Ancla">#</a></span></h3><p>La ventaja cuántica solo se logra si los estados \(|\phi\rangle\) y \(|\varphi\rangle\) ya están preparados. Preparar un estado cuántico a partir de datos clásicos generalmente tiene complejidad \(O(N)\), ya que cada componente del vector debe cargarse en la superposición.</p>
 <p>Sin embargo, en escenarios donde los datos ya están disponibles en forma cuántica (como en simulaciones físicas), el costo de preparación se elimina, y el cálculo del producto interno se realiza en \(O(\log N)\).</p>
 <hr>
-<h3 id="4-conclusión" class="relative group">4. Conclusión <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-conclusi%c3%b3n" aria-label="Ancla">#</a></span></h3><p>El cálculo de \(\langle \psi | \phi \rangle\) puede realizarse en \(O(\log N)\) dentro del modelo cuántico bajo los siguientes supuestos:</p>
+<h3 id="4-conclusión" class="relative group">4. Conclusión <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-conclusi%c3%b3n" aria-label="Ancla">#</a></span></h3><p>El cálculo de \(\langle \phi | \varphi \rangle\) puede realizarse en \(O(\log N)\) dentro del modelo cuántico bajo los siguientes supuestos:</p>
 <ol>
-<li>Los vectores están codificados como estados cuánticos \(|\psi\rangle\) y \(|\phi\rangle\).</li>
+<li>Los vectores están codificados como estados cuánticos \(|\phi\rangle\) y \(|\varphi\rangle\).</li>
 <li>Las operaciones cuánticas (como puertas y mediciones) escalan con el número de qubits (\(\log N\)).</li>
 </ol>
 <div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">

@@ -26,7 +26,7 @@ El producto interno o escalar entre vectores $x$ e $y$, también conocido como p
 
 ### Enunciado
 {{< alert "check" >}}
-Demostraremos que el cálculo de \(\langle \psi | \phi \rangle\) en un sistema cuántico puede realizarse en \(O(\log N)\) requiere formalizar el procedimiento bajo los supuestos adecuados. 
+Demostraremos que el cálculo de \(\langle \phi | \varphi \rangle\) en un sistema cuántico puede realizarse en \(O(\log N)\) requiere formalizar el procedimiento bajo los supuestos adecuados. 
 {{< /alert >}}
 
 ---
@@ -34,25 +34,25 @@ Demostraremos que el cálculo de \(\langle \psi | \phi \rangle\) en un sistema c
 ### 1. Representación de los vectores como estados cuánticos
 Especifiquemos las componentes de cada uno de los dos vectores \(x = (x_1, \dots, x_N)\), \(y= (y_1,\dots, y_N)\). Estos se codifican como estados cuánticos:
 \[
-|\psi\rangle = \frac{1}{\|x\|} \sum_{i=1}^N x_i |i\rangle, \quad |\phi\rangle = \frac{1}{\|y\|} \sum_{i=1}^N y_i |i\rangle
+|\phi\rangle = \frac{1}{\|x\|} \sum_{i=1}^N x_i |i\rangle, \quad |\varphi\rangle = \frac{1}{\|y\|} \sum_{i=1}^N y_i |i\rangle
 \]
 El producto interno *a la* quantum viene dado por:
 \[
-\langle \psi | \phi \rangle = \frac{\sum_{i=1}^N x_i y_i}{\|x\| \|y\|}
+\langle \phi | \varphi \rangle = \frac{\sum_{i=1}^N x_i y_i}{\|x\| \|y\|}
 \]
 
 
 
-### 2. Operación cuántica para calcular \\(\langle \psi|\phi\rangle\\)
-La computación cuántica permite estimar \(\langle \psi | \phi \rangle\) mediante interferencia cuántica. El procedimiento básico es el siguiente:
+### 2. Operación cuántica para calcular \\(\langle \phi|\varphi\rangle\\)
+La computación cuántica permite estimar \(\langle \phi | \varphi \rangle\) mediante interferencia cuántica. El procedimiento básico es el siguiente:
 
 
  #### a. Construcción del estado combinado
-Se prepara un estado auxiliar que combina \(|\psi\rangle\) y \(|\phi\rangle\):
+Se prepara un estado auxiliar que combina \(|\phi\rangle\) y \(|\varphi\rangle\):
 \[
-|\Psi\rangle = \frac{1}{\sqrt{2}} \left( |\psi\rangle|0\rangle + |\phi\rangle|1\rangle \right)
+|\Psi\rangle = \frac{1}{\sqrt{2}} \left( |\phi\rangle|0\rangle + |\varphi\rangle|1\rangle \right)
 \]
-Esto requiere un circuito que condicione la preparación de \(|\phi\rangle\) o \(|\psi\rangle\) en el valor del qubit auxiliar.
+Esto requiere un circuito que condicione la preparación de \(|\phi\rangle\) o \(|\varphi\rangle\) en el valor del qubit auxiliar.
 
 #### b. Aplicación de la puerta Hadamard
 Aplicamos una puerta Hadamard \(H\) al qubit auxiliar:
@@ -61,32 +61,32 @@ H|0\rangle = \frac{1}{\sqrt{2}} (|0\rangle + |1\rangle), \quad H|1\rangle = \fra
 \]
 El nuevo estado se convierte en:
 \[
-|\Psi'\rangle = \frac{1}{2} \Big( (|\psi\rangle + |\phi\rangle)|0\rangle + (|\psi\rangle - |\phi\rangle)|1\rangle \Big)
+|\Psi'\rangle = \frac{1}{2} \Big( (|\phi\rangle + |\varphi\rangle)|0\rangle + (|\phi\rangle - |\varphi\rangle)|1\rangle \Big)
 \]
 
 #### c. Medición del qubit auxiliar
-La probabilidad de medir \(0\) en el qubit auxiliar está relacionada directamente con \(\langle \psi | \phi \rangle\):
+La probabilidad de medir \(0\) en el qubit auxiliar está relacionada directamente con \(\langle \phi | \varphi \rangle\):
 \[
-P(0) = \frac{1}{2} \left( 1 + \text{Re}(\langle \psi | \phi \rangle) \right)
+P(0) = \frac{1}{2} \left( 1 + \text{Re}(\langle \phi | \varphi \rangle) \right)
 \]
-Similarmente, la probabilidad de medir \(1\) está relacionada con \(1 - \text{Re}(\langle \psi | \phi \rangle)\). Mediante repeticiones, podemos estimar \(\text{Re}(\langle \psi | \phi \rangle).\)
+Similarmente, la probabilidad de medir \(1\) está relacionada con \(1 - \text{Re}(\langle \phi | \varphi \rangle).\) Mediante repeticiones, podemos estimar \(\text{Re}(\langle \phi | \varphi \rangle).\)
 
 #### d. Complejidad del cálculo
-1. El número de qubits necesarios para representar \(|\psi\rangle\) y \(|\phi\rangle\) es \(\log N\), ya que cada índice \(i\) del vector requiere \(\log N\) bits.
-2. Las operaciones cuánticas (Hadamard, condicionamiento) actúan en paralelo sobre las amplitudes de \(|\psi\rangle\) y \(|\phi\rangle\), lo que implica que la complejidad del circuito depende del número de qubits, es decir, \(O(\log N)\).
+1. El número de qubits necesarios para representar \(|\phi\rangle\) y \(|\varphi\rangle\) es \(\log N\).
+2. Las operaciones cuánticas, tales como la puerta Hadamard, actúan en paralelo sobre las amplitudes de \(|\phi\rangle\) y \(|\varphi\rangle\), lo que implica que la complejidad del circuito depende del número de qubits, luego \(O(\log N)\).
 
 ---
 
 ### 3. Preparación del estado: un costo adicional
-La ventaja cuántica solo se logra si los estados \(|\psi\rangle\) y \(|\phi\rangle\) ya están preparados. Preparar un estado cuántico a partir de datos clásicos generalmente tiene complejidad \(O(N)\), ya que cada componente del vector debe cargarse en la superposición.
+La ventaja cuántica solo se logra si los estados \(|\phi\rangle\) y \(|\varphi\rangle\) ya están preparados. Preparar un estado cuántico a partir de datos clásicos generalmente tiene complejidad \(O(N)\), ya que cada componente del vector debe cargarse en la superposición.
 
 Sin embargo, en escenarios donde los datos ya están disponibles en forma cuántica (como en simulaciones físicas), el costo de preparación se elimina, y el cálculo del producto interno se realiza en \(O(\log N)\).
 
 ---
 
 ### 4. Conclusión
-El cálculo de \(\langle \psi | \phi \rangle\) puede realizarse en \(O(\log N)\) dentro del modelo cuántico bajo los siguientes supuestos:
-1. Los vectores están codificados como estados cuánticos \(|\psi\rangle\) y \(|\phi\rangle\).
+El cálculo de \(\langle \phi | \varphi \rangle\) puede realizarse en \(O(\log N)\) dentro del modelo cuántico bajo los siguientes supuestos:
+1. Los vectores están codificados como estados cuánticos \(|\phi\rangle\) y \(|\varphi\rangle\).
 2. Las operaciones cuánticas (como puertas y mediciones) escalan con el número de qubits (\(\log N\)).
 
 
