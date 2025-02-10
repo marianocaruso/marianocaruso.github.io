@@ -31,7 +31,7 @@ Demostraremos que el cálculo de \(\langle \phi | \varphi \rangle\) en un sistem
 
 ---
 
-### 1. Representación de los vectores como estados cuánticos
+### 1. Codificación de los vectores en estados cuánticos
 Especifiquemos las componentes de cada uno de los dos vectores \(x = (x_1, \dots, x_N)\), \(y= (y_1,\dots, y_N)\). Estos se codifican como estados cuánticos:
 \[
 |\phi\rangle = \frac{1}{\|x\|} \sum_{i=1}^N x_i |i\rangle, \quad |\varphi\rangle = \frac{1}{\|y\|} \sum_{i=1}^N y_i |i\rangle
