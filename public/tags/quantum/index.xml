@@ -2,25 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quantum on Mariano Caruso</title>
-    <link>https://marianocaruso.github.io/tags/quantum/</link>
+    <link>http://localhost:1313/tags/quantum/</link>
     <description>Recent content in Quantum on Mariano Caruso</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
-    <lastBuildDate>Thu, 02 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://marianocaruso.github.io/tags/quantum/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/quantum/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Qubits y partículas</title>
+      <link>http://localhost:1313/notes/particular-qubits/</link>
+      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/particular-qubits/</guid>
+      <description>Representación de qubits en estados particulares</description>
+    </item>
     <item>
       <title>Cómputo eficiente del producto interno</title>
-      <link>https://marianocaruso.github.io/notes/dot-product/</link>
+      <link>http://localhost:1313/notes/dot-product/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/dot-product/</guid>
+      <guid>http://localhost:1313/notes/dot-product/</guid>
       <description>Ventajas y desafíos en el cómputo del producto interno</description>
     </item>
     <item>
       <title>Teorema de no clonado</title>
-      <link>https://marianocaruso.github.io/notes/non-cloning/</link>
+      <link>http://localhost:1313/notes/non-cloning/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/non-cloning/</guid>
+      <guid>http://localhost:1313/notes/non-cloning/</guid>
       <description>Sobre la imposibilidad de cierto tipo plagio</description>
     </item>
   </channel>

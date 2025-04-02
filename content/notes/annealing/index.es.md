@@ -3,18 +3,18 @@
 title: "Algoritmos de annealing" # va al índice de notas
 date: 2025-01-03
 showDate: false
-summary: "La naturaleza inspira algoritmos de optimización"
+summary: "Cuando la naturaleza inspira algoritmos de optimización"
 # description: "nota 2" #creo que no sirve para nada
-draft: true # true="no se muestra en la web"
+draft: false # true="no se muestra en la web"
 showReadingTime: false
-tags: [quantum, dot product, kernel, LLM]
+tags: [quantum, optimization]
 math:  true  
 
 ---
 
 {{< katex >}}
 
-# optimización vía annealing
+## optimización vía annealing
 
 Veamos cómo resolver problemas de optimización de una función $f$, usando algoritmos de annealing clásico y cuántico. Ambas familias de algoritmos tienen un origen común en basado en la termodinámica. 
 
@@ -56,15 +56,15 @@ acumulan tensiones internas, debida a *defectos* (cualquier perturbación en la 
 
 La composición del material y la distribución de tales defectos determinan las propiedades físicas del material, tales como la conductividad eléctrica, el color, la ductilidad y la dureza, entre otras.
 
-> * **ductilidad** posibilidad de un material de deformarse plásticamente de manera sostenible y sin romperse por acción de un esfuerzo externo (op. fragilidad).
-> * **dureza** posibilidad de resistencia a la deformación plástica localizada, tales como la penetración, la abrasión y el rayado (op. suavidad).
+* **ductilidad** posibilidad de un material de deformarse plásticamente de manera sostenible y sin romperse por acción de un esfuerzo externo (op. fragilidad).
+* **dureza** posibilidad de resistencia a la deformación plástica localizada, tales como la penetración, la abrasión y el rayado (op. suavidad).
 
 En un material con defectos, es esperable que exista una temperatura umbral, por encima de la cual se promueve la migración de los componentes de dichos defectos. Posteriormente, si el enfriamiento es lento y controlado, los defectos pueden reorganizarse de manera más homogénea, dando lugar a un aumento la ductilidad además de una disminución de la dureza, junto con una disminución de la energía interna.
 
 El proceso que regula este comportamiento se denomina **recocido** o **annealing**.
 
 
-> Como resultado de este **proceso térmico** sobre el material, queda de manifiesta la estrecha relación entre una redistribución o disminución del número de defectos, el aumento de la ductilidad y la disminución de la **energía interna**.
+Como resultado de este **proceso térmico** sobre el material, queda de manifiesta la estrecha relación entre una redistribución o disminución del número de defectos, el aumento de la ductilidad y la disminución de la **energía interna**.
 
 
 
@@ -74,7 +74,7 @@ El proceso que regula este comportamiento se denomina **recocido** o **annealing
 2. **mantener** la temperatura durante cierto tiempo 
 3. **enfriar** el material lenta y controladamente 
 
-> Algo similar ocurre con otro tipo de recetas, veamos el siguiente análogo gastronómico para **ablandar la milanesa** como indica [esta señora](https://www.youtube.com/watch?v=owh4KLIewYw) o [este artículo de Crónica](https://www.cronica.com.ar/cocina/Trucos-para-que-la-milanesa-salga-como-Dios-manda-tierna-y-sabrosa-20230503-0026.html). En ambos casos la energía que se agrega al material tiende a disuadir las tensiones las tensiones internas generadas por las fibras.
+Algo similar ocurre con otro tipo de recetas, veamos el siguiente análogo gastronómico para **ablandar la milanesa** como indica [esta señora](https://www.youtube.com/watch?v=owh4KLIewYw) o [este artículo de Crónica](https://www.cronica.com.ar/cocina/Trucos-para-que-la-milanesa-salga-como-Dios-manda-tierna-y-sabrosa-20230503-0026.html). En ambos casos la energía que se agrega al material tiende a disuadir las tensiones las tensiones internas generadas por las fibras.
 
 
 
@@ -86,7 +86,8 @@ Veamos una manera de conectar los procedimientos de annealing con el de minimiza
 
 ### ¿qué busca matemáticamente el algoritmo?
 Supongamos una superficie dada por una función $f:D\rightarrow\mathbb{R}$, queremos encontrar el $(x_*)$ tal que $f(x_*)\leq f(x)$, $\forall x\in D$.
-> **nota** si $D\in\mathbb{R}^n$, con $n=2$ tendríamos una superficie. 
+
+**nota** si $D\in\mathbb{R}^n$, con $n=2$ tendríamos una superficie. 
 
 ---
 
@@ -114,6 +115,8 @@ En tal caso que bolitas **abstractas** recorran el material durante el proceso d
 
 
 Denotemos por $x' \succ x$ a la relación de orden entre $x'$ y $x$, que adjetiva a $x'$ como _mejor que_ $x$. Usemos esta relación para denotar 
+
+
 > $x' \succ x \Longleftrightarrow x'$ es   sucesor de $x$,
 
 que conlleva la siguiente acción: 
@@ -167,11 +170,10 @@ Dado que esta probabilidad depende del orden entre $f(x')\gtreqless
 f(x)$, denotando de manera compacta a $\Delta_{x'x}f:=f(x')-f(x)$ podemos expresar 
 
 
-\begin{equation*}
-P(x'\succ x)=&
-P(x'\succ x|\Delta_{x'x}f<0\,, T)P(\Delta_{x'x}f<0\,, T)+\\
-&P(x'\succ x|\Delta_{x'x}f\geq0\,, T)P(\Delta_{x'x}f\geq 0\,, T).
-\end{equation*}
+$$
+P(x'\succ x)=
+P(x'\succ x|\Delta_{x'x}f<0 , T)P(\Delta_{x'x}f<0, T)+P(x'\succ x|\Delta_{x'x}f\geq0, T)P(\Delta_{x'x}f\geq 0, T).
+$$
 
 De manera que el algoritmo presenta una bifurcación según si $f(x')-f(x)<0$ o si $f(x')-f(x)\geq 0$, en cuyo caso la probabilidad de aceptar a ese $x'$ como sucesor del antiguo $x$ vendrá dada por la probabilidad condicional $P(x'\succ x|\Delta_{x'x}f\gtreqless 0\,, T)$, osea  la probabilidad de aceptar $x'$ frente a $x$ dado $\Delta_{x'x}f\gtreqless 0\,; T$, notemos que para el caso en que $\Delta_{x'x}f<0$ $x'$ se acepta siempre como sucesor de $x$, osea $P(x'\succ x)=1$, $\forall T$.
 
@@ -269,13 +271,11 @@ donde $L(f_Z,z)=-f_Z\mathtt{log}(f_Z)-\mu_0 f_Z-\mu_1 z f_Z$, las ecuaciones de 
 #### Amnesia
 
 No estamos hablando de la persona sino de su medida de probabilidad. 
-\newtheorem*{def}{(def)}
 
----
-\begin{def}\label{amnesia}
-Definimos a $Z$ como una variable aleatoria **amnésica** si y solo si $P[Z>t+s|Z>s]=P[Z>t]$.
-\end{def}
----
+
+
+$\textbf{def.}$ Definimos a $Z$ como una variable aleatoria **amnésica** si y solo si $P[Z>t+s|Z>s]=P[Z>t]$.
+
 
 Esta propiedad se interpreta como que la información de los eventos que cumplen con $Z>s$, $Z$ supera a $s$, condiciona de tal forma a $Z>t+s$, que es idéntico a superar $Z>t$, como si no importara la información que aporta $Z>s$.
 
@@ -292,11 +292,11 @@ P[Z>t+s|Z>s]&=\frac{G(t+s)}{G(s)}
 \end{equation}
 pues si se cumple $Z>t+s$ corresponde a eventos contenidos en un conjunto incluido en el que corresponde a $Z>s$, de manera que si $Z$ es amnésica si y solo si $G(t+s)=G(t)G(s)$, $\forall s,t$. Veamos que si $s=0$ : $G(t)=G(t)G(0)$, luego $G(t)[1-G(0)]=0$ entonces o bien  $G(t)$ es idénticamente nula o bien $G(0)=1$. La primera opción queda descartada por trivial, por pretender ser $G(t)=P[Z>t]$. Además de la condición para $G$, se cumple que $G\geq 0$, pues $G(t/2+t/2)=G(t/2)G(t/2)$ luego $G(t)=G^2(t/2)\geq 0$.
 
-Entonces buscamos $G$, tal que $G(t+s)=G(t)G(s)$, $\forall s,t$ con $G(0)=1$. Si $G$ es diferenciable y usando la condición para $G$ entonces $\frac{dG(z)}{dz}\big{|}_{z=t+s}=G(t)\frac{dG(z)}{dz}\big{|}_{z=s}$, luego evaluando en $s=0$ se tiene $G'(t)=G'(0)G(t)$, luego $G(t)=e^{G'(0)t}$, como $\lim_{t\to+\infty}P[Z\leq t]=1$ luego $\lim_{t\to+\infty}P[Z>1]=0$, entonces debe ocurrir que  $G'(0)<0$, con lo cual podemos escribir $G(z)=e^{-\lambda z}$, con cierto $\lambda>0$.
+Entonces buscamos $G$, tal que $G(t+s)=G(t)G(s)$, $\forall s,t$ con $G(0)=1$. Si $G$ es diferenciable y usando la condición para $G$ entonces $\frac{dG(z)}{dz}|_{z=t+s}=G(t)\frac{dG(z)}{dz}|_{z=s}$, luego evaluando en $s=0$ se tiene $G'(t)=G'(0)G(t)$, luego $G(t)=e^{G'(0)t}$, como $\lim_{t\to+\infty}P[Z\leq t]=1$ luego $\lim_{t\to+\infty}P[Z>1]=0$, entonces debe ocurrir que  $G'(0)<0$, con lo cual podemos escribir $G(z)=e^{-\lambda z}$, con cierto $\lambda>0$.
 
 ---
 
-> **nota**  $P[Z\leq t+s|Z\leq s]=1$
+**notar** que  $P[Z\leq t+s|Z\leq s]=1$
 
 ---
 
@@ -400,7 +400,7 @@ Esta parte del algoritmo es la que pueda depender de la función objeto $f$, en 
 ### diccionario: proceso de annealing $\longleftrightarrow$ algoritmo de annealing
 
 
-|\textbf{proceso de annealing} | \textbf{algoritmo de annealing}|
+|$\textbf{proceso de annealing}$ | $\textbf{algoritmo de annealing}$|
 |----|----|
 |energía | función objeto|
 |configuración| potencial solución|
