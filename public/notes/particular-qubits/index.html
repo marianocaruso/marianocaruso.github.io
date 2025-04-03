@@ -114,9 +114,11 @@
     <meta property="article:tag" content="Qubits">
     <meta property="article:tag" content="Spin States">
     <meta property="article:tag" content="Orbital Space">
+    <meta property="og:image" content="http://localhost:1313/notes/particular-qubits/feature%20qubit%20particulares.png">
 
   
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/notes/particular-qubits/feature%20qubit%20particulares.png">
   <meta name="twitter:title" content="Qubits particulares">
   <meta name="twitter:description" content="Representación de qubits en estados de  partículas">
 
@@ -145,7 +147,7 @@
     "keywords": ["quantum","qubits","spin states","orbital space"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "333"
+    "wordCount": "601"
   }
   </script>
     
@@ -772,6 +774,67 @@
       </h1>
       
       
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/notes/particular-qubits/feature%20qubit%20particulares_hu2104112860361312331.webp 330w,/notes/particular-qubits/feature%20qubit%20particulares_hu260095677630102329.webp 660w
+            
+              ,/notes/particular-qubits/feature%20qubit%20particulares_hu1054184663767038384.webp 1024w
+            
+            
+              ,/notes/particular-qubits/feature%20qubit%20particulares_hu5153531221666640388.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1920"
+        height="1440"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="/notes/particular-qubits/feature%20qubit%20particulares_hu13912107681963370439.png"
+          srcset="/notes/particular-qubits/feature%20qubit%20particulares_hu3969767355644154574.png 330w,/notes/particular-qubits/feature%20qubit%20particulares_hu13912107681963370439.png 660w
+          
+            ,/notes/particular-qubits/feature%20qubit%20particulares_hu4950421723579824233.png 1024w
+          
+          
+            ,/notes/particular-qubits/feature%20qubit%20particulares_hu10939865930815541270.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
     </header>
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       
@@ -798,14 +861,24 @@
       <div class="min-h-0 min-w-0 max-w-prose grow">
         
 
-<h2 id="representación-de-qubits-en-estados-de-partícula" class="relative group">Representación de qubits en estados de partícula <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#representaci%c3%b3n-de-qubits-en-estados-de-part%c3%adcula" aria-label="Ancla">#</a></span></h2><p>En el tratamiento de qubits se parte del hecho de que el estado completo de la partícula se describe en un espacio de Hilbert total que, en muchos sistemas físicos, es el producto tensorial de dos subespacios: uno asociado a la parte orbital (generalmente de dimensión infinita) y otro a la parte interna (spin), que es de dimensión 2. Formalmente, se tiene</p>
-\[\mathscr{H} = \mathscr{H}_{\mathrm{orbital}} \otimes \mathscr{H}_{\mathrm{spin}},\]<p>donde \(\mathscr{H}_{\mathrm{orbital}} = L^2(\mathbb{R}^3)\) y \(\mathscr{H}_{\mathrm{spin}} \sim \mathbb{C}^2.\)
-La clave para trabajar exclusivamente con qubits (la parte de spin) reside en la separabilidad tanto del Hamiltoniano como de los estados. En muchos contextos experimentales, el Hamiltoniano total \(H\) puede descomponerse en dos términos que actúan de forma independiente en cada subespacio:</p>
-\[H = H_{\mathrm{orbital}} \otimes I_{\mathrm{spin}} + I_{\mathrm{orbital}} \otimes H_{\mathrm{spin}},\]<p>
-donde \(I_{\mathrm{orbital}}\) e \(I_{\mathrm{spin}}\) son los operadores identidad en \(\mathscr{H}_{\mathrm{orbital}}\) y \(\mathscr{H}_{\mathrm{spin}}\) respectivamente. Esto es válido cuando no existen términos de acoplamiento entre la parte orbital y el spin, o cuando tales acoplamientos son despreciables o pueden tratarse perturbativamente.</p>
-\[|\pmb{x}, s\rangle = |\phi(\pmb{x}) \otimes |s\rangle,\]\[U(t) = U_{\mathrm{orbital}}(t) \otimes U_{\mathrm{spin}}(t).\]\[|s(t)\rangle = U_{\mathrm{spin}}(t)\, |s\rangle.\]<p>Esta aproximación se justifica en la medida en que, en los dispositivos de qubits (por ejemplo, en sistemas de spin qubits en semiconductores o iones atrapados), la interacción que podría acoplar las variables orbitales y de spin es muy pequeña en comparación con las interacciones que afectan directamente al spin. De modo que, al fijar la parte orbital en un estado estacionario, se “congela” su contribución dinámica, permitiendo que el comportamiento cuántico relevante se describa únicamente en el subespacio \(\mathscr{H}_{\mathrm{spin}}\).</p>
+<h2 id="representación-de-qubits-en-estados-de-partícula" class="relative group">Representación de qubits en estados de partícula <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#representaci%c3%b3n-de-qubits-en-estados-de-part%c3%adcula" aria-label="Ancla">#</a></span></h2><p>El qubit es el análogo cuántico del bit (acrónimo de binary-digit), la unidad fundamental clásica de información. Es un objeto matemático con propiedades específicas que pueden realizarse en un sistema físico real de muchas maneras diferentes. Al igual que el bit clásico tiene un estado, e.g. 0 o 1, un qubit también tiene un estado. Sin embargo, a diferencia del bit clásico, $|0\rangle$ y $|1\rangle$ son solo dos posibles estados del qubit, y cualquier combinación lineal (superposición) de ellos también es posible. En general, pues, el estado físico de un qubit es la superposición $|\psi\rangle = \alpha|0\rangle + \beta|1\rangle$ (donde $\alpha$ y $\beta$ son números complejos). El estado de un qubit puede describirse como un vector en un espacio de Hilbert bidimensional, un espacio vectorial complejo. Los estados especiales $|0\rangle$ y $|1\rangle$ se conocen como los estados de la base computacional y forman una base ortonormal para este espacio vectorial.
+La realización física de estos qubits tiene lugar utilizando propiedades como el spin de las partículas (generalmente fermiones), la polarización de los fotones,&hellip; para conseguir dos estados base.</p>
+<p>Ahora bien si tratamos con objetos cuya descripción físico-matemática completa comprende una parte espacial que suelen ser de dimensión infinita</p>
+<blockquote>
+<p>¿puede afectar esta descripción completa al intento de codificar estados tipo qubits de espacios de dimensión 2?</p>
+</blockquote>
+<hr>
+<p>En el tratamiento de qubits se parte del hecho de que el estado completo de la partícula se describe en un espacio de Hilbert total que, en muchos sistemas físicos, es el producto tensorial de dos espacios: uno asociado a la parte orbital (generalmente de dimensión infinita) y otro a la parte interna (por ejemplo la parte de spin), que suele ser de dimensión 2. Formalmente, se tiene</p>
+\[\mathscr{H} = \mathscr{H}_{1} \otimes \mathscr{H}_{2},\]<p>donde \(\mathscr{H}_{1} = L^2(\mathbb{R}^3)\) y \(\mathscr{H}_{2} \sim \mathbb{C}^2.\)
+La clave para trabajar exclusivamente con qubits (la parte de spin) reside en la separabilidad tanto del Hamiltoniano como de los estados. Bajo el supuesto de separabilidad del Hamiltoniano total \(H\), esto es</p>
+\[H = H_{1} \otimes I_{2} + I_{1} \otimes H_{2},\]<p>
+donde \(I_{1}\) e \(I_{2}\) son los operadores identidad en \(\mathscr{H}_{1}\) y \(\mathscr{H}_{2}\) respectivamente. Esto es válido cuando no existen términos de acoplamiento entre la parte orbital y el spin, o cuando tales acoplamientos son despreciables o pueden tratarse perturbativamente.</p>
+\[|\phi(\pmb{x}), s\rangle = |\phi(\pmb{x})\rangle \otimes |s\rangle,\]<p>
+donde \(|\phi(\pmb{x})\rangle \in \mathscr{H}_{1}\) es la componente orbital en la posición \(\pmb{x}\)  y \(|s\rangle\) es un estado arbitrario en \(\mathscr{H}_{2} \sim \mathbb{C}^2\), la evolución temporal también se separa:</p>
+\[U(t) = U_{1}(t) \otimes U_{2}(t).\]<p>Si además \(|\phi(\pmb{x})\rangle\) es un autostado estacionario de \(H_{1}\), su evolución se reduce a una fase global, y la dinámica efectiva se concentra en la parte de spin:</p>
+\[|s(t)\rangle = U_{2}(t)\, |s\rangle.\]<p>Esta aproximación se justifica en la medida en que, en los dispositivos de qubits (por ejemplo, en sistemas de spin qubits en semiconductores o iones atrapados), la interacción que podría acoplar las variables orbitales y de spin es muy pequeña en comparación con las interacciones que afectan directamente al spin. De modo que, al fijar la parte orbital en un estado estacionario, se “congela” su contribución dinámica, permitiendo que el comportamiento cuántico relevante se describa únicamente en el subespacio \(\mathscr{H}_{2}\).</p>
 <p>La separabilidad del Hamiltoniano y de los estados es, por tanto, el fundamento que permite “aislar” el qubit en una estructura bidimensional, lo que facilita la manipulación y el control en aplicaciones de computación cuántica.</p>
-\[H = H_{\mathrm{orbital}} \otimes I_{\mathrm{spin}} + I_{\mathrm{orbital}} \otimes H_{\mathrm{spin}},\]<p>
+\[H = H_{1} \otimes I_{2} + I_{1} \otimes H_{2},\]<p>
 se puede omitir o discriminar, vía factorización, la parte orbital y trabajar únicamente en el subespacio bidimensional isomorfo a \(\mathbb{C}^2\) para tratar con un qubit.</p>
 
       </div>

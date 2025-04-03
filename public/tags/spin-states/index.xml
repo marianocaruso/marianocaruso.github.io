@@ -10,11 +10,11 @@
     <lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/spin-states/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Qubits y partículas</title>
+      <title>Qubits particulares</title>
       <link>http://localhost:1313/notes/particular-qubits/</link>
       <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/notes/particular-qubits/</guid>
-      <description>Representación de qubits en estados particulares</description>
+      <description>Representación de qubits en estados de  partículas</description>
     </item>
   </channel>
 </rss>
