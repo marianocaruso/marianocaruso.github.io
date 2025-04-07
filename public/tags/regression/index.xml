@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Regression on Mariano Caruso</title>
+    <link>http://localhost:1313/tags/regression/</link>
+    <description>Recent content in Regression on Mariano Caruso</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>© Mariano Caruso</copyright>
+    <lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/regression/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Métricas de regresión</title>
+      <link>http://localhost:1313/notes/r2/</link>
+      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/r2/</guid>
+      <description>Comentario sobre la relación entre métricas de regresión tipo cociente</description>
+    </item>
+  </channel>
+</rss>
