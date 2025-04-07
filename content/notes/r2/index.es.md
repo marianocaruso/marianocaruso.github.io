@@ -1,9 +1,9 @@
 ---
 
-title: "Métricas de regresión" # va al índice de notas
+title: "Métrica para regresión" # va al índice de notas
 date: 2025-01-03
 showDate: false
-summary: "Comentario sobre la relación entre métricas de regresión tipo cociente"
+summary: "Comentario sobre métrica para regresión tipo cociente"
 # description: "nota 2" #creo que no sirve para nada
 draft: false # true="no se muestra en la web"
 showReadingTime: false
@@ -17,7 +17,7 @@ math:  true
 
 # comentario sobre $R^2$ y cociente de varianzas
 
-Dado un modelo que predice $\{y_i\}_{i\in I_N}$, con media aritmética $\bar{y}$, mediante $\{\hat{y_i}\}_{i\in I_N}$, donde $I_N:=\{1,\cdots, N\}\subset \mathbb{N}$
+Supongamos unos datos $\{y_i\}_{i\in I_N}$, con media aritmética $\bar{y}$ y un modelo que realiza predice mediante $\{\hat{y_i}\}_{i\in I_N}$, donde $I_N:=\{1,\cdots, N\}\subset \mathbb{N}$
 
 > $$ R^2:=1-\dfrac{\sum_{i\in I_N}(y_i-\hat{y}_i)^2}{\sum_{i\in I_N}(y_i-\bar{y})^2} $$
 
