@@ -17,7 +17,7 @@ math:  true
 
 # comentario sobre $R^2$ y cociente de varianzas
 
-Supongamos unos datos $\{y_i\}_{i\in I_N}$, con media aritmética $\bar{y}$ y un modelo que realiza predice mediante $\{\hat{y_i}\}_{i\in I_N}$, donde $I_N:=\{1,\cdots, N\}\subset \mathbb{N}$
+Supongamos unos datos $\{y_i\}_{i\in I_N}$, con media aritmética $\bar{y}$ y un modelo que predice $\{\hat{y_i}\}_{i\in I_N}$, donde $I_N:=\{1,\cdots, N\}\subset \mathbb{N}$
 
 > $$ R^2:=1-\dfrac{\sum_{i\in I_N}(y_i-\hat{y}_i)^2}{\sum_{i\in I_N}(y_i-\bar{y})^2} $$
 
