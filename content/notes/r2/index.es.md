@@ -17,7 +17,7 @@ math:  true
 
 # comentario sobre $R^2$ y cociente de varianzas
 
-Supongamos unos datos $\{y_i\}_{i\in I_N}$, con media aritmética $\bar{y}$ y un modelo que predice $\{\hat{y_i}\}_{i\in I_N}$, donde $I_N:=\{1,\cdots, N\}\subset \mathbb{N}$
+Supongamos unos datos $\{y_i\}_{i\in I_N}$, con media aritmética $\bar{y}$ y un modelo que realiza predice mediante $\{\hat{y_i}\}_{i\in I_N}$, donde $I_N:=\{1,\cdots, N\}\subset \mathbb{N}$
 
 > $$ R^2:=1-\dfrac{\sum_{i\in I_N}(y_i-\hat{y}_i)^2}{\sum_{i\in I_N}(y_i-\bar{y})^2} $$
 
@@ -67,20 +67,14 @@ En los modelos de regresión lineal, suele cumplirse cierta ortogonalidad entre 
 
 Sustituyendo en la suma obtenida:
 $$
-\sum_{i\in I_N}(y_i - \bar{y})^2 = \sum_{i\in I_N} (y_i - \hat{y}_i)^2 + \sum_{i\in I_N} (\hat{y}_i - \bar{y})^2 + \lambda.$$
-el signo de $\lambda$ no está definido, por lo que 
-
+\sum_{i\in I_N}(y_i - \bar{y})^2 = \sum_{i\in I_N} (y_i - \hat{y}_i)^2 + \sum_{i\in I_N} (\hat{y}_i - \bar{y})^2 + \lambda,
 $$
-\sum_{i\in I_N} (y_i - \bar{y})^2 - \sum_{i\in I_N} (y_i - \hat{y}_i)^2 = \sum_{i\in I_N} (\hat{y}_i - \bar{y})^2+\lambda 
-$$
-
-De esta forma 
+el signo de $\lambda$ no está definido, por lo que $\sum_{i\in I_N} (y_i - \bar{y})^2 - \sum_{i\in I_N} (y_i - \hat{y}_i)^2 = \sum_{i\in I_N} (\hat{y}_i - \bar{y})^2+\lambda$, puede reemplazarse en $R^2$
 
 $$
 R^2=\dfrac{\sum_{i\in I_N}(\hat{y}_i-\bar{y})^2+\lambda}{\sum_{i\in I_N}(y_i-\bar{y})^2}.
 $$
-
-esto hace que si $\lambda<0$ y en valor absoluto mayor que $\sum_{i\in I}(\hat{y}_i-\bar{y})^2$ para que entonces $R^2<0$
+Si $\lambda<0$ y en valor absoluto mayor que $\sum_{i\in I}(\hat{y}_i-\bar{y})^2$ se tiene que $R^2<0$
 
 
 Si $\bar{\hat{y}}=\bar{y}$, osea: $\sum_{i\in I_N} (y_i-\hat{y}_i)=0$, entonce podemos considerar a $\sum_{i\in I_N}(y_i-\bar{y})^2$ como algo proporcional a la **varianza muestral** de las predicciones $\hat{y}$. En este caso podríamos deducir que $\lambda$ toma la forma reducida de $\lambda=2\sum_{i\in I_N} (y_i - \hat{y}_i)(\hat{y}_i - \bar{y})$ luego $\lambda=2\sum_{i\in I_N} (y_i - \hat{y}_i)\hat{y}_i - 2\sum_{i\in I_N} (y_i - \hat{y}_i)\bar{y}$, finalmente $\lambda=2\sum_{i\in I_N} (y_i - \hat{y}_i)\hat{y}_i$.
