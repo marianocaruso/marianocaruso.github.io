@@ -23,7 +23,7 @@ Supongamos unos datos $\{y_i\}_{i\in I_N}$, con media aritmética $\bar{y}$ y un
 
 el numerador de la fracción es proporcional al error cuadrático medio sobre los elementos de $I$ y el denominador es proporcional a la variación de la muestra $\{y_i\}_{i\in I_N}$.
 
-Se espera que un buen modelo sea tal que $R^2\in [0,1]$, pero la estructura de $R^2$ es tal que $1-(A/B)^2$. Dado que $(A/B)^2\geq 0$, el caso en que $(A/B)^2=0$, con $B$ finito, implica que $A=0$, caso **perfecto**. 
+Se espera que un buen modelo sea tal que $R^2\in [0,1]$. Según la definición anterior $R^2$ tiene la forma $1-(A/B)^2$. Dado que $(A/B)^2\geq 0$, el caso en que $(A/B)^2=0$, con $B$ finito, implica que $A=0$, caso **perfecto**. 
 
 Separemos el caso restante $(A/B)^2>0$, en dos: 
 
