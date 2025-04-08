@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Regression on Mariano Caruso</title>
-    <link>http://localhost:1313/tags/regression/</link>
+    <link>https://marianocaruso.github.io/tags/regression/</link>
     <description>Recent content in Regression on Mariano Caruso</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
     <lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/regression/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://marianocaruso.github.io/tags/regression/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Métricas de regresión</title>
-      <link>http://localhost:1313/notes/r2/</link>
+      <title>Métrica para regresión</title>
+      <link>https://marianocaruso.github.io/notes/r2/</link>
       <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/r2/</guid>
-      <description>Comentario sobre la relación entre métricas de regresión tipo cociente</description>
+      <guid>https://marianocaruso.github.io/notes/r2/</guid>
+      <description>Comentario sobre métrica para regresión tipo cociente</description>
     </item>
   </channel>
 </rss>

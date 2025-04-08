@@ -4,51 +4,51 @@
   
     
       <url>
-            <loc>http://localhost:1313/en/about/</loc>
+            <loc>https://marianocaruso.github.io/en/about/</loc>
             <lastmod>2025-01-15T00:00:00+00:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="http://localhost:1313/about/"
+              href="https://marianocaruso.github.io/about/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="http://localhost:1313/en/about/"
+              href="https://marianocaruso.github.io/en/about/"
               />
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/en/cv/</loc>
+            <loc>https://marianocaruso.github.io/en/cv/</loc>
             <lastmod>2025-01-15T00:00:00+00:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="http://localhost:1313/cv/"
+              href="https://marianocaruso.github.io/cv/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="http://localhost:1313/en/cv/"
+              href="https://marianocaruso.github.io/en/cv/"
               />
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/en/</loc>
+            <loc>https://marianocaruso.github.io/en/</loc>
             <lastmod>2025-01-15T00:00:00+00:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="http://localhost:1313/"
+              href="https://marianocaruso.github.io/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="http://localhost:1313/en/"
+              href="https://marianocaruso.github.io/en/"
               />
           </url>
     
@@ -57,16 +57,16 @@
   
     
       <url>
-            <loc>http://localhost:1313/en/notes/</loc>
+            <loc>https://marianocaruso.github.io/en/notes/</loc>
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="http://localhost:1313/notes/"
+              href="https://marianocaruso.github.io/notes/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="http://localhost:1313/en/notes/"
+              href="https://marianocaruso.github.io/en/notes/"
               />
           </url>
     

@@ -2,60 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mariano Caruso</title>
-    <link>http://localhost:1313/</link>
+    <link>https://marianocaruso.github.io/</link>
     <description>Recent content on Mariano Caruso</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
     <lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://marianocaruso.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Currículum Vitae</title>
-      <link>http://localhost:1313/cv/</link>
+      <link>https://marianocaruso.github.io/cv/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/cv/</guid>
+      <guid>https://marianocaruso.github.io/cv/</guid>
       <description></description>
     </item>
     <item>
       <title>Sobre mí</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://marianocaruso.github.io/about/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://marianocaruso.github.io/about/</guid>
       <description></description>
     </item>
     <item>
       <title>Algoritmos de annealing</title>
-      <link>http://localhost:1313/notes/annealing/</link>
+      <link>https://marianocaruso.github.io/notes/annealing/</link>
       <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/annealing/</guid>
+      <guid>https://marianocaruso.github.io/notes/annealing/</guid>
       <description>Cuando la naturaleza inspira algoritmos de optimización</description>
     </item>
     <item>
-      <title>Métricas de regresión</title>
-      <link>http://localhost:1313/notes/r2/</link>
+      <title>Métrica para regresión</title>
+      <link>https://marianocaruso.github.io/notes/r2/</link>
       <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/r2/</guid>
-      <description>Comentario sobre la relación entre métricas de regresión tipo cociente</description>
+      <guid>https://marianocaruso.github.io/notes/r2/</guid>
+      <description>Comentario sobre métrica para regresión tipo cociente</description>
     </item>
     <item>
       <title>Qubits particulares</title>
-      <link>http://localhost:1313/notes/particular-qubits/</link>
+      <link>https://marianocaruso.github.io/notes/particular-qubits/</link>
       <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/particular-qubits/</guid>
+      <guid>https://marianocaruso.github.io/notes/particular-qubits/</guid>
       <description>Representación de qubits en estados de  partículas</description>
     </item>
     <item>
       <title>Cómputo eficiente del producto interno</title>
-      <link>http://localhost:1313/notes/dot-product/</link>
+      <link>https://marianocaruso.github.io/notes/dot-product/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/dot-product/</guid>
+      <guid>https://marianocaruso.github.io/notes/dot-product/</guid>
       <description>Ventajas y desafíos en el cómputo del producto interno</description>
     </item>
     <item>
       <title>Teorema de no clonado</title>
-      <link>http://localhost:1313/notes/non-cloning/</link>
+      <link>https://marianocaruso.github.io/notes/non-cloning/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/non-cloning/</guid>
+      <guid>https://marianocaruso.github.io/notes/non-cloning/</guid>
       <description>Sobre la imposibilidad de cierto tipo plagio</description>
     </item>
   </channel>

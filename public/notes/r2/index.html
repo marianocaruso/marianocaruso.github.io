@@ -12,13 +12,13 @@
   class="scroll-smooth"
   data-default-appearance="dark"
   data-auto-appearance="true"
-><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+><head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FF5733" />
   
-  <title>Métricas de regresión &middot; Mariano Caruso</title>
-    <meta name="title" content="Métricas de regresión &middot; Mariano Caruso" />
+  <title>Métrica para regresión &middot; Mariano Caruso</title>
+    <meta name="title" content="Métrica para regresión &middot; Mariano Caruso" />
   
   
   
@@ -77,14 +77,14 @@
     name="description"
     content="
       
-        Comentario sobre la relación entre métricas de regresión tipo cociente
+        Comentario sobre métrica para regresión tipo cociente
       
     "
   />
   
   
   
-  <link rel="canonical" href="http://localhost:1313/notes/r2/" />
+  <link rel="canonical" href="https://marianocaruso.github.io/notes/r2/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -101,10 +101,10 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/notes/r2/">
+  <meta property="og:url" content="https://marianocaruso.github.io/notes/r2/">
   <meta property="og:site_name" content="Mariano Caruso">
-  <meta property="og:title" content="Métricas de regresión">
-  <meta property="og:description" content="Comentario sobre la relación entre métricas de regresión tipo cociente">
+  <meta property="og:title" content="Métrica para regresión">
+  <meta property="og:description" content="Comentario sobre métrica para regresión tipo cociente">
   <meta property="og:locale" content="es">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
@@ -112,13 +112,13 @@
     <meta property="article:modified_time" content="2025-01-03T00:00:00+00:00">
     <meta property="article:tag" content="Regression">
     <meta property="article:tag" content="Metrics">
-    <meta property="og:image" content="http://localhost:1313/notes/r2/feature-regression.png">
+    <meta property="og:image" content="https://marianocaruso.github.io/notes/r2/feature-regression.png">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/notes/r2/feature-regression.png">
-  <meta name="twitter:title" content="Métricas de regresión">
-  <meta name="twitter:description" content="Comentario sobre la relación entre métricas de regresión tipo cociente">
+  <meta name="twitter:image" content="https://marianocaruso.github.io/notes/r2/feature-regression.png">
+  <meta name="twitter:title" content="Métrica para regresión">
+  <meta name="twitter:description" content="Comentario sobre métrica para regresión tipo cociente">
 
   
   <script type="application/ld+json">
@@ -126,12 +126,12 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Notas",
-    "name": "Métricas de regresión",
-    "headline": "Métricas de regresión",
+    "name": "Métrica para regresión",
+    "headline": "Métrica para regresión",
     
-    "abstract": "Comentario sobre la relación entre métricas de regresión tipo cociente",
+    "abstract": "Comentario sobre métrica para regresión tipo cociente",
     "inLanguage": "es",
-    "url" : "http:\/\/localhost:1313\/notes\/r2\/",
+    "url" : "https:\/\/marianocaruso.github.io\/notes\/r2\/",
     "author" : {
       "@type": "Person",
       "name": "Mariano Caruso"
@@ -145,7 +145,7 @@
     "keywords": ["regression","metrics"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "650"
+    "wordCount": "945"
   }
   </script>
     
@@ -156,19 +156,19 @@
    "itemListElement": [
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/",
+       "item": "https://marianocaruso.github.io/",
        "name": "Mariano Caruso",
        "position": 1
      },
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/notes/",
+       "item": "https://marianocaruso.github.io/notes/",
        "name": "Notas",
        "position": 2
      },
      {
        "@type": "ListItem",
-       "name": "Métricas De Regresión",
+       "name": "Métrica Para Regresión",
        "position": 3
      }
    ]
@@ -346,6 +346,11 @@
 
   
   
+  
+  
+  
+  
+
 
   
   
@@ -768,7 +773,7 @@
     <header class="max-w-prose">
       
       <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Métricas de regresión
+        Métrica para regresión
       </h1>
       
       
@@ -836,21 +841,59 @@
     </header>
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Tabla de contenido
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#interpretando-los-valores-de--r2-">interpretando los valores de </a></li>
+    <li><a href="#r2-puede-ser-negativo"> puede ser negativo</a></li>
+    <li><a href="#conclusión">conclusión</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
       <div class="min-h-0 min-w-0 max-w-prose grow">
         
 
-<h1 id="comentario-sobre-r2-y-cociente-de-varianzas" class="relative group">comentario sobre $R^2$ y cociente de varianzas <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#comentario-sobre-r2-y-cociente-de-varianzas" aria-label="Ancla">#</a></span></h1><p>Dado un modelo que predice $\{y_i\}_{i\in I_N}$, con media aritmética $\bar{y}$, mediante $\{\hat{y_i}\}_{i\in I_N}$, donde $I_N:=\{1,\cdots, N\}\subset \mathbb{N}$</p>
-<blockquote>
-$$ R^2:=1-\dfrac{\sum_{i\in I_N}(y_i-\hat{y}_i)^2}{\sum_{i\in I_N}(y_i-\bar{y})^2} $$</blockquote>
-<p>el numerador de la fracción es proporcional al error cuadrático medio sobre los elementos de $I$ y el denominador es proporcional a la variación de la muestra $\{y_i\}_{i\in I_N}$.</p>
-<p>Se espera que un buen modelo sea tal que $R^2\in [0,1]$, pero la estructura de $R^2$ es tal que $1-(A/B)^2$. Dado que $(A/B)^2\geq 0$, el caso en que $(A/B)^2=0$, con $B$ finito, implica que $A=0$, caso <strong>perfecto</strong>.</p>
-<p>Separemos el caso restante $(A/B)^2>0$, en dos:</p>
+<h1 id="comentario-sobre-r2-y-cociente-de-varianzas" class="relative group">comentario sobre $R^2$ y cociente de varianzas <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#comentario-sobre-r2-y-cociente-de-varianzas" aria-label="Ancla">#</a></span></h1><p>En el análisis de datos y la modelización predictiva, el coeficiente de determinación $R^2$ es una de las métricas más populares para evaluar qué tan bien un modelo se ajusta a los datos. Pero, ¿qué significa realmente este valor y cómo debemos interpretarlo? En esta entrada, desglosaremos su definición, su cálculo y las implicaciones que tiene en contextos como la regresión lineal y más allá.</p>
+<p>Supongamos unos datos $\{y_i\}_{i\in I_N}$, con media aritmética $\bar{y}$ y un modelo que realiza predicciones para cada dato $\{\hat{y_i}\}_{i\in I_N}$, donde $I_N:=\{1,\cdots, N\}\subset \mathbb{N}$. El coeficiente de determinación \( R^2 \) se define como:</p>
+<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    
+  </span>
+  <span class="dark:text-neutral-300">$$ R^2:=1-\dfrac{\sum_{i\in I_N}(y_i-\hat{y}_i)^2}{\sum_{i\in I_N}(y_i-\bar{y})^2} $$</span>
+</div>
+
+<p>el numerador de la fracción es es la suma de los cuadrados de los residuos y es proporcional al error cuadrático medio sobre los elementos de $I$ y el denominador es proporcional a la variación de la muestra $\{y_i\}_{i\in I_N}$, que mide su variabilidad respecto a la media $\bar{y}$.</p>
+<p>En términos simples, $R^2$ nos dice qué proporción de la variabilidad de los datos es explicada por el modelo.</p>
+<h2 id="interpretando-los-valores-de--r2-" class="relative group">interpretando los valores de \( R^2 \) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#interpretando-los-valores-de--r2-" aria-label="Ancla">#</a></span></h2><p>El valor de \( R^2 \) puede variar bastante, y su interpretación depende del contexto:</p>
+<ul>
+<li><strong>\( R^2 = 1 \)</strong>: el modelo predice perfectamente los datos (\( y_i = \hat{y}_i \)), lo que implica que el error cuadrático medio es cero. ¡Un caso ideal pero raro en la práctica!</li>
+<li><strong>\( R^2 = 0 \)</strong>: el modelo no explica ninguna variabilidad; es tan bueno como usar la media \( \bar{y} \) como predictor.</li>
+<li><strong>\( R^2 < 0 \)</strong>: sorprendentemente, esto es posible. Significa que el modelo es peor que simplemente usar la media, ya que el error cuadrático medio supera la varianza muestral de los datos.</li>
+</ul>
+<p>Se espera que un buen modelo tenga $R^2$ entre $0$ y $1$, Un valor negativo indica que las predicciones son tan malas que sería mejor y más eficiente ignorar ese modelo y usar $\bar{y}$.</p>
+<hr>
+<p>Analicemos la estructura matemática de $R^2$: $1-(A/B)^2$. Por definición $(A/B)^2\geq 0$.</p>
+<p>a. el caso en que $(A/B)^2=0$, con $B$ finito, implica que $A=0$.</p>
+<p>b. Separemos el caso restante $(A/B)^2>0$, en dos:</p>
 <ol>
 <li>$(A/B)^2 \in (0,1]$, es lo deseable y si el modelo es bueno es lo esperable en la práctica.</li>
 <li>$(A/B)^2 \in (1,\infty)$, en ese caso el error cuadrático medio entre los datos $\{y_i\}_{i\in I_N}$ y las predicciones $\{\hat{y}_i\}_{i\in I_N}$ es mayor (osea peor) que la propia fluctuación de los datos $\{y_i\}_{i\in I_N}$ respecto de su media $\hat{y}$, i.e. su varianza muestral, osea sería mejor reemplazar el modelo y sus predicciones $\hat{y}_i$, por una lisa y llana $\bar{y}$, porque lo hace mejor.</li>
 </ol>
 <p>Los casos que &ldquo;hablan bien&rdquo; del modelo son tales que $R^2 \in [0,1]$, pero cabe la posibilidad de que $R^2<0$, en ese caso el modelo elegido provee predicciones peores que tomar la media aritmética de los datos.</p>
-<p>En general $R^2$ no es siempre positivo, es decir, $R^2$ puede ser negativo. Veamos qué implica que $R^2<0$: $\sum_{i\in I_N}(y_i-\hat{y}_i)^2>\sum_{i\in I_N}(y_i-\bar{y})^2$, es decir el error cuadrático medio es mayor a la varianza muestral.</p>
+<h2 id="r2-puede-ser-negativo" class="relative group">$R^2$ puede ser negativo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#r2-puede-ser-negativo" aria-label="Ancla">#</a></span></h2><p>En general $R^2$ no es siempre positivo.  Veamos qué implica que $R^2<0$: $\sum_{i\in I_N}(y_i-\hat{y}_i)^2>\sum_{i\in I_N}(y_i-\bar{y})^2$, es decir el error cuadrático medio es mayor a la varianza muestral.</p>
 <p>Independientemente de la definición de $R^2$, veamos la relación entre las sumas de $(y_i-\bar{y})^2$, $(\hat{y}_i-\bar{y})^2$ y $(y_i-\hat{y}_i)^2$.</p>
 <hr>
 <p>Usamos el hecho de que podemos escribir cada diferencia $y_i - \bar{y}$ como la suma de dos términos:</p>
@@ -862,28 +905,32 @@ $$
 $$<p>Utilizando la identidad \((a+b)^2 = a^2 + b^2 + 2ab\), obtenemos:</p>
 $$
 (y_i - \bar{y})^2 = (y_i - \hat{y}_i)^2 + (\hat{y}_i - \bar{y})^2 + 2\,(y_i - \hat{y}_i)(\hat{y}_i - \bar{y}).
-$$<p>Sumamos la igualdad para \(i \in I\):
-$\sum_{i\in I_N}(y_i - \bar{y})^2 = \sum_{i\in I_N} (y_i - \hat{y}_i)^2 + \sum_{i\in I_N} (\hat{y}_i - \bar{y})^2 + 2 \sum_{i\in I_N} (y_i - \hat{y}_i)(\hat{y}_i - \bar{y})$. Denotemos por $\lambda=2\sum_{i\in I_N} (y_i - \hat{y}_i)(\hat{y}_i - \bar{y})$.</p>
-<p>En los modelos de regresión lineal, suele cumplirse cierta ortogonalidad entre los residuos $y_i - \hat{y}_i$ y las predicciones centradas $(\hat{y}_i - \bar{y})$:  $\sum_{i\in I_N} (y_i - \hat{y}_i)(\hat{y}_i - \bar{y}) = 0$, en particular:</p>
+$$$$
+\sum_{i\in I_N}(y_i - \bar{y})^2 = \sum_{i\in I_N} [(y_i - \hat{y}_i)^2 +  (\hat{y}_i - \bar{y})^2 + 2 (y_i - \hat{y}_i)(\hat{y}_i - \bar{y})].$$<p>Denotemos por $\lambda=2\sum_{i\in I_N} (y_i - \hat{y}_i)(\hat{y}_i - \bar{y})$.</p>
+<p>En los modelos de regresión lineal, suele cumplirse cierta ortogonalidad entre los residuos $y_i - \hat{y}_i$ y las predicciones centradas en $\bar{y}$ $(\hat{y}_i - \bar{y})$:</p>
+$$\sum_{i\in I_N} (y_i - \hat{y}_i)(\hat{y}_i - \bar{y}) = 0,$$<p>en particular:</p>
 <ul>
 <li>$\sum_{i\in I_N} (y_i - \hat{y}_i)\hat{y}_i = 0$, por la ortogonalidad de los residuos con las predicciones</li>
 <li>$\sum_{i\in I_N} y_i - \hat{y}_i = 0$ porque el modelo ajusta una intersección, de modo que los residuos tienen media cero.</li>
 </ul>
 $$
-\sum_{i\in I_N}(y_i - \bar{y})^2 = \sum_{i\in I_N} (y_i - \hat{y}_i)^2 + \sum_{i\in I_N} (\hat{y}_i - \bar{y})^2 + \lambda.$$<p>
-el signo de $\lambda$ no está definido, por lo que</p>
-$$
-\sum_{i\in I_N} (y_i - \bar{y})^2 - \sum_{i\in I_N} (y_i - \hat{y}_i)^2 = \sum_{i\in I_N} (\hat{y}_i - \bar{y})^2+\lambda 
-$$<p>De esta forma</p>
-$$
-R^2=\dfrac{\sum_{i\in I_N}(\hat{y}_i-\bar{y})^2+\lambda}{\sum_{i\in I_N}(y_i-\bar{y})^2}.
-$$<p>esto hace que si $\lambda<0$ y en valor absoluto mayor que $\sum_{i\in I}(\hat{y}_i-\bar{y})^2$ para que entonces $R^2<0$</p>
-<p>Si $\bar{\hat{y}}=\bar{y}$, osea: $\sum_{i\in I_N} (y_i-\hat{y}_i)=0$, entonce podemos considerar a $\sum_{i\in I_N}(y_i-\bar{y})^2$ como algo proporcional a la <strong>varianza muestral</strong> de las predicciones $\hat{y}$. En este caso podríamos deducir que $\lambda$ toma la forma reducida de $\lambda=2\sum_{i\in I_N} (y_i - \hat{y}_i)(\hat{y}_i - \bar{y})$ luego $\lambda=2\sum_{i\in I_N} (y_i - \hat{y}_i)\hat{y}_i - 2\sum_{i\in I_N} (y_i - \hat{y}_i)\bar{y}$, finalmente $\lambda=2\sum_{i\in I_N} (y_i - \hat{y}_i)\hat{y}_i$.</p>
-<p>Ahora bien $\bar{\hat{y}}=\bar{y}$, es válido para un modelo de regresión lineal y no es valido en general para otros casos. Con lo cual no es válido en general asociar $R^2$ con el cociente de la varianza de $\hat{y}$ y la varianza de $y$.</p>
-$$
-R^2=1-\frac{e(y,\hat{y})}{\mathtt{Var}(y)}
+\sum_{i\in I_N}(y_i - \bar{y})^2 = \sum_{i\in I_N} (y_i - \hat{y}_i)^2 + \sum_{i\in I_N} (\hat{y}_i - \bar{y})^2 + \lambda,
+$$$$
+R^2=\dfrac{\sum_{i\in I_N}(\hat{y}_i-\bar{y})^2+\lambda}{\sum_{i\in I_N}(y_i-\bar{y})^2},
 $$<p>
+el signo de $\lambda$ no está definido, si $\lambda<0$ y en valor absoluto mayor que $\sum_{i\in I}(\hat{y}_i-\bar{y})^2$ se tiene que $R^2<0$.</p>
+<p>Si $\bar{\hat{y}}=\bar{y}$, osea: $\sum_{i\in I_N} (y_i-\hat{y}_i)=0$, entonces podemos considerar a $\sum_{i\in I_N}(y_i-\bar{y})^2$ como algo proporcional a la <strong>varianza muestral</strong> de las predicciones $\hat{y}$. En este caso podríamos deducir que $\lambda$ toma la forma reducida de $\lambda=2\sum_{i\in I_N} (y_i - \hat{y}_i)(\hat{y}_i - \bar{y})$ luego $\lambda=2\sum_{i\in I_N} (y_i - \hat{y}_i)\hat{y}_i - 2\sum_{i\in I_N} (y_i - \hat{y}_i)\bar{y}$, finalmente $\lambda=2\sum_{i\in I_N} (y_i - \hat{y}_i)\hat{y}_i$.</p>
+<p>Ahora bien $\bar{\hat{y}}=\bar{y}$, es válido para un modelo de regresión lineal y no es valido en general para otros casos. Con lo cual no es válido en general asociar $R^2$ con el cociente de la varianza de $\hat{y}$ y la varianza de $y$.</p>
+<p>Conviene seguir usando la definición original y reescribirla de manera compacta como
+<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    
+  </span>
+  <span class="dark:text-neutral-300">$$ R^2=1-\frac{e(y,\hat{y})}{\mathtt{Var}(y)} $$</span>
+</div>
+
 donde $e(y,\hat{y})=N^{-1}\cdot\sum_{i\in I_N}(y_i-\hat{y}_i)^{2}$ y $\mathtt{Var}(y)=N^{-1}\cdot\sum_{i\in I_N}(y_i-\bar{y})^{2}$ y $\mathtt{Var}(y)$ una forma de definir la varianza muestral.</p>
+<h2 id="conclusión" class="relative group">conclusión <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusi%c3%b3n" aria-label="Ancla">#</a></span></h2><p>El coeficiente de determinación $R^2$ es una herramienta esencial para evaluar modelos predictivos, pero no es una varita mágica. Al entender su definición, su relación con las sumas de cuadrados y sus limitaciones, podemos usarlo de manera más informada. Ya sea en regresión lineal o en contextos más amplios, combinar $R^2$ con otras métricas y validaciones nos dará una visión más completa del rendimiento de nuestros modelos.</p>
 
       </div>
     </section>
@@ -1031,7 +1078,7 @@ donde $e(y,\hat{y})=N^{-1}\cdot\sum_{i\in I_N}(y_i-\hat{y}_i)^{2}$ y $\mathtt{Va
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://x.com/intent/tweet/?url=http://localhost:1313/notes/r2/&amp;text=M%c3%a9tricas%20de%20regresi%c3%b3n"
+          href="https://x.com/intent/tweet/?url=https://marianocaruso.github.io/notes/r2/&amp;text=M%c3%a9trica%20para%20regresi%c3%b3n"
           title=""
           aria-label=""
           target="_blank"
@@ -1044,7 +1091,7 @@ donde $e(y,\hat{y})=N^{-1}\cdot\sum_{i\in I_N}(y_i-\hat{y}_i)^{2}$ y $\mathtt{Va
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/notes/r2/&amp;title=M%c3%a9tricas%20de%20regresi%c3%b3n"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://marianocaruso.github.io/notes/r2/&amp;title=M%c3%a9trica%20para%20regresi%c3%b3n"
           title="Compartir en LinkedIn"
           aria-label="Compartir en LinkedIn"
           target="_blank"
@@ -1057,7 +1104,7 @@ donde $e(y,\hat{y})=N^{-1}\cdot\sum_{i\in I_N}(y_i-\hat{y}_i)^{2}$ y $\mathtt{Va
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://telegram.me/share/url?text=http://localhost:1313/notes/r2/&amp;url=M%c3%a9tricas%20de%20regresi%c3%b3n"
+          href="https://telegram.me/share/url?text=https://marianocaruso.github.io/notes/r2/&amp;url=M%c3%a9trica%20para%20regresi%c3%b3n"
           title="Compartir en Telegram"
           aria-label="Compartir en Telegram"
           target="_blank"
@@ -1070,7 +1117,7 @@ donde $e(y,\hat{y})=N^{-1}\cdot\sum_{i\in I_N}(y_i-\hat{y}_i)^{2}$ y $\mathtt{Va
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="mailto:?body=http://localhost:1313/notes/r2/&amp;subject=M%c3%a9tricas%20de%20regresi%c3%b3n"
+          href="mailto:?body=https://marianocaruso.github.io/notes/r2/&amp;subject=M%c3%a9trica%20para%20regresi%c3%b3n"
           title="Enviar vía email"
           aria-label="Enviar vía email"
           target="_blank"
@@ -1210,7 +1257,7 @@ donde $e(y,\hat{y})=N^{-1}\cdot\sum_{i\in I_N}(y_i-\hat{y}_i)^{2}$ y $\mathtt{Va
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="http://localhost:1313/"
+  data-url="https://marianocaruso.github.io/"
 >
   <div
     id="search-modal"

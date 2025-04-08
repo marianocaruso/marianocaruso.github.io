@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quantum on Mariano Caruso</title>
-    <link>http://localhost:1313/tags/quantum/</link>
+    <link>https://marianocaruso.github.io/tags/quantum/</link>
     <description>Recent content in Quantum on Mariano Caruso</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
     <lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/quantum/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://marianocaruso.github.io/tags/quantum/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Algoritmos de annealing</title>
-      <link>http://localhost:1313/notes/annealing/</link>
+      <link>https://marianocaruso.github.io/notes/annealing/</link>
       <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/annealing/</guid>
+      <guid>https://marianocaruso.github.io/notes/annealing/</guid>
       <description>Cuando la naturaleza inspira algoritmos de optimización</description>
     </item>
     <item>
       <title>Qubits particulares</title>
-      <link>http://localhost:1313/notes/particular-qubits/</link>
+      <link>https://marianocaruso.github.io/notes/particular-qubits/</link>
       <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/particular-qubits/</guid>
+      <guid>https://marianocaruso.github.io/notes/particular-qubits/</guid>
       <description>Representación de qubits en estados de  partículas</description>
     </item>
     <item>
       <title>Cómputo eficiente del producto interno</title>
-      <link>http://localhost:1313/notes/dot-product/</link>
+      <link>https://marianocaruso.github.io/notes/dot-product/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/dot-product/</guid>
+      <guid>https://marianocaruso.github.io/notes/dot-product/</guid>
       <description>Ventajas y desafíos en el cómputo del producto interno</description>
     </item>
     <item>
       <title>Teorema de no clonado</title>
-      <link>http://localhost:1313/notes/non-cloning/</link>
+      <link>https://marianocaruso.github.io/notes/non-cloning/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/non-cloning/</guid>
+      <guid>https://marianocaruso.github.io/notes/non-cloning/</guid>
       <description>Sobre la imposibilidad de cierto tipo plagio</description>
     </item>
   </channel>
