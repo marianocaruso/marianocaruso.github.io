@@ -7,7 +7,7 @@ summary: "Sobre el proceso de búsqueda de puntos críticos"
 # description: "nota 2" #creo que no sirve para nada
 draft: false # true="no se muestra en la web"
 showReadingTime: false
-tags: [quantum, optimization]
+tags: [gradient flux , optimization]
 math:  true  
 
 ---
