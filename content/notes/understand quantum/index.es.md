@@ -19,9 +19,9 @@ math:  true
 
 ¿Qué quiso decir Feynman con "nadie entiende la mecánica cuántica"? Esa frase es, sin duda, una de las más citadas atribuidas a Richard Feynman. A menudo se saca de contexto, lo que lleva a la idea errónea de que la mecánica cuántica es completamente incomprensible, incluso para los físicos. Sin embargo, si acudimos a la fuente, el libro **"El Carácter de la Ley Física"** (The Character of Physical Law), basado en sus conferencias Messenger de 1964 en la Universidad de Cornell, encontramos la frase en su contexto original, y su significado se vuelve mucho más matizado.
 
-La frase aparece en el **Capítulo 6, titulado "Probabilidad e Incertidumbre - la visión Cuántico-Mecánica de la Naturaleza"**. Feynman llega a este punto después de reflexionar sobre cómo, a medida que la ciencia avanza y explora fenómenos más allá de nuestra experiencia cotidiana, las leyes de la naturaleza que descubrimos a menudo parecen "irrazonables" e "intuitivamente muy lejanas de lo obvio".
+La frase aparece en el **Capítulo 6, titulado "Probabilidad e Incertidumbre - la visión Mecánico-Cuántica de la Naturaleza"**. Feynman llega a este punto después de reflexionar sobre cómo, a medida que la ciencia avanza y explora fenómenos más allá de nuestra experiencia cotidiana, las leyes de la naturaleza que descubrimos a menudo parecen "irrazonables" e "intuitivamente muy lejanas de lo obvio".
 
-Cita ejemplos como la teoría de la relatividad, donde la simultaneidad deja de ser absoluta, o el comportamiento de la luz y los electrones, que a veces se comportan como partículas y a veces como ondas. Esta dualidad onda-partícula es el foco central de la explicación en este capítulo, utilizando el famoso experimento de la doble rendija.
+Cita ejemplos como la teoría de la relatividad, donde la simultaneidad deja de ser absoluta, o el comportamiento de la luz y los electrones, que a veces se comportan como partículas y a veces como ondas. Esta aparente dualidad onda-partícula es el foco central de la explicación en este capítulo, utilizando el famoso experimento de la doble rendija.
 
 Feynman describe cómo, si lanzáramos balas a una placa con dos agujeros, esperaríamos que llegaran a un detector detrás de la placa en patrones predecibles, como la suma de las balas que pasan por cada agujero individualmente. Si hiciéramos el mismo experimento con ondas de agua, veríamos un patrón de interferencia complicado, donde las crestas y los valles se suman o se restan.
 
@@ -35,7 +35,7 @@ Los electrones llegan como *partículas* discretas. Sin embargo, si medimos la *
 
 Este es el meollo del misterio. Los electrones llegan como partículas (en "bultos"), pero la *probabilidad* de dónde aterrizan se rige por las mismas reglas matemáticas que rigen la intensidad de las ondas.
 
-Feynman profundiza en el paradoxa: si intentamos observar por qué agujero pasa el electrón, el patrón de interferencia desaparece, y los electrones se comportan como balas. La observación misma *cambia* el resultado. Esto lleva al Principio de Incertidumbre de Heisenberg, que él reformula en el contexto del experimento de la doble rendija:
+Feynman profundiza: si intentamos observar por qué agujero pasa el electrón, el patrón de interferencia desaparece, y los electrones se comportan como balas. La observación misma *cambia* el resultado. Esto lleva al principio de Heisenberg, que él reformula en el contexto del experimento de la doble rendija:
 
 > Es imposible diseñar cualquier aparato... para determinar a través de qué agujero pasa el electrón que al mismo tiempo no perturbe el electrón lo suficiente como para destruir el patrón de interferencia. (p. 143)
 
