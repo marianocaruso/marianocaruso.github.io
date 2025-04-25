@@ -120,7 +120,7 @@ Conviene seguir usando la definición original y reescribirla de manera compacta
 {{< alert "def" >}}
 $$ R^2=1-\frac{e(y,\hat{y})}{\mathtt{Var}(y)} $$
 {{< /alert>}}
-donde $e(y,\hat{y})=N^{-1}\cdot\sum_{i\in I_N}(y_i-\hat{y}_i)^{2}$ y $\mathtt{Var}(y)=N^{-1}\cdot\sum_{i\in I_N}(y_i-\bar{y})^{2}$ y $\mathtt{Var}(y)$ una forma de definir la varianza muestral.
+donde $e(y,\hat{y})=N^{-1}\cdot\sum_{i\in I_N}(y_i-\hat{y}_i)^{2}$ y $\mathtt{Var}(y)=N^{-1}\cdot\sum_{i\in I_N}(y_i-\bar{y})^{2}$, una forma de definir la varianza muestral.
 
 
 ## conclusión
