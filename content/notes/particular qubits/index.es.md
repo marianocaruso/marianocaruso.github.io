@@ -1,7 +1,7 @@
 ---
 
 title: "Qubits particulares" # va al índice de notas
-date: 2025-01-03
+date: 2025-01-06
 showDate: false
 summary: "Representación de qubits en estados de  partículas"
 # description: "nota 2" #creo que no sirve para nada

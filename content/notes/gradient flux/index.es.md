@@ -1,7 +1,7 @@
 ---
 
 title: "Flujos y gradientes" # va al índice de notas
-date: 2025-01-03
+date: 2025-01-04
 showDate: false
 summary: "Sobre el proceso de búsqueda de puntos críticos"
 # description: "nota 2" #creo que no sirve para nada

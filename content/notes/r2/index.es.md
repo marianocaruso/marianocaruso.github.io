@@ -1,7 +1,7 @@
 ---
 
 title: "Métrica para regresión" # va al índice de notas
-date: 2025-01-03
+date: 2025-01-05
 showDate: false
 summary: "Comentario sobre métrica para regresión tipo cociente"
 # description: "nota 2" #creo que no sirve para nada
