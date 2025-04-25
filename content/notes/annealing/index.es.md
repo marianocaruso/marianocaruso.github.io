@@ -35,7 +35,7 @@ El algoritmo de quantum annealing y el término "recocido cuántico" fue propues
 [^6]: Apolloni, Bruno; Carvalho, Maria C.; De Falco, Diego (1989). "Quantum stochastic optimization". Stoc. Proc. Appl. 33 (2): 233–244.
 [^7]: Kadowaki, T.; Nishimori, H. (1998). "Quantum annealing in the transverse Ising model". Phys. Rev. E. 58 (5): 5355.
 
-Esta presentación de **Nishimori** (uno de los autores del quantum annealing) en Google [link youtube](https://www.youtube.com/watch?v=OQ91L96YWCk) hace un recorrido por el algoritmo de annealing clásico y cuántico. 
+En esta presentación de **Nishimori** (uno de los autores del quantum annealing) en Google [link youtube](https://www.youtube.com/watch?v=OQ91L96YWCk) hace un recorrido por el algoritmo de annealing clásico y cuántico. 
 
 
 Notar que la propuesta del quantum annealing en 1998 fue realizada antes que hubieran máquinas cuánticas en las que implementarlo. La propuesta del algoritmo del quantum annealing no requiere hardware cuántico, sino que puede ser considerado hoy como un algortimo de inspiración cuántica. 
