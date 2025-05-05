@@ -20,11 +20,11 @@ math:  true
 
 -----
 
-# ¡Qué te la optimize Magoya!
+## ¡Qué te la optimize Magoya!
 
 ... dijo nunca nadie.
 
-## Con $M$ de Magoya
+## Con M de Magoya
 
 Los problemas de optimización pueden ser enunciados con cierta facilidad, pero su análisis y resolución suelen conducir a una gran cantidad de detalles formales y computacionales. Este artículo pretende comentar algunos puntos sobre la idea de concebir algún sistema físico, $M$, al que preparamos en algún estado inicial, y luego dejamos que recorra su vida en búsqueda del estado óptimo. 
 
