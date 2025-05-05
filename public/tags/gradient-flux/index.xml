@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gradient Flux on Mariano Caruso</title>
-    <link>http://localhost:1313/tags/gradient-flux/</link>
+    <link>https://marianocaruso.github.io/tags/gradient-flux/</link>
     <description>Recent content in Gradient Flux on Mariano Caruso</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
     <lastBuildDate>Sat, 04 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/gradient-flux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://marianocaruso.github.io/tags/gradient-flux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flujos y gradientes</title>
-      <link>http://localhost:1313/notes/gradient-flux/</link>
+      <link>https://marianocaruso.github.io/notes/gradient-flux/</link>
       <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/gradient-flux/</guid>
+      <guid>https://marianocaruso.github.io/notes/gradient-flux/</guid>
       <description>Sobre el proceso de búsqueda de puntos críticos</description>
     </item>
   </channel>

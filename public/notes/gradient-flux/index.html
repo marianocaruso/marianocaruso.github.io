@@ -12,7 +12,7 @@
   class="scroll-smooth"
   data-default-appearance="dark"
   data-auto-appearance="true"
-><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+><head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FF5733" />
@@ -84,7 +84,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:1313/notes/gradient-flux/" />
+  <link rel="canonical" href="https://marianocaruso.github.io/notes/gradient-flux/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -101,7 +101,7 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/notes/gradient-flux/">
+  <meta property="og:url" content="https://marianocaruso.github.io/notes/gradient-flux/">
   <meta property="og:site_name" content="Mariano Caruso">
   <meta property="og:title" content="Flujos y gradientes">
   <meta property="og:description" content="Sobre el proceso de búsqueda de puntos críticos">
@@ -112,11 +112,11 @@
     <meta property="article:modified_time" content="2025-01-04T00:00:00+00:00">
     <meta property="article:tag" content="Gradient Flux">
     <meta property="article:tag" content="Optimization">
-    <meta property="og:image" content="http://localhost:1313/notes/gradient-flux/feature-gradient%20flux.png">
+    <meta property="og:image" content="https://marianocaruso.github.io/notes/gradient-flux/feature-gradient%20flux.png">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/notes/gradient-flux/feature-gradient%20flux.png">
+  <meta name="twitter:image" content="https://marianocaruso.github.io/notes/gradient-flux/feature-gradient%20flux.png">
   <meta name="twitter:title" content="Flujos y gradientes">
   <meta name="twitter:description" content="Sobre el proceso de búsqueda de puntos críticos">
 
@@ -131,7 +131,7 @@
     
     "abstract": "Sobre el proceso de búsqueda de puntos críticos",
     "inLanguage": "es",
-    "url" : "http:\/\/localhost:1313\/notes\/gradient-flux\/",
+    "url" : "https:\/\/marianocaruso.github.io\/notes\/gradient-flux\/",
     "author" : {
       "@type": "Person",
       "name": "Mariano Caruso"
@@ -145,7 +145,7 @@
     "keywords": ["gradient flux","optimization"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "325"
+    "wordCount": "1898"
   }
   </script>
     
@@ -156,13 +156,13 @@
    "itemListElement": [
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/",
+       "item": "https://marianocaruso.github.io/",
        "name": "Mariano Caruso",
        "position": 1
      },
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/notes/",
+       "item": "https://marianocaruso.github.io/notes/",
        "name": "Notas",
        "position": 2
      },
@@ -346,6 +346,11 @@
 
   
   
+  
+  
+  
+  
+
 
   
   
@@ -847,11 +852,13 @@
   <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#introducción">Introducción</a></li>
-    <li><a href="#1-puntos-estacionarios-y-puntos-críticos">1. Puntos estacionarios y puntos críticos</a></li>
-    <li><a href="#2-convergencia-a-largo-plazo">2. Convergencia a largo plazo</a></li>
-    <li><a href="#3-múltiples-extremos-y-ausencia-de-bifurcaciones-innatas">3. Múltiples extremos y ausencia de bifurcaciones innatas</a></li>
-    <li><a href="#4-referencias">4. Referencias</a></li>
+    <li><a href="#con-m-de-magoya">Con  de Magoya</a></li>
+    <li><a href="#afinidad-local">Afinidad local</a></li>
+    <li><a href="#del-descenso-al-flujo">Del descenso al flujo</a></li>
+    <li><a href="#propiedades-de-los-flujos-de-gradiente">Propiedades de los flujos de gradiente</a></li>
+    <li><a href="#aplicaciones-a-la-optimización">Aplicaciones a la optimización</a></li>
+    <li><a href="#funciones-convexas">Funciones convexas</a></li>
+    <li><a href="#referencias">Referencias</a></li>
   </ul>
 </nav>
   </div>
@@ -863,17 +870,96 @@
       <div class="min-h-0 min-w-0 max-w-prose grow">
         
 
-<h2 id="introducción" class="relative group">Introducción <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#introducci%c3%b3n" aria-label="Ancla">#</a></span></h2><p>En este artículo analizamos la dinámica del flujo de gradiente definido por:</p>
+<!--
+
+ -->
+<hr>
+<h1 id="qué-te-la-optimize-magoya" class="relative group">¡Qué te la optimize Magoya! <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#qu%c3%a9-te-la-optimize-magoya" aria-label="Ancla">#</a></span></h1><p>&hellip; dijo nunca nadie.</p>
+<h2 id="con-m-de-magoya" class="relative group">Con $M$ de Magoya <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#con-m-de-magoya" aria-label="Ancla">#</a></span></h2><p>Los problemas de optimización pueden ser enunciados con cierta facilidad, pero su análisis y resolución suelen conducir a una gran cantidad de detalles formales y computacionales. Este artículo pretende comentar algunos puntos sobre la idea de concebir algún sistema físico, $M$, al que preparamos en algún estado inicial, y luego dejamos que recorra su vida en búsqueda del estado óptimo.</p>
+<p>Exteriorizamos la responsabilidad de resolver un problema de optimización a algún sistema físico <em>bien educado</em>: si pudiéramos construir sistemas físicos tales que en su evolución temporal resuelvan un problema de optimización, ¿qué forma tendrían ?</p>
+<h2 id="afinidad-local" class="relative group">Afinidad local <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#afinidad-local" aria-label="Ancla">#</a></span></h2><p>El principio intuitivo detrás del descenso de gradiente es la búsqueda de un descenso <em>local</em>. Por lo tanto, necesitamos caracterizar el comportamiento local de la función que pretendemos optimizar. Para esto sirven los gradientes.</p>
 $$
- x'(t) = -\nabla f(x(t)),
-$$<p>donde $x \in \mathbb{R}^n$ y $f:\mathbb{R}^n\to\mathbb{R}$ es una función de clase $C^1$. Examinaremos la relación entre las soluciones estacionarias de este sistema y los puntos críticos de $f$, así como su comportamiento a largo plazo y el impacto de la existencia de múltiples extremos en la dinámica.</p>
-<h2 id="1-puntos-estacionarios-y-puntos-críticos" class="relative group">1. Puntos estacionarios y puntos críticos <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-puntos-estacionarios-y-puntos-cr%c3%adticos" aria-label="Ancla">#</a></span></h2><p>Un punto $x^*$ es estacionario si la derivada temporal se anula: $x'(t)=0$. De la ecuación de flujo de gradiente se deduce que $\nabla f(x^*)=0$. Por tanto, <strong>los puntos estacionarios coinciden exactamente con los puntos críticos</strong> de la función $f$.</p>
-<h2 id="2-convergencia-a-largo-plazo" class="relative group">2. Convergencia a largo plazo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-convergencia-a-largo-plazo" aria-label="Ancla">#</a></span></h2><p>La energía $f(x(t))$ decae a lo largo de las trayectorias según:</p>
+f(x+y) = f(x) + y\cdot \nabla f(x) + O(\| y\|),
+$$<p>
+para cualquier norma $\| \cdot \|$ en $\mathbb{R}^N$, donde $\nabla f(x) \in \mathbb{R}^N$ es el gradiente de $f$ en $x$, compuesto por las derivadas parciales de $f$. Por lo tanto, alrededor de $x$, $f$ es aproximadamente afín.</p>
+<p>Dado que tenemos una aproximación afín local alrededor de $x$, podemos buscar la dirección de descenso más pronunciado, es decir, el vector de norma unitaria $u \in \mathbb{R}^d$ tal que $u \cdot \nabla f(x)$ se minimiza. Esta dirección de descenso más pronunciado depende de la elección de la norma (suponiendo que el gradiente no sea cero en $x$).</p>
 $$
-\frac{d}{dt}f(x(t)) = \nabla f(x(t))\cdot x'(t) = -\|\nabla f(x(t))\|^2 \le 0.
-$$<p>Bajo condiciones estándar para $f$, analiticidad y compacidad de los subniveles, la desigualdad de Łojasiewicz garantiza que $x(t)$ converge a un punto límite $x^*$ cuando $t$ tiende a $\infty$. Sin embargo, este punto límite puede ser un mínimo local, un máximo local o un punto de silla, dependiendo de la topología de $f$ y de la condición inicial.</p>
-<h2 id="3-múltiples-extremos-y-ausencia-de-bifurcaciones-innatas" class="relative group">3. Múltiples extremos y ausencia de bifurcaciones innatas <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-m%c3%baltiples-extremos-y-ausencia-de-bifurcaciones-innatas" aria-label="Ancla">#</a></span></h2><p>Si $f$ presenta varios mínimos locales, cada mínimo actúa como atractor asintótico con su propia cuenca de atracción. Las condiciones iniciales determinan en cuál atractor cae la trayectoria. En ausencia de parámetros externos que varíen en el sistema, <strong>no se produce una bifurcación dinámica</strong> interna: el sistema no cambia cualitativamente salvo al variar la función $f$ misma.</p>
-<h2 id="4-referencias" class="relative group">4. Referencias <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-referencias" aria-label="Ancla">#</a></span></h2><ol>
+u = \ – \frac{\nabla f(x)}{ \| \nabla f(x) \|_2},
+$$<p>
+es decir, el descenso más pronunciado es a lo largo del gradiente negativo (ver una ilustración a continuación). En esta entrada del blog me centraré solo en esta dirección de descenso más pronunciado.</p>
+$$
+u \in\  – \arg\max_{ v \in \{-e_1,\, e_1,\, -e_2,\, e_2,\dots,\, -e_N,\, e_N \}} v^\top \nabla f(x),
+$$<p>donde $e_i$ es el $i$-ésimo vector canónico de la base de $\mathbb{R}^N$. Aquí, el descenso más pronunciado es a lo largo de un eje coordenado (a lo largo del lado positivo o negativo), y esto lleva a varias formas de descenso coordinado.</p>
+<h2 id="del-descenso-al-flujo" class="relative group">Del descenso al flujo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#del-descenso-al-flujo" aria-label="Ancla">#</a></span></h2>$$
+x_{n+1} = x_{n} \, – \gamma \nabla f(x_{n})
+$$<p>
+$n$ etiqueta cada iteración y $\gamma > 0$ es un tamaño del paso, escencialmente mide la intensidad del cambio en cada iteración.</p>
+<p>En esta entrada, para simplificar su análisis y preparar el escenario para futuras entradas, presentaré el flujo de gradiente, que es esencialmente el límite del descenso de gradiente cuando el tamaño de paso $\gamma$ tiende a cero.</p>
+$$
+\frac{1}{\gamma} \big[ X(t + \gamma) \, – X(t) \big] = \, – \nabla f(X(t)).
+$$$$
+\dot{X}(t) = \ – \nabla f (X(t)).
+$$<p>Estudiar el flujo de gradiente en lugar de las recurrencias del descenso de gradiente tiene pros y contras.</p>
+<ul>
+<li><em>Análisis simplificados</em>: El flujo de gradiente no tiene tamaño de paso, por lo que todos los problemas tradicionales molestos relacionados con la elección del tamaño de paso, con búsqueda de línea, constante, decreciente o con un esquema extraño, son innecesarios.</li>
+<li><em>Del flujo (continuo) a algoritmos (discretos) reales</em>: Un flujo no puede ejecutarse en una computadora, ya que es un objeto de tiempo continuo. La discretización tradicional es el método de Euler, que reemplaza exactamente el flujo por una interpolación afín a trozos de las iteraciones de descenso de gradiente, donde, como se mostró anteriormente, vemos $x_n$ como $X(n\gamma)$, siendo $\gamma$ el incremento de tiempo entre dos muestras. Cuatro observaciones interesantes:
+<ol>
+<li><em>No hay transferencia directa de pruebas</em>: Aunque la discretización de Euler siempre proporciona un algoritmo, las pruebas de convergencia genéricas no permiten transferir inmediatamente las pruebas de tiempo continuo a resultados de convergencia para el análisis discreto. Una dificultad clave es establecer el tamaño de paso $\gamma$. Sin embargo, el análisis a menudo puede ser imitado, es decir, se pueden utilizar funciones de Lyapunov similares.</li>
+<li><em>Algoritmos proximales</em>: Ante funciones de gradiente no continuas, la versión <em>hacia adelante</em> de la discretización de Euler $x_{n+1} = x_{n} – \gamma \nabla f(x_{n})$ puede ser reemplazada por la versión <em>hacia atrás</em> $x_{n+1} = x_{n} \, –  \gamma \nabla f(x_{n+1}),$  que solo es implícita, ya que puede resolverse minimizando $f(x) + \frac{1}{2\gamma}\|x-x_{n}\|_2^2$, lo que conduce al algoritmo del punto proximal. Los esquemas forward-backward también pueden recuperarse cuando $f$ es la suma de un término suave y otro no suave.</li>
+<li><em>Descenso de gradiente estocástico</em>: Hay dos maneras de tratar el descenso de gradiente estocástico, lo que lleva a dos límites continuos muy diferentes. Añadir ruido $\varepsilon_n$ independiente e idénticamente distribuido (para simplificar) de media cero al gradiente conduce a la recurrencia $x_{n+1} = x_{n} – \gamma \big[ \nabla f(x_{n}) + \varepsilon_n\big]$, donde el ruido se multiplica por el tamaño de paso $\gamma$. Tomar el límite cuando $\gamma$ tiende a cero conduce a la ecuación determinista del flujo de gradiente. La razón principal y &ldquo;a grandes rasgos&rdquo; es que la contribución del ruido se desvanece porque se multiplica por el tamaño de paso.</li>
+<li><em>Convergencia a una difusión de Langevin</em>: Cuando en su lugar se añade ruido con magnitud proporcional a la raíz cuadrada $\sqrt{2 \gamma}$ del tamaño de paso (que es asintóticamente mayor que $\gamma$), cuando $\gamma$ tiende a cero, y si la covarianza del ruido es la identidad, convergemos a un proceso de difusión que es la solución de una ecuación diferencial estocástica: $dX(t) = \ – \nabla f(X(t)) + \sqrt{2} dB(t),$
+donde $B$ es un movimiento browniano estándar. Además, cuando $t$ tiende a infinito, $X(t)$ tiende en distribución a una variable aleatoria con densidad proporcional a $\exp( – f(x) )$.</li>
+</ol>
+</li>
+</ul>
+<h2 id="propiedades-de-los-flujos-de-gradiente" class="relative group">Propiedades de los flujos de gradiente <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#propiedades-de-los-flujos-de-gradiente" aria-label="Ancla">#</a></span></h2><p>El flujo de gradiente $\dot{X}(t) = \ – \nabla f (X(t)) $ está bien definido para una amplia variedad de condiciones sobre la función $f$. Las más clásicas son la continuidad de Lipschitz del gradiente o la semiconvexidad.</p>
+<p>La propiedad más obvia es que la función disminuye a lo largo del flujo; en otras palabras, $f(X(t))$ es decreciente, lo cual es una consecuencia simple de</p>
+$$
+\frac{d}{dt} f(X(t)) =  \frac{dX(t)}{dt}\cdot \nabla f(X(t)) =\  – \| \nabla f (X(t) )\|_2^2 \leqslant 0.
+$$<p>Si $f$ está acotada inferiormente, entonces $f(X(t))$ siempre convergerá, pues se trata como una función no creciente que está acotada. Sin embargo, en general, $X(t)$ puede no converger siempre sin supuestos adicionales, por ejemplo, puede oscilar indefinidamente. Esto es, sin embargo, raro y existen diversas condiciones suficientes para la convergencia de los flujos de gradiente, que se remontan a Lojasiewicz y se basan en las desigualdades homónimas, que establecen que para $y$ y $x$ lo suficientemente cerca,</p>
+$$
+|f(x) – f(y)|^{1-\theta} \leqslant C \| \nabla f(x)\|
+$$<p>para algún $C > 0$ y $\theta \in (0,1)$. Estas se cumplen para &ldquo;funciones subanalíticas&rdquo;, que incluyen la mayoría de las funciones que uno puede imaginar.</p>
+<p>Una vez que $X(t)$ converge a algún $"X(\infty)"$, suponiendo que $\nabla f$ es continuo, debemos tener $"\nabla f(X(\infty))=0"$, es decir, $X(\infty)$ es un punto estacionario de $f$. Entre todos los puntos estacionarios (que pueden ser mínimos locales, máximos locales o puntos de silla), aquel al que converge $X(t)$ depende de $X(0)$. Típicamente, solo los mínimos locales son estables, es decir, las cuencas de atracción de otros puntos estacionarios tienen típicamente medida de Lebesgue cero.</p>
+<h2 id="aplicaciones-a-la-optimización" class="relative group">Aplicaciones a la optimización <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#aplicaciones-a-la-optimizaci%c3%b3n" aria-label="Ancla">#</a></span></h2><p>Hay, al menos, dos preguntas clave en optimización relacionadas con los flujos de gradiente:</p>
+<ul>
+<li>¿Cuándo podemos tener garantías globales de convergencia? Es decir, ¿podemos asegurarnos de elegir un punto de inicialización lo suficientemente bueno como para obtener el óptimo global <em>sin saber dónde está el óptimo global</em>? Una dificultad clave es que el volumen de la cuenca de atracción del óptimo global puede ser arbitrariamente pequeño, incluso para funciones infinitamente diferenciables (imagine una función igual a cero en todas partes excepto en una pequeña bola donde es negativa).</li>
+<li>¿Qué tan rápido podemos llegar allí? &ldquo;Allí&rdquo; puede ser un punto estacionario o un óptimo global. Esta es una pregunta importante, ya que la mera convergencia en el límite puede ser arbitrariamente lenta.</li>
+</ul>
+<p>Una clase importante de funciones son las funciones convexas, donde todo funciona muy bien. Las estudiaremos a continuación. Otras funciones se estudiarán en futuras entradas.</p>
+<h2 id="funciones-convexas" class="relative group">Funciones convexas <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#funciones-convexas" aria-label="Ancla">#</a></span></h2><p>Ahora asumimos que la función $f$ es convexa y diferenciable. En el aprendizaje automático, esto corresponde a funciones objetivo encontradas para el aprendizaje supervisado que se basan en la minimización del riesgo empírico con una función de predicción parametrizada linealmente, como la regresión logística.</p>
+<p>Existen varias definiciones de convexidad, que se basan en propiedades globales la función está siempre &ldquo;por debajo de sus cuerdas&rdquo;, o está siempre &ldquo;por encima de sus tangentes&rdquo; o propiedades locales (el Hessiano es siempre positivo semidefinido). La que necesitamos aquí es la de estar por encima de sus tangentes, es decir, para cualquier $x, y \in \mathbb{R}^N$, $f(x) \geqslant f(y)  +  ( x \, – y)\cdot\nabla f(y)$.</p>
+<p>Aplicar esto a cualquier punto estacionario $y$ tal que $\nabla f(y)=0$ muestra que para todo $x$, $f(x) \geqslant f(y)$, es decir, $y$ es un minimizador global de $f$. Este es el beneficio clásico de la convexidad: no hay necesidad de preocuparse por los mínimos locales.</p>
+<p>Otra propiedad que necesitaremos es la desigualdad de Lojasiewicz, que se cumple en particular cuando $f$ es $\mu$-fuertemente convexa, es decir, $f – \frac{\mu}{2} \| \cdot \|_2^2$ es convexa:</p>
+$$
+f(x) \ – f(x_\ast) \leqslant \frac{1}{2 \mu} \| \nabla f (x)\|^2,
+$$<p>
+para cualquier minimizador $x_\ast$ de $f$ y cualquier $x$. Esta propiedad permite pasar de una cota sobre la norma del gradiente a una cota sobre los valores de la función. Entonces obtenemos la tasa de convergencia:</p>
+$$
+\begin{aligned}
+\frac{d}{dt} \big[ f(X(t))\ – f(x_\ast) \big] &=  {X}(t)\cdot \nabla f(X(t)) \\
+&=  
+\ – \| \nabla f (X(t) )\|_2^2 \\
+\frac{d}{dt} \big[ f(X(t))\ – f(x_\ast) \big] &\leqslant \ – 2\mu  \big[ f(X(t)) \ – f(x_\ast) \big]
+\end{aligned}
+$$$$
+f(X(t)) \ – f(x_\ast) \leqslant \exp( – 2\mu t ) \big[ f(X(0))\  – f(x_\ast) \big],
+$$<p>
+es decir, la convergencia es exponencial y el tiempo característico es proporcional a $1/\mu$.</p>
+<p>El flujo de gradiente proporciona la idea principal (convergencia exponencial); y aplicando el resultado anterior a $t = \gamma n$, parece que recuperamos la tasa tradicional proporcional a $\exp( – \gamma \mu n)$. Sin embargo, esto solo es cierto asintóticamente para $\gamma$ tendiendo a cero, y demostrar un resultado para el descenso de gradiente requiere pasos adicionales para lidiar con tener un tamaño de paso constante. Esto requiere típicamente $\gamma \leqslant 1/L$, donde $L$ es la constante de suavidad de $f$, y la prueba más simple utiliza la misma estructura.</p>
+$$
+\begin{aligned}
+\frac{d}{dt}\big[   \| X(t)\ – x_\ast \|^2 \big] &= –   2 ( X(t)  – x_\ast )\cdot \nabla f(X(t)) \\
+&\leqslant \ – 2 \big[ f(X(t)) \ – f(x_\ast) \big],
+\end{aligned}$$$$
+\begin{aligned}
+ f(X(t)) \ – f(x_\ast) &\leqslant \frac{1}{t} \int_0^t \big[ f(X(u)) \ – f(x_\ast) \big] du\\
+ & \leqslant \frac{1}{2t} \| X(0) \ – x_\ast \|^2 \ – \frac{1}{2t} \| X(t) \ – x_\ast \|^2.
+\end{aligned}
+$$<p>
+Recuperamos las tasas habituales de $O(1/n)$, con $t = \gamma n$, con la misma advertencia que antes (el tamaño de paso debe estar acotado).</p>
+<hr>
+<h2 id="referencias" class="relative group">Referencias <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#referencias" aria-label="Ancla">#</a></span></h2><ol>
 <li>Ambrosio, L., Gigli, N. &amp; Savaré, G. <em>Gradient Flows in Metric Spaces and in the Space of Probability Measures</em>. Birkhäuser, 2008.</li>
 <li>Absil, P.-A., Mahony, R. &amp; Andrews, B. “Convergence of the Iterates of Descent Methods for Analytic Cost Functions.” <em>SIAM Journal on Optimization</em> <strong>16</strong>(2), 531–547 (2005).</li>
 <li>Łojasiewicz, S. “Sur les trajectoires du gradient d’une fonction analytique.” <em>Séminaire G. Choquet</em>, École Polytechnique (1983).</li>
@@ -1025,7 +1111,7 @@ $$<p>Bajo condiciones estándar para $f$, analiticidad y compacidad de los subni
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://x.com/intent/tweet/?url=http://localhost:1313/notes/gradient-flux/&amp;text=Flujos%20y%20gradientes"
+          href="https://x.com/intent/tweet/?url=https://marianocaruso.github.io/notes/gradient-flux/&amp;text=Flujos%20y%20gradientes"
           title=""
           aria-label=""
           target="_blank"
@@ -1038,7 +1124,7 @@ $$<p>Bajo condiciones estándar para $f$, analiticidad y compacidad de los subni
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/notes/gradient-flux/&amp;title=Flujos%20y%20gradientes"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://marianocaruso.github.io/notes/gradient-flux/&amp;title=Flujos%20y%20gradientes"
           title="Compartir en LinkedIn"
           aria-label="Compartir en LinkedIn"
           target="_blank"
@@ -1051,7 +1137,7 @@ $$<p>Bajo condiciones estándar para $f$, analiticidad y compacidad de los subni
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://telegram.me/share/url?text=http://localhost:1313/notes/gradient-flux/&amp;url=Flujos%20y%20gradientes"
+          href="https://telegram.me/share/url?text=https://marianocaruso.github.io/notes/gradient-flux/&amp;url=Flujos%20y%20gradientes"
           title="Compartir en Telegram"
           aria-label="Compartir en Telegram"
           target="_blank"
@@ -1064,7 +1150,7 @@ $$<p>Bajo condiciones estándar para $f$, analiticidad y compacidad de los subni
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="mailto:?body=http://localhost:1313/notes/gradient-flux/&amp;subject=Flujos%20y%20gradientes"
+          href="mailto:?body=https://marianocaruso.github.io/notes/gradient-flux/&amp;subject=Flujos%20y%20gradientes"
           title="Enviar vía email"
           aria-label="Enviar vía email"
           target="_blank"
@@ -1204,7 +1290,7 @@ $$<p>Bajo condiciones estándar para $f$, analiticidad y compacidad de los subni
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="http://localhost:1313/"
+  data-url="https://marianocaruso.github.io/"
 >
   <div
     id="search-modal"

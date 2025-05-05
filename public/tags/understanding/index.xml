@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Understanding on Mariano Caruso</title>
-    <link>http://localhost:1313/tags/understanding/</link>
+    <link>https://marianocaruso.github.io/tags/understanding/</link>
     <description>Recent content in Understanding on Mariano Caruso</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
     <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/understanding/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://marianocaruso.github.io/tags/understanding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Decodificando a Feynman</title>
-      <link>http://localhost:1313/notes/understand-quantum/</link>
+      <link>https://marianocaruso.github.io/notes/understand-quantum/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/understand-quantum/</guid>
+      <guid>https://marianocaruso.github.io/notes/understand-quantum/</guid>
       <description>¿Nadie entiende la mecánica cuántica?</description>
     </item>
   </channel>
