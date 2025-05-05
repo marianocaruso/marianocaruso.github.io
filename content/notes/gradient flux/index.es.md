@@ -41,7 +41,7 @@ f(x+y) = f(x) + y\cdot \nabla f(x) + O(\| y\|),
 $$
 para cualquier norma $\| \cdot \|$ en $\mathbb{R}^N$, donde $\nabla f(x) \in \mathbb{R}^N$ es el gradiente de $f$ en $x$, compuesto por las derivadas parciales de $f$. Por lo tanto, alrededor de $x$, $f$ es aproximadamente afín. 
 
-Dado que tenemos una aproximación afín local alrededor de $x$, podemos buscar la dirección de descenso más pronunciado, es decir, el vector de norma unitaria $u \in \mathbb{R}^d$ tal que $u \cdot \nabla f(x)$ se minimiza. Esta dirección de descenso más pronunciado depende de la elección de la norma (suponiendo que el gradiente no sea cero en $x$).
+Dado que tenemos una aproximación afín local alrededor de $x$, podemos buscar la dirección de descenso más pronunciado, es decir, el vector de norma unitaria $u \in \mathbb{R}^N$ tal que $u \cdot \nabla f(x)$ se minimiza. Esta dirección de descenso más pronunciado depende de la elección de la norma (suponiendo que el gradiente no sea cero en $x$).
 
 Para la norma $\ell_2$, minimizar $u \cdot \nabla f(x)$ tal que $\|u\|_2 = 1$, conduce a 
 $$
@@ -67,7 +67,7 @@ $n$ etiqueta cada iteración y $\gamma > 0$ es un tamaño del paso, escencialmen
 
 En esta entrada, para simplificar su análisis y preparar el escenario para futuras entradas, presentaré el flujo de gradiente, que es esencialmente el límite del descenso de gradiente cuando el tamaño de paso $\gamma$ tiende a cero.
 
-Más precisamente, esto se obtiene considerando que nuestras iteraciones $x_n$ se muestrean en cada múltiplo de $\gamma$, a partir de una función $X: \mathbb{R}_+ \to \mathbb{R}^d$, como $x_n = X(n\gamma)$
+Más precisamente, esto se obtiene considerando que nuestras iteraciones $x_n$ se muestrean en cada múltiplo de $\gamma$, a partir de una función $X: \mathbb{R}_+ \to \mathbb{R}^N$, como $x_n = X(n\gamma)$
 Podemos entonces usar una interpolación afín a trozos para definir una función definida en todos los puntos. Tenemos entonces para $t = n\gamma$,
 $
 X(t + \gamma) = x_{n+1} =x_{n} \, – \gamma \nabla f(x_{n}) = X(t)\, – \gamma \nabla f(X(t))$. Dividiendo por $\gamma$, obtenemos
