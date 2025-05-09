@@ -3,7 +3,7 @@
 title: "Qubits particulares" # va al índice de notas
 date: 2025-01-06
 showDate: false
-summary: "Representación de qubits en estados de  partículas"
+summary: "Representación de qubits en estados de  partícula"
 # description: "nota 2" #creo que no sirve para nada
 draft: false # true="no se muestra en la web"
 showReadingTime: false
