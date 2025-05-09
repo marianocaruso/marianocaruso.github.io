@@ -2,74 +2,74 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mariano Caruso</title>
-    <link>https://marianocaruso.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Mariano Caruso</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
     <lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://marianocaruso.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Currículum Vitae</title>
-      <link>https://marianocaruso.github.io/cv/</link>
+      <link>http://localhost:1313/cv/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/cv/</guid>
+      <guid>http://localhost:1313/cv/</guid>
       <description></description>
     </item>
     <item>
       <title>Sobre mí</title>
-      <link>https://marianocaruso.github.io/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description></description>
     </item>
     <item>
       <title>Qubits particulares</title>
-      <link>https://marianocaruso.github.io/notes/particular-qubits/</link>
+      <link>http://localhost:1313/notes/particular-qubits/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/particular-qubits/</guid>
+      <guid>http://localhost:1313/notes/particular-qubits/</guid>
       <description>Representación de qubits en estados de  partículas</description>
     </item>
     <item>
       <title>Métrica para regresión</title>
-      <link>https://marianocaruso.github.io/notes/r2/</link>
+      <link>http://localhost:1313/notes/r2/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/r2/</guid>
+      <guid>http://localhost:1313/notes/r2/</guid>
       <description>Comentario sobre métrica para regresión tipo cociente</description>
     </item>
     <item>
       <title>Flujos y gradientes</title>
-      <link>https://marianocaruso.github.io/notes/gradient-flux/</link>
+      <link>http://localhost:1313/notes/gradient-flux/</link>
       <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/gradient-flux/</guid>
+      <guid>http://localhost:1313/notes/gradient-flux/</guid>
       <description>Sobre el proceso de búsqueda de puntos críticos</description>
     </item>
     <item>
       <title>Algoritmos de annealing</title>
-      <link>https://marianocaruso.github.io/notes/annealing/</link>
+      <link>http://localhost:1313/notes/annealing/</link>
       <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/annealing/</guid>
+      <guid>http://localhost:1313/notes/annealing/</guid>
       <description>Cuando la naturaleza inspira algoritmos de optimización</description>
     </item>
     <item>
       <title>Cómputo eficiente del producto interno</title>
-      <link>https://marianocaruso.github.io/notes/dot-product/</link>
+      <link>http://localhost:1313/notes/dot-product/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/dot-product/</guid>
+      <guid>http://localhost:1313/notes/dot-product/</guid>
       <description>Ventajas y desafíos en el cómputo del producto interno</description>
     </item>
     <item>
       <title>Decodificando a Feynman</title>
-      <link>https://marianocaruso.github.io/notes/understand-quantum/</link>
+      <link>http://localhost:1313/notes/understand-quantum/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/understand-quantum/</guid>
+      <guid>http://localhost:1313/notes/understand-quantum/</guid>
       <description>¿Nadie entiende la mecánica cuántica?</description>
     </item>
     <item>
       <title>Teorema de no clonado</title>
-      <link>https://marianocaruso.github.io/notes/non-cloning/</link>
+      <link>http://localhost:1313/notes/non-cloning/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/non-cloning/</guid>
+      <guid>http://localhost:1313/notes/non-cloning/</guid>
       <description>Sobre la imposibilidad de cierto tipo plagio</description>
     </item>
   </channel>

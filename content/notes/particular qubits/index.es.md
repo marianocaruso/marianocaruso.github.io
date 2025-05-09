@@ -23,7 +23,7 @@ La realización física de estos qubits tiene lugar utilizando propiedades como 
 
 Ahora bien si tratamos con objetos cuya descripción físico-matemática completa comprende una parte espacial que suelen ser de dimensión infinita 
 
-> ¿Es posible concebir estados tipo qubits en estos espacios de de Hilber de dimensión superior a 2?
+> ¿Es posible concebir estados tipo qubits en estos espacios de Hilbert de dimensión superior a 2?
 
 ----
 
