@@ -147,7 +147,7 @@
     "keywords": ["quantum","qubits","spin states","orbital space"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "601"
+    "wordCount": "599"
   }
   </script>
     
@@ -870,7 +870,7 @@
 La realización física de estos qubits tiene lugar utilizando propiedades como el spin de las partículas (generalmente fermiones), la polarización de los fotones,&hellip; para conseguir dos estados base.</p>
 <p>Ahora bien si tratamos con objetos cuya descripción físico-matemática completa comprende una parte espacial que suelen ser de dimensión infinita</p>
 <blockquote>
-<p>¿puede afectar esta descripción completa al intento de codificar estados tipo qubits de espacios de dimensión 2?</p>
+<p>¿Es posible concebir estados tipo qubits en estos espacios de de Hilber de dimensión superior a 2?</p>
 </blockquote>
 <hr>
 <p>En el tratamiento de qubits se parte del hecho de que el estado completo de la partícula se describe en un espacio de Hilbert total que, en muchos sistemas físicos, es el producto tensorial de dos espacios: uno asociado a la parte orbital (generalmente de dimensión infinita) y otro a la parte interna (por ejemplo la parte de spin), que suele ser de dimensión 2. Formalmente, se tiene</p>
@@ -880,7 +880,7 @@ La clave para trabajar exclusivamente con qubits (la parte de spin) reside en la
 donde \(I_{1}\) e \(I_{2}\) son los operadores identidad en \(\mathscr{H}_{1}\) y \(\mathscr{H}_{2}\) respectivamente. Esto es válido cuando no existen términos de acoplamiento entre la parte orbital y el spin, o cuando tales acoplamientos son despreciables o pueden tratarse perturbativamente.</p>
 \[|\phi(\pmb{x}), s\rangle = |\phi(\pmb{x})\rangle \otimes |s\rangle,\]<p>
 donde \(|\phi(\pmb{x})\rangle \in \mathscr{H}_{1}\) es la componente orbital en la posición \(\pmb{x}\)  y \(|s\rangle\) es un estado arbitrario en \(\mathscr{H}_{2} \sim \mathbb{C}^2\), la evolución temporal también se separa:</p>
-\[U(t) = U_{1}(t) \otimes U_{2}(t).\]<p>Si además \(|\phi(\pmb{x})\rangle\) es un autostado estacionario de \(H_{1}\), su evolución se reduce a una fase global, y la dinámica efectiva se concentra en la parte de spin:</p>
+\[U(t) = U_{1}(t) \otimes U_{2}(t).\]<p>Si además \(|\phi(\pmb{x})\rangle\) es un autostado estacionario de \(H_{1}\), su evolución temporal se puede factorizar y la dinámica efectiva se concentra en la parte de spin:</p>
 \[|s(t)\rangle = U_{2}(t)\, |s\rangle.\]<p>Esta aproximación se justifica en la medida en que, en los dispositivos de qubits (por ejemplo, en sistemas de spin qubits en semiconductores o iones atrapados), la interacción que podría acoplar las variables orbitales y de spin es muy pequeña en comparación con las interacciones que afectan directamente al spin. De modo que, al fijar la parte orbital en un estado estacionario, se “congela” su contribución dinámica, permitiendo que el comportamiento cuántico relevante se describa únicamente en el subespacio \(\mathscr{H}_{2}\).</p>
 <p>La separabilidad del Hamiltoniano y de los estados es, por tanto, el fundamento que permite “aislar” el qubit en una estructura bidimensional, lo que facilita la manipulación y el control en aplicaciones de computación cuántica.</p>
 \[H = H_{1} \otimes I_{2} + I_{1} \otimes H_{2},\]<p>

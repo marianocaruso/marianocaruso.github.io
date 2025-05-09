@@ -23,7 +23,7 @@ La realización física de estos qubits tiene lugar utilizando propiedades como 
 
 Ahora bien si tratamos con objetos cuya descripción físico-matemática completa comprende una parte espacial que suelen ser de dimensión infinita 
 
-> ¿puede afectar esta descripción completa al intento de codificar estados tipo qubits de espacios de dimensión 2?
+> ¿Es posible concebir estados tipo qubits en estos espacios de de Hilber de dimensión superior a 2?
 
 ----
 
@@ -43,7 +43,7 @@ donde \(|\phi(\pmb{x})\rangle \in \mathscr{H}_{1}\) es la componente orbital en 
 
 \[U(t) = U_{1}(t) \otimes U_{2}(t).\]
 
-Si además \(|\phi(\pmb{x})\rangle\) es un autostado estacionario de \(H_{1}\), su evolución se reduce a una fase global, y la dinámica efectiva se concentra en la parte de spin:
+Si además \(|\phi(\pmb{x})\rangle\) es un autostado estacionario de \(H_{1}\), su evolución temporal se puede factorizar y la dinámica efectiva se concentra en la parte de spin:
 
 \[|s(t)\rangle = U_{2}(t)\, |s\rangle.\]
 
