@@ -4,68 +4,68 @@
   
     
       <url>
-            <loc>http://localhost:1313/cv/</loc>
+            <loc>https://marianocaruso.github.io/cv/</loc>
             <lastmod>2025-01-15T00:00:00+00:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="http://localhost:1313/en/cv/"
+              href="https://marianocaruso.github.io/en/cv/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="http://localhost:1313/cv/"
+              href="https://marianocaruso.github.io/cv/"
               />
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/</loc>
+            <loc>https://marianocaruso.github.io/</loc>
             <lastmod>2025-01-15T00:00:00+00:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="http://localhost:1313/en/"
+              href="https://marianocaruso.github.io/en/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="http://localhost:1313/"
+              href="https://marianocaruso.github.io/"
               />
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/about/</loc>
+            <loc>https://marianocaruso.github.io/about/</loc>
             <lastmod>2025-01-15T00:00:00+00:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="http://localhost:1313/en/about/"
+              href="https://marianocaruso.github.io/en/about/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="http://localhost:1313/about/"
+              href="https://marianocaruso.github.io/about/"
               />
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/notes/</loc>
+            <loc>https://marianocaruso.github.io/notes/</loc>
             <lastmod>2025-01-06T00:00:00+00:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="http://localhost:1313/en/notes/"
+              href="https://marianocaruso.github.io/en/notes/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="http://localhost:1313/notes/"
+              href="https://marianocaruso.github.io/notes/"
               />
           </url>
     
@@ -78,7 +78,7 @@
   
     
       <url>
-            <loc>http://localhost:1313/notes/particular-qubits/</loc>
+            <loc>https://marianocaruso.github.io/notes/particular-qubits/</loc>
             <lastmod>2025-01-06T00:00:00+00:00</lastmod>
           </url>
     
@@ -89,7 +89,7 @@
   
     
       <url>
-            <loc>http://localhost:1313/notes/r2/</loc>
+            <loc>https://marianocaruso.github.io/notes/r2/</loc>
             <lastmod>2025-01-05T00:00:00+00:00</lastmod>
           </url>
     
@@ -100,7 +100,7 @@
   
     
       <url>
-            <loc>http://localhost:1313/notes/gradient-flux/</loc>
+            <loc>https://marianocaruso.github.io/notes/gradient-flux/</loc>
             <lastmod>2025-01-04T00:00:00+00:00</lastmod>
           </url>
     
@@ -111,14 +111,14 @@
   
     
       <url>
-            <loc>http://localhost:1313/notes/annealing/</loc>
+            <loc>https://marianocaruso.github.io/notes/annealing/</loc>
             <lastmod>2025-01-03T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/notes/dot-product/</loc>
+            <loc>https://marianocaruso.github.io/notes/dot-product/</loc>
             <lastmod>2025-01-02T00:00:00+00:00</lastmod>
           </url>
     
@@ -131,7 +131,7 @@
   
     
       <url>
-            <loc>http://localhost:1313/notes/understand-quantum/</loc>
+            <loc>https://marianocaruso.github.io/notes/understand-quantum/</loc>
             <lastmod>2025-01-01T00:00:00+00:00</lastmod>
           </url>
     
@@ -140,7 +140,7 @@
   
     
       <url>
-            <loc>http://localhost:1313/notes/non-cloning/</loc>
+            <loc>https://marianocaruso.github.io/notes/non-cloning/</loc>
             <lastmod>2025-01-01T00:00:00+00:00</lastmod>
           </url>
     
