@@ -14,7 +14,7 @@
       <link>https://marianocaruso.github.io/notes/particular-qubits/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://marianocaruso.github.io/notes/particular-qubits/</guid>
-      <description>Representación de qubits en estados de  partículas</description>
+      <description>Representación de qubits en estados de  partícula</description>
     </item>
     <item>
       <title>Métrica para regresión</title>
@@ -43,6 +43,13 @@
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://marianocaruso.github.io/notes/dot-product/</guid>
       <description>Ventajas y desafíos en el cómputo del producto interno</description>
+    </item>
+    <item>
+      <title>Eterno retorno</title>
+      <link>https://marianocaruso.github.io/notes/eternal-return/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/notes/eternal-return/</guid>
+      <description>¿Cuándo llegamos?</description>
     </item>
     <item>
       <title>Decodificando a Feynman</title>
