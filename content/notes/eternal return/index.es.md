@@ -75,7 +75,7 @@ Borges escribe sobre la idea de volver eternamente; Goya y Rubens pintan a un Cr
 
 <iframe 
   style="width: 100%; height: 300px; border-radius: 20px;" 
-  src="https://www.youtube.com/embed/93uoTfciHeY" 
+  src="https://www.youtube.com/embed/Lfa4kgiuQWE"
   frameborder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
   allowfullscreen>
