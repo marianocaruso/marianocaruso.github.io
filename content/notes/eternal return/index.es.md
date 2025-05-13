@@ -73,13 +73,14 @@ Borges escribe sobre la idea de volver eternamente; Goya y Rubens pintan a un Cr
 
 
 
-<iframe 
-  style="width: 100%; height: 300px; border-radius: 20px;" 
-  src="https://www.youtube.com/embed/Lfa4kgiuQWE"
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowfullscreen>
-</iframe>
+<div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
+  <iframe 
+    src="https://www.youtube.com/embed/Lfa4kgiuQWE"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 12px;"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
 
 [{{< spotify type="album" id="5iT3F2EhjVQVrO4PKhsP8c?" width="100%" height="160" >}}]:#
 [esto coloca un reproductor de muestras de spotify dado el id de la carpeta de spotify]:# 
