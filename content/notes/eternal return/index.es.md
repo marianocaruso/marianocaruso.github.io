@@ -39,7 +39,7 @@ donde $\sigma=(\sigma_1,\sigma_2,\sigma_3)$ es el arreglo de las matrices de Pau
 
 
 $$
-U(t)\;=\;\exp\Bigl(-i\omega t/\hbar \,\hat w\cdot\sigma\Bigr)\,.
+U(t)\;=\;\exp\Bigl[-i\omega t/\hbar \,(\hat w\cdot\sigma)\Bigr]\,.
 $$
 Como $(\hat w\cdot\sigma)^2=I$, luego $U(t)=\cos\bigl(\omega t/\hbar\bigr)I - i\,\sin\bigl(\omega t/\hbar\bigr)\,(\hat w\cdot\sigma).$
 De aquí se ve que \$U(t)\$ es un operador cíclico, de período $T=h/\omega$. Es decir, la evolución del qubit es un movimiento circular en la esfera de Bloch con vuelta al estado original cada \$T\$. Este hecho se alinea con la propiedad algebraica de que las rotaciones en \$SU(2)\$ (que generan los operadores cuánticos de un qubit) son isomorfas a las rotaciones tridimensionales en $SO(3)$.  En consecuencia, cualquier Hamiltoniano de dos niveles da lugar a dinámicas cíclicas en la esfera de Bloch, y esas rotaciones unitarias se pueden componer para simular evoluciones complejas.
