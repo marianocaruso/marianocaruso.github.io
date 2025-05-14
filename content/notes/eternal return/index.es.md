@@ -66,8 +66,8 @@ Borges escribe sobre la idea de volver eternamente; Goya y Rubens pintan a un Cr
 * F. Nietzsche (1882). *La gaya ciencia*. Alianza Editorial, Madrid, 1994, Aforismo 341.
 * F. Nietzsche (1883–1885). *Así habló Zaratustra*. Alianza Editorial, Madrid, 1997, Parte III.
 * A. Schopenhauer (1819). *El mundo como voluntad y representación*. Trotta, Madrid, 2006, Libro IV.
-* F. de Goya y Lucientes, (1820- 1823), *Saturno*, [Museo Nacional del Prado](https://www.museodelprado.es/coleccion/obra-de-arte/saturno/18110a75-b0e7-430c-bc73-2a4d55893bd6?searchMeta=saturno%20goya)
-* P. P. Rubens, (1636-1638), *Saturno devorando a un hijo*, [Museo Nacional del Prado](https://www.museodelprado.es/coleccion/obra-de-arte/saturno-devorando-a-un-hijo/d022fed3-6069-4786-b59f-4399a2d74e50?searchMeta=saturno%20rubens)
+* F. de Goya y Lucientes (1820- 1823), *Saturno*, [Museo Nacional del Prado](https://www.museodelprado.es/coleccion/obra-de-arte/saturno/18110a75-b0e7-430c-bc73-2a4d55893bd6?searchMeta=saturno%20goya)
+* P. P. Rubens (1636-1638), *Saturno devorando a un hijo*, [Museo Nacional del Prado](https://www.museodelprado.es/coleccion/obra-de-arte/saturno-devorando-a-un-hijo/d022fed3-6069-4786-b59f-4399a2d74e50?searchMeta=saturno%20rubens)
 * F. Bloch (1946). *Nuclear Induction*. *Physical Review* 70, 460–473.
 * M. A. Nielsen & I. L. Chuang (2000). *Quantum Computation and Quantum Information*. Cambridge Univ. Press.
 * M. Reck, A. Zeilinger, H. J. Bernstein & P. Bertani (1994). *Experimental realization of any discrete unitary operator*. *Phys. Rev. Lett.* 73, 58–61.
