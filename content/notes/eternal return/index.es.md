@@ -1,7 +1,7 @@
 ---
 
 title: "Eterno retorno" # va al índice de notas
-date: 2025-01-02
+date: 2025-05-01
 showDate: false
 summary: "¿Cuándo llegamos?"
 # description: "nota 2" #creo que no sirve para nada

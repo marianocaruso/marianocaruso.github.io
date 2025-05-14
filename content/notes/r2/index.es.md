@@ -3,7 +3,7 @@
 title: "Métrica para regresión" # va al índice de notas
 date: 2025-01-05
 showDate: false
-summary: "Comentario sobre métrica para regresión tipo cociente"
+summary: "Comentario sobre métricas tipo cociente"
 # description: "nota 2" #creo que no sirve para nada
 draft: false # true="no se muestra en la web"
 showReadingTime: false
