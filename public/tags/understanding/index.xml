@@ -11,9 +11,9 @@
     <atom:link href="https://marianocaruso.github.io/tags/understanding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Decodificando a Feynman</title>
-      <link>https://marianocaruso.github.io/notes/understand-quantum/</link>
+      <link>https://marianocaruso.github.io/notes/1.understand-quantum/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/understand-quantum/</guid>
+      <guid>https://marianocaruso.github.io/notes/1.understand-quantum/</guid>
       <description>¿Nadie entiende la mecánica cuántica?</description>
     </item>
   </channel>

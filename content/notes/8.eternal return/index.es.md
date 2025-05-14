@@ -62,8 +62,16 @@ Hay una aparente dicotomía entre la idea de progreso, tan valorada en la cienci
 
 Los avances en simulación de sistemas físicos y químicos, particularmente en el campo de la mecánica cuántica y la información cuántica, dependen intrínsecamente de la capacidad de utilizar y controlar las recurrencias inherentes a estos sistemas. La comprensión y el control de estas recurrencias son, por lo tanto, fundamentales para el futuro del avance científico y tecnológico, permitiendo el desarrollo de herramientas cada vez más poderosas para la simulación y el cómputo. 
 
+## ¡Una de yapa!
 
-
+<div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
+  <iframe 
+    src="https://www.youtube.com/embed/Lfa4kgiuQWE"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 12px;"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
 
 
 ## Referencias
@@ -86,14 +94,7 @@ Los avances en simulación de sistemas físicos y químicos, particularmente en 
 
 
 
-<div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
-  <iframe 
-    src="https://www.youtube.com/embed/Lfa4kgiuQWE"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 12px;"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
-</div>
+
 
 [{{< spotify type="album" id="5iT3F2EhjVQVrO4PKhsP8c?" width="100%" height="160" >}}]:#
 [esto coloca un reproductor de muestras de spotify dado el id de la carpeta de spotify]:# 

@@ -3,6 +3,53 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
+  
+    
+      <url>
+            <loc>https://marianocaruso.github.io/notes/8.eternal-return/</loc>
+            <lastmod>2025-05-01T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://marianocaruso.github.io/</loc>
+            <lastmod>2025-05-01T00:00:00+00:00</lastmod>
+            <xhtml:link
+              rel="alternate"
+              hreflang="en"
+              href="https://marianocaruso.github.io/en/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="es"
+              href="https://marianocaruso.github.io/"
+              />
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://marianocaruso.github.io/notes/</loc>
+            <lastmod>2025-05-01T00:00:00+00:00</lastmod>
+            <xhtml:link
+              rel="alternate"
+              hreflang="en"
+              href="https://marianocaruso.github.io/en/notes/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="es"
+              href="https://marianocaruso.github.io/notes/"
+              />
+          </url>
+    
+  
+    
+  
+    
+  
+    
       <url>
             <loc>https://marianocaruso.github.io/cv/</loc>
             <lastmod>2025-01-15T00:00:00+00:00</lastmod>
@@ -15,23 +62,6 @@
               rel="alternate"
               hreflang="es"
               href="https://marianocaruso.github.io/cv/"
-              />
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://marianocaruso.github.io/</loc>
-            <lastmod>2025-01-15T00:00:00+00:00</lastmod>
-            <xhtml:link
-              rel="alternate"
-              hreflang="en"
-              href="https://marianocaruso.github.io/en/"
-              />
-            <xhtml:link
-              rel="alternate"
-              hreflang="es"
-              href="https://marianocaruso.github.io/"
               />
           </url>
     
@@ -54,23 +84,6 @@
     
   
     
-      <url>
-            <loc>https://marianocaruso.github.io/notes/</loc>
-            <lastmod>2025-01-06T00:00:00+00:00</lastmod>
-            <xhtml:link
-              rel="alternate"
-              hreflang="en"
-              href="https://marianocaruso.github.io/en/notes/"
-              />
-            <xhtml:link
-              rel="alternate"
-              hreflang="es"
-              href="https://marianocaruso.github.io/notes/"
-              />
-          </url>
-    
-  
-    
   
     
   
@@ -78,7 +91,7 @@
   
     
       <url>
-            <loc>https://marianocaruso.github.io/notes/particular-qubits/</loc>
+            <loc>https://marianocaruso.github.io/notes/7.particular-qubits/</loc>
             <lastmod>2025-01-06T00:00:00+00:00</lastmod>
           </url>
     
@@ -86,10 +99,8 @@
     
   
     
-  
-    
       <url>
-            <loc>https://marianocaruso.github.io/notes/r2/</loc>
+            <loc>https://marianocaruso.github.io/notes/6.r2/</loc>
             <lastmod>2025-01-05T00:00:00+00:00</lastmod>
           </url>
     
@@ -100,7 +111,7 @@
   
     
       <url>
-            <loc>https://marianocaruso.github.io/notes/gradient-flux/</loc>
+            <loc>https://marianocaruso.github.io/notes/5.gradient-flux/</loc>
             <lastmod>2025-01-04T00:00:00+00:00</lastmod>
           </url>
     
@@ -111,25 +122,14 @@
   
     
       <url>
-            <loc>https://marianocaruso.github.io/notes/annealing/</loc>
+            <loc>https://marianocaruso.github.io/notes/4.annealing/</loc>
             <lastmod>2025-01-03T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://marianocaruso.github.io/notes/dot-product/</loc>
-            <lastmod>2025-01-02T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>https://marianocaruso.github.io/notes/eternal-return/</loc>
+            <loc>https://marianocaruso.github.io/notes/3dot-product/</loc>
             <lastmod>2025-01-02T00:00:00+00:00</lastmod>
           </url>
     
@@ -142,7 +142,7 @@
   
     
       <url>
-            <loc>https://marianocaruso.github.io/notes/understand-quantum/</loc>
+            <loc>https://marianocaruso.github.io/notes/1.understand-quantum/</loc>
             <lastmod>2025-01-01T00:00:00+00:00</lastmod>
           </url>
     
@@ -151,7 +151,7 @@
   
     
       <url>
-            <loc>https://marianocaruso.github.io/notes/non-cloning/</loc>
+            <loc>https://marianocaruso.github.io/notes/2.non-cloning/</loc>
             <lastmod>2025-01-01T00:00:00+00:00</lastmod>
           </url>
     

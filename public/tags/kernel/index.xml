@@ -11,9 +11,9 @@
     <atom:link href="https://marianocaruso.github.io/tags/kernel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cómputo eficiente del producto interno</title>
-      <link>https://marianocaruso.github.io/notes/dot-product/</link>
+      <link>https://marianocaruso.github.io/notes/3dot-product/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/dot-product/</guid>
+      <guid>https://marianocaruso.github.io/notes/3dot-product/</guid>
       <description>Ventajas y desafíos en el cómputo del producto interno</description>
     </item>
   </channel>

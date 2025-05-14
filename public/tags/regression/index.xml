@@ -11,10 +11,10 @@
     <atom:link href="https://marianocaruso.github.io/tags/regression/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Métrica para regresión</title>
-      <link>https://marianocaruso.github.io/notes/r2/</link>
+      <link>https://marianocaruso.github.io/notes/6.r2/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/r2/</guid>
-      <description>Comentario sobre métrica para regresión tipo cociente</description>
+      <guid>https://marianocaruso.github.io/notes/6.r2/</guid>
+      <description>Comentario sobre métricas tipo cociente</description>
     </item>
   </channel>
 </rss>

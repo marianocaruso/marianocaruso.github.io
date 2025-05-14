@@ -11,37 +11,37 @@
     <atom:link href="https://marianocaruso.github.io/tags/quantum/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Qubits particulares</title>
-      <link>https://marianocaruso.github.io/notes/particular-qubits/</link>
+      <link>https://marianocaruso.github.io/notes/7.particular-qubits/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/particular-qubits/</guid>
+      <guid>https://marianocaruso.github.io/notes/7.particular-qubits/</guid>
       <description>Representación de qubits en estados de  partícula</description>
     </item>
     <item>
       <title>Algoritmos de annealing</title>
-      <link>https://marianocaruso.github.io/notes/annealing/</link>
+      <link>https://marianocaruso.github.io/notes/4.annealing/</link>
       <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/annealing/</guid>
+      <guid>https://marianocaruso.github.io/notes/4.annealing/</guid>
       <description>Cuando la naturaleza inspira algoritmos de optimización</description>
     </item>
     <item>
       <title>Cómputo eficiente del producto interno</title>
-      <link>https://marianocaruso.github.io/notes/dot-product/</link>
+      <link>https://marianocaruso.github.io/notes/3dot-product/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/dot-product/</guid>
+      <guid>https://marianocaruso.github.io/notes/3dot-product/</guid>
       <description>Ventajas y desafíos en el cómputo del producto interno</description>
     </item>
     <item>
       <title>Decodificando a Feynman</title>
-      <link>https://marianocaruso.github.io/notes/understand-quantum/</link>
+      <link>https://marianocaruso.github.io/notes/1.understand-quantum/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/understand-quantum/</guid>
+      <guid>https://marianocaruso.github.io/notes/1.understand-quantum/</guid>
       <description>¿Nadie entiende la mecánica cuántica?</description>
     </item>
     <item>
       <title>Teorema de no clonado</title>
-      <link>https://marianocaruso.github.io/notes/non-cloning/</link>
+      <link>https://marianocaruso.github.io/notes/2.non-cloning/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/non-cloning/</guid>
+      <guid>https://marianocaruso.github.io/notes/2.non-cloning/</guid>
       <description>Sobre la imposibilidad de cierto tipo plagio</description>
     </item>
   </channel>
