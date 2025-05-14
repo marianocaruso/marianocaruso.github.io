@@ -62,16 +62,27 @@ Hay una aparente dicotomía entre la idea de progreso, tan valorada en la cienci
 
 Los avances en simulación de sistemas físicos y químicos, particularmente en el campo de la mecánica cuántica y la información cuántica, dependen intrínsecamente de la capacidad de utilizar y controlar las recurrencias inherentes a estos sistemas. La comprensión y el control de estas recurrencias son, por lo tanto, fundamentales para el futuro del avance científico y tecnológico, permitiendo el desarrollo de herramientas cada vez más poderosas para la simulación y el cómputo. 
 
-## ¡Una de yapa!
+## Anexo 
 
-<div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
-  <iframe 
-    src="https://www.youtube.com/embed/Lfa4kgiuQWE"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 12px;"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
-</div>
+Extracto de <a href="https://lavenganzaseraterrible.com/" class="button" target="_blank" rel="noopener">
+ La Venganza Será Terrible
+</a> emitido el 14 de Julio de 1994.
+
+
+<!-- esta de abajo era la manera más corta de congo, solo colocando el ID -->
+
+{{< youtube Lfa4kgiuQWE >}}
+
+<!-- esta de abajo era la manera más extensa 
+  <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
+    <iframe 
+      src="https://www.youtube.com/embed/Lfa4kgiuQWE"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 12px;"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+-->
 
 
 ## Referencias

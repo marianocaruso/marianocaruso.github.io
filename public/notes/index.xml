@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notas on Mariano Caruso</title>
-    <link>https://marianocaruso.github.io/notes/</link>
+    <link>http://localhost:1313/notes/</link>
     <description>Recent content in Notas on Mariano Caruso</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
     <lastBuildDate>Thu, 01 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://marianocaruso.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Eterno retorno</title>
-      <link>https://marianocaruso.github.io/notes/8.eternal-return/</link>
+      <link>http://localhost:1313/notes/8.eternal-return/</link>
       <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/8.eternal-return/</guid>
+      <guid>http://localhost:1313/notes/8.eternal-return/</guid>
       <description>¿Cuándo llegamos?</description>
     </item>
     <item>
       <title>Qubits particulares</title>
-      <link>https://marianocaruso.github.io/notes/7.particular-qubits/</link>
+      <link>http://localhost:1313/notes/7.particular-qubits/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/7.particular-qubits/</guid>
+      <guid>http://localhost:1313/notes/7.particular-qubits/</guid>
       <description>Representación de qubits en estados de  partícula</description>
     </item>
     <item>
       <title>Métrica para regresión</title>
-      <link>https://marianocaruso.github.io/notes/6.r2/</link>
+      <link>http://localhost:1313/notes/6.r2/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/6.r2/</guid>
+      <guid>http://localhost:1313/notes/6.r2/</guid>
       <description>Comentario sobre métricas tipo cociente</description>
     </item>
     <item>
       <title>Flujos y gradientes</title>
-      <link>https://marianocaruso.github.io/notes/5.gradient-flux/</link>
+      <link>http://localhost:1313/notes/5.gradient-flux/</link>
       <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/5.gradient-flux/</guid>
+      <guid>http://localhost:1313/notes/5.gradient-flux/</guid>
       <description>Sobre el proceso de búsqueda de puntos críticos</description>
     </item>
     <item>
       <title>Algoritmos de annealing</title>
-      <link>https://marianocaruso.github.io/notes/4.annealing/</link>
+      <link>http://localhost:1313/notes/4.annealing/</link>
       <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/4.annealing/</guid>
+      <guid>http://localhost:1313/notes/4.annealing/</guid>
       <description>Cuando la naturaleza inspira algoritmos de optimización</description>
     </item>
     <item>
       <title>Cómputo eficiente del producto interno</title>
-      <link>https://marianocaruso.github.io/notes/3dot-product/</link>
+      <link>http://localhost:1313/notes/3dot-product/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/3dot-product/</guid>
+      <guid>http://localhost:1313/notes/3dot-product/</guid>
       <description>Ventajas y desafíos en el cómputo del producto interno</description>
     </item>
     <item>
       <title>Decodificando a Feynman</title>
-      <link>https://marianocaruso.github.io/notes/1.understand-quantum/</link>
+      <link>http://localhost:1313/notes/1.understand-quantum/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/1.understand-quantum/</guid>
+      <guid>http://localhost:1313/notes/1.understand-quantum/</guid>
       <description>¿Nadie entiende la mecánica cuántica?</description>
     </item>
     <item>
       <title>Teorema de no clonado</title>
-      <link>https://marianocaruso.github.io/notes/2.non-cloning/</link>
+      <link>http://localhost:1313/notes/2.non-cloning/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/2.non-cloning/</guid>
+      <guid>http://localhost:1313/notes/2.non-cloning/</guid>
       <description>Sobre la imposibilidad de cierto tipo plagio</description>
     </item>
   </channel>
