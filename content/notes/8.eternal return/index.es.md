@@ -62,7 +62,7 @@ Hay una aparente dicotomía entre la idea de progreso, tan valorada en la cienci
 
 Los avances en simulación de sistemas físicos y químicos, particularmente en el campo de la mecánica cuántica y la información cuántica, dependen intrínsecamente de la capacidad de utilizar y controlar las recurrencias inherentes a estos sistemas. La comprensión y el control de estas recurrencias son, por lo tanto, fundamentales para el futuro del avance científico y tecnológico, permitiendo el desarrollo de herramientas cada vez más poderosas para la simulación y el cómputo. 
 
-La danza eterna del tiempo, con sus ciclos y retornos, no es solo un tema de reflexión filosófica y artística, sino también un principio fundamental que guía nuestra exploración científica del universo.
+
 
 
 
