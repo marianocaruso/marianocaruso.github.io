@@ -52,7 +52,12 @@ En otras palabras, casi todo punto de $E$ y tras la aplicación sucesiva de $f$ 
 En mecánica clásica, los sistemas hamiltonianos cuya medida de Liouville es invariante, resultado de una divergencia nula del flujo en el espacio de fases y característica de los sistemas en los que se conserva la energía, satisfacen las condiciones del teorema de Poincaré y son  *periódicos a la larga*.
 
 
-La dinámica unitaria *a la* Schrödinger de los sistemas cuánticos está encerrada en otro ciclo. En mecánica cuántica existe un resultado análogo al clásico: para un sistema cerrado con espectro discreto de energías y una base de autovectores del operador hamiltoniano $H$, tenemos garantías de que para cualquier tiempo de partida $s$ habrá un tiempo $t>s$ futuro en que el estado cuántico $|\psi(t)\rangle$ regrese arbitrariamente cerca del estado inicial $|\psi(s)\rangle$.  La evolución unitaria del estado en mecánica cuántica, $|\psi(t)\rangle = U(t-s)|\psi(s)\rangle$ con $U(t)\;=\;\exp\bigl[-it/\hbar H\bigr]$, conserva la norma y hace la dinámica cuasiperiódica. En efecto, escribiendo los estados en ambos tiempos como combinación lineal de los autovectores de $H$, la distancia entre $|\psi(t)\rangle$ y $|\psi(s)\rangle$ puede hacerse arbitrariamente pequeña. 
+La dinámica unitaria *a la* Schrödinger de los sistemas cuánticos está encerrada en otro ciclo. En mecánica cuántica existe un resultado análogo al clásico: para un sistema cerrado con espectro discreto de energías y una base de autovectores del operador hamiltoniano $H$, tenemos garantías de que para cualquier tiempo de partida $s$ habrá un tiempo $t>s$ futuro en que el estado cuántico $|\psi(t)\rangle$ regrese arbitrariamente cerca del estado inicial $|\psi(s)\rangle$.  La evolución unitaria del estado en mecánica cuántica
+
+$$
+|\psi(t)\rangle = U(t-s)|\psi(s)\rangle
+$$ 
+donde $U(t)\;=\;\exp\bigl[-it/\hbar H\bigr]$, conserva la norma y hace la dinámica cuasiperiódica. En efecto, escribiendo los estados en ambos tiempos como combinación lineal de los autovectores de $H$, la distancia entre $|\psi(t)\rangle$ y $|\psi(s)\rangle$ puede hacerse arbitrariamente pequeña. 
 
 
 
