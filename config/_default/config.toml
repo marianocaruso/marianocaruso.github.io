@@ -13,7 +13,6 @@ defaultContentLanguage = "es"
   # WARN  [CONGO] Theme parameter `logo` has been renamed to `header.logo`. Please update your site configuration.
 
 
-
 enableRobotsTXT = true
 paginate = 10
 summaryLength = 0
@@ -24,6 +23,10 @@ summaryLength = 0
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+
+[params.assets]
+customCSS = ["css/custom.css"]
 
 
 ## opcional es un intento por que use delimitadores para LaTeX distintos a \\( ...\\).

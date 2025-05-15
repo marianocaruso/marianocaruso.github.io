@@ -1,7 +1,22 @@
+
+
 /*modifica el tamaño global de las letras*/
 
 html {
   font-size: 13pt;
+}
+
+
+blockquote {
+  font-style: normal !important;        /* Quitar cursiva */
+  font-weight: normal !important;       /* Quitar negrita */
+  quotes: none !important;              /* Quitar comillas automáticas */
+  background: none !important;          /* Quitar fondo si tiene */
+}
+
+blockquote::before,
+blockquote::after {
+  content: none !important;             /* Eliminar comillas */
 }
 
 

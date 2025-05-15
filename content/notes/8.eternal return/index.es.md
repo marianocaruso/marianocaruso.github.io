@@ -31,11 +31,27 @@ En el arte plástico, el tiempo devorador se traduce en imágenes poderosas.  Go
 
 En matemáticas y en física el teorema de recurrencia de Poincaré afirma que ciertos sistemas dinámicos, tras un tiempo finito suficientemente largo, regresan a un estado tan próximo como se desee al estado inicial en el caso de tiempo continuo o idéntico al estado inicial en el caso de tiempo discreto.
 
-En mecánica clásica los sistemas hamiltonianos aislados son periódicos *a la larga*.  
+Cuando decimos ciertos sistemas dinámicos nos referimos en parte a aquellos en los que *mantienen su porte* a lo largo del tiempo, i.e. en su evolución temporal conservan la medida. Formalmente necesitamos una transformación $f: X \to X$ en un espacio de medida $(X, \Sigma, \mu)$, donde $\Sigma$ es una $\sigma-$álgebra sobre el espacio medible $X$ y $\mu$ una media. Se dice que $f$ **conserva la medida** $\mu$ si para todo conjunto medible $E \in \Sigma$, se cumple que $\mu(f^{-1}(E)) = \mu(E)$.
 
-En mecánica cuántica existe un resultado análogo al clásico: para un sistema cerrado con espectro discreto de energías, una versión cuántica del teorema garantiza que para cualquier tolerancia y cualquier tiempo de partida habrá un tiempo $T$ futuro en que el estado cuántico $|\psi(T)\rangle$ regrese arbitrariamente cerca del estado inicial $|\psi(0)\rangle$.  La evolución unitaria del estado en mecánica cuántica, $|\psi(t)\rangle = U(t)|\psi(0)\rangle$ con $U(t)\;=\;\exp\bigl[-it/\hbar H\bigr]$, conserva la norma y hace la dinámica cuasiperiódica. En efecto, escribiendo $|\psi(0)\rangle=\sum_n c_n |\phi_n\rangle$ en la base de autofunciones de energía $H|\phi_n\rangle=E_n|\phi_n\rangle$, la distancia entre $|\psi(T)\rangle$ y $|\psi(0)\rangle$ puede hacerse arbitrariamente pequeña. 
+Este teorema de recurrencia de Poincaré puede enunciarse como:
 
-Metafóricamente hablando, la dinámica *a la* Schrödinger de los sistemas cuánticos está encerrada en otro ciclo.
+
+> Sea $(X, \Sigma, \mu)$ un espacio de medida finita y sea $f: X \to X$ una transformación que conserva la medida $\mu$.
+Para cualquier conjunto medible $E \in \Sigma$, el conjunto de aquellos puntos $x$ de $E$ para los cuales existe un $N \in \mathbb{N}$ tal que $f^n(x) \notin E$ para todo $n > N$, tiene medida cero. 
+
+De manera compacta tenemos:
+
+{{< alert "circle-info" >}}
+$\mu \pmb{(}  \{x \in E : \exists N \in \mathbb{N}/ f^n(x) \notin E, \forall n > N\}\pmb{)} = 0$
+{{< /alert >}}
+
+En otras palabras, casi todo punto de $E$ y tras la aplicación sucesiva de $f$ retorna a $E$.
+
+
+En mecánica clásica, los sistemas hamiltonianos cuya medida de Liouville es invariante, resultado de una divergencia nula del flujo en el espacio de fases y característica de los sistemas en los que se conserva la energía, satisfacen las condiciones del teorema de Poincaré y son  *periódicos a la larga*.
+
+
+La dinámica unitaria *a la* Schrödinger de los sistemas cuánticos está encerrada en otro ciclo. En mecánica cuántica existe un resultado análogo al clásico: para un sistema cerrado con espectro discreto de energías, una versión cuántica del teorema garantiza que para cualquier tolerancia y cualquier tiempo de partida habrá un tiempo $T$ futuro en que el estado cuántico $|\psi(T)\rangle$ regrese arbitrariamente cerca del estado inicial $|\psi(0)\rangle$.  La evolución unitaria del estado en mecánica cuántica, $|\psi(t)\rangle = U(t)|\psi(0)\rangle$ con $U(t)\;=\;\exp\bigl[-it/\hbar H\bigr]$, conserva la norma y hace la dinámica cuasiperiódica. En efecto, escribiendo $|\psi(0)\rangle=\sum_n c_n |\phi_n\rangle$ en la base de autofunciones de energía $H|\phi_n\rangle=E_n|\phi_n\rangle$, la distancia entre $|\psi(T)\rangle$ y $|\psi(0)\rangle$ puede hacerse arbitrariamente pequeña. 
 
 De hecho, en el ámbito de la computación cuántica también encontramos otro tipo de recurrencia. Esta recurrencia cuántica puede visualizarse claramente en el caso más simple: la dinámica de un **qubit**. Cualquier estado de un qubit se representa como un punto en la *esfera de Bloch*. Desde el punto de vista matemático, la esfera es un espacio cerrado y compacto. Una compuerta cuántica de un qubit equivale a una rotación de esa esfera. Matematicamente, bajo el Hamiltoniano 
 $$

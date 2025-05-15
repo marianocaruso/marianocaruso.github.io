@@ -2,116 +2,116 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Mariano Caruso</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://marianocaruso.github.io/tags/</link>
     <description>Recent content in Tags on Mariano Caruso</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
     <lastBuildDate>Thu, 01 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://marianocaruso.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Eternal Return</title>
-      <link>http://localhost:1313/tags/eternal-return/</link>
+      <link>https://marianocaruso.github.io/tags/eternal-return/</link>
       <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/eternal-return/</guid>
+      <guid>https://marianocaruso.github.io/tags/eternal-return/</guid>
       <description></description>
     </item>
     <item>
       <title>Quantum Computing</title>
-      <link>http://localhost:1313/tags/quantum-computing/</link>
+      <link>https://marianocaruso.github.io/tags/quantum-computing/</link>
       <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/quantum-computing/</guid>
+      <guid>https://marianocaruso.github.io/tags/quantum-computing/</guid>
       <description></description>
     </item>
     <item>
       <title>Orbital Space</title>
-      <link>http://localhost:1313/tags/orbital-space/</link>
+      <link>https://marianocaruso.github.io/tags/orbital-space/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/orbital-space/</guid>
+      <guid>https://marianocaruso.github.io/tags/orbital-space/</guid>
       <description></description>
     </item>
     <item>
       <title>Quantum</title>
-      <link>http://localhost:1313/tags/quantum/</link>
+      <link>https://marianocaruso.github.io/tags/quantum/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/quantum/</guid>
+      <guid>https://marianocaruso.github.io/tags/quantum/</guid>
       <description></description>
     </item>
     <item>
       <title>Qubits</title>
-      <link>http://localhost:1313/tags/qubits/</link>
+      <link>https://marianocaruso.github.io/tags/qubits/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/qubits/</guid>
+      <guid>https://marianocaruso.github.io/tags/qubits/</guid>
       <description></description>
     </item>
     <item>
       <title>Spin States</title>
-      <link>http://localhost:1313/tags/spin-states/</link>
+      <link>https://marianocaruso.github.io/tags/spin-states/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/spin-states/</guid>
+      <guid>https://marianocaruso.github.io/tags/spin-states/</guid>
       <description></description>
     </item>
     <item>
       <title>Metrics</title>
-      <link>http://localhost:1313/tags/metrics/</link>
+      <link>https://marianocaruso.github.io/tags/metrics/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/metrics/</guid>
+      <guid>https://marianocaruso.github.io/tags/metrics/</guid>
       <description></description>
     </item>
     <item>
       <title>Regression</title>
-      <link>http://localhost:1313/tags/regression/</link>
+      <link>https://marianocaruso.github.io/tags/regression/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/regression/</guid>
+      <guid>https://marianocaruso.github.io/tags/regression/</guid>
       <description></description>
     </item>
     <item>
       <title>Gradient Flux</title>
-      <link>http://localhost:1313/tags/gradient-flux/</link>
+      <link>https://marianocaruso.github.io/tags/gradient-flux/</link>
       <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/gradient-flux/</guid>
+      <guid>https://marianocaruso.github.io/tags/gradient-flux/</guid>
       <description></description>
     </item>
     <item>
       <title>Optimization</title>
-      <link>http://localhost:1313/tags/optimization/</link>
+      <link>https://marianocaruso.github.io/tags/optimization/</link>
       <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/optimization/</guid>
+      <guid>https://marianocaruso.github.io/tags/optimization/</guid>
       <description></description>
     </item>
     <item>
       <title>Dot Product</title>
-      <link>http://localhost:1313/tags/dot-product/</link>
+      <link>https://marianocaruso.github.io/tags/dot-product/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/dot-product/</guid>
+      <guid>https://marianocaruso.github.io/tags/dot-product/</guid>
       <description></description>
     </item>
     <item>
       <title>Kernel</title>
-      <link>http://localhost:1313/tags/kernel/</link>
+      <link>https://marianocaruso.github.io/tags/kernel/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/kernel/</guid>
+      <guid>https://marianocaruso.github.io/tags/kernel/</guid>
       <description></description>
     </item>
     <item>
       <title>LLM</title>
-      <link>http://localhost:1313/tags/llm/</link>
+      <link>https://marianocaruso.github.io/tags/llm/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/llm/</guid>
+      <guid>https://marianocaruso.github.io/tags/llm/</guid>
       <description></description>
     </item>
     <item>
       <title>States</title>
-      <link>http://localhost:1313/tags/states/</link>
+      <link>https://marianocaruso.github.io/tags/states/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/states/</guid>
+      <guid>https://marianocaruso.github.io/tags/states/</guid>
       <description></description>
     </item>
     <item>
       <title>Understanding</title>
-      <link>http://localhost:1313/tags/understanding/</link>
+      <link>https://marianocaruso.github.io/tags/understanding/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/understanding/</guid>
+      <guid>https://marianocaruso.github.io/tags/understanding/</guid>
       <description></description>
     </item>
   </channel>
