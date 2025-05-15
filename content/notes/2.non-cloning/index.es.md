@@ -93,7 +93,7 @@ $$
 U|\varphi\rangle\otimes|s\rangle:=e^{i\phi(\varphi,s)}|\varphi\rangle\otimes|\varphi\rangle.
 $$
 
-    Aún en este caso las ideas de la demostración anterior seguiría siendo válida. 
+Aún en este caso las ideas de la demostración anterior seguiría siendo válida. 
 
 2.  Se ha demostrado la imposibilidad de realizar copias **perfectas**  del estado del sistema cuántico y sin **destruir** el estado original, vía un operador o bien lineal o bien unitario.
 
