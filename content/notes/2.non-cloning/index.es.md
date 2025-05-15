@@ -31,8 +31,7 @@ Tal operador se dice que **realiza**  el procedimiento de copiado sin destruir e
 En las condiciones anteriores se puede demostrar el siguiente
 
 ## Enunciado 
-$\nexists U$ que cumpla la definición tal que o bien 
-
+$\nexists U$ que cumpla la definición anterior tal que o bien 
 1. $U$ sea lineal 
 2. $U$ sea unitario
 
@@ -88,7 +87,13 @@ que es una ecuación para  $\langle \varphi_1 |\varphi_2\rangle\in \mathbb{C}$; 
 
 **Notas**
 
-1. Incluso podríamos haber generalizado el operador $U$ para incluir una fase local $\phi$ que pueda depender incluso de los estados $|\varphi\rangle,|s \rangle$, de forma que el supuesto operador de copia se redefina como $U|\varphi\rangle\otimes|s\rangle:=e^{i\phi(\varphi,s)}|\varphi\rangle\otimes|\varphi\rangle$. Aún en este caso las ideas de la demostración anterior seguiría siendo válida. 
+1. Incluso podríamos haber generalizado el operador $U$ para incluir una fase local $\phi$ que pueda depender incluso de los estados $|\varphi\rangle,|s \rangle$, de forma que el supuesto operador de copia se redefina como 
+
+$$
+U|\varphi\rangle\otimes|s\rangle:=e^{i\phi(\varphi,s)}|\varphi\rangle\otimes|\varphi\rangle.
+$$
+
+Aún en este caso las ideas de la demostración anterior seguiría siendo válida. 
 
 2.  Se ha demostrado la imposibilidad de realizar copias **perfectas**  del estado del sistema cuántico y sin **destruir** el estado original, vía un operador o bien lineal o bien unitario.
 
