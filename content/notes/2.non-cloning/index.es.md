@@ -85,7 +85,7 @@ $$
 $$ 
 que es una ecuación para  $\langle \varphi_1 |\varphi_2\rangle\in \mathbb{C}$; con lo cual o bien $\langle \varphi_1 |\varphi_2\rangle=0$ o bien $\langle \varphi_1 |\varphi_2\rangle=1$. El primer caso implica que aquellos vectores no pueden ser cualquier sino solo aquellos mutuamente ortogonales, con lo cual no hay arbitrariedad. El segundo caso implica que ambos pueden  ser proporcionales. En cualquier caso no hay arbitrariedad en la elección de aquellos dos vectores $| \varphi_1 \rangle,|\varphi_2\rangle$, lo que se traduce en una no universalidad del operador $U$.
 
-**Notas**
+## Notas
 
 1. Incluso podríamos haber generalizado el operador $U$ para incluir una fase local $\phi$ que pueda depender incluso de los estados $|\varphi\rangle,|s \rangle$, de forma que el supuesto operador de copia se redefina como 
 
