@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computational Complexity on Mariano Caruso</title>
+    <link>http://localhost:1313/tags/computational-complexity/</link>
+    <description>Recent content in Computational Complexity on Mariano Caruso</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>© Mariano Caruso</copyright>
+    <lastBuildDate>Mon, 05 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/computational-complexity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Complejidad computacional</title>
+      <link>http://localhost:1313/notes/8.eternal-return---copia/</link>
+      <pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/8.eternal-return---copia/</guid>
+      <description>Un juego hasta el hartazgo</description>
+    </item>
+  </channel>
+</rss>

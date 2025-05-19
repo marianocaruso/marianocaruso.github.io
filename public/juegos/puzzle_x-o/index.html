@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>puzzle x-o</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="numbers-hidden">
+    <h1> puzzle x-o</h1>
+
+    <div class="game-setup">
+        <div class="setup-left">
+            <select id="grid-size-selector">
+                <option value="2" selected>2x2</option>
+                <option value="3">3x3</option>
+            </select>
+            <button id="start-new-game-button" class="action-button">comenzar</button>
+        </div>
+        <div class="setup-center">
+            <span id="timer-display" class="game-stat">00:00</span>
+            <span id="score-display" class="game-stat">puntaje: 0</span>
+        </div>
+        <div class="setup-right">
+            <button id="reset-button" class="action-button">reiniciar</button>
+            <button id="hint-button" class="action-button">ayuda</button>
+            <button id="solve-button" class="action-button">auto-solución</button>
+        </div>
+    </div>
+
+    <div class="game-area">
+        <div id="palette-container">
+            <h2>piezas disponibles</h2>
+            <div id="palette">
+                <!-- Las piezas disponibles se generarán aquí -->
+            </div>
+        </div>
+
+        <div id="board-container">
+            <h2 id="board-title">tablero</h2>
+            <div id="puzzle-board" class="grid-2x2">
+                <!-- Las celdas del puzzle se generarán aquí -->
+            </div>
+        </div>
+    </div>
+
+    <p id="win-message" class="hidden">¡felicidades!</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
