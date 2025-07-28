@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monte Carlo on Mariano Caruso</title>
+    <link>https://marianocaruso.github.io/tags/monte-carlo/</link>
+    <description>Recent content in Monte Carlo on Mariano Caruso</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>© Mariano Caruso</copyright>
+    <lastBuildDate>Fri, 25 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marianocaruso.github.io/tags/monte-carlo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cadenas de Markov</title>
+      <link>https://marianocaruso.github.io/notes/9.markov/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/notes/9.markov/</guid>
+      <description>Sobre la no necesidad de independencia de eventos</description>
+    </item>
+  </channel>
+</rss>

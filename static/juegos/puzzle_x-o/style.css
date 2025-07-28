@@ -3,8 +3,10 @@
     --color-verde-pieza: #2ECC71;
     --color-amarillo-pieza: #F1C40F;
     --color-azul-pieza: #3498DB;
-    --color-principal-titulo: #c0392b;
+    /* --color-principal-titulo: #c0392b; */ /* Comentado ya que los títulos ahora tienen colores específicos */
     --color-texto-oscuro: #393939;
+    --color-violeta-oscuro: #6c3483;
+    --color-naranja-oscuro: #d37f00; /* Un naranja oscuro más intenso */
 }
 
 body {
@@ -18,27 +20,33 @@ body {
     color: #333;
 }
 
-h1, h2 {
-    color: var(--color-principal-titulo);
+h1 { /* Título principal del juego */
+    color: #c0392b; /* Mantenemos el rojo original para el H1 */
     font-weight: 500;
-}
-h1 {
     font-size: 2.5em;
     margin-bottom: 30px;
 }
-h2 {
+
+h2 { /* Estilo base para H2, será sobrescrito por IDs específicos */
+    font-weight: 500;
     font-size: 1.5em;
     margin-bottom: 15px;
 }
+
+#palette-container h2 {
+    color: var(--color-violeta-oscuro);
+}
+
+#board-container h2 { /* o #board-title */
+    color: var(--color-naranja-oscuro);
+}
+
 
 .game-setup {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 95%;
-    /* Ancho aproximado para coincidir con el game-area (palette + board + gap)
-       Para 3x3: (112*3 + 15*2 + 2*2 pad + 2*20 cont_pad) ~ 400 por contenedor
-       400 + 400 + 30 (gap) = 830px.  Ajustar según sea necesario. */
     max-width: 830px;
     margin-bottom: 30px;
     padding: 15px 20px;
@@ -96,7 +104,7 @@ h2 {
     border: 1px solid #e6a700;
 }
 #start-new-game-button:hover {
-    background-color: #f5d061; /* Amarillo más claro al pasar el mouse */
+    background-color: #f5d061;
 }
 
 .game-stat {
@@ -107,7 +115,7 @@ h2 {
     padding: 7px 14px;
     border-radius: 18px;
     border: 1px solid #ddd;
-    min-width: 80px; /* Aumentado para "puntaje:" */
+    min-width: 90px; /* Aumentado para "acciones:" */
     text-align: center;
 }
 
@@ -144,8 +152,7 @@ h2 {
     gap: 30px;
     justify-content: center;
     align-items: flex-start;
-    width: auto; /* Permitir que el contenido defina el ancho */
-    /* max-width: 1200px; No necesario si los hijos definen el tamaño */
+    width: auto;
     margin-bottom: 30px;
 }
 
@@ -156,23 +163,6 @@ h2 {
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     box-sizing: border-box;
 }
-/* Para 2x2: (150*2) + 15 (gap) + 15*2 (padding) + 2*2 (border) = 300 + 15 + 30 + 4 = 349
-   #palette-container: 349 + 20*2 (padding) = 389px
-   #board-container: (161*2) + 8 (gap) + 8*2 (padding) + 3*2 (border) = 322 + 8 + 16 + 6 = 352
-   #board-container: 352 + 20*2 (padding) = 392px -> Ajustar para igualar
-   Ancho celda paleta 2x2: 150px
-   Ancho celda tablero 2x2: ( (150*2 + 15) - 8 - (3*2) ) / 2 = (315 - 8 - 6)/2 = 301/2 = 150.5. Redondeado a 150
-   Grid tablero 2x2: 150*2 (celdas) + 8 (gap) + 8*2 (padding) + 3*2 (border) = 300+8+16+6 = 330
-   Paleta 2x2: 150*2 (celdas) + 15 (gap) + 15*2 (padding) + 2*2 (border) = 300+15+30+4 = 349
-   Intentaremos que el interior de palette y puzzle-board sea similar
-*/
-/* Para 3x3: (112*3) + 15*2 (gap) + 15*2 (padding) + 2*2 (border) = 336 + 30 + 30 + 4 = 400
-   #palette-container: 400 + 20*2 (padding) = 440px
-   Ancho celda paleta 3x3: 112px
-   Ancho celda tablero 3x3: ( (112*3 + 15*2) - 8*2 - (3*2) ) / 3 = (336 + 30 - 16 - 6) / 3 = (366 - 22)/3 = 344/3 = 114.6. Redondeado a 115
-   Grid tablero 3x3: 115*3 (celdas) + 8*2 (gap) + 8*2 (padding) + 3*2 (border) = 345+16+16+6 = 383
-   Paleta 3x3: 112*3 (celdas) + 15*2 (gap) + 15*2 (padding) + 2*2 (border) = 336+30+30+4 = 400
-*/
 
 #palette, #puzzle-board {
     box-sizing: border-box;
@@ -182,7 +172,7 @@ h2 {
     display: grid;
     gap: 15px;
     padding: 15px;
-    border: 2px dashed #ccc;
+    border: 3px dashed var(--color-violeta-oscuro); /* Borde violeta */
     border-radius: 12px;
     align-items: start;
     justify-items: start;
@@ -190,7 +180,7 @@ h2 {
 .palette-grid-2x2 {
     grid-template-columns: repeat(2, 150px);
     grid-template-rows: repeat(2, 150px);
-    width: calc(150px * 2 + 15px * 1 + 15px * 2 + 2px * 2); /* (pieza*cols) + (gap*(cols-1)) + (padding*2) + (border*2) */
+    width: calc(150px * 2 + 15px * 1 + 15px * 2 + 2px * 2);
 }
 .palette-grid-3x3 {
     grid-template-columns: repeat(3, 112px);
@@ -202,34 +192,30 @@ h2 {
 #puzzle-board {
     display: grid;
     gap: 8px;
-    border: 3px solid var(--color-principal-titulo);
+    border: 3px solid var(--color-naranja-oscuro); /* Borde naranja */
     padding: 8px;
-    background-color: #fdecea;
+    background-color: #ffffff; /* Color de fondo interno del tablero, se puede cambiar si se desea */
     border-radius: 8px;
 }
-/* Width for puzzle-board should match palette width for consistency */
-.grid-2x2 { /* Palette width for 2x2 is 349px */
+
+.grid-2x2 {
     grid-template-columns: repeat(2, calc((349px - 8px * 1 - 8px * 2 - 3px * 2) / 2));
     grid-template-rows: repeat(2, calc((349px - 8px * 1 - 8px * 2 - 3px * 2) / 2));
     width: 349px;
 }
-.grid-3x3 { /* Palette width for 3x3 is 400px */
+.grid-3x3 {
     grid-template-columns: repeat(3, calc((400px - 8px * 2 - 8px * 2 - 3px * 2) / 3));
     grid-template-rows: repeat(3, calc((400px - 8px * 2 - 8px * 2 - 3px * 2) / 3));
     width: 400px;
 }
 
-/* Cell sizes are now determined by the grid calculation above */
-.board-cell-2x2, .board-cell-3x3 {
-    /* width and height will be set by grid-template-columns/rows */
-}
 .puzzle-piece-2x2 { width: 150px; height: 150px; }
 .puzzle-piece-3x3 { width: 112px; height: 112px; }
 
 
 .board-cell {
     background-color: #fff;
-    border: 1px solid #f5c6cb;
+    border: 1px dashed #d37f00;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -244,25 +230,25 @@ h2 {
     align-items: center;
     position: relative;
     transition: box-shadow 0.2s, transform 0.1s;
-    background-color: #f8f8f8;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15),
-                0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #D9D9D9; /* Nuevo color base de pieza */
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.25), /* Sombra más marcada */
+                0px 4px 7px rgba(0, 0, 0, 0.22);
     border-radius: 12px;
 }
 .puzzle-piece:active:not(.dragging) {
     transform: scale(0.97);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1),
-                0px 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2), /* Sombra ajustada para active */
+                0px 2px 4px rgba(0, 0, 0, 0.18);
 }
 
 .puzzle-piece:hover {
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2),
-                0px 3px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.3), /* Sombra ajustada para hover */
+                0px 5px 10px rgba(0, 0, 0, 0.25);
 }
 .puzzle-piece.dragging {
     opacity: 0.6;
     cursor: grabbing;
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
+    box-shadow: 0px 12px 25px rgba(0,0,0,0.35); /* Sombra ajustada para dragging */
 }
 
 .puzzle-piece svg {
@@ -273,8 +259,8 @@ h2 {
 }
 
 .drag-over {
-    background-color: #ffe8cc; /* Naranja muy pálido */
-    border: 2px dashed #ffab73; /* Naranja discontinuo */
+    background-color: #ffe8cc;
+    border: 2px dashed #ffab73;
 }
 .palette-drag-over {
     border-color: #d2b4de;

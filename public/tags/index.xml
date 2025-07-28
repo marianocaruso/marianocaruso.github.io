@@ -7,8 +7,36 @@
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
-    <lastBuildDate>Thu, 01 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://marianocaruso.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markov Chain</title>
+      <link>https://marianocaruso.github.io/tags/markov-chain/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/tags/markov-chain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Monte Carlo</title>
+      <link>https://marianocaruso.github.io/tags/monte-carlo/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/tags/monte-carlo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PageRank</title>
+      <link>https://marianocaruso.github.io/tags/pagerank/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/tags/pagerank/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Probability</title>
+      <link>https://marianocaruso.github.io/tags/probability/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/tags/probability/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Eternal Return</title>
       <link>https://marianocaruso.github.io/tags/eternal-return/</link>

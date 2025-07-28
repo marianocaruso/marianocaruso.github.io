@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const winMessage = document.getElementById('win-message');
     const bodyElement = document.body;
     const timerDisplay = document.getElementById('timer-display');
-    const scoreDisplay = document.getElementById('score-display'); // Cambiado de movesDisplay
+    const actionsDisplay = document.getElementById('actions-display'); // Cambiado
 
     let boardState = [];
     let paletteState = [];
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let timerInterval = null;
     let secondsElapsed = 0;
-    let score = 0; // Cambiado de moveCount
+    let actionCount = 0; // Cambiado
 
     const shapeXPath = "M-12,-12 L12,12 M-12,12 L12,-12";
     const circleRadius = 14;
@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startTimer() {
-        if (timerInterval) stopTimer(); // Detener si ya hay uno corriendo
-        secondsElapsed = 0; // Siempre empezar desde 0 al iniciar explícitamente
+        if (timerInterval) stopTimer();
+        secondsElapsed = 0;
         updateTimerDisplay();
         timerInterval = setInterval(() => {
             secondsElapsed++;
@@ -92,18 +92,18 @@ document.addEventListener('DOMContentLoaded', () => {
         updateTimerDisplay();
     }
 
-    function updateScoreDisplay() { // Cambiado de updateMoveCountDisplay
-        scoreDisplay.textContent = `puntaje: ${score}`;
+    function updateActionsDisplay() { // Cambiado
+        actionsDisplay.textContent = `acciones: ${actionCount}`;
     }
 
-    function incrementScore() { // Cambiado de incrementMoveCount
-        score++;
-        updateScoreDisplay();
+    function incrementActionCount() { // Cambiado
+        actionCount++;
+        updateActionsDisplay();
     }
 
-    function resetScore() { // Cambiado de resetMoveCount
-        score = 0;
-        updateScoreDisplay();
+    function resetActionCount() { // Cambiado
+        actionCount = 0;
+        updateActionsDisplay();
     }
 
 
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const paletteEntry = paletteState.find(p => p.elementId === pieceElement.id);
                 if (paletteEntry) paletteEntry.rotation = newRotation;
             }
-            if(timerInterval) incrementScore(); // Solo contar si el juego ha comenzado
+            if(timerInterval) incrementActionCount();
             checkWinCondition();
         });
         pieceElement.addEventListener('dragstart', handleDragStart);
@@ -251,29 +251,29 @@ document.addEventListener('DOMContentLoaded', () => {
         paletteDiv.addEventListener('dragleave', handleDragLeavePalette);
     }
 
-    function startGame() { // Esta función se llama al hacer clic en "comenzar"
+    function startGame() {
         currentGridSize = parseInt(gridSizeSelector.value);
         PIECE_DEFINITIONS = ALL_PIECE_DEFINITIONS[currentGridSize];
         winMessage.classList.add('hidden');
         bodyElement.classList.add('numbers-hidden');
         
-        startTimer(); // Iniciar el temporizador aquí
-        resetScore(); // Resetear el puntaje
+        startTimer();
+        resetActionCount();
         
         setupBoardUI();
         initializePalette();
     }
 
-    function resetPiecePositions() { // Botón "reiniciar"
+    function resetPiecePositions() {
         winMessage.classList.add('hidden');
         bodyElement.classList.add('numbers-hidden');
         
-        resetTimer(); // Poner temporizador a 00:00 y detenerlo
-        resetScore(); // Resetear puntaje
+        resetTimer();
+        resetActionCount();
         
         boardCellElements.forEach(row => row.forEach(cell => cell.innerHTML = ''));
         boardState = Array(currentGridSize).fill(null).map(() => Array(currentGridSize).fill(null));
-        initializePalette(); // Esto NO debe iniciar el timer, solo startGame lo hace
+        initializePalette();
     }
 
     function handleDragStart(e) { e.target.classList.add('dragging'); const pieceId = parseInt(e.target.dataset.pieceId); const rotation = parseInt(e.target.dataset.rotation); let source, originalIndexOrCoords; if (e.target.parentElement.id === 'palette') { source = 'palette'; originalIndexOrCoords = paletteState.findIndex(p => p.elementId === e.target.id); } else { source = 'board'; originalIndexOrCoords = { r: parseInt(e.target.parentElement.dataset.r), c: parseInt(e.target.parentElement.dataset.c) }; } draggedPieceData = { pieceId, rotation, elementId: e.target.id, source, originalIndexOrCoords }; e.dataTransfer.setData('text/plain', e.target.id); e.dataTransfer.effectAllowed = 'move'; }
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleDropOnBoard(e) {
         e.preventDefault();
         e.currentTarget.classList.remove('drag-over');
-        if (!draggedPieceData || !timerInterval) return; // No contar movimientos si el timer no está activo
+        if (!draggedPieceData || !timerInterval) return;
 
         const targetR = parseInt(e.currentTarget.dataset.r);
         const targetC = parseInt(e.currentTarget.dataset.c);
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!boardState[targetR]) boardState[targetR] = [];
         boardState[targetR][targetC] = { id: draggedPieceData.pieceId, rotation: draggedPieceData.rotation };
         e.currentTarget.appendChild(draggedElement);
-        incrementScore();
+        incrementActionCount();
 
         if (draggedPieceData.source === 'board') {
             const origR = draggedPieceData.originalIndexOrCoords.r;
@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const origC = draggedPieceData.originalIndexOrCoords.c;
         if (boardState[origR]) boardState[origR][origC] = null;
         
-        incrementScore();
+        incrementActionCount();
         checkWinCondition();
     }
 
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showSolutionAction() {
-        resetPiecePositions(); // Llama a resetTimer y resetScore
+        resetPiecePositions();
         winMessage.classList.add('hidden');
         solveButton.textContent = "auto-solución";
         
@@ -422,20 +422,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Inicialización al cargar la página
     gridSizeSelector.value = currentGridSize.toString();
-    // No llamamos a startGame() aquí para que el timer no inicie al cargar.
-    // Se inicializa el tablero y la paleta, pero el juego "comienza" con el botón.
     PIECE_DEFINITIONS = ALL_PIECE_DEFINITIONS[currentGridSize];
     winMessage.classList.add('hidden');
     bodyElement.classList.add('numbers-hidden');
-    resetTimer(); // Asegurar que el timer esté en 00:00
-    resetScore(); // Asegurar que el puntaje esté en 0
+    resetTimer();
+    resetActionCount();
     setupBoardUI();
     initializePalette();
 
-    // Listeners para los botones
-    startNewGameButton.addEventListener('click', startGame); // startGame ahora inicia el timer
+    startNewGameButton.addEventListener('click', startGame);
     resetButton.addEventListener('click', resetPiecePositions);
     hintButton.addEventListener('click', togglePieceNumbersVisibility);
     solveButton.addEventListener('click', showSolutionAction);

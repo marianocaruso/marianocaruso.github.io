@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google PageRank on Mariano Caruso</title>
+    <link>http://localhost:1313/tags/google-pagerank/</link>
+    <description>Recent content in Google PageRank on Mariano Caruso</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>© Mariano Caruso</copyright>
+    <lastBuildDate>Wed, 15 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/google-pagerank/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cadenas de Markov: De una disputa rusa a la inteligencia artificial</title>
+      <link>http://localhost:1313/notes/9.markov/</link>
+      <pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/9.markov/</guid>
+      <description>Explorando el origen y la sorprendente utilidad de las Cadenas de Markov en campos tan diversos como la física nuclear y los motores de búsqueda.</description>
+    </item>
+  </channel>
+</rss>
