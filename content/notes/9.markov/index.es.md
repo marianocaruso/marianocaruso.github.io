@@ -11,13 +11,14 @@ math:  true
 ---
 
 {{< katex >}}
-#### Introducción
+
+### Introducción
 
 La respuesta a preguntas aparentemente diversas como cuántas veces hay que barajar una baraja para que sea verdaderamente aleatoria, cuánto uranio se necesita para una bomba nuclear, cómo se predice la siguiente palabra en una frase o cómo Google sabe qué página buscas, se encuentra en una peculiar y acalorada disputa matemática que tuvo lugar en Rusia hace más de 100 años. En 1905, el levantamiento de grupos socialistas contra el Zar dividió profundamente a la nación, y esta división social y política se extendió incluso al ámbito académico, afectando a los matemáticos.
 
 En un lado de la contienda intelectual, defendiendo al Zar y el *status quo*, se encontraba **Pavel Nekrasov**, conocido extraoficialmente como el "Zar de la Probabilidad". Nekrasov era un hombre profundamente religioso y poderoso que usaba su posición para argumentar que las matemáticas podían ser utilizadas para explicar el **libre albedrío** y la voluntad de Dios. En el lado opuesto, con una postura socialista, estaba su némesis intelectual, **Andrey Markov**, también conocido como "Andrey el Furioso". Markov, un ateo, no toleraba lo que consideraba una falta de rigor, especialmente cuando se vinculaba la matemática con el libre albedrío o la religión. Él criticó públicamente el trabajo de Nekrasov, incluyéndolo entre los "abusos de las matemáticas".
 
-#### La Ley de los grandes números y la independencia
+### La Ley de los grandes números y la independencia
 
 La disputa central entre Markov y Nekrasov giraba en torno a la **Ley de los Grandes Números**, una idea fundamental que había dominado la probabilidad durante 200 años. Esta ley, probada por primera vez por Jacob Bernoulli en 1713, establece que el comportamiento promedio de un resultado se acerca cada vez más a su valor esperado a medida que se realizan más y más pruebas *independientes*. Por ejemplo, al lanzar una moneda un gran número de veces, la proporción de caras y cruces tiende a estabilizarse alrededor del 50/50.
 
@@ -25,7 +26,7 @@ Bernoulli, sin embargo, había probado que esta ley solo funcionaba para eventos
 
 Para Markov, la postura de Nekrasov era "delirante" y absurda por vincular la independencia matemática con el libre albedrío. Markov se propuso refutarlo, buscando demostrar que los **eventos dependientes** también podían seguir la Ley de los Grandes Números, y que era perfectamente posible hacer cálculos de probabilidad con ellos.
 
-#### La demostración de Markov: El Poema "Eugenio Oneguin" y las Cadenas
+### Poemas y cadenas
 
 Para llevar a cabo su demostración, Markov necesitaba un sistema donde un evento claramente dependiera de lo que había ocurrido antes. Tuvo la idea de que esto sucede en el **texto**: la probabilidad de que la siguiente letra sea una consonante o una vocal depende en gran medida de la letra actual. Para probar esto, Markov se basó en el poema "Eugenio Oneguin" de Alexander Pushkin, una obra central de la literatura rusa.
 
@@ -39,7 +40,7 @@ Simulando secuencias de letras con esta máquina, generando números aleatorios 
 
 Esta nueva forma de teoría de la probabilidad, que permitía modelar eventos dependientes, pasó a conocerse como la **Cadena de Markov**. Aunque era un avance significativo —ya que en el mundo real casi todo depende de algo más, como el clima de mañana del de hoy, o la propagación de una enfermedad de quién está infectado— Markov mismo no le dio mucha importancia a sus aplicaciones prácticas, declarando estar "preocupado solo con cuestiones de puro análisis".
 
-#### Aplicaciones Revolucionarias de las Cadenas de Markov
+### Aplicaciones en cadena
 
 La aparente indiferencia de Markov sobre la aplicabilidad de su teoría contrastaría drásticamente con el papel fundamental que las Cadenas de Markov jugarían en desarrollos cruciales del siglo XX.
 
@@ -70,7 +71,7 @@ La idea original de Markov de predecir texto fue retomada en la década de 1940 
 
 Esta es precisamente la base de cómo funcionan los sistemas de predicción de texto modernos, como el autocompletado de Gmail, y los algoritmos de los **modelos de lenguaje grandes (LLMs)** actuales. Aunque los LLMs no usan estrictamente letras individuales sino "tokens" (que pueden ser letras, palabras, marcas de puntuación, etc.), la pregunta fundamental sigue siendo: "¿Cuáles son las probabilidades de que el siguiente token sea este, o este, o este?". Sin embargo, los LLMs actuales superan a las Cadenas de Markov simples al utilizar un mecanismo llamado **"atención"**, que les permite ponderar la importancia de diferentes tokens en el contexto previo para afinar sus predicciones (por ejemplo, distinguiendo "celda" en un contexto biológico de "celda" de prisión).
 
-#### Limitaciones y la Propiedad "Sin Memoria" de las Cadenas de Markov
+### Contextos limitados
 
 A pesar de su versatilidad, las Cadenas de Markov no son adecuadas para modelar *todos* los sistemas dependientes. En particular, los sistemas con **bucles de retroalimentación positiva** —donde un cambio inicial se amplifica a sí mismo, como el calentamiento global (el aumento de CO2 eleva la temperatura, que a su vez aumenta el vapor de agua, un potente gas de efecto invernadero, elevando aún más la temperatura)— son difíciles de predecir con Cadenas de Markov. En estos casos, el estado futuro no depende solo del estado actual, sino de la acumulación de efectos pasados.
 
