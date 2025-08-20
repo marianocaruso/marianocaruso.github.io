@@ -12,7 +12,7 @@
   class="scroll-smooth"
   data-default-appearance="dark"
   data-auto-appearance="true"
-><head>
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FF5733" />
@@ -82,7 +82,7 @@
   
   
   
-  <link rel="canonical" href="https://marianocaruso.github.io/notes/9.markov/" />
+  <link rel="canonical" href="http://localhost:1313/notes/9.markov/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -99,7 +99,7 @@
   
   
   
-  <meta property="og:url" content="https://marianocaruso.github.io/notes/9.markov/">
+  <meta property="og:url" content="http://localhost:1313/notes/9.markov/">
   <meta property="og:site_name" content="Mariano Caruso">
   <meta property="og:title" content="Cadenas de Markov">
   <meta property="og:description" content="Una entrada de blog sobre el origen, la evolución y las diversas aplicaciones de las Cadenas de Markov, desde la Rusia zarista hasta los modelos de lenguaje modernos.">
@@ -112,11 +112,11 @@
     <meta property="article:tag" content="Probability">
     <meta property="article:tag" content="PageRank">
     <meta property="article:tag" content="Monte Carlo">
-    <meta property="og:image" content="https://marianocaruso.github.io/notes/9.markov/feature%20-%20markov.png">
+    <meta property="og:image" content="http://localhost:1313/notes/9.markov/feature%20-%20markov.png">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://marianocaruso.github.io/notes/9.markov/feature%20-%20markov.png">
+  <meta name="twitter:image" content="http://localhost:1313/notes/9.markov/feature%20-%20markov.png">
   <meta name="twitter:title" content="Cadenas de Markov">
   <meta name="twitter:description" content="Una entrada de blog sobre el origen, la evolución y las diversas aplicaciones de las Cadenas de Markov, desde la Rusia zarista hasta los modelos de lenguaje modernos.">
 
@@ -131,7 +131,7 @@
     "description": "Una entrada de blog sobre el origen, la evolución y las diversas aplicaciones de las Cadenas de Markov, desde la Rusia zarista hasta los modelos de lenguaje modernos.",
     "abstract": "Sobre la no necesidad de independencia de eventos",
     "inLanguage": "es",
-    "url" : "https:\/\/marianocaruso.github.io\/notes\/9.markov\/",
+    "url" : "http:\/\/localhost:1313\/notes\/9.markov\/",
     "author" : {
       "@type": "Person",
       "name": "Mariano Caruso"
@@ -145,7 +145,7 @@
     "keywords": ["Markov chain","probability","PageRank","Monte Carlo"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2726"
+    "wordCount": "2705"
   }
   </script>
     
@@ -156,13 +156,13 @@
    "itemListElement": [
      {
        "@type": "ListItem",
-       "item": "https://marianocaruso.github.io/",
+       "item": "http://localhost:1313/",
        "name": "Mariano Caruso",
        "position": 1
      },
      {
        "@type": "ListItem",
-       "item": "https://marianocaruso.github.io/notes/",
+       "item": "http://localhost:1313/notes/",
        "name": "Notas",
        "position": 2
      },
@@ -346,11 +346,6 @@
 
   
   
-  
-  
-  
-  
-
 
   
   
@@ -856,15 +851,11 @@
   <ul>
     <li>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#introducción">Introducción</a></li>
-            <li><a href="#la-ley-de-los-grandes-números-y-la-independencia">La Ley de los grandes números y la independencia</a></li>
-            <li><a href="#la-demostración-de-markov-el-poema-eugenio-oneguin-y-las-cadenas">La demostración de Markov: El Poema &ldquo;Eugenio Oneguin&rdquo; y las Cadenas</a></li>
-            <li><a href="#aplicaciones-revolucionarias-de-las-cadenas-de-markov">Aplicaciones Revolucionarias de las Cadenas de Markov</a></li>
-            <li><a href="#limitaciones-y-la-propiedad-sin-memoria-de-las-cadenas-de-markov">Limitaciones y la Propiedad &ldquo;Sin Memoria&rdquo; de las Cadenas de Markov</a></li>
-          </ul>
-        </li>
+        <li><a href="#introducción">Introducción</a></li>
+        <li><a href="#la-ley-de-los-grandes-números-y-la-independencia">La Ley de los grandes números y la independencia</a></li>
+        <li><a href="#poemas-y-cadenas">Poemas y cadenas</a></li>
+        <li><a href="#aplicaciones-en-cadena">Aplicaciones en cadena</a></li>
+        <li><a href="#contextos-limitados">Contextos limitados</a></li>
       </ul>
     </li>
   </ul>
@@ -878,18 +869,18 @@
       <div class="min-h-0 min-w-0 max-w-prose grow">
         
 
-<h4 id="introducción" class="relative group">Introducción <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#introducci%c3%b3n" aria-label="Ancla">#</a></span></h4><p>La respuesta a preguntas aparentemente diversas como cuántas veces hay que barajar una baraja para que sea verdaderamente aleatoria, cuánto uranio se necesita para una bomba nuclear, cómo se predice la siguiente palabra en una frase o cómo Google sabe qué página buscas, se encuentra en una peculiar y acalorada disputa matemática que tuvo lugar en Rusia hace más de 100 años. En 1905, el levantamiento de grupos socialistas contra el Zar dividió profundamente a la nación, y esta división social y política se extendió incluso al ámbito académico, afectando a los matemáticos.</p>
+<h3 id="introducción" class="relative group">Introducción <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#introducci%c3%b3n" aria-label="Ancla">#</a></span></h3><p>La respuesta a preguntas aparentemente diversas como cuántas veces hay que barajar una baraja para que sea verdaderamente aleatoria, cuánto uranio se necesita para una bomba nuclear, cómo se predice la siguiente palabra en una frase o cómo Google sabe qué página buscas, se encuentra en una peculiar y acalorada disputa matemática que tuvo lugar en Rusia hace más de 100 años. En 1905, el levantamiento de grupos socialistas contra el Zar dividió profundamente a la nación, y esta división social y política se extendió incluso al ámbito académico, afectando a los matemáticos.</p>
 <p>En un lado de la contienda intelectual, defendiendo al Zar y el <em>status quo</em>, se encontraba <strong>Pavel Nekrasov</strong>, conocido extraoficialmente como el &ldquo;Zar de la Probabilidad&rdquo;. Nekrasov era un hombre profundamente religioso y poderoso que usaba su posición para argumentar que las matemáticas podían ser utilizadas para explicar el <strong>libre albedrío</strong> y la voluntad de Dios. En el lado opuesto, con una postura socialista, estaba su némesis intelectual, <strong>Andrey Markov</strong>, también conocido como &ldquo;Andrey el Furioso&rdquo;. Markov, un ateo, no toleraba lo que consideraba una falta de rigor, especialmente cuando se vinculaba la matemática con el libre albedrío o la religión. Él criticó públicamente el trabajo de Nekrasov, incluyéndolo entre los &ldquo;abusos de las matemáticas&rdquo;.</p>
-<h4 id="la-ley-de-los-grandes-números-y-la-independencia" class="relative group">La Ley de los grandes números y la independencia <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#la-ley-de-los-grandes-n%c3%bameros-y-la-independencia" aria-label="Ancla">#</a></span></h4><p>La disputa central entre Markov y Nekrasov giraba en torno a la <strong>Ley de los Grandes Números</strong>, una idea fundamental que había dominado la probabilidad durante 200 años. Esta ley, probada por primera vez por Jacob Bernoulli en 1713, establece que el comportamiento promedio de un resultado se acerca cada vez más a su valor esperado a medida que se realizan más y más pruebas <em>independientes</em>. Por ejemplo, al lanzar una moneda un gran número de veces, la proporción de caras y cruces tiende a estabilizarse alrededor del 50/50.</p>
+<h3 id="la-ley-de-los-grandes-números-y-la-independencia" class="relative group">La Ley de los grandes números y la independencia <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#la-ley-de-los-grandes-n%c3%bameros-y-la-independencia" aria-label="Ancla">#</a></span></h3><p>La disputa central entre Markov y Nekrasov giraba en torno a la <strong>Ley de los Grandes Números</strong>, una idea fundamental que había dominado la probabilidad durante 200 años. Esta ley, probada por primera vez por Jacob Bernoulli en 1713, establece que el comportamiento promedio de un resultado se acerca cada vez más a su valor esperado a medida que se realizan más y más pruebas <em>independientes</em>. Por ejemplo, al lanzar una moneda un gran número de veces, la proporción de caras y cruces tiende a estabilizarse alrededor del 50/50.</p>
 <p>Bernoulli, sin embargo, había probado que esta ley solo funcionaba para eventos independientes, como el lanzamiento de una moneda justa, donde un evento no influye en los demás. Nekrasov aceptaba esta condición, pero la llevó un paso más allá: argumentó que si se observaba la Ley de los Grandes Números en un conjunto de datos, se podía inferir que los eventos subyacentes debían ser independientes. Nekrasov observó esta pauta en estadísticas sociales como las tasas de matrimonio, delincuencia y natalidad en Bélgica entre 1841 y 1845; vio que los promedios anuales de matrimonios convergían alrededor de 29.000. Razonó que, dado que estas estadísticas seguían la Ley de los Grandes Números, las decisiones individuales que las causaban (casarse, cometer crímenes, tener hijos) debían ser actos independientes de <strong>libre albedrío</strong>. Para Nekrasov, el libre albedrío no era solo filosófico, sino algo medible y científico.</p>
 <p>Para Markov, la postura de Nekrasov era &ldquo;delirante&rdquo; y absurda por vincular la independencia matemática con el libre albedrío. Markov se propuso refutarlo, buscando demostrar que los <strong>eventos dependientes</strong> también podían seguir la Ley de los Grandes Números, y que era perfectamente posible hacer cálculos de probabilidad con ellos.</p>
-<h4 id="la-demostración-de-markov-el-poema-eugenio-oneguin-y-las-cadenas" class="relative group">La demostración de Markov: El Poema &ldquo;Eugenio Oneguin&rdquo; y las Cadenas <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#la-demostraci%c3%b3n-de-markov-el-poema-eugenio-oneguin-y-las-cadenas" aria-label="Ancla">#</a></span></h4><p>Para llevar a cabo su demostración, Markov necesitaba un sistema donde un evento claramente dependiera de lo que había ocurrido antes. Tuvo la idea de que esto sucede en el <strong>texto</strong>: la probabilidad de que la siguiente letra sea una consonante o una vocal depende en gran medida de la letra actual. Para probar esto, Markov se basó en el poema &ldquo;Eugenio Oneguin&rdquo; de Alexander Pushkin, una obra central de la literatura rusa.</p>
+<h3 id="poemas-y-cadenas" class="relative group">Poemas y cadenas <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#poemas-y-cadenas" aria-label="Ancla">#</a></span></h3><p>Para llevar a cabo su demostración, Markov necesitaba un sistema donde un evento claramente dependiera de lo que había ocurrido antes. Tuvo la idea de que esto sucede en el <strong>texto</strong>: la probabilidad de que la siguiente letra sea una consonante o una vocal depende en gran medida de la letra actual. Para probar esto, Markov se basó en el poema &ldquo;Eugenio Oneguin&rdquo; de Alexander Pushkin, una obra central de la literatura rusa.</p>
 <p>Tomó los primeros 20.000 caracteres del poema, eliminó la puntuación y los espacios, y los unió en una larga cadena. Contó que el 43% de los caracteres eran vocales y el 57% consonantes. Luego, dividió la cadena en pares de letras superpuestas para analizar las combinaciones: vocal-vocal, consonante-consonante, vocal-consonante y consonante-vocal. Si las letras fueran independientes, la probabilidad de un par vocal-vocal sería el producto de la probabilidad de una vocal consigo misma (aproximadamente $0.43 \times 0.43 = 0.18$, o un 18%). Sin embargo, Markov encontró que los pares vocal-vocal solo aparecían el 6% de las veces, lo que era significativamente menor que la predicción de independencia. Las frecuencias de todos los demás pares también diferían notablemente de lo que se esperaría si fueran independientes, confirmando que las letras eran dependientes.</p>
 $$ P(\text{vocal} \to \text{vocal}) = \frac{P(\text{vocal-vocal})}{P(\text{vocal})} = \frac{0.06}{0.43} \approx 0.13 $$<p>
 Esto significaba una probabilidad del 13% de transición de vocal a vocal. Como la suma de las probabilidades de todas las transiciones desde un estado dado debe ser 1 (100%), la probabilidad de ir de una vocal a una consonante era $1 - 0.13 = 0.87$ (87%). Repitió el proceso para las consonantes, completando su máquina predictiva.</p>
 <p>Simulando secuencias de letras con esta máquina, generando números aleatorios para decidir la siguiente transición, Markov observó que, aunque la proporción de vocales a consonantes fluctuaba al principio, con el tiempo convergía a los valores exactos que había contado a mano en el poema: 43% vocales y 57% consonantes. Así, Markov construyó un sistema dependiente, una &ldquo;cadena literal de eventos&rdquo;, y demostró que aún así seguía la Ley de los Grandes Números. Esto significaba que la convergencia observada en las estadísticas sociales no probaba la independencia de las decisiones subyacentes, y por lo tanto, no probaba el libre albedrío. Markov sabía que había destrozado el argumento de Nekrasov, y culminó su trabajo con una última burla: &ldquo;Así, el libre albedrío no es necesario para hacer probabilidad&rdquo;. De hecho, ni siquiera la independencia es necesaria para hacer probabilidad.</p>
 <p>Esta nueva forma de teoría de la probabilidad, que permitía modelar eventos dependientes, pasó a conocerse como la <strong>Cadena de Markov</strong>. Aunque era un avance significativo —ya que en el mundo real casi todo depende de algo más, como el clima de mañana del de hoy, o la propagación de una enfermedad de quién está infectado— Markov mismo no le dio mucha importancia a sus aplicaciones prácticas, declarando estar &ldquo;preocupado solo con cuestiones de puro análisis&rdquo;.</p>
-<h4 id="aplicaciones-revolucionarias-de-las-cadenas-de-markov" class="relative group">Aplicaciones Revolucionarias de las Cadenas de Markov <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#aplicaciones-revolucionarias-de-las-cadenas-de-markov" aria-label="Ancla">#</a></span></h4><p>La aparente indiferencia de Markov sobre la aplicabilidad de su teoría contrastaría drásticamente con el papel fundamental que las Cadenas de Markov jugarían en desarrollos cruciales del siglo XX.</p>
+<h3 id="aplicaciones-en-cadena" class="relative group">Aplicaciones en cadena <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#aplicaciones-en-cadena" aria-label="Ancla">#</a></span></h3><p>La aparente indiferencia de Markov sobre la aplicabilidad de su teoría contrastaría drásticamente con el papel fundamental que las Cadenas de Markov jugarían en desarrollos cruciales del siglo XX.</p>
 <p><strong>1. El Método Monte Carlo y la Simulación de Bombas Nucleares</strong>
 En 1945, se detonó la primera bomba nuclear. Incluso después de la guerra, el matemático <strong>Stanislaw Ulam</strong>, parte del Proyecto Manhattan, continuó investigando el comportamiento de los neutrones dentro de una bomba. Una bomba nuclear funciona mediante una reacción en cadena: un neutrón golpea un núcleo de uranio-235, este se divide liberando energía y dos o tres neutrones más. Si, en promedio, estos nuevos neutrones logran golpear y dividir más de un núcleo, se produce una reacción en cadena descontrolada, es decir, una bomba. Una pregunta clave era la cantidad mínima de uranio-235 necesaria, lo que requería comprender el comportamiento de los neutrones.</p>
 <p>En enero de 1946, Ulam fue afectado por una encefalitis casi fatal. Durante su larga recuperación, pasaba el tiempo jugando al solitario. La pregunta de cuáles eran las probabilidades de ganar una partida aleatoriamente barajada de solitario le obsesionaba. Resolver esto analíticamente era inviable debido al número inmenso de posibles arreglos de las cartas ($52! \approx 8 \times 10^{67}$). Ulam tuvo una revelación: ¿y si simplemente jugaba cientos de partidas y contaba cuántas ganaba para obtener una aproximación estadística?.</p>
@@ -905,7 +896,7 @@ En 1993, el acceso público a Internet provocó una explosión de información, 
 <p><strong>3. Modelos de Lenguaje Grandes (LLMs) y Predicción de Texto</strong>
 La idea original de Markov de predecir texto fue retomada en la década de 1940 por <strong>Claude Shannon</strong>, el padre de la teoría de la información. Shannon fue más allá de vocales y consonantes, centrándose en letras individuales y luego en palabras completas. Se preguntó qué pasaría si, en lugar de mirar solo la última letra o palabra, se consideraran las dos o más palabras anteriores como predictores. Descubrió que al tomar en cuenta cada vez más palabras previas, se podían hacer mejores y mejores predicciones sobre cuál sería la siguiente palabra.</p>
 <p>Esta es precisamente la base de cómo funcionan los sistemas de predicción de texto modernos, como el autocompletado de Gmail, y los algoritmos de los <strong>modelos de lenguaje grandes (LLMs)</strong> actuales. Aunque los LLMs no usan estrictamente letras individuales sino &ldquo;tokens&rdquo; (que pueden ser letras, palabras, marcas de puntuación, etc.), la pregunta fundamental sigue siendo: &ldquo;¿Cuáles son las probabilidades de que el siguiente token sea este, o este, o este?&rdquo;. Sin embargo, los LLMs actuales superan a las Cadenas de Markov simples al utilizar un mecanismo llamado <strong>&ldquo;atención&rdquo;</strong>, que les permite ponderar la importancia de diferentes tokens en el contexto previo para afinar sus predicciones (por ejemplo, distinguiendo &ldquo;celda&rdquo; en un contexto biológico de &ldquo;celda&rdquo; de prisión).</p>
-<h4 id="limitaciones-y-la-propiedad-sin-memoria-de-las-cadenas-de-markov" class="relative group">Limitaciones y la Propiedad &ldquo;Sin Memoria&rdquo; de las Cadenas de Markov <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#limitaciones-y-la-propiedad-sin-memoria-de-las-cadenas-de-markov" aria-label="Ancla">#</a></span></h4><p>A pesar de su versatilidad, las Cadenas de Markov no son adecuadas para modelar <em>todos</em> los sistemas dependientes. En particular, los sistemas con <strong>bucles de retroalimentación positiva</strong> —donde un cambio inicial se amplifica a sí mismo, como el calentamiento global (el aumento de CO2 eleva la temperatura, que a su vez aumenta el vapor de agua, un potente gas de efecto invernadero, elevando aún más la temperatura)— son difíciles de predecir con Cadenas de Markov. En estos casos, el estado futuro no depende solo del estado actual, sino de la acumulación de efectos pasados.</p>
+<h3 id="contextos-limitados" class="relative group">Contextos limitados <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#contextos-limitados" aria-label="Ancla">#</a></span></h3><p>A pesar de su versatilidad, las Cadenas de Markov no son adecuadas para modelar <em>todos</em> los sistemas dependientes. En particular, los sistemas con <strong>bucles de retroalimentación positiva</strong> —donde un cambio inicial se amplifica a sí mismo, como el calentamiento global (el aumento de CO2 eleva la temperatura, que a su vez aumenta el vapor de agua, un potente gas de efecto invernadero, elevando aún más la temperatura)— son difíciles de predecir con Cadenas de Markov. En estos casos, el estado futuro no depende solo del estado actual, sino de la acumulación de efectos pasados.</p>
 <p>Una preocupación actual con los LLMs es precisamente esta: si el texto generado por los modelos termina en Internet y se utiliza como datos de entrenamiento para futuros modelos, podría conducir a un &ldquo;estado muy aburrido y estable&rdquo;, donde el sistema solo &ldquo;dice lo mismo una y otra vez para siempre&rdquo;. Estos sistemas con bucles de retroalimentación se vuelven difíciles de modelar con Cadenas de Markov.</p>
 <p>Sin embargo, para muchos otros sistemas dependientes, las Cadenas de Markov siguen siendo una herramienta increíblemente poderosa para la probabilidad. Su gran fortaleza radica en una propiedad clave: son <strong>&ldquo;sin memoria&rdquo;</strong> o <strong>&ldquo;memoryless&rdquo;</strong>. Aunque la historia de un sistema puede ser extremadamente larga (como todas las letras en un texto, todas las interacciones de un neutrón o el clima durante semanas), la propiedad sin memoria de las Cadenas de Markov permite ignorar casi todo ese historial y solo mirar el <strong>estado actual</strong> para hacer predicciones significativas. Es esta capacidad de simplificación la que permite tomar sistemas extremadamente complejos y reducirlos significativamente para hacer predicciones útiles. Como un artículo lo resume: &ldquo;La resolución de problemas es a menudo una cuestión de idear una Cadena de Markov apropiada&rdquo;.</p>
 <p>Esta simplificación también explica por qué se sabe que <strong>siete barajados de riffle</strong> son suficientes para que una baraja de 52 cartas esté &ldquo;completamente aleatoria&rdquo;. El barajado de cartas puede verse como una Cadena de Markov donde cada arreglo de la baraja es un estado, y cada barajado es un paso. Después de siete barajados, cada arreglo posible de la baraja es aproximadamente igualmente probable, lo que significa que la baraja está &ldquo;básicamente aleatoria&rdquo;.</p>
@@ -1057,7 +1048,7 @@ La idea original de Markov de predecir texto fue retomada en la década de 1940 
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://x.com/intent/tweet/?url=https://marianocaruso.github.io/notes/9.markov/&amp;text=Cadenas%20de%20Markov"
+          href="https://x.com/intent/tweet/?url=http://localhost:1313/notes/9.markov/&amp;text=Cadenas%20de%20Markov"
           title=""
           aria-label=""
           target="_blank"
@@ -1070,7 +1061,7 @@ La idea original de Markov de predecir texto fue retomada en la década de 1940 
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://marianocaruso.github.io/notes/9.markov/&amp;title=Cadenas%20de%20Markov"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/notes/9.markov/&amp;title=Cadenas%20de%20Markov"
           title="Compartir en LinkedIn"
           aria-label="Compartir en LinkedIn"
           target="_blank"
@@ -1083,7 +1074,7 @@ La idea original de Markov de predecir texto fue retomada en la década de 1940 
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://telegram.me/share/url?text=https://marianocaruso.github.io/notes/9.markov/&amp;url=Cadenas%20de%20Markov"
+          href="https://telegram.me/share/url?text=http://localhost:1313/notes/9.markov/&amp;url=Cadenas%20de%20Markov"
           title="Compartir en Telegram"
           aria-label="Compartir en Telegram"
           target="_blank"
@@ -1096,7 +1087,7 @@ La idea original de Markov de predecir texto fue retomada en la década de 1940 
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="mailto:?body=https://marianocaruso.github.io/notes/9.markov/&amp;subject=Cadenas%20de%20Markov"
+          href="mailto:?body=http://localhost:1313/notes/9.markov/&amp;subject=Cadenas%20de%20Markov"
           title="Enviar vía email"
           aria-label="Enviar vía email"
           target="_blank"
@@ -1219,7 +1210,7 @@ La idea original de Markov de predecir texto fue retomada en la década de 1940 
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="https://marianocaruso.github.io/"
+  data-url="http://localhost:1313/"
 >
   <div
     id="search-modal"

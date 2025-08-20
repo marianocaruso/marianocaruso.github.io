@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spin States on Mariano Caruso</title>
-    <link>https://marianocaruso.github.io/tags/spin-states/</link>
+    <link>http://localhost:1313/tags/spin-states/</link>
     <description>Recent content in Spin States on Mariano Caruso</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
     <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://marianocaruso.github.io/tags/spin-states/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/spin-states/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Qubits particulares</title>
-      <link>https://marianocaruso.github.io/notes/7.particular-qubits/</link>
+      <link>http://localhost:1313/notes/7.particular-qubits/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/7.particular-qubits/</guid>
+      <guid>http://localhost:1313/notes/7.particular-qubits/</guid>
       <description>Representación de qubits en estados de  partícula</description>
     </item>
   </channel>
