@@ -808,8 +808,15 @@
 <h2 id="descripción" class="relative group">descripción <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#descripci%c3%b3n" aria-label="Ancla">#</a></span></h2><p>Se trata de un puzzle simple, en tanto que no tienen bordes que encastrar, pero complicados porque a priori pueden ir de cualquier forma. La idea es que la persona que lo intente compruebe por hartazgo la rapidez con la que crece el tiempo promedio de resolución con solo pasar de un simple 2x2 a un 3x3. El efecto de confirmar que un 2x2 se puede armar en un tiempo breve, pero no suele ser así con solo con un 3x3, permite tirar por tierra las expectativas que pueda hacerse el ludócuata de turno. Para los jugadores más resistentes, se puede armar un 4x4, etc.</p>
 <p>Una vez comprobadas las ganas morir que entran por no completar el puzzle, se puede introducir el concepto de cómo lo resuelve una computadora que pruebe todas las opciones en las que pueden ser localizadas las piezas (muchísimas de las cuales no resuelven el puzzle), este número se puede expresar matemáticamente y dependiendo de lo que conozca el jugador se puede verificar analíticamente cómo crece el tiempo promedio de resolución con la cantidad de piezas del puzzle.
 El juego consiste en disponer piezas sin bordes “tradicionales” de encastre, lo que hace que la colocación sea más libre. El desafío radica en que, conforme crece el tamaño de la rejilla (2x2, 3x3, etc.), el tiempo promedio para resolver el puzzle aumenta rápidamente, ilustrando así el fenómeno de la explosión combinatoria.</p>
-<iframe src="/juegos/puzzle_x-o/index.html"
-        style="width: 150%; height: 800px; border: none;"
+<style>
+.responsive-iframe {
+  width: 150%;
+  aspect-ratio: 5 / 4.5; /* ajusta según tu juego */
+  border: none;
+}
+</style>
+<iframe class="responsive-iframe"
+        src="/juegos/puzzle_x-o/index.html"
         loading="lazy"
         allowfullscreen>
 </iframe>
