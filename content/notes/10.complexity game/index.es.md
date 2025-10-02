@@ -3,7 +3,7 @@
 title: "Complejidad computacional" # va al índice de notas
 date: 2025-05-05
 showDate: false
-summary: "comprobando la complejidad por hartazgo"
+summary: "comprobandola por hartazgo"
 # description: "nota 2" #creo que no sirve para nada
 draft: false # true="no se muestra en la web"
 showReadingTime: false
@@ -27,8 +27,16 @@ Una vez comprobadas las ganas morir que entran por no completar el puzzle, se pu
 El juego consiste en disponer piezas sin bordes “tradicionales” de encastre, lo que hace que la colocación sea más libre. El desafío radica en que, conforme crece el tamaño de la rejilla (2x2, 3x3, etc.), el tiempo promedio para resolver el puzzle aumenta rápidamente, ilustrando así el fenómeno de la explosión combinatoria.
 
 
-<iframe src="/juegos/puzzle_x-o/index.html"
-        style="width: 150%; height: 800px; border: none;"
+<style>
+.responsive-iframe {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* ajusta según tu juego */
+  border: none;
+}
+</style>
+
+<iframe class="responsive-iframe"
+        src="/juegos/puzzle_x-o/index.html"
         loading="lazy"
         allowfullscreen>
 </iframe>

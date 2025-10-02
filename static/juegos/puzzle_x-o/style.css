@@ -297,3 +297,9 @@ h2 { /* Estilo base para H2, será sobrescrito por IDs específicos */
     font-weight: 600;
 }
 .hidden { display: none !important; }
+
+.scale-wrapper {
+  transform: scale(0.8);       /* ajustá este número hasta que encaje */
+  transform-origin: top left;
+  width: 125%;                 /* compensa el shrink horizontal */
+}
