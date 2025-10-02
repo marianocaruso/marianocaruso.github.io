@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Equidad on Mariano Caruso</title>
+    <link>http://localhost:1313/tags/equidad/</link>
+    <description>Recent content in Equidad on Mariano Caruso</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>© Mariano Caruso</copyright>
+    <lastBuildDate>Thu, 15 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/equidad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>El enigma de la equidad que encendió la probabilidad</title>
+      <link>http://localhost:1313/notes/10.juegos-y-aleatoriedad/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/10.juegos-y-aleatoriedad/</guid>
+      <description>¿Cómo dividir un premio de forma justa cuando un juego se interrumpe? Esta pregunta, aparentemente simple, sentó las bases de la teoría de la probabilidad.</description>
+    </item>
+  </channel>
+</rss>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quantum Computing on Mariano Caruso</title>
-    <link>http://localhost:1313/tags/quantum-computing/</link>
+    <link>https://marianocaruso.github.io/tags/quantum-computing/</link>
     <description>Recent content in Quantum Computing on Mariano Caruso</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
     <lastBuildDate>Thu, 01 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/quantum-computing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://marianocaruso.github.io/tags/quantum-computing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Eterno retorno</title>
-      <link>http://localhost:1313/notes/8.eternal-return/</link>
+      <link>https://marianocaruso.github.io/notes/8.eternal-return/</link>
       <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/8.eternal-return/</guid>
+      <guid>https://marianocaruso.github.io/notes/8.eternal-return/</guid>
       <description>¿Cuándo llegamos?</description>
     </item>
   </channel>

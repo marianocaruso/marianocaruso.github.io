@@ -7,14 +7,14 @@
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
-    <lastBuildDate>Wed, 15 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/probabilidad/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Cadenas de Markov: De una disputa rusa a la inteligencia artificial</title>
-      <link>http://localhost:1313/notes/9.markov/</link>
-      <pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/9.markov/</guid>
-      <description>Explorando el origen y la sorprendente utilidad de las Cadenas de Markov en campos tan diversos como la física nuclear y los motores de búsqueda.</description>
+      <title>El enigma de la equidad que encendió la probabilidad</title>
+      <link>http://localhost:1313/notes/10.juegos-y-aleatoriedad/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/10.juegos-y-aleatoriedad/</guid>
+      <description>¿Cómo dividir un premio de forma justa cuando un juego se interrumpe? Esta pregunta, aparentemente simple, sentó las bases de la teoría de la probabilidad.</description>
     </item>
   </channel>
 </rss>
