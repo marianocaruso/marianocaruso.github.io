@@ -297,26 +297,3 @@ h2 { /* Estilo base para H2, será sobrescrito por IDs específicos */
     font-weight: 600;
 }
 .hidden { display: none !important; }
-
-/* --- Ajuste responsivo rápido --- */
-.scale-wrapper {
-  transform: scale(0.9);       /* achica el juego dentro del iframe */
-  transform-origin: top left;  /* que se reduzca desde arriba a la izquierda */
-  width: 111%;                 /* compensa el shrink horizontal */
-  max-width: 100%;
-}
-
-/* En pantallas chicas (móviles), escalar más */
-@media (max-width: 768px) {
-  .scale-wrapper {
-    transform: scale(0.7);
-    width: 143%;
-  }
-}
-
-@media (max-width: 480px) {
-  .scale-wrapper {
-    transform: scale(0.6);
-    width: 166%;
-  }
-}
