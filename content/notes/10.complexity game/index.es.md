@@ -26,16 +26,9 @@ Se trata de un puzzle simple, en tanto que no tienen bordes que encastrar, pero 
 Una vez comprobadas las ganas morir que entran por no completar el puzzle, se puede introducir el concepto de cómo lo resuelve una computadora que pruebe todas las opciones en las que pueden ser localizadas las piezas (muchísimas de las cuales no resuelven el puzzle), este número se puede expresar matemáticamente y dependiendo de lo que conozca el jugador se puede verificar analíticamente cómo crece el tiempo promedio de resolución con la cantidad de piezas del puzzle.
 El juego consiste en disponer piezas sin bordes “tradicionales” de encastre, lo que hace que la colocación sea más libre. El desafío radica en que, conforme crece el tamaño de la rejilla (2x2, 3x3, etc.), el tiempo promedio para resolver el puzzle aumenta rápidamente, ilustrando así el fenómeno de la explosión combinatoria.
 
-<style>
-.responsive-iframe {
-  width: 150%;
-  aspect-ratio: 5 / 4.5; /* ajusta según tu juego */
-  border: none;
-}
-</style>
 
-<iframe class="responsive-iframe"
-        src="/juegos/puzzle_x-o/index.html"
+<iframe src="/juegos/puzzle_x-o/index.html"
+        style="width: 150%; height: 800px; border: none;"
         loading="lazy"
         allowfullscreen>
 </iframe>
