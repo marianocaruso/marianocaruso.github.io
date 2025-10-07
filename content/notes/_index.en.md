@@ -1,7 +1,7 @@
 ---
 title: "Notes"
 #date: 2025-01-15
-description: "Notes about me "
+description: "notes written by me ..."
 showReadingTime: false
 cascade:
   showEdit: false
@@ -9,6 +9,6 @@ cascade:
 ---
 
 
-notes written by me
+... there may be some errors
 
 
