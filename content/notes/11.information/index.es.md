@@ -36,7 +36,7 @@ Definimos una función matemática \( I(p) \) que cuantifica la información bas
 3. **Aditividad para eventos independientes**: \( I(p_1 \times p_2) = I(p_1) + I(p_2) \)
 4. **Relación inversa con la probabilidad**: Menor probabilidad implica mayor información
 
-La función que satisface perfectamente estos principios es:
+Una función que satisface perfectamente estos principios es:
 
 \[ I(p) = -\log_2 p \]
 
