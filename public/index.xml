@@ -11,9 +11,9 @@
     <atom:link href="https://marianocaruso.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>¿A o B?</title>
-      <link>https://marianocaruso.github.io/notes/11.decision-making/</link>
+      <link>https://marianocaruso.github.io/notes/12.decision-making/</link>
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/11.decision-making/</guid>
+      <guid>https://marianocaruso.github.io/notes/12.decision-making/</guid>
       <description>Decisiones basadas en datos</description>
     </item>
     <item>
@@ -24,11 +24,18 @@
       <description>Sobre la no necesidad de independencia de eventos</description>
     </item>
     <item>
+      <title>Información</title>
+      <link>https://marianocaruso.github.io/notes/11.information/</link>
+      <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/notes/11.information/</guid>
+      <description>Midiendo la sorpresa</description>
+    </item>
+    <item>
       <title>Complejidad computacional</title>
       <link>https://marianocaruso.github.io/notes/10.complexity-game/</link>
       <pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate>
       <guid>https://marianocaruso.github.io/notes/10.complexity-game/</guid>
-      <description>comprobandola por hartazgo</description>
+      <description>Comprobandola por hartazgo</description>
     </item>
     <item>
       <title>Eterno retorno</title>

@@ -3,7 +3,7 @@
 title: "Complejidad computacional" # va al índice de notas
 date: 2025-05-05
 showDate: false
-summary: "comprobandola por hartazgo"
+summary: "Comprobandola por hartazgo"
 # description: "nota 2" #creo que no sirve para nada
 draft: false # true="no se muestra en la web"
 showReadingTime: false

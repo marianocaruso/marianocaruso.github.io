@@ -7,7 +7,7 @@ summary: "Decisiones basadas en datos"
 # description: "nota 2" #creo que no sirve para nada
 draft: false # true="no se muestra en la web"
 showReadingTime: false
-tags: [binary decision, conditional probability, entropy, mutual information, maxent, logistic distribution]
+tags: [binary decision, conditional probability, mutual information, maxent, logistic distribution]
 math:  true  
 
 ---
@@ -24,11 +24,13 @@ Decidir es tomar partido por una lista de opciones y dado el número mínimo de 
 
 Quizá el método más rudimentario, para decidir entre las opciones excluyentes $A$ o $B$, puede resolverse haciendo una lista de $\mathtt{pros}$ y $\mathtt{conts}$, luego contabilizar $\mathtt{pros}(A)-\mathtt{conts}(A)$ y $\mathtt{pros}(B)-\mathtt{conts}(B)$ y tomar aquella opción que tenga el número más alto. Este método tiene limitaciones, pues depende del número y tipo de elementos de las listas para $A$ y $B$.
 
-Queremos poner una regla de medir para decidir, una basada en una colección finita de valores $x_1,\cdots,x_n$. Formalicemos esta idea de la toma decisiones basada en los $n-$valores anteriores, sin presuponer qué cosas son y qué valores toman, solo concebirlas como variables aleatorias $X_1,\cdots,X_n$ de valores que determinan a lo sumo una probabilidad de elegir una de las dos opciones $Y\in \{0,1\}$, definimos por $p(\pmb{x})=P(Y=1|\pmb{X}=\pmb{x})$, donde $\pmb{X}=(X_1,\cdots,X_n)$ y $\pmb{x}=(x_1,\cdots,x_n)$, como $Y$ es dicotómica, luego $1-p(\pmb{x})=P(Y=0|\pmb{X}=\pmb{x})$, notar que si $X$ es un vector de variables aleatorias continuas entonces $P(X=x)=0$, no obstante tiene sentido pensar y escribir $P(Y|X=x)$. 
+Queremos poner una regla de medir para decidir, una basada en una colección finita de valores $x_1,\cdots,x_n$. Formalicemos esta idea de la toma decisiones basada en los $n-$valores anteriores, sin presuponer qué cosas son y qué valores toman, solo concebirlas como variables aleatorias $X_1,\cdots,X_n$ de valores que determinan a lo sumo una probabilidad de elegir una de las dos opciones $Y\in \{0,1\}$, definimos por $p(\pmb{x})=P(Y=1|\pmb{X}=\pmb{x})$, donde $\pmb{X}=(X_1,\cdots,X_n)$ y $\pmb{x}=(x_1,\cdots,x_n)$, como $Y$ es dicotómica, luego $1-p(\pmb{x})=P(Y=0|\pmb{X}=\pmb{x})$, notar que si $X$ es un vector de variables aleatorias continuas entonces $P(X=x)=0$, no obstante tiene sentido pensar y escribir $P(Y|X=x)$. De hecho, podríamos esbozar un principio rudimentario de decisión dicotómica que utilice a $p(\pmb{x})$ como sigue 
 
+> $p(\pmb{x})<0.5$ elijo $Y=0$
 
-En teoría de la información se puede formalizar el concepto de incorporar la "data" que proviene de haber fijado $\pmb{X}$ en $\pmb{x}$, y evaluar cómo cambia la información que se tiene de $Y$ condicionada por esa data. Haremos uso de la información ganada o la información mutua que se define como $H(Y)-H(Y|\pmb{X})$ y de la información condicionada $H(Y|\pmb{X})$.
+> $p(\pmb{x})>0.5$ elijo $Y=1$
 
+En cualquier caso hemos pasado de decidir basado en un lista de pros y contras a utilizar una medida de probabilidad como decisor: por tanto necesitamos encontrar o construir dicha cantidad. En teoría de la información se puede formalizar el concepto de incorporar la "data" que proviene de haber fijado $\pmb{X}$ en $\pmb{x}$, y evaluar cómo cambia la información que se tiene de $Y$ condicionada por esa "data". Haciendo uso de la información condicionada $H(Y|\pmb{X})$ y de la información ganada o mutua $H(Y)-H(Y|\pmb{X})$ es posible contestar a la pregunta sobre cuál es la distribución de probabilidad $p(\pmb{x})$ óptima, i.e. aquella que maximiza dicha información, de manera que poder utilizarla como decisor. Veremos 5 formas de aproximar esta búsqueda
 
 ### toma 1
 

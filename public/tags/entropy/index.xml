@@ -2,19 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Entropy on Mariano Caruso</title>
-    <link>https://marianocaruso.github.io/tags/entropy/</link>
+    <link>http://localhost:1313/tags/entropy/</link>
     <description>Recent content in Entropy on Mariano Caruso</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
     <lastBuildDate>Tue, 05 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://marianocaruso.github.io/tags/entropy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/entropy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>¿A o B?</title>
-      <link>https://marianocaruso.github.io/notes/11.decision-making/</link>
+      <link>http://localhost:1313/notes/12.decision-making/</link>
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/11.decision-making/</guid>
+      <guid>http://localhost:1313/notes/12.decision-making/</guid>
       <description>Decisiones basadas en datos</description>
+    </item>
+    <item>
+      <title>Información</title>
+      <link>http://localhost:1313/notes/11.information/</link>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/11.information/</guid>
+      <description>¿Qué es la?</description>
     </item>
   </channel>
 </rss>
