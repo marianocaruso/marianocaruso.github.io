@@ -99,15 +99,16 @@ Esta solución requiere exactamente **un bit** de información, la unidad mínim
 
 
 
-## Conceptos clave
-
-La  **auto-información** mide sorpresa individual: $I(p) = -\log_2 p$, la **entropía** promedia la sorpresa esperada: $H[X] = -\sum_{i=1}^{n} p_i \log_2 p_i$. Las **distribuciones balanceadas** maximizan la entropía y los **sesgos** reducen el contenido informativo.
-
 ## Conclusión
+
+
+
 
 La teoría de la información, cimentada por Claude Shannon en 1948, proporciona herramientas matemáticas precisas para cuantificar algo tan abstracto como la información. Desde compresión de datos hasta comunicación eficiente, estos conceptos siguen siendo fundamentales en la era digital.
 
 La elegancia de la teoría reside en cómo conecta intuición cotidiana con matemáticas rigurosas, demostrando que incluso la "sorpresa" puede medirse y optimizarse.
+
+En resumen, **auto-información** mide sorpresa individual: $I(p) = -\log_2 p$, la **entropía** promedia la sorpresa esperada: $H[X] = -\sum_{i=1}^{n} p_i \log_2 p_i$. Las **distribuciones balanceadas** maximizan la entropía y los **sesgos** reducen el contenido informativo.
 
 
 [{{< spotify type="album" id="5iT3F2EhjVQVrO4PKhsP8c?" width="100%" height="160" >}}]:#
