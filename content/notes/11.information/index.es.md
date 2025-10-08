@@ -18,7 +18,7 @@ math:  true
 ## ¿Qué es la Información y cómo se mide?
 
 
-Imaginemos una situación cotidiana: abrís el la heladera esperando encontrar leche, pero descubrís que tiene más vida de lo esperado. Esa desagradable sorpresa te ha proporcionado información valiosa `no consumas esa leche`.
+Imaginemos una situación cotidiana: abrís el la heladera esperando encontrar leche, pero descubrís que tiene "más vida de la esperada". Esa desagradable sorpresa te ha proporcionado información valiosa `no consumas esa leche`.
 
 Por otro lado, si lanzás un dado cargado que siempre cae en 6, cada resultado te sorprenderá poco, si usás un dado balanceado, cada lanzamiento será más impredecible que el caso anterior.
 
