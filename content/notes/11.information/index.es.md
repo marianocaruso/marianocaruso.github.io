@@ -101,13 +101,7 @@ Esta solución requiere exactamente **un bit** de información, la unidad mínim
 
 ## Conceptos clave
 
-1. **Auto-información** mide sorpresa individual: $I(p) = -\log_2 p$
-
-2. **Entropía** promedia la sorpresa esperada: $H[X] = -\sum_{i=1}^{n} p_i \log_2 p_i$
-
-3. **Distribuciones balanceadas** maximizan la entropía
-
-4. **Sesgos reducen** el contenido informativo
+La  **auto-información** mide sorpresa individual: $I(p) = -\log_2 p$, la **entropía** promedia la sorpresa esperada: $H[X] = -\sum_{i=1}^{n} p_i \log_2 p_i$. Las **distribuciones balanceadas** maximizan la entropía y los **sesgos** reducen el contenido informativo.
 
 ## Conclusión
 
