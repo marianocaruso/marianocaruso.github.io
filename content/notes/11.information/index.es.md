@@ -17,15 +17,12 @@ math:  true
 
 ## ¿Qué es la Información y cómo se mide?
 
-### El concepto fundamental
 
-Imaginemos una situación cotidiana: abrís el la heladera esperando encontrar leche, pero descubres que tiene más vida de lo esperado. Esa desagradable sorpresa te ha proporcionado información valiosa `no consumas esa leche`.
+Imaginemos una situación cotidiana: abrís el la heladera esperando encontrar leche, pero descubrís que tiene más vida de lo esperado. Esa desagradable sorpresa te ha proporcionado información valiosa `no consumas esa leche`.
 
-**Analicemos un ejemplo más técnico:**
-- Si lanzás un dado cargado que siempre cae en 6, cada resultado te sorprenderá poco
-- Si usás un dado balanceado, cada lanzamiento será más impredecible
+Por otro lado, si lanzás un dado cargado que siempre cae en 6, cada resultado te sorprenderá poco, si usás un dado balanceado, cada lanzamiento será más impredecible que el caso anterior.
 
-**La idea central:** Podemos medir la información mediante el nivel de sorpresa que genera un evento. A mayor incertidumbre resuelta, mayor el contenido informativo.
+> **idea central** podemos medir la información mediante el nivel de sorpresa que genera un evento. A mayor incertidumbre resuelta, mayor el contenido informativo.
 
 ### De la intuición a la formalización matemática
 
