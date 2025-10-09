@@ -30,7 +30,7 @@ Definimos una función matemática \( I(p) \) que cuantifica la información bas
 
 1. **Variación continua**: Cambios pequeños en probabilidad deben generar cambios pequeños en información
 2. **Cero información para lo seguro**: Eventos con \( p = 1 \) no aportan nueva información
-3. **Aditividad para eventos independientes**: \( I(p_1 \times p_2) = I(p_1) + I(p_2) \)
+3. **Aditividad para eventos independientes**: \( I(p_1  p_2) = I(p_1) + I(p_2) \)
 4. **Relación inversa con la probabilidad**: Menor probabilidad implica mayor información
 
 Una función que satisface perfectamente estos principios es:
