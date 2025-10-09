@@ -58,13 +58,13 @@ I(p_1 p_2) &= -\log_2 (p_1 p_2) \\
 
 La **entropía de Shannon** representa el contenido informativo promedio de una distribución de probabilidad. Para eventos con probabilidades \( p_1, p_2, ..., p_n \):
 
-\[ H[X] = \mathbb{E}[I(X)] = -\sum_{i=1}^{n} p_i \log_2 p_i \]
+\[ H = -\sum_{i=1}^{n} p_i \log_2 p_i \]
 
 ### Caso de estudio: distribución bernoulli
 
 Para una variable que toma valor 1 con probabilidad \( p \) y 0 con probabilidad \( 1-p \):
 
-\[ H[X] = -p \log_2 p - (1-p) \log_2 (1-p) \]
+\[ H = -p \log_2 p - (1-p) \log_2 (1-p) \]
 
 **Comportamiento característico:**
 - Máxima entropía en \( p = 0.5 \) (máxima incertidumbre)
@@ -104,7 +104,7 @@ La teoría de la información, cimentada por Claude Shannon en 1948, proporciona
 
 La elegancia de la teoría reside en cómo conecta intuición cotidiana con matemáticas rigurosas, demostrando que incluso la "sorpresa" puede medirse y optimizarse.
 
-En resumen, **auto-información** mide sorpresa individual: $I(p)$, la **entropía** promedia la sorpresa esperada: $H[X]$. Las **distribuciones balanceadas** maximizan la entropía y los **sesgos** reducen el contenido informativo.
+En resumen, **auto-información** mide sorpresa individual: $I(p)$, la **entropía** promedia la sorpresa esperada: $H$. Las **distribuciones balanceadas** maximizan la entropía y los **sesgos** reducen el contenido informativo.
 
 
 [{{< spotify type="album" id="5iT3F2EhjVQVrO4PKhsP8c?" width="100%" height="160" >}}]:#
