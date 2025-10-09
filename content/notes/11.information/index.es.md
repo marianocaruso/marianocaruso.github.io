@@ -38,7 +38,7 @@ Una función que satisface perfectamente estos principios es:
 \[ I(p) = -\log_2 p \]
 
 ### Comprobación
-1. $I(p)$ es continua en $[0,1]$.
+1. $I(p)= -\log_2 p$ es continua en $[0,1]$.
 2. cuando \( p = 1 \), \( I(p) = 0 \) lo seguro no aporta novedad, i.e. no informa. En oposición cuando \( p \to 0 \), \( I(p) \to \infty \), eventos muy raros son muy informativos.
 3. dados dos **eventos independientes:** con probabilidades \( p_1 \) y \( p_2 \):
 \[
@@ -49,7 +49,7 @@ I(p_1 p_2) &= -\log_2 (p_1 p_2) \\
 \end{aligned}
 \]
 
-4. $I(p)$ es monótona decreciente, de hecho es diferenciable en $[0,1]$, i.e. $I'(p)<0$.
+4. $I(p)$ es monótona decreciente, de hecho es diferenciable en $(0,1]$, i.e. $I'(p)<0$.
 
 
 ## Entropía de la teoría de la información
