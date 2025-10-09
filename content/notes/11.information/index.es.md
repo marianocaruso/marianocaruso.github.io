@@ -18,7 +18,7 @@ math:  true
 ## ¿Qué es la Información y cómo se mide?
 
 
-Imaginemos una situación cotidiana: abrís el la heladera esperando encontrar leche, pero descubrís que tiene "más vida de la esperada". Esa desagradable sorpresa te ha proporcionado información valiosa `no consumas esa leche`.
+Imaginemos una situación cotidiana: abrís el la heladera esperando encontrar leche, pero descubrís que tiene "más vida de la esperada". Esa desagradable sorpresa te proporcionó información valiosa `no consumas esa leche`.
 
 Por otro lado, si lanzás un dado cargado que siempre cae en 6, cada resultado te sorprenderá poco, si usás un dado balanceado, cada lanzamiento será más impredecible que el caso anterior.
 
@@ -38,7 +38,7 @@ Una función que satisface perfectamente estos principios es:
 \[ I(p) = -\log_2 p \]
 
 ### Comprobación
-1. $I(p)= -\log_2 p$ es continua en $[0,1]$.
+1. $I(p)= -\log_2 p$ es continua en $(0,1]$.
 2. cuando \( p = 1 \), \( I(p) = 0 \) lo seguro no aporta novedad, i.e. no informa. En oposición cuando \( p \to 0 \), \( I(p) \to \infty \), eventos muy raros son muy informativos.
 3. dados dos **eventos independientes:** con probabilidades \( p_1 \) y \( p_2 \):
 \[
