@@ -37,10 +37,10 @@ Una función que satisface perfectamente estos principios es:
 
 \[ I(p) = -\log_2 p \]
 
-### Comprobación matemática
-
-**Eventos independientes:** Para probabilidades \( p_1 \) y \( p_2 \):
-
+### Comprobación
+1. $I(p)$ es continua en $[0,1]$.
+2. cuando \( p = 1 \), \( I(p) = 0 \) lo seguro no aporta novedad, i.e. no informa. En oposición cuando \( p \to 0 \), \( I(p) \to \infty \), eventos muy raros son muy informativos.
+3. dados dos **eventos independientes:** con probabilidades \( p_1 \) y \( p_2 \):
 \[
 \begin{aligned}
 I(p_1 p_2) &= -\log_2 (p_1 p_2) \\
@@ -49,11 +49,10 @@ I(p_1 p_2) &= -\log_2 (p_1 p_2) \\
 \end{aligned}
 \]
 
-**Comportamiento esperado:**
-- Cuando \( p \to 0 \), \( I(p) \to \infty \) (eventos muy raros son muy informativos)
-- Cuando \( p = 1 \), \( I(p) = 0 \) (lo seguro no informa)
+4. $I(p)$ es monótona decreciente, de hecho es diferenciable en $[0,1]$, i.e. $I'(p)<0$.
 
-## Entropía: el corazón de la teoría de la información
+
+## Entropía de la teoría de la información
 
 ### Definición y significado
 
@@ -105,7 +104,7 @@ La teoría de la información, cimentada por Claude Shannon en 1948, proporciona
 
 La elegancia de la teoría reside en cómo conecta intuición cotidiana con matemáticas rigurosas, demostrando que incluso la "sorpresa" puede medirse y optimizarse.
 
-En resumen, **auto-información** mide sorpresa individual: $I(p) = -\log_2 p$, la **entropía** promedia la sorpresa esperada: $H[X] = -\sum_{i=1}^{n} p_i \log_2 p_i$. Las **distribuciones balanceadas** maximizan la entropía y los **sesgos** reducen el contenido informativo.
+En resumen, **auto-información** mide sorpresa individual: $I(p)$, la **entropía** promedia la sorpresa esperada: $H[X]$. Las **distribuciones balanceadas** maximizan la entropía y los **sesgos** reducen el contenido informativo.
 
 
 [{{< spotify type="album" id="5iT3F2EhjVQVrO4PKhsP8c?" width="100%" height="160" >}}]:#
