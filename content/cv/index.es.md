@@ -7,7 +7,7 @@ showReadingTime: false
 showDate: false
 ---
 
-Podés {{< button href="/cv/es-cv.pdf" target="_blank" >}}descargarlo{{< /button >}} en formato PDF.
+Podés {{< button href="/cv/es-cv.pdf" target="_blank" >}}descargarlo{{< /button >}}  en formato PDF.
 
 ---
 
