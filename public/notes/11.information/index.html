@@ -856,12 +856,11 @@
   <ul>
     <li><a href="#qué-es-la-información-y-cómo-se-mide">¿Qué es la Información y cómo se mide?</a>
       <ul>
-        <li><a href="#el-concepto-fundamental">El concepto fundamental</a></li>
         <li><a href="#de-la-intuición-a-la-formalización-matemática">De la intuición a la formalización matemática</a></li>
-        <li><a href="#comprobación-matemática">Comprobación matemática</a></li>
+        <li><a href="#comprobación">Comprobación</a></li>
       </ul>
     </li>
-    <li><a href="#entropía-el-corazón-de-la-teoría-de-la-información">Entropía: el corazón de la teoría de la información</a>
+    <li><a href="#entropía-de-la-teoría-de-la-información">Entropía de la teoría de la información</a>
       <ul>
         <li><a href="#definición-y-significado">Definición y significado</a></li>
         <li><a href="#caso-de-estudio-distribución-bernoulli">Caso de estudio: distribución bernoulli</a></li>
@@ -873,7 +872,6 @@
         <li><a href="#por-qué-bits-y-base-2">Por qué bits y base 2</a></li>
       </ul>
     </li>
-    <li><a href="#conceptos-clave">Conceptos clave</a></li>
     <li><a href="#conclusión">Conclusión</a></li>
   </ul>
 </nav>
@@ -886,36 +884,41 @@
       <div class="min-h-0 min-w-0 max-w-prose grow">
         
 
-<h2 id="qué-es-la-información-y-cómo-se-mide" class="relative group">¿Qué es la Información y cómo se mide? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#qu%c3%a9-es-la-informaci%c3%b3n-y-c%c3%b3mo-se-mide" aria-label="Ancla">#</a></span></h2><h3 id="el-concepto-fundamental" class="relative group">El concepto fundamental <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#el-concepto-fundamental" aria-label="Ancla">#</a></span></h3><p>Imaginemos una situación cotidiana: abrís el la heladera esperando encontrar leche, pero descubres que tiene más vida de lo esperado. Esa desagradable sorpresa te ha proporcionado información valiosa <code>no consumas esa leche</code>.</p>
-<p><strong>Analicemos un ejemplo más técnico:</strong></p>
-<ul>
-<li>Si lanzás un dado cargado que siempre cae en 6, cada resultado te sorprenderá poco</li>
-<li>Si usás un dado balanceado, cada lanzamiento será más impredecible</li>
-</ul>
-<p><strong>La idea central:</strong> Podemos medir la información mediante el nivel de sorpresa que genera un evento. A mayor incertidumbre resuelta, mayor el contenido informativo.</p>
+<h2 id="qué-es-la-información-y-cómo-se-mide" class="relative group">¿Qué es la Información y cómo se mide? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#qu%c3%a9-es-la-informaci%c3%b3n-y-c%c3%b3mo-se-mide" aria-label="Ancla">#</a></span></h2><p>Imaginemos una situación cotidiana: abrís el la heladera esperando encontrar leche, pero descubrís que tiene &ldquo;más vida de la esperada&rdquo;. Esa desagradable sorpresa te proporcionó información valiosa <code>no consumas esa leche</code>.</p>
+<p>Por otro lado, si lanzás un dado cargado que siempre cae en 6, cada resultado te sorprenderá poco, si usás un dado balanceado, cada lanzamiento será más impredecible que el caso anterior.</p>
+<blockquote>
+<p><strong>idea central</strong> podemos medir la información mediante el nivel de sorpresa que genera un evento. A mayor incertidumbre resuelta, mayor el contenido informativo.</p>
+</blockquote>
 <h3 id="de-la-intuición-a-la-formalización-matemática" class="relative group">De la intuición a la formalización matemática <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#de-la-intuici%c3%b3n-a-la-formalizaci%c3%b3n-matem%c3%a1tica" aria-label="Ancla">#</a></span></h3><p>Definimos una función matemática \( I(p) \) que cuantifica la información basada en la probabilidad \( p \) de un evento. Esta función debe cumplir con cuatro principios esenciales:</p>
 <ol>
 <li><strong>Variación continua</strong>: Cambios pequeños en probabilidad deben generar cambios pequeños en información</li>
 <li><strong>Cero información para lo seguro</strong>: Eventos con \( p = 1 \) no aportan nueva información</li>
-<li><strong>Aditividad para eventos independientes</strong>: \( I(p_1 \times p_2) = I(p_1) + I(p_2) \)</li>
+<li><strong>Aditividad para eventos independientes</strong>: \( I(p_1  p_2) = I(p_1) + I(p_2) \)</li>
 <li><strong>Relación inversa con la probabilidad</strong>: Menor probabilidad implica mayor información</li>
 </ol>
-<p>La función que satisface perfectamente estos principios es:</p>
-\[ I(p) = -\log_2 p \]<h3 id="comprobación-matemática" class="relative group">Comprobación matemática <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#comprobaci%c3%b3n-matem%c3%a1tica" aria-label="Ancla">#</a></span></h3><p><strong>Eventos independientes:</strong> Para probabilidades \( p_1 \) y \( p_2 \):</p>
+<p>Una función que satisface perfectamente estos principios es:</p>
+\[ I(p) = -\log_2 p \]<h3 id="comprobación" class="relative group">Comprobación <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#comprobaci%c3%b3n" aria-label="Ancla">#</a></span></h3><ol>
+<li>
+<p>$I(p)= -\log_2 p$ es continua en $(0,1]$.</p>
+</li>
+<li>
+<p>cuando \( p = 1 \), \( I(p) = 0 \) lo seguro no aporta novedad, i.e. no informa. En oposición cuando \( p \to 0 \), \( I(p) \to \infty \), eventos muy raros son muy informativos.</p>
+</li>
+<li>
 \[
 \begin{aligned}
 I(p_1 p_2) &= -\log_2 (p_1 p_2) \\
 &= -(\log_2 p_1 + \log_2 p_2) \\
 &= I(p_1) + I(p_2)
 \end{aligned}
-\]<p><strong>Comportamiento esperado:</strong></p>
-<ul>
-<li>Cuando \( p \to 0 \), \( I(p) \to \infty \) (eventos muy raros son muy informativos)</li>
-<li>Cuando \( p = 1 \), \( I(p) = 0 \) (lo seguro no informa)</li>
-</ul>
-<h2 id="entropía-el-corazón-de-la-teoría-de-la-información" class="relative group">Entropía: el corazón de la teoría de la información <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#entrop%c3%ada-el-coraz%c3%b3n-de-la-teor%c3%ada-de-la-informaci%c3%b3n" aria-label="Ancla">#</a></span></h2><h3 id="definición-y-significado" class="relative group">Definición y significado <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#definici%c3%b3n-y-significado" aria-label="Ancla">#</a></span></h3><p>La <strong>entropía de Shannon</strong> representa el contenido informativo promedio de una distribución de probabilidad. Para eventos con probabilidades \( p_1, p_2, ..., p_n \):</p>
-\[ H[X] = \mathbb{E}[I(X)] = -\sum_{i=1}^{n} p_i \log_2 p_i \]<h3 id="caso-de-estudio-distribución-bernoulli" class="relative group">Caso de estudio: distribución bernoulli <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#caso-de-estudio-distribuci%c3%b3n-bernoulli" aria-label="Ancla">#</a></span></h3><p>Para una variable que toma valor 1 con probabilidad \( p \) y 0 con probabilidad \( 1-p \):</p>
-\[ H[X] = -p \log_2 p - (1-p) \log_2 (1-p) \]<p><strong>Comportamiento característico:</strong></p>
+\]</li>
+<li>
+<p>$I(p)$ es monótona decreciente, de hecho es diferenciable en $(0,1]$, i.e. $I'(p)<0$.</p>
+</li>
+</ol>
+<h2 id="entropía-de-la-teoría-de-la-información" class="relative group">Entropía de la teoría de la información <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#entrop%c3%ada-de-la-teor%c3%ada-de-la-informaci%c3%b3n" aria-label="Ancla">#</a></span></h2><h3 id="definición-y-significado" class="relative group">Definición y significado <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#definici%c3%b3n-y-significado" aria-label="Ancla">#</a></span></h3><p>La <strong>entropía de Shannon</strong> representa el contenido informativo promedio de una distribución de probabilidad. Para eventos con probabilidades \( p_1, p_2, ..., p_n \):</p>
+\[ H = -\sum_{i=1}^{n} p_i \log_2 p_i \]<h3 id="caso-de-estudio-distribución-bernoulli" class="relative group">Caso de estudio: distribución bernoulli <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#caso-de-estudio-distribuci%c3%b3n-bernoulli" aria-label="Ancla">#</a></span></h3><p>Para una variable que toma valor 1 con probabilidad \( p \) y 0 con probabilidad \( 1-p \):</p>
+\[ H = -p \log_2 p - (1-p) \log_2 (1-p) \]<p><strong>Comportamiento característico:</strong></p>
 <ul>
 <li>Máxima entropía en \( p = 0.5 \) (máxima incertidumbre)</li>
 <li>Mínima entropía en \( p = 0 \) o \( p = 1 \) (cero incertidumbre)</li>
@@ -938,22 +941,9 @@ I(p_1 p_2) &= -\log_2 (p_1 p_2) \\
 <li>Base \( e \): Unidades en &ldquo;nats&rdquo; (natural units)</li>
 <li>Base 10: Menos útil en contextos computacionales</li>
 </ul>
-<h2 id="conceptos-clave" class="relative group">Conceptos clave <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conceptos-clave" aria-label="Ancla">#</a></span></h2><ol>
-<li>
-<p><strong>Auto-información</strong> mide sorpresa individual: $I(p) = -\log_2 p$</p>
-</li>
-<li>
-<p><strong>Entropía</strong> promedia la sorpresa esperada: $H[X] = -\sum_{i=1}^{n} p_i \log_2 p_i$</p>
-</li>
-<li>
-<p><strong>Distribuciones balanceadas</strong> maximizan la entropía</p>
-</li>
-<li>
-<p><strong>Sesgos reducen</strong> el contenido informativo</p>
-</li>
-</ol>
 <h2 id="conclusión" class="relative group">Conclusión <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusi%c3%b3n" aria-label="Ancla">#</a></span></h2><p>La teoría de la información, cimentada por Claude Shannon en 1948, proporciona herramientas matemáticas precisas para cuantificar algo tan abstracto como la información. Desde compresión de datos hasta comunicación eficiente, estos conceptos siguen siendo fundamentales en la era digital.</p>
 <p>La elegancia de la teoría reside en cómo conecta intuición cotidiana con matemáticas rigurosas, demostrando que incluso la &ldquo;sorpresa&rdquo; puede medirse y optimizarse.</p>
+<p>En resumen, <strong>auto-información</strong> mide sorpresa individual: $I(p)$, la <strong>entropía</strong> promedia la sorpresa esperada: $H$. Las <strong>distribuciones balanceadas</strong> maximizan la entropía y los <strong>sesgos</strong> reducen el contenido informativo.</p>
 
       </div>
     </section>
