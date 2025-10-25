@@ -7,9 +7,12 @@ showReadingTime: false
 showDate: false
 ---
 
-Puedes visualizarlo o {{< button href="/cv/es-cv.pdf" target="_blank" >}}descargarlo{{< /button >}} en formato PDF
-
-<iframe src="/cv/es-cv.pdf" style="width:100%; height:600px;" frameborder="0"></iframe>
+Podés {{< button href="/cv/es-cv.pdf" target="_blank" >}}descargarlo{{< /button >}} en formato PDF.
 
 ---
+
+
+<!-- 
+<iframe src="/cv/es-cv.pdf" style="width:100%; height:600px;" frameborder="0"></iframe>
+-->
 
