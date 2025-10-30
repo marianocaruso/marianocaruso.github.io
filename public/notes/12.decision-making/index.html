@@ -148,7 +148,7 @@
     "keywords": ["binary decision","conditional probability","mutual information","maxent","logistic distribution"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1724"
+    "wordCount": "1713"
   }
   </script>
     
@@ -916,7 +916,7 @@ $$<p>
 donde $p_Y=\int_\mathscr{X} p(\pmb{x})P_{\pmb{X}}(\pmb{x}) d\pmb{x}$.</p>
 <p>$H(Y)$ depende de $p(\pmb{x})$ pero no depende de $\pmb{x}$. De hecho si dependiera de $\pmb{x}$ sería raro porque no está supeditada a $\pmb{x}$, pues eso se consigue con $H(Y|\pmb{X})$.</p>
 <p>Si quisiera encontrar la distribución $p(\pmb{x})$ tal que se maximice la información ganada, no debería tomar variaciones respecto de $\pmb{x}$ sino sobre las distribuciones, es decir, no recurrir al cálculo sobre funciones sino sombre funcionales.</p>
-<p>Con lo cual cuando quiera maximizar la información ganada (información mutua) $H(Y)-H(Y|\pmb{X})$ variando $\pmb{x}$ eso equivale a minimizar la entropía condicional $H(Y|\pmb{X})$. Pero si quisiera tomar variaciones respecto de $p(\pmb{x})$ entonces creo que</p>
+<p>Con lo cual cuando quiera maximizar la información ganada (información mutua) $H(Y)-H(Y|\pmb{X})$ variando $\pmb{x}$ eso equivale a minimizar la entropía condicional $H(Y|\pmb{X})$.</p>
 <p>En cualquier caso la <strong>entropía condicional</strong> $H(Y | \pmb{X})$ se define como el valor esperado de la entropía de $Y$ condicionada a cada valor posible de $\pmb{X}$:</p>
 $$
 H(Y \mid \pmb{X}) := \mathbb{E}_{\pmb{X}}[H(Y \mid \pmb{X} = \pmb{x})].
@@ -1031,7 +1031,7 @@ usando la función sigmoide como $f(\pmb{x})=\sigma(F(\pmb{x}))$, definida por $
 <p>para el caso logístico $f(\pmb{x})=\frac{1}{1+\exp[-\sum_k\omega_k x_k)]}$, $\nabla f(\pmb{x})=-f(\pmb{x})[1-f(\pmb{x})]\pmb{\omega}$</p>
 </blockquote>
 <hr>
-<h3 id="toma-5" class="relative group">toma 5 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#toma-5" aria-label="Ancla">#</a></span></h3><p>Otra manera más directa y bastante general de abordar el problema consiste en trata con una variable aleatoria $Z$ real definida a partir de las cantidades $\pmb{x}$ que habíamos considerado como resultado de un vector aleatorio $\pmb{X}$, en este caos las consideramos fijas. La aleatoriedad es introducida vía una fluctuación aditiva $\xi$: $Z=\phi(\pmb{x})+\xi$.</p>
+<h3 id="toma-5" class="relative group">toma 5 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#toma-5" aria-label="Ancla">#</a></span></h3><p>Otra manera más directa y bastante general de abordar el problema consiste en tratar con una variable aleatoria $Z$ real definida a partir de las cantidades $\pmb{x}$ que habíamos considerado como resultado de un vector aleatorio $\pmb{X}$, en este caos las consideramos fijas. La aleatoriedad es introducida vía una fluctuación aditiva $\xi$: $Z=\phi(\pmb{x})+\xi$.</p>
 $$
 Y = 
 \begin{cases}

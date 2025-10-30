@@ -74,7 +74,7 @@ Si quisiera encontrar la distribución $p(\pmb{x})$ tal que se maximice la infor
 
 
  
-Con lo cual cuando quiera maximizar la información ganada (información mutua) $H(Y)-H(Y|\pmb{X})$ variando $\pmb{x}$ eso equivale a minimizar la entropía condicional $H(Y|\pmb{X})$. Pero si quisiera tomar variaciones respecto de $p(\pmb{x})$ entonces creo que 
+Con lo cual cuando quiera maximizar la información ganada (información mutua) $H(Y)-H(Y|\pmb{X})$ variando $\pmb{x}$ eso equivale a minimizar la entropía condicional $H(Y|\pmb{X})$. 
 
 
 En cualquier caso la **entropía condicional** $H(Y | \pmb{X})$ se define como el valor esperado de la entropía de $Y$ condicionada a cada valor posible de $\pmb{X}$:
@@ -270,7 +270,7 @@ donde $\pmb{\lambda}=(\lambda_1,\cdots,\lambda_n)$.
 
 ### toma 5 
 
-Otra manera más directa y bastante general de abordar el problema consiste en trata con una variable aleatoria $Z$ real definida a partir de las cantidades $\pmb{x}$ que habíamos considerado como resultado de un vector aleatorio $\pmb{X}$, en este caos las consideramos fijas. La aleatoriedad es introducida vía una fluctuación aditiva $\xi$: $Z=\phi(\pmb{x})+\xi$.
+Otra manera más directa y bastante general de abordar el problema consiste en tratar con una variable aleatoria $Z$ real definida a partir de las cantidades $\pmb{x}$ que habíamos considerado como resultado de un vector aleatorio $\pmb{X}$, en este caos las consideramos fijas. La aleatoriedad es introducida vía una fluctuación aditiva $\xi$: $Z=\phi(\pmb{x})+\xi$.
 
 La variable aleatoria dicotómica $Y$ queda definida según el umbral $Z$ 
 $$
