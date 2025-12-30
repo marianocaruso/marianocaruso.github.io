@@ -146,7 +146,7 @@
     "keywords": ["uncertainty","repetition effect","conditional probability"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1535"
+    "wordCount": "1525"
   }
   </script>
     
@@ -886,20 +886,20 @@
         
 
 <h3 id="probabilidad-de-progreso-de-un-proyecto" class="relative group">Probabilidad de progreso de un proyecto <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#probabilidad-de-progreso-de-un-proyecto" aria-label="Ancla">#</a></span></h3><p>Todo proyecto está, por definición, orientado al futuro. Un proyecto es una secuencia de acciones que apunta a la concreción de un objetivo que todavía no existe y cuyo resultado no puede conocerse de antemano. Incluso cuando el plan es claro y los medios están bien definidos, siempre hay un margen de incertidumbre respecto a si una acción concreta, o el proyecto en su conjunto, logrará concretarse.</p>
-<p>Esta incertidumbre no es un defecto del diseño ni una falta de información; es estructural. Actuar implica decidir hoy bajo condiciones que solo se resolverán mañana. Precisamente por eso, el lenguaje natural para describir proyectos es probabilístico.</p>
+<p>Esta incertidumbre no es un defecto del diseño ni una falta de información; es estructural. Actuar implica decidir hoy bajo condiciones que solo se resolverán mañana.</p>
 $$
 X_k \in \{0,1\}, \qquad k=1,2,\dots
 $$<p>
 donde $X_k=1$ representa la concreción de la acción en la etapa $k$ y $X_k=0$ su no concreción en dicha etapa. El índice $k$ no es solo un contador: impone una ordenación temporal de los intentos y, con ella, una secuencia de consumo de recursos.</p>
 <hr>
 <h3 id="intentos-y-concreción" class="relative group">Intentos y concreción <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#intentos-y-concreci%c3%b3n" aria-label="Ancla">#</a></span></h3>$$
-N := \inf\{n \in \mathbb{N} : X_n = 1 ,\}.
+N := \inf\{n \in \mathbb{N} : X_n = 1 \}.
 $$<p>La variable aleatoria $N$ no mide tiempo cronológico, sino el <strong>despliegue efectivo de recursos</strong> necesario para que el proyecto avance: cada intento consume tiempo, dinero, atención o capital político, y $N$ cuenta cuántos de esos intentos fueron necesarios.</p>
 $$
 \{N>n\} = \{X_1=0,\dots,X_n=0\}, \qquad
 \{N=n\} = \{X_1=0,\dots,X_{n-1}=0, X_n=1\}.
 $$<p>
-Estas identidades son puramente lógicas y no dependen de ninguna hipótesis probabilística adicional.</p>
+Estas identidades no dependen de ninguna hipótesis probabilística adicional: e.g. independencia, distribución idéntica, etc.</p>
 <p>La probabilidad $P(N \le n)$ se interpreta como la <strong>probabilidad de que el proyecto se concrete en, a lo sumo, $n$ intentos</strong>. Dicho de otra manera, mide la probabilidad de alcanzar el objetivo antes de agotar $n$ etapas o recursos asignados.</p>
 <ul>
 <li>
