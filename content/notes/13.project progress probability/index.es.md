@@ -173,7 +173,7 @@ Hay varias lecturas complementarias:
    Esto indica que las fluctuaciones son del mismo orden que la media. No existe una “ley de los grandes números” que estabilice el costo: incluso en promedio, el proyecto puede salir mucho más caro o mucho más barato de lo esperado.
 
 3. **Fragilidad del modelo sin dependencia**
-   El hecho de que (V[N]) sea grande refleja que el modelo independiente es frágil: al no incorporar aprendizaje ni desgaste, no hay mecanismo que reduzca la dispersión del número de intentos. El proceso puede terminar muy pronto o prolongarse arbitrariamente.
+   El hecho de que $V[N]$ sea grande refleja que el modelo independiente es frágil: al no incorporar aprendizaje ni desgaste, no hay mecanismo que reduzca la dispersión del número de intentos. El proceso puede terminar muy pronto o prolongarse arbitrariamente.
 
 ---
 
