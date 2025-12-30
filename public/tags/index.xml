@@ -7,20 +7,34 @@
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
-    <lastBuildDate>Tue, 05 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://marianocaruso.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conditional Probability</title>
+      <link>https://marianocaruso.github.io/tags/conditional-probability/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/tags/conditional-probability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Repetition Effect</title>
+      <link>https://marianocaruso.github.io/tags/repetition-effect/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/tags/repetition-effect/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Uncertainty</title>
+      <link>https://marianocaruso.github.io/tags/uncertainty/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/tags/uncertainty/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Binary Decision</title>
       <link>https://marianocaruso.github.io/tags/binary-decision/</link>
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://marianocaruso.github.io/tags/binary-decision/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Conditional Probability</title>
-      <link>https://marianocaruso.github.io/tags/conditional-probability/</link>
-      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/tags/conditional-probability/</guid>
       <description></description>
     </item>
     <item>

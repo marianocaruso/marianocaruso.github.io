@@ -13,4 +13,3 @@ math: true
 ---
 
 {{< katex >}}
-

@@ -17,8 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FF5733" />
   
-  <title>¿A o B? &middot; Mariano Caruso</title>
-    <meta name="title" content="¿A o B? &middot; Mariano Caruso" />
+  <title>Persistencia y dependencia &middot; Mariano Caruso</title>
+    <meta name="title" content="Persistencia y dependencia &middot; Mariano Caruso" />
   
   
   
@@ -77,14 +77,14 @@
     name="description"
     content="
       
-        Decisiones basadas en datos
+        Probabilidad de progreso de un proyecto
       
     "
   />
   
   
   
-  <link rel="canonical" href="https://marianocaruso.github.io/notes/12.decision-making/" />
+  <link rel="canonical" href="https://marianocaruso.github.io/notes/13.project-progress-probability/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -101,27 +101,25 @@
   
   
   
-  <meta property="og:url" content="https://marianocaruso.github.io/notes/12.decision-making/">
+  <meta property="og:url" content="https://marianocaruso.github.io/notes/13.project-progress-probability/">
   <meta property="og:site_name" content="Mariano Caruso">
-  <meta property="og:title" content="¿A o B?">
-  <meta property="og:description" content="Decisiones basadas en datos">
+  <meta property="og:title" content="Persistencia y dependencia">
+  <meta property="og:description" content="Probabilidad de progreso de un proyecto">
   <meta property="og:locale" content="es">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
-    <meta property="article:published_time" content="2025-08-05T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-08-05T00:00:00+00:00">
-    <meta property="article:tag" content="Binary Decision">
+    <meta property="article:published_time" content="2025-12-30T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-30T00:00:00+00:00">
+    <meta property="article:tag" content="Uncertainty">
+    <meta property="article:tag" content="Repetition Effect">
     <meta property="article:tag" content="Conditional Probability">
-    <meta property="article:tag" content="Mutual Information">
-    <meta property="article:tag" content="Maxent">
-    <meta property="article:tag" content="Logistic Distribution">
-    <meta property="og:image" content="https://marianocaruso.github.io/notes/12.decision-making/feature%20-%20A%20o%20B.png">
+    <meta property="og:image" content="https://marianocaruso.github.io/notes/13.project-progress-probability/feature%20-%20ppp.png">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://marianocaruso.github.io/notes/12.decision-making/feature%20-%20A%20o%20B.png">
-  <meta name="twitter:title" content="¿A o B?">
-  <meta name="twitter:description" content="Decisiones basadas en datos">
+  <meta name="twitter:image" content="https://marianocaruso.github.io/notes/13.project-progress-probability/feature%20-%20ppp.png">
+  <meta name="twitter:title" content="Persistencia y dependencia">
+  <meta name="twitter:description" content="Probabilidad de progreso de un proyecto">
 
   
   <script type="application/ld+json">
@@ -129,26 +127,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Notas",
-    "name": "¿A o B?",
-    "headline": "¿A o B?",
+    "name": "Persistencia y dependencia",
+    "headline": "Persistencia y dependencia",
     
-    "abstract": "Decisiones basadas en datos",
+    "abstract": "Probabilidad de progreso de un proyecto",
     "inLanguage": "es",
-    "url" : "https:\/\/marianocaruso.github.io\/notes\/12.decision-making\/",
+    "url" : "https:\/\/marianocaruso.github.io\/notes\/13.project-progress-probability\/",
     "author" : {
       "@type": "Person",
       "name": "Mariano Caruso"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-05T00:00:00\u002b00:00",
-    "datePublished": "2025-08-05T00:00:00\u002b00:00",
+    "dateCreated": "2025-12-30T00:00:00\u002b00:00",
+    "datePublished": "2025-12-30T00:00:00\u002b00:00",
     
-    "dateModified": "2025-08-05T00:00:00\u002b00:00",
+    "dateModified": "2025-12-30T00:00:00\u002b00:00",
     
-    "keywords": ["binary decision","conditional probability","mutual information","maxent","logistic distribution"],
+    "keywords": ["uncertainty","repetition effect","conditional probability"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1713"
+    "wordCount": "1535"
   }
   </script>
     
@@ -171,7 +169,7 @@
      },
      {
        "@type": "ListItem",
-       "name": "¿ a O B?",
+       "name": "Persistencia Y Dependencia",
        "position": 3
      }
    ]
@@ -776,7 +774,7 @@
     <header class="max-w-prose">
       
       <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        ¿A o B?
+        Persistencia y dependencia
       </h1>
       
       
@@ -804,12 +802,16 @@
       
         <source
           
-            srcset="/notes/12.decision-making/feature%20-%20A%20o%20B_hu3290545952134073660.webp 330w,/notes/12.decision-making/feature%20-%20A%20o%20B_hu7062744560447615029.webp 660w
+            srcset="/notes/13.project-progress-probability/feature%20-%20ppp_hu10213685137047371075.webp 330w,/notes/13.project-progress-probability/feature%20-%20ppp_hu15820624329552908906.webp 660w
             
-              ,/notes/12.decision-making/feature%20-%20A%20o%20B_hu10439612523559563033.webp 1024w
+              
+                ,/notes/13.project-progress-probability/feature%20-%20ppp_hu565122412989001483.webp 1024w
+              
             
             
-              ,/notes/12.decision-making/feature%20-%20A%20o%20B_hu9948964819500824336.webp 1320w
+              
+                ,/notes/13.project-progress-probability/feature%20-%20ppp_hu565122412989001483.webp 1024w
+              
             "
           
           sizes="100vw"
@@ -817,19 +819,19 @@
         />
       
       <img
-        width="1920"
-        height="1440"
+        width="1024"
+        height="1024"
         class="mb-6 rounded-md"
         
         
         
-          src="/notes/12.decision-making/feature%20-%20A%20o%20B_hu15412645617257236199.png"
-          srcset="/notes/12.decision-making/feature%20-%20A%20o%20B_hu1303991579227515362.png 330w,/notes/12.decision-making/feature%20-%20A%20o%20B_hu15412645617257236199.png 660w
+          src="/notes/13.project-progress-probability/feature%20-%20ppp_hu16084001922386163338.png"
+          srcset="/notes/13.project-progress-probability/feature%20-%20ppp_hu11191211584061325279.png 330w,/notes/13.project-progress-probability/feature%20-%20ppp_hu16084001922386163338.png 660w
           
-            ,/notes/12.decision-making/feature%20-%20A%20o%20B_hu11964681857235328931.png 1024w
+            ,/notes/13.project-progress-probability/feature%20-%20ppp.png 1024w
           
           
-            ,/notes/12.decision-making/feature%20-%20A%20o%20B_hu11669404608622572578.png 1320w
+            ,/notes/13.project-progress-probability/feature%20-%20ppp.png 1024w
           "
           sizes="100vw"
         
@@ -855,23 +857,21 @@
   <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#decisiones-basadas-en-datos">decisiones basadas en datos</a>
+    <li>
       <ul>
-        <li><a href="#decisión-dicotómica">decisión dicotómica</a></li>
-        <li><a href="#toma-1">toma 1</a></li>
-        <li><a href="#toma-2">toma 2</a></li>
-        <li><a href="#toma-3---maxent--py1pmbxpmbx">toma 3 - MaxEnt  </a>
+        <li><a href="#probabilidad-de-progreso-de-un-proyecto">Probabilidad de progreso de un proyecto</a></li>
+        <li><a href="#intentos-y-concreción">Intentos y concreción</a></li>
+        <li><a href="#persistencia-sin-dependencia">Persistencia sin dependencia</a>
           <ul>
-            <li><a href="#entropía-condicional">entropía condicional</a></li>
+            <li><a href="#interpretación-de-la-esperanza">Interpretación de la esperanza</a></li>
+            <li><a href="#interpretación-de-la-varianza">Interpretación de la varianza</a></li>
+            <li><a href="#lectura-conjunta">Lectura conjunta</a></li>
           </ul>
         </li>
-        <li><a href="#toma-4-maxent--pyypmbxpmbx">toma 4 MaxEnt  </a></li>
-        <li><a href="#toma-5">toma 5</a>
-          <ul>
-            <li><a href="#función-de-verosimilitud">función de verosimilitud</a></li>
-            <li><a href="#estimación-de-máxima-verosimilitud">estimación de máxima verosimilitud</a></li>
-          </ul>
-        </li>
+        <li><a href="#dependencia-y-probabilidad-condicional">Dependencia y probabilidad condicional</a></li>
+        <li><a href="#persistencia-que-transforma-y-persistencia-que-no">Persistencia que transforma y persistencia que no</a></li>
+        <li><a href="#persistencia-y-progreso">Persistencia y progreso</a></li>
+        <li><a href="#reflexión">Reflexión</a></li>
       </ul>
     </li>
   </ul>
@@ -885,170 +885,160 @@
       <div class="min-h-0 min-w-0 max-w-prose grow">
         
 
-<h2 id="decisiones-basadas-en-datos" class="relative group">decisiones basadas en datos <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#decisiones-basadas-en-datos" aria-label="Ancla">#</a></span></h2><h3 id="decisión-dicotómica" class="relative group">decisión dicotómica <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#decisi%c3%b3n-dicot%c3%b3mica" aria-label="Ancla">#</a></span></h3><p>Decidir es tomar partido por una lista de opciones y dado el número mínimo de opciones es 2, la decisión &ldquo;más fundamental&rdquo;, en el sentido basal de la palabra, es de tipo binaria.</p>
-<p>Quizá el método más rudimentario, para decidir entre las opciones excluyentes $A$ o $B$, puede resolverse haciendo una lista de $\mathtt{pros}$ y $\mathtt{conts}$, luego contabilizar $\mathtt{pros}(A)-\mathtt{conts}(A)$ y $\mathtt{pros}(B)-\mathtt{conts}(B)$ y tomar aquella opción que tenga el número más alto. Este método tiene limitaciones, pues depende del número y tipo de elementos de las listas para $A$ y $B$.</p>
-<p>Queremos poner una regla de medir para decidir, una basada en una colección finita de valores $x_1,\cdots,x_n$. Formalicemos esta idea de la toma decisiones basada en los $n-$valores anteriores, sin presuponer qué cosas son y qué valores toman, solo concebirlas como variables aleatorias $X_1,\cdots,X_n$ de valores que determinan a lo sumo una probabilidad de elegir una de las dos opciones $Y\in \{0,1\}$, definimos por $p(\pmb{x})=P(Y=1|\pmb{X}=\pmb{x})$, donde $\pmb{X}=(X_1,\cdots,X_n)$ y $\pmb{x}=(x_1,\cdots,x_n)$, como $Y$ es dicotómica, luego $1-p(\pmb{x})=P(Y=0|\pmb{X}=\pmb{x})$, notar que si $X$ es un vector de variables aleatorias continuas entonces $P(X=x)=0$, no obstante tiene sentido pensar y escribir $P(Y|X=x)$. De hecho, podríamos esbozar un principio rudimentario de decisión dicotómica que utilice a $p(\pmb{x})$ como sigue</p>
-<blockquote>
-<p>$p(\pmb{x})<0.5$ elijo $Y=0$</p>
-</blockquote>
-<blockquote>
-<p>$p(\pmb{x})>0.5$ elijo $Y=1$</p>
-</blockquote>
-<p>En cualquier caso hemos pasado de decidir basado en un lista de pros y contras a utilizar una medida de probabilidad como decisor: por tanto necesitamos encontrar o construir dicha cantidad. En teoría de la información se puede formalizar el concepto de incorporar la &ldquo;data&rdquo; que proviene de haber fijado $\pmb{X}$ en $\pmb{x}$, y evaluar cómo cambia la información que se tiene de $Y$ condicionada por esa &ldquo;data&rdquo;. Haciendo uso de la información condicionada $H(Y|\pmb{X})$ y de la información ganada o mutua $H(Y)-H(Y|\pmb{X})$ es posible contestar a la pregunta sobre cuál es la distribución de probabilidad $p(\pmb{x})$ óptima, i.e. aquella que maximiza dicha información, de manera que poder utilizarla como decisor. Veremos 5 formas de aproximar esta búsqueda</p>
-<h3 id="toma-1" class="relative group">toma 1 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#toma-1" aria-label="Ancla">#</a></span></h3>$$
-\log\left(\dfrac{p}{1-p}\right)=-\dfrac{\partial_{\pmb{x}}H(Y|\pmb{X}=\pmb{x})}{\partial_{\pmb{x}}p(\pmb{x})}
-$$<p>
-$p(\pmb{x})/[1-p(\pmb{x})]$ es el cociente entre obtener $Y=1$ y obtener $Y=0$, condicionada a la información $\pmb{X}=\pmb{x}$.</p>
-<p>Si denotamos por $F(\pmb{x})=-\dfrac{\partial_{\pmb{x}}H(Y|\pmb{X}=\pmb{x})}{\partial_{\pmb{x}}p(\pmb{x})}$, de  $\log\left(\dfrac{p(\pmb{x})}{1-p(\pmb{x})}\right)=F(\pmb{x})$, se obtiene</p>
+<h3 id="probabilidad-de-progreso-de-un-proyecto" class="relative group">Probabilidad de progreso de un proyecto <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#probabilidad-de-progreso-de-un-proyecto" aria-label="Ancla">#</a></span></h3><p>Todo proyecto está, por definición, orientado al futuro. Un proyecto es una secuencia de acciones que apunta a la concreción de un objetivo que todavía no existe y cuyo resultado no puede conocerse de antemano. Incluso cuando el plan es claro y los medios están bien definidos, siempre hay un margen de incertidumbre respecto a si una acción concreta, o el proyecto en su conjunto, logrará concretarse.</p>
+<p>Esta incertidumbre no es un defecto del diseño ni una falta de información; es estructural. Actuar implica decidir hoy bajo condiciones que solo se resolverán mañana. Precisamente por eso, el lenguaje natural para describir proyectos es probabilístico.</p>
 $$
-p(\pmb{x})=\dfrac{1}{1+e^{-F(\pmb{x})}}
-$$<p>Si $F(\pmb{x})=w_0+w_1x_1+\cdots+w_nx_n$ es una función lineal $p(\pmb{x})$ toma la forma de una distribución logística multivariada</p>
-$$
-p(\pmb{x})=\dfrac{1}{1+e^{-\sum_{k=0}^nw_kx_k}}
+X_k \in \{0,1\}, \qquad k=1,2,\dots
 $$<p>
-donde $x_0=1$.</p>
-<p>También podría tomarse de $d_pH(Y)\partial_{\pmb{x}}p(\pmb{x})-\partial_{\pmb{x}}H(Y|\pmb{X}=\pmb{x})=0$, una ecuación diferencial para $p$ pues como $d_pH(Y)=-\log\left(\dfrac{p}{1-p}\right)$, entonces</p>
+donde $X_k=1$ representa la concreción de la acción en la etapa $k$ y $X_k=0$ su no concreción en dicha etapa. El índice $k$ no es solo un contador: impone una ordenación temporal de los intentos y, con ella, una secuencia de consumo de recursos.</p>
+<hr>
+<h3 id="intentos-y-concreción" class="relative group">Intentos y concreción <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#intentos-y-concreci%c3%b3n" aria-label="Ancla">#</a></span></h3>$$
+N := \inf\{n \in \mathbb{N} : X_n = 1 ,\}.
+$$<p>La variable aleatoria $N$ no mide tiempo cronológico, sino el <strong>despliegue efectivo de recursos</strong> necesario para que el proyecto avance: cada intento consume tiempo, dinero, atención o capital político, y $N$ cuenta cuántos de esos intentos fueron necesarios.</p>
 $$
-\log\left[\dfrac{p(\pmb{x})}{1-p(\pmb{x})}\right]\partial_{\pmb{x}}p(\pmb{x})=-\partial_{\pmb{x}}H(Y|\pmb{X}=\pmb{x})
-$$<h3 id="toma-2" class="relative group">toma 2 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#toma-2" aria-label="Ancla">#</a></span></h3>$$
-H(Y):=-p_Y\log(p_Y)-(1-p_Y)\log(1-p_Y)
+\{N>n\} = \{X_1=0,\dots,X_n=0\}, \qquad
+\{N=n\} = \{X_1=0,\dots,X_{n-1}=0, X_n=1\}.
 $$<p>
-donde $p_Y=\int_\mathscr{X} p(\pmb{x})P_{\pmb{X}}(\pmb{x}) d\pmb{x}$.</p>
-<p>$H(Y)$ depende de $p(\pmb{x})$ pero no depende de $\pmb{x}$. De hecho si dependiera de $\pmb{x}$ sería raro porque no está supeditada a $\pmb{x}$, pues eso se consigue con $H(Y|\pmb{X})$.</p>
-<p>Si quisiera encontrar la distribución $p(\pmb{x})$ tal que se maximice la información ganada, no debería tomar variaciones respecto de $\pmb{x}$ sino sobre las distribuciones, es decir, no recurrir al cálculo sobre funciones sino sombre funcionales.</p>
-<p>Con lo cual cuando quiera maximizar la información ganada (información mutua) $H(Y)-H(Y|\pmb{X})$ variando $\pmb{x}$ eso equivale a minimizar la entropía condicional $H(Y|\pmb{X})$.</p>
-<p>En cualquier caso la <strong>entropía condicional</strong> $H(Y | \pmb{X})$ se define como el valor esperado de la entropía de $Y$ condicionada a cada valor posible de $\pmb{X}$:</p>
-$$
-H(Y \mid \pmb{X}) := \mathbb{E}_{\pmb{X}}[H(Y \mid \pmb{X} = \pmb{x})].
-$$<p>
-Como $Y$ es discreta y $\pmb{X}$ continua, la forma <strong>explícita</strong> es:</p>
-$$
-H(Y \mid \pmb{X}) = - \int_{\mathscr{X}} \sum_{y \in \mathscr{Y}} P(Y = y \mid \pmb{X} = \pmb{x}) \log P(Y = y \mid \pmb{X} = \pmb{x}) \cdot P_{\pmb{X}}(\pmb{x})\, d\pmb{x}
-$$<p>
-para el caso binario $Y \in \{0,1\}$, entonces, si denotamos:</p>
+Estas identidades son puramente lógicas y no dependen de ninguna hipótesis probabilística adicional.</p>
+<p>La probabilidad $P(N \le n)$ se interpreta como la <strong>probabilidad de que el proyecto se concrete en, a lo sumo, $n$ intentos</strong>. Dicho de otra manera, mide la probabilidad de alcanzar el objetivo antes de agotar $n$ etapas o recursos asignados.</p>
 <ul>
-<li>$p(\pmb{x}) = P(Y = 1 \mid \pmb{X} = \pmb{x})$,</li>
-<li>$1 - p(\pmb{x}) = P(Y = 0 \mid \pmb{X} = \pmb{x})$,</li>
-<li>$P_{\pmb{X}}(\pmb{x})$ es la densidad de $\pmb{X}$,</li>
-</ul>
-<p>la entropía condicional se convierte en:</p>
-$$
-H(Y \mid \pmb{X}) = - \int_{\mathscr{X}} \left[ p(\pmb{x}) \log p(\pmb{x}) + (1 - p(\pmb{x})) \log (1 - p(\pmb{x})) \right] \cdot P_{\pmb{X}}(\pmb{x})\, d\pmb{x}
-$$$$
-  H(Y \mid \pmb{X} = \pmb{x}) = - p(\pmb{x}) \log p(\pmb{x}) - [1 - p(\pmb{x})] \log (1 - p(\pmb{x})),
-$$<blockquote>
-<p>Es decir $H(Y \mid \pmb{X}) = \mathbb{E}_{\pmb{X}}[H_{b}(p(\pmb{X}))]$, donde $H_{b}(p) := -p \log p - (1-p) \log(1-p)$ es la entropía binaria.</p>
-</blockquote>
-<blockquote>
-<ul>
-<li>Esta expresión <strong>no</strong> se puede escribir simplemente como una función de $p_Y$, ni se puede derivar respecto de $\pmb{x}$ sin cuidado, porque es una integral.</li>
-</ul>
-</blockquote>
-<p>La información mutua o información ganada $I(p)=H(Y)-H(Y|\pmb{X})$, pues ambas cantidades dependen de $p(\pmb{x})$.</p>
-<p>Si bien $H(Y|\pmb{X})$ es un funcional local de $p(\pmb{x})$, pues se puede escribir como la integral en $\pmb{x}$ que contiene a $p(\pmb{x})$, no ocurre lo mismo con $H(Y)=-p_Y\log(p_Y)-(1-p_Y)\log(1-p_Y)$ que no puede escribirse así, pues la integral de $p(\pmb{x})$ está repartida en cada $p_Y$ de $H(Y)$.</p>
-<h3 id="toma-3---maxent--py1pmbxpmbx" class="relative group">toma 3 - MaxEnt  $P(Y=1|\pmb{X}=\pmb{x})$ <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#toma-3---maxent--py1pmbxpmbx" aria-label="Ancla">#</a></span></h3><p>Queremos determinar la distribución condicional $p(\pmb{x}) := P(Y=1 \mid \pmb{X} = \pmb{x})$ que maximiza la entropía condicional de $Y$ dado $\pmb{X}$, i.e. la información de $Y$ condicionada por $\pmb{X}$, bajo ciertas restricciones de valor esperado.</p>
-<h4 id="entropía-condicional" class="relative group">entropía condicional <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#entrop%c3%ada-condicional" aria-label="Ancla">#</a></span></h4><p>Como $Y \in \{0,1\}$, la entropía condicional de $Y$ dado $\pmb{X} = \pmb{x}$ es:</p>
-$$
-H(Y |\pmb{X}=\pmb{x}) = - p(\pmb{x}) \log p(\pmb{x}) - (1 - p(\pmb{x})) \log (1 - p(\pmb{x}))
-$$<p>Queremos maximizar la entropía esperada:</p>
-$$
-H(Y \mid \pmb{X}) = \mathbb{E}_{\pmb{X}} [H(Y \mid \pmb{X} = \pmb{x})]
-$$<p>Imponemos restricciones sobre el valor esperado de ciertas funciones $f_k(\pmb{x})$, a través de la esperanza:</p>
-$$
-\mathbb{E}_{\pmb{X}} [p(\pmb{x}) f_k(\pmb{x})] \geq \mu_k \quad \text{para } k=1, \dots, m
-$$<p>Definimos el funcional $\mathscr{F}$</p>
-$$
-\mathscr{F}[p(\pmb{x})] = \mathbb{E}_{\pmb{X}} \left[ -p(\pmb{x}) \log p(\pmb{x}) - (1 - p(\pmb{x})) \log (1 - p(\pmb{x})) \right] +\sum_{k=1}^m \lambda_k \left( \mathbb{E}_{\pmb{X}} [p(\pmb{x}) f_k(\pmb{x})-\mu_k ] \right)
-$$<p>Para encontrar el máximo, derivamos funcionalmente con respecto a $p$, e igualamos a cero:</p>
-$$
-\delta_{p} \mathscr{F}= -\log p(\pmb{x}) + \log(1 - p(\pmb{x})) + \sum_k \lambda_k f_k(\pmb{x}) = 0
-$$<p>Lo que implica:</p>
-$$
-\log \left( \frac{1 - p(\pmb{x})}{p(\pmb{x})} \right) = -\sum_k \lambda_k f_k(\pmb{x})
-$$<p>Es decir:</p>
-$$
-\frac{1 - p(\pmb{x})}{p(\pmb{x})} = \exp\left(- \sum_k \lambda_k f_k(\pmb{x}) \right)
-$$$$
-p(\pmb{x}) = \frac{1}{1 + \exp\left(- \sum_k \lambda_k f_k(\pmb{x}) \right)}
-$$<p>
-también puede escribirse como  $p(\pmb{x}) = \sigma\left( \sum_k \lambda_k f_k(\pmb{x}) \right)$, donde $\sigma$ es la función sigmoide $\sigma(z) := 1/(1 + e^{-z})$.</p>
-<p>La solución al problema de máxima entropía condicional bajo las restricciones da com resultado  una <strong>distribución logística generalizada</strong>:</p>
-$$
-P(Y=1 \mid \pmb{X} = \pmb{x}) = \frac{1}{1 + \exp\left( -\sum_k w_k f_k(\pmb{x}) \right)}
-$$<hr>
-<h3 id="toma-4-maxent--pyypmbxpmbx" class="relative group">toma 4 MaxEnt  $P(Y=y|\pmb{X}=\pmb{x})$ <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#toma-4-maxent--pyypmbxpmbx" aria-label="Ancla">#</a></span></h3><p>Podemos generalizar el resultado anterior para el caso en que se tenga una cantidad numerable de opciones excluyentes para la variable $Y$.</p>
-<p>Buscamos la distribución condicional $p(y|\pmb{x})=P(Y=y|\pmb{X}=\pmb{x})$, también denotada genéricamente por $\varphi(\pmb{x},y)$, que maximiza la entropía condicional</p>
-$$
-H(Y \mid \pmb{X}) = -\int_{\mathscr{X}} P_{\pmb{X}}(\pmb{x}) \sum_y \varphi(\pmb{x},y) \log [\varphi(\pmb{x},y)] \, d\pmb{x}
-$$<p>sujeta a las siguientes restricciones:</p>
-<ol>
 <li>
-<p>Normalización: $\sum_y \varphi(\pmb{x},y) = 1 \quad \forall \pmb{x}$</p>
+<p>[etapas] Indica cuán probable es que el proyecto logre avanzar dentro de los primeros $n$ pasos. Un valor cercano a 1 significa que el proyecto tiene alta probabilidad de concretarse rápidamente; un valor bajo indica que es probable que se necesiten más intentos.</p>
 </li>
 <li>
+<p>[recursos] Si cada intento consume recursos (tiempo, dinero, atención). Entonces $P(N \le n)$ refleja la probabilidad de que el proyecto se concrete antes de gastar los recursos correspondientes a $n$ intentos.</p>
+</li>
+</ul>
+<p>Si los intentos son independientes con probabilidad $p$, entonces</p>
 $$
-\int_{\mathscr{X}} P_{\pmb{X}}(\pmb{x})\sum_y \varphi(\pmb{x},y) g_k(\pmb{x}, y) \, d\pmb{x} \geq \mu_k  \quad \forall k
-$$</li>
+P(N \le n) = 1 - (1-p)^n,
+$$<p>lo que crece monótonamente con $n$. Esto muestra que la probabilidad de concreción aumenta al invertir más intentos, y que la curva $P(N \le n)$ proporciona un modo de acotar la cantidad de recursos necesarios en promedio.</p>
+<p>Cuando los intentos no son independientes y se definen probabilidades condicionales $p_k$,</p>
+$$
+P(N \le n) = 1 - \prod_{k=1}^{n} (1-p_k),
+$$<p>reflejando cómo la estructura del proyecto puede favorecer o dificultar la concreción. Si $p_k$ aumenta con $k$, la persistencia se vuelve más eficaz; si disminuye, el progreso es más incierto.</p>
+<p>En resumen, $P(N \le n)$ es una <strong>medida acumulada de éxito</strong>: cuantifica la probabilidad de concretar el proyecto <strong>dentro de un límite de intentos o recursos</strong>, y permite comparar escenarios independientes versus dependientes.</p>
+<hr>
+<h3 id="persistencia-sin-dependencia" class="relative group">Persistencia sin dependencia <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#persistencia-sin-dependencia" aria-label="Ancla">#</a></span></h3><p>Supongamos primero que los intentos son idénticamente distribuidos, con</p>
+$$
+P(X_k=1)=p,
+$$<p>
+de ahí que $P(X_k=1)$ no depende de $k$.</p>
+<p>En este caso,</p>
+$$
+P(N>n) = (1-p)^n,
+\qquad
+P(N=n) = (1-p)^{n-1}p.
+$$<p>La esperanza de $N$ puede calcularse directamente a partir de su distribución:</p>
+$$
+E[N] = \sum_{n\ge1} n (1-p)^{n-1} p.
+$$$$
+\sum_{n\ge1} n q^{n-1} = \frac{1}{(1-q)^2}, \qquad |q|<1,
+$$<p>con $q=1-p$, se obtiene</p>
+$$
+E[N] = p \cdot \frac{1}{p^2} = \frac{1}{p}.
+$$<p>Para la varianza, observamos primero que</p>
+$$
+E[N^2] = \sum_{n\ge1} n^2 (1-p)^{n-1} p.
+$$<p>Usando la identidad</p>
+$$
+\sum_{n\ge1} n^2 q^{n-1} = \frac{1+q}{(1-q)^3}, \qquad |q|<1,
+$$<p>con $q=1-p$, resulta</p>
+$$
+E[N^2] = p \cdot \frac{2-p}{p^3} = \frac{2-p}{p^2}.
+$$<p>Por lo tanto, $V[N] := E[N^2] - (E[N])^2$, toma la forma</p>
+$$
+V[N] = \frac{1-p}{p^2}.
+$$<p>Este modelo presenta cierta ingenuidad. Cada intento es estadísticamente igual al anterior. El pasado no influye en el futuro. Pero tiene cierta utilidad, pues es resoluble de manera sencilla y puede servir para fijar una escala natural para el orden de magnitud de los recursos necesarios y puede servir como una cota de referencia incluso cuando el proceso real no sea independiente, como veremos posteriormente.</p>
+<p>Ambas cantidades $E[N]$ y $V[N]$ tienen interpretaciones claras cuando se leen en términos de <strong>recursos</strong> y <strong>riesgo</strong>.</p>
+<h4 id="interpretación-de-la-esperanza" class="relative group">Interpretación de la esperanza <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#interpretaci%c3%b3n-de-la-esperanza" aria-label="Ancla">#</a></span></h4><p>En el caso de intentos independientes con $P(X_k=1)=p$, la igualdad $E[N]=1/p$, dice que el <strong>número medio de intentos necesarios</strong> para concretar el proyecto es inversamente proporcional a la probabilidad de concreción en cada intento.</p>
+<p>Interpretado operativamente:</p>
+<ul>
+<li>Si cada intento tiene una probabilidad pequeña de concreción, el proyecto es <em>caro</em> en recursos: el esfuerzo medio crece como $1/p$.</li>
+<li>Si se consigue duplicar $p$, se reduce a la mitad el número medio de intentos necesarios.</li>
+</ul>
+<p>Esta igualdad también tiene una lectura estructural: en el modelo independiente, no hay memoria ni aprendizaje. El proceso “olvida” el pasado, de modo que el costo esperado del proyecto está completamente determinado por una única magnitud local, $p$. No importa cuántas veces se haya fallado antes: el costo esperado desde cualquier punto sigue siendo $1/p$.</p>
+<hr>
+<h4 id="interpretación-de-la-varianza" class="relative group">Interpretación de la varianza <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#interpretaci%c3%b3n-de-la-varianza" aria-label="Ancla">#</a></span></h4><p>La varianza</p>
+$$
+V[N]=\frac{1-p}{p^2}
+$$<p>mide la <strong>incertidumbre en el consumo de recursos</strong> alrededor de su valor medio.</p>
+<p>Hay varias lecturas complementarias:</p>
+<ol>
+<li>
+<p><strong>Riesgo operativo</strong>
+Aunque el costo medio sea $1/p$, la realización concreta puede desviarse mucho de ese valor. Cuando $p$ es pequeño, la varianza es grande: no solo se espera gastar muchos recursos, sino que además el gasto es altamente impredecible.</p>
+</li>
+<li>
+<p><strong>Escala natural de las fluctuaciones</strong>
+La desviación típica es
+$ \sqrt{V[N]} = \sqrt{1-p}/p \sim 1/p$ cuando $p$ es pequeño.
+Esto indica que las fluctuaciones son del mismo orden que la media. No existe una “ley de los grandes números” que estabilice el costo: incluso en promedio, el proyecto puede salir mucho más caro o mucho más barato de lo esperado.</p>
+</li>
+<li>
+<p><strong>Fragilidad del modelo sin dependencia</strong>
+El hecho de que (V[N]) sea grande refleja que el modelo independiente es frágil: al no incorporar aprendizaje ni desgaste, no hay mecanismo que reduzca la dispersión del número de intentos. El proceso puede terminar muy pronto o prolongarse arbitrariamente.</p>
+</li>
 </ol>
-<p>Construimos ahora el funcional $\mathscr{F}$ como</p>
-$$
-\mathscr{F}[\varphi(\pmb{x},y)] = -\int_{\mathscr{X}} P_{\pmb{X}}(\pmb{x}) \sum_y \varphi(\pmb{x},y) \log \varphi(\pmb{x},y) \, d\pmb{x} + \sum_k \lambda_k \left(\int_{\mathscr{X}} P_{\pmb{X}}(\pmb{x}) \sum_y \varphi(\pmb{x},y) g_k(\pmb{x}, y) \, d\pmb{x} - \mu_k \right) +\int_{\mathscr{X}}P_{\pmb{X}}(\pmb{x}) \eta(\pmb{x}) \left( \sum_y \varphi(\pmb{x},y) - 1 \right) \, d\pmb{x}
-$$<blockquote>
-<p><strong>notar</strong> que el término $\eta(\pmb{x})$ aparece porque estamos resolviendo un problema de optimización funcional, y necesitamos garantizar que para cada valor de $\pmb{x}$ se cumpla la restricción de normalización: $
-\sum_y p(y \mid \pmb{x}) = 1 \quad \text{para todo } \pmb{x}.$ Esta es una restricción para cada $\pmb{x}$, entonces no podemos usar un solo multiplicador de Lagrange global, como en problemas finito-dimensionales, necesitamos usar un multiplicador funcional $\eta(\pmb{x})$, que es una función definida sobre el espacio de $\pmb{x}$, para imponer esta restricción punto a punto. Formalmente: si tenemos una familia de restricciones parametrizadas por $\pmb{x}$, como
-$F(\pmb{x}) := \sum_y p(y \mid \pmb{x}) - 1 = 0 \quad \forall \pmb{x}$, entonces el término de Lagrange asociado es:
-$\int P_{\pmb{X}}(\pmb{x}) \eta(\pmb{x}) \left( \sum_y p(y \mid \pmb{x}) - 1 \right) d\pmb{x}.$</p>
-</blockquote>
 <hr>
-<p>Calculamos la derivada funcional respecto de $p(y \mid \pmb{x})$:</p>
-$$
-\delta_{\varphi} \mathscr{F} = -\log \varphi(\pmb{x},y) - 1 + \sum_k \lambda_k g_k(\pmb{x}, y) + \eta(\pmb{x})
-$$<p>Igualamos a cero:</p>
-$$
-\log \varphi(\pmb{x},y) = -1 + \eta(\pmb{x}) +\sum_k \lambda_k g_k(\pmb{x}, y)
+<h4 id="lectura-conjunta" class="relative group">Lectura conjunta <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lectura-conjunta" aria-label="Ancla">#</a></span></h4><ul>
+<li>$E[N]=1/p$ fija el <strong>nivel medio</strong> de recursos necesarios.</li>
+<li>$V[N]$ cuantifica el <strong>riesgo</strong> asociado a esa estimación.</li>
+</ul>
+<p>En el caso independiente, ambos crecen al mismo ritmo cuando $p$ es pequeño. Esto subraya un punto conceptual importante: persistir sin dependencia no solo es caro en promedio, sino también altamente incierto.</p>
+<p>Desde esta perspectiva, introducir dependencia entre los intentos, cuando es favorable, no solo puede reducir $E[N]$, sino también estabilizar el proceso, disminuyendo la varianza y haciendo el uso de recursos más predecible.</p>
+<hr>
+<h3 id="dependencia-y-probabilidad-condicional" class="relative group">Dependencia y probabilidad condicional <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#dependencia-y-probabilidad-condicional" aria-label="Ancla">#</a></span></h3>$$
+P(X_k=1)=p \quad \forall k.
 $$$$
-\varphi(\pmb{x},y) = \exp\left( -1 + \eta(\pmb{x}) + \sum_k \lambda_k g_k(\pmb{x}, y) \right)
+p_n := P(X_n=1 \mid X_1=0,\dots,X_{n-1}=0).
+$$<p>Introducimos una variable auxiliar $X_0$ definida como $X_0 = 0$ casi seguramente. Esta variable no representa un intento real, sino un estado inicial previo al comienzo del proyecto, en el que aún no se ha desplegado ningún recurso ni se ha realizado ninguna acción. Su único propósito es unificar la notación: al condicionar sobre $X_0=0$, que ocurre con probabilidad uno, no se introduce información adicional. En particular, esto permite definir de forma uniforme $p_1 := P(X_1=1 \mid X_0=0)=P(X_1=1)$ y tratar todos los pasos del proceso bajo una misma convención temporal. De esta forma para $n=1$ no hay condición. Para $n\ge2$, $p_n$ mide cómo cambia la probabilidad de concreción después de una secuencia de intentos fallidos.</p>
+<p>Usando la regla del producto para probabilidades condicionales</p>
+$$
+P(X_1,\dots,X_n)=P(X_1)P(X_2|X_1)\dots P(X_k|X_1,\cdots X_{k-1})\dots P(X_n|X_1,\cdots X_{n-1})
+$$<p>que denotamos de manera compacta como</p>
+$$
+P(X_1,\dots,X_n) = \prod_{k=1}^n P(X_k \mid X_1,\dots,X_{k-1})
+$$<p>y que evaluada para el caso:</p>
+$$
+P(X_1=0,\dots,X_n=0)
+= \prod_{k=1}^n P(X_k=0 \mid X_1=0,\dots,X_{k-1}=0)
+= \prod_{k=1}^n (1-p_k).
+$$<p>A partir de las identidades que definen $N$, se obtiene entonces</p>
+$$
+P(N>n)=\prod_{k=1}^n (1-p_k),
+\qquad
+P(N=n)=p_n\prod_{k=1}^{n-1}(1-p_k).
 $$<p>
-Definimos $Z(\pmb{x}) = \exp[1-\eta(\pmb{x})]$</p>
-<p>como $\sum_y \varphi(\pmb{x},y) = 1$ luego  $\sum_y\exp\left( -1 + \eta(\pmb{x}) + \sum_k \lambda_k g_k(\pmb{x}, y) \right)=1$, luego la función $Z$ toma la forma $Z(\pmb{x}) = \sum_{y} \exp\left[\sum_k \lambda_k g_k(\pmb{x}, y) \right]$.</p>
+Estas expresiones son completamente generales y no requieren independencia.</p>
+<h3 id="persistencia-que-transforma-y-persistencia-que-no" class="relative group">Persistencia que transforma y persistencia que no <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#persistencia-que-transforma-y-persistencia-que-no" aria-label="Ancla">#</a></span></h3><p>Cuando $p_n = p$, persistir equivale a volver siempre al mismo estado probabilístico.</p>
 $$
-\varphi(\pmb{x},y) = \frac{1}{Z(\pmb{x})} \exp\left( \sum_k \lambda_k g_k(\pmb{x}, y) \right)
-$$<p>Esta es la forma general de un modelo MaxEnt condicional. Los multiplicadores $\lambda_k$ se determinan ajustando las expectativas del modelo a las empíricas.</p>
+p \le p_n
+$$<p>
+cada intento fallido ($X_k=0$) incrementa la probabilidad condicional del siguiente. <em>La persistencia incorpora aprendizaje</em>.</p>
 $$
-\varphi(\pmb{x},y)=
-\frac{\exp\left[ y \sum_k\lambda_k f_k(\pmb{x}) \right]}{1+\exp\left[\sum_k\lambda_k f_k(\pmb{x}) \right]} 
+p \ge p_n
+$$<p>
+cada intento fallido reduce la probabilidad futura. <em>La persistencia acumula ignorancia</em>.</p>
+<h3 id="persistencia-y-progreso" class="relative group">Persistencia y progreso <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#persistencia-y-progreso" aria-label="Ancla">#</a></span></h3>$$
+P(N > n) = (1 - p)^n
 $$$$
-\varphi(\pmb{x},y)=
-\frac{\exp\left( y \pmb{\lambda}\cdot \pmb{x} \right)}{1+\exp\left( \pmb{\lambda}\cdot \pmb{x} \right)} 
+p_n \ge p \quad \forall n,
+$$$$
+P(N>n)=\prod_{k=1}^n (1-p_k) \le (1-p)^n,
+$$$$
+P(N\le n) \ge 1-(1-p)^n.
 $$<p>
-donde $\pmb{\lambda}=(\lambda_1,\cdots,\lambda_n)$.</p>
+Persistir, en este caso, aumenta la probabilidad de progreso antes de consumir $n$ intentos.</p>
+<p>Si, por el contrario, se cumple</p>
+$$
+p_n \le p \quad \forall n,
+$$<p>
+las desigualdades se invierten y la persistencia retrasa el progreso respecto del modelo independiente.</p>
 <hr>
-<blockquote>
-<p><strong>notar</strong> que la función $f(\pmb{x})=\frac{1}{1+\exp[-F(\pmb{x})]}$, se puede escribir
-usando la función sigmoide como $f(\pmb{x})=\sigma(F(\pmb{x}))$, definida por $\sigma(z):= 1/(1 + e^{-z})$, y como $\sigma'(z)=\sigma(z)[1-\sigma(z)]$ se tiene que $\nabla f(\pmb{x})=f(\pmb{x})[1-f(\pmb{x})]\nabla F(\pmb{x})$</p>
-</blockquote>
-<blockquote>
-<p>para el caso logístico $f(\pmb{x})=\frac{1}{1+\exp[-\sum_k\omega_k x_k)]}$, $\nabla f(\pmb{x})=-f(\pmb{x})[1-f(\pmb{x})]\pmb{\omega}$</p>
-</blockquote>
-<hr>
-<h3 id="toma-5" class="relative group">toma 5 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#toma-5" aria-label="Ancla">#</a></span></h3><p>Otra manera más directa y bastante general de abordar el problema consiste en tratar con una variable aleatoria $Z$ real definida a partir de las cantidades $\pmb{x}$ que habíamos considerado como resultado de un vector aleatorio $\pmb{X}$, en este caos las consideramos fijas. La aleatoriedad es introducida vía una fluctuación aditiva $\xi$: $Z=\phi(\pmb{x})+\xi$.</p>
-$$
-Y = 
-\begin{cases}
-1 & \text{si } Z > 0 \\
-0 & \text{si } Z \leq 0
-\end{cases}
-$$<p>Entonces, la probabilidad condicional de $Y$ dado $\pmb{X}=\pmb{x}$ es: $P(Y = 1 | \pmb{X}=\pmb{x}) = P(Z > 0) = P(\xi > -\phi(\pmb{x})) = 1 - F_\xi(-\phi(\pmb{x}))$, donde $F_\xi(\chi):=P(\xi\leq \chi)$ es la función de distribución acumulada de $\xi$. Aquí es donde entra en juego el modelo de error que se quiera usar, si $\xi\sim \mathtt{logistic}(\mu,s)$, la forma de la distribución acumulada tiene el aspecto de S que se pretende. Luego $F_\xi(\chi)=1/(1+e^{-(\chi-\mu)/s})$, podría usar, en particular para modelar el error corresponde $\mu=0$, para permitir fluctuaciones simétricas, como $1 - F_\xi(-\phi(\pmb{x}))=1/(1+e^{-\phi(\pmb{x})/s})$, entnces</p>
-<p>$P(Y = 1 | \pmb{X}=\pmb{x})=1/(1+\exp[{-\phi(\pmb{x})/s})]$</p>
-<p>Si $\phi(\pmb{x})=\pmb{\lambda}\cdot\pmb{x}$, queda la pregunta de cómo obtener o estimar $\pmb{\lambda}$.</p>
-<h4 id="función-de-verosimilitud" class="relative group">función de verosimilitud <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#funci%c3%b3n-de-verosimilitud" aria-label="Ancla">#</a></span></h4><p>Dados datos observados $(\pmb{x}_1, y_1), \dots, (\pmb{x}_n, y_n)$ con $\pmb{x}_i$ fijos y $y_i \in (0,1)$, la verosimilitud es:</p>
-$$
-L(\pmb{\lambda}) = \prod_{i=1}^n \left( \frac{1}{1 + e^{-\pmb{\lambda}\cdot \pmb{x}_i}} \right)^{y_i} \left( \frac{1}{1 + e^{\pmb{\lambda}\cdot\pmb{x}_i}} \right)^{1 - y_i}
-$$<h4 id="estimación-de-máxima-verosimilitud" class="relative group">estimación de máxima verosimilitud <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#estimaci%c3%b3n-de-m%c3%a1xima-verosimilitud" aria-label="Ancla">#</a></span></h4><p>El estimador $\hat{\pmb{\lambda}}$ es solución de:</p>
-$$
-\hat{\pmb{\lambda}} = \arg\max_{\pmb{\lambda}} \; \log L(\pmb{\lambda})
-= \arg\max_{\pmb{\lambda}} \; \sum_{i=1}^n \left[ y_i \log \sigma(\pmb{\lambda}\cdot \pmb{x}_i) + (1 - y_i) \log (1 - \sigma(\pmb{\lambda}\cdot\pmb{x}_i)) \right]
-$$<p>donde $\sigma(z) = 1/(1 + e^{-z})$.</p>
+<h3 id="reflexión" class="relative group">Reflexión <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reflexi%c3%b3n" aria-label="Ancla">#</a></span></h3><p>Los proyectos no son eventos aislados, sino procesos formados por una sucesión de acciones. En la práctica, esas acciones rara vez son independientes: cada decisión modifica el contexto de las siguientes, para bien o para mal.</p>
+<p>Por eso, la persistencia no puede evaluarse solo en términos de cuántas veces se insiste. Persistir sin que exista dependencia entre etapas equivale a repetir sin aprendizaje. En cambio, cuando el proyecto incorpora mecanismos que hacen crecer, local o globalmente, la probabilidad de concreción, la persistencia se convierte en progreso.</p>
+<p>Desde este punto de vista, satisfacer un objetivo no es solo cuestión de resistir en el tiempo, sino de diseñar una estructura de dependencia entre acciones que permita que cada intento mejore las condiciones del siguiente. Persistencia y dependencia no son alternativas: son complementarias.</p>
 
       </div>
     </section>
@@ -1196,7 +1186,7 @@ $$<p>donde $\sigma(z) = 1/(1 + e^{-z})$.</p>
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://x.com/intent/tweet/?url=https://marianocaruso.github.io/notes/12.decision-making/&amp;text=%c2%bfA%20o%20B?"
+          href="https://x.com/intent/tweet/?url=https://marianocaruso.github.io/notes/13.project-progress-probability/&amp;text=Persistencia%20y%20dependencia"
           title=""
           aria-label=""
           target="_blank"
@@ -1209,7 +1199,7 @@ $$<p>donde $\sigma(z) = 1/(1 + e^{-z})$.</p>
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://marianocaruso.github.io/notes/12.decision-making/&amp;title=%c2%bfA%20o%20B?"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://marianocaruso.github.io/notes/13.project-progress-probability/&amp;title=Persistencia%20y%20dependencia"
           title="Compartir en LinkedIn"
           aria-label="Compartir en LinkedIn"
           target="_blank"
@@ -1222,7 +1212,7 @@ $$<p>donde $\sigma(z) = 1/(1 + e^{-z})$.</p>
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://telegram.me/share/url?text=https://marianocaruso.github.io/notes/12.decision-making/&amp;url=%c2%bfA%20o%20B?"
+          href="https://telegram.me/share/url?text=https://marianocaruso.github.io/notes/13.project-progress-probability/&amp;url=Persistencia%20y%20dependencia"
           title="Compartir en Telegram"
           aria-label="Compartir en Telegram"
           target="_blank"
@@ -1235,7 +1225,7 @@ $$<p>donde $\sigma(z) = 1/(1 + e^{-z})$.</p>
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="mailto:?body=https://marianocaruso.github.io/notes/12.decision-making/&amp;subject=%c2%bfA%20o%20B?"
+          href="mailto:?body=https://marianocaruso.github.io/notes/13.project-progress-probability/&amp;subject=Persistencia%20y%20dependencia"
           title="Enviar vía email"
           aria-label="Enviar vía email"
           target="_blank"
@@ -1258,7 +1248,7 @@ $$<p>donde $\sigma(z) = 1/(1 + e^{-z})$.</p>
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="group flex" href="/notes/9.markov/">
+            <a class="group flex" href="/notes/12.decision-making/">
               <span
                 class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
                 ><span class="ltr:inline rtl:hidden">&larr;</span
@@ -1267,7 +1257,7 @@ $$<p>donde $\sigma(z) = 1/(1 + e^{-z})$.</p>
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Cadenas de Markov</span
+                  >¿A o B?</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
@@ -1277,23 +1267,6 @@ $$<p>donde $\sigma(z) = 1/(1 + e^{-z})$.</p>
           
         </span>
         <span>
-          
-            <a class="group flex text-right" href="/notes/13.project-progress-probability/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Persistencia y dependencia</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                </span>
-              </span>
-              <span
-                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-                ><span class="ltr:inline rtl:hidden">&rarr;</span
-                ><span class="ltr:hidden rtl:inline">&larr;</span></span
-              >
-            </a>
           
         </span>
       </div>

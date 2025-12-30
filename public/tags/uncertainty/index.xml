@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Conditional Probability on Mariano Caruso</title>
-    <link>https://marianocaruso.github.io/tags/conditional-probability/</link>
-    <description>Recent content in Conditional Probability on Mariano Caruso</description>
+    <title>Uncertainty on Mariano Caruso</title>
+    <link>https://marianocaruso.github.io/tags/uncertainty/</link>
+    <description>Recent content in Uncertainty on Mariano Caruso</description>
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
     <lastBuildDate>Tue, 30 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://marianocaruso.github.io/tags/conditional-probability/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://marianocaruso.github.io/tags/uncertainty/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Persistencia y dependencia</title>
       <link>https://marianocaruso.github.io/notes/13.project-progress-probability/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://marianocaruso.github.io/notes/13.project-progress-probability/</guid>
       <description>Probabilidad de progreso de un proyecto</description>
-    </item>
-    <item>
-      <title>¿A o B?</title>
-      <link>https://marianocaruso.github.io/notes/12.decision-making/</link>
-      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://marianocaruso.github.io/notes/12.decision-making/</guid>
-      <description>Decisiones basadas en datos</description>
     </item>
   </channel>
 </rss>
