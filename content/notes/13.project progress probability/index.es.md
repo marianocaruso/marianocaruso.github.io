@@ -20,9 +20,9 @@ math:  true
 
 Todo proyecto está, por definición, orientado al futuro. Un proyecto es una secuencia de acciones que apunta a la concreción de un objetivo que todavía no existe y cuyo resultado no puede conocerse de antemano. Incluso cuando el plan es claro y los medios están bien definidos, siempre hay un margen de incertidumbre respecto a si una acción concreta, o el proyecto en su conjunto, logrará concretarse.
 
-Esta incertidumbre no es un defecto del diseño ni una falta de información; es estructural. Actuar implica decidir hoy bajo condiciones que solo se resolverán mañana. Precisamente por eso, el lenguaje natural para describir proyectos es probabilístico.
+Esta incertidumbre no es un defecto del diseño ni una falta de información; es estructural. Actuar implica decidir hoy bajo condiciones que solo se resolverán mañana. 
 
-Modelamos entonces cada acción relevante del proyecto mediante una variable aleatoria
+Precisamente por eso, modelamos entonces cada acción relevante del proyecto mediante una variable aleatoria
 $$
 X_k \in \{0,1\}, \qquad k=1,2,\dots
 $$
@@ -34,7 +34,7 @@ donde $X_k=1$ representa la concreción de la acción en la etapa $k$ y $X_k=0$ 
 
 Definimos el **número de intentos hasta la primera concreción** como
 $$
-N := \inf\{n \in \mathbb{N} : X_n = 1 ,\}.
+N := \inf\{n \in \mathbb{N} : X_n = 1 \}.
 $$
 
 La variable aleatoria $N$ no mide tiempo cronológico, sino el **despliegue efectivo de recursos** necesario para que el proyecto avance: cada intento consume tiempo, dinero, atención o capital político, y $N$ cuenta cuántos de esos intentos fueron necesarios.
@@ -44,7 +44,7 @@ $$
 \{N>n\} = \{X_1=0,\dots,X_n=0\}, \qquad
 \{N=n\} = \{X_1=0,\dots,X_{n-1}=0, X_n=1\}.
 $$
-Estas identidades son puramente lógicas y no dependen de ninguna hipótesis probabilística adicional.
+Estas identidades no dependen de ninguna hipótesis probabilística adicional: e.g. independencia, distribución idéntica, etc.
 
 La probabilidad $P(N \le n)$ se interpreta como la **probabilidad de que el proyecto se concrete en, a lo sumo, $n$ intentos**. Dicho de otra manera, mide la probabilidad de alcanzar el objetivo antes de agotar $n$ etapas o recursos asignados.
 
