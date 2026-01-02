@@ -146,7 +146,7 @@
     "keywords": ["uncertainty","repetition effect","conditional probability"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1525"
+    "wordCount": "1561"
   }
   </script>
     
@@ -891,10 +891,9 @@ $$
 X_k \in \{0,1\}, \qquad k=1,2,\dots
 $$<p>
 donde $X_k=1$ representa la concreción de la acción en la etapa $k$ y $X_k=0$ su no concreción en dicha etapa. El índice $k$ no es solo un contador: impone una ordenación temporal de los intentos y, con ella, una secuencia de consumo de recursos.</p>
-<hr>
 <h3 id="intentos-y-concreción" class="relative group">Intentos y concreción <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#intentos-y-concreci%c3%b3n" aria-label="Ancla">#</a></span></h3>$$
 N := \inf\{n \in \mathbb{N} : X_n = 1 \}.
-$$<p>La variable aleatoria $N$ no mide tiempo cronológico, sino el <strong>despliegue efectivo de recursos</strong> necesario para que el proyecto avance: cada intento consume tiempo, dinero, atención o capital político, y $N$ cuenta cuántos de esos intentos fueron necesarios.</p>
+$$<p>La variable aleatoria $N$ no mide tiempo cronológico, sino el <strong>despliegue efectivo de recursos</strong> necesario para que el proyecto avance: cada intento consume tiempo, dinero, etc. y $N$ cuenta cuántos de esos intentos fueron necesarios.</p>
 $$
 \{N>n\} = \{X_1=0,\dots,X_n=0\}, \qquad
 \{N=n\} = \{X_1=0,\dots,X_{n-1}=0, X_n=1\}.
@@ -906,19 +905,18 @@ Estas identidades no dependen de ninguna hipótesis probabilística adicional: e
 <p>[etapas] Indica cuán probable es que el proyecto logre avanzar dentro de los primeros $n$ pasos. Un valor cercano a 1 significa que el proyecto tiene alta probabilidad de concretarse rápidamente; un valor bajo indica que es probable que se necesiten más intentos.</p>
 </li>
 <li>
-<p>[recursos] Si cada intento consume recursos (tiempo, dinero, atención). Entonces $P(N \le n)$ refleja la probabilidad de que el proyecto se concrete antes de gastar los recursos correspondientes a $n$ intentos.</p>
+<p>[recursos] Si cada intento consume recursos (tiempo, dinero, atención,&hellip; entonces $P(N \le n)$ refleja la probabilidad de que el proyecto se concrete antes de gastar los recursos correspondientes a $n$ intentos.</p>
 </li>
 </ul>
-<p>Si los intentos son independientes con probabilidad $p$, entonces</p>
+<p>Si las variables aleatorias $\{X_k\}_k$ son idénticamente distribuidas e independientes tales que  $p:=P(X_k=1)$, entonces</p>
 $$
 P(N \le n) = 1 - (1-p)^n,
-$$<p>lo que crece monótonamente con $n$. Esto muestra que la probabilidad de concreción aumenta al invertir más intentos, y que la curva $P(N \le n)$ proporciona un modo de acotar la cantidad de recursos necesarios en promedio.</p>
-<p>Cuando los intentos no son independientes y se definen probabilidades condicionales $p_k$,</p>
+$$<p>lo que crece monótonamente con $n$. Esto muestra que la probabilidad de concreción aumenta al invertir más intentos, y que la curva $P(N \le n)$ proporciona un una garantía casi segura de éxito y un modo de acotar la cantidad de recursos necesarios en promedio, como veremos más adelante.
+Podemos hacer lo propio cando los intentos no son independientes y se definen probabilidades condicionales $p_k=P(X_k=1|X_1=0,\cdots X_k=0)$,</p>
 $$
 P(N \le n) = 1 - \prod_{k=1}^{n} (1-p_k),
-$$<p>reflejando cómo la estructura del proyecto puede favorecer o dificultar la concreción. Si $p_k$ aumenta con $k$, la persistencia se vuelve más eficaz; si disminuye, el progreso es más incierto.</p>
+$$<p>reflejando cómo la estructura del proyecto puede favorecer o dificultar la concreción. Si $p_k$ aumenta con $k$, la persistencia se vuelve más eficaz; si disminuye con $k$, el progreso es más incierto. Dicha expresión para $P(N\le n )$ será demostrada más adelante.</p>
 <p>En resumen, $P(N \le n)$ es una <strong>medida acumulada de éxito</strong>: cuantifica la probabilidad de concretar el proyecto <strong>dentro de un límite de intentos o recursos</strong>, y permite comparar escenarios independientes versus dependientes.</p>
-<hr>
 <h3 id="persistencia-sin-dependencia" class="relative group">Persistencia sin dependencia <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#persistencia-sin-dependencia" aria-label="Ancla">#</a></span></h3><p>Supongamos primero que los intentos son idénticamente distribuidos, con</p>
 $$
 P(X_k=1)=p,
@@ -949,7 +947,7 @@ E[N^2] = p \cdot \frac{2-p}{p^3} = \frac{2-p}{p^2}.
 $$<p>Por lo tanto, $V[N] := E[N^2] - (E[N])^2$, toma la forma</p>
 $$
 V[N] = \frac{1-p}{p^2}.
-$$<p>Este modelo presenta cierta ingenuidad. Cada intento es estadísticamente igual al anterior. El pasado no influye en el futuro. Pero tiene cierta utilidad, pues es resoluble de manera sencilla y puede servir para fijar una escala natural para el orden de magnitud de los recursos necesarios y puede servir como una cota de referencia incluso cuando el proceso real no sea independiente, como veremos posteriormente.</p>
+$$<p>Este modelo presenta cierta ingenuidad. Cada intento es estadísticamente igual al anterior. El pasado no influye en el futuro. Pero tiene cierta utilidad, pues es resoluble de manera sencilla y puede servir para fijar una escala natural para el orden de magnitud de los recursos necesarios y también como una cota de referencia incluso cuando el proceso real no sea independiente, como veremos posteriormente.</p>
 <p>Ambas cantidades $E[N]$ y $V[N]$ tienen interpretaciones claras cuando se leen en términos de <strong>recursos</strong> y <strong>riesgo</strong>.</p>
 <h4 id="interpretación-de-la-esperanza" class="relative group">Interpretación de la esperanza <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#interpretaci%c3%b3n-de-la-esperanza" aria-label="Ancla">#</a></span></h4><p>En el caso de intentos independientes con $P(X_k=1)=p$, la igualdad $E[N]=1/p$, dice que el <strong>número medio de intentos necesarios</strong> para concretar el proyecto es inversamente proporcional a la probabilidad de concreción en cada intento.</p>
 <p>Interpretado operativamente:</p>
@@ -958,7 +956,6 @@ $$<p>Este modelo presenta cierta ingenuidad. Cada intento es estadísticamente i
 <li>Si se consigue duplicar $p$, se reduce a la mitad el número medio de intentos necesarios.</li>
 </ul>
 <p>Esta igualdad también tiene una lectura estructural: en el modelo independiente, no hay memoria ni aprendizaje. El proceso “olvida” el pasado, de modo que el costo esperado del proyecto está completamente determinado por una única magnitud local, $p$. No importa cuántas veces se haya fallado antes: el costo esperado desde cualquier punto sigue siendo $1/p$.</p>
-<hr>
 <h4 id="interpretación-de-la-varianza" class="relative group">Interpretación de la varianza <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#interpretaci%c3%b3n-de-la-varianza" aria-label="Ancla">#</a></span></h4><p>La varianza</p>
 $$
 V[N]=\frac{1-p}{p^2}
@@ -980,14 +977,12 @@ Esto indica que las fluctuaciones son del mismo orden que la media. No existe un
 El hecho de que $V[N]$ sea grande refleja que el modelo independiente es frágil: al no incorporar aprendizaje ni desgaste, no hay mecanismo que reduzca la dispersión del número de intentos. El proceso puede terminar muy pronto o prolongarse arbitrariamente.</p>
 </li>
 </ol>
-<hr>
 <h4 id="lectura-conjunta" class="relative group">Lectura conjunta <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lectura-conjunta" aria-label="Ancla">#</a></span></h4><ul>
 <li>$E[N]=1/p$ fija el <strong>nivel medio</strong> de recursos necesarios.</li>
 <li>$V[N]$ cuantifica el <strong>riesgo</strong> asociado a esa estimación.</li>
 </ul>
 <p>En el caso independiente, ambos crecen al mismo ritmo cuando $p$ es pequeño. Esto subraya un punto conceptual importante: persistir sin dependencia no solo es caro en promedio, sino también altamente incierto.</p>
 <p>Desde esta perspectiva, introducir dependencia entre los intentos, cuando es favorable, no solo puede reducir $E[N]$, sino también estabilizar el proceso, disminuyendo la varianza y haciendo el uso de recursos más predecible.</p>
-<hr>
 <h3 id="dependencia-y-probabilidad-condicional" class="relative group">Dependencia y probabilidad condicional <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#dependencia-y-probabilidad-condicional" aria-label="Ancla">#</a></span></h3>$$
 P(X_k=1)=p \quad \forall k.
 $$$$
@@ -1015,11 +1010,11 @@ Estas expresiones son completamente generales y no requieren independencia.</p>
 $$
 p \le p_n
 $$<p>
-cada intento fallido ($X_k=0$) incrementa la probabilidad condicional del siguiente. <em>La persistencia incorpora aprendizaje</em>.</p>
+cada intento fallido ($X_k=0$) incrementa la probabilidad condicional del siguiente. En este casi <em>la persistencia incorpora aprendizaje</em>.</p>
 $$
 p \ge p_n
 $$<p>
-cada intento fallido reduce la probabilidad futura. <em>La persistencia acumula ignorancia</em>.</p>
+cada intento fallido reduce la probabilidad futura. En este caso <em>la persistencia acumula ignorancia</em>.</p>
 <h3 id="persistencia-y-progreso" class="relative group">Persistencia y progreso <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#persistencia-y-progreso" aria-label="Ancla">#</a></span></h3>$$
 P(N > n) = (1 - p)^n
 $$$$
@@ -1035,7 +1030,6 @@ $$
 p_n \le p \quad \forall n,
 $$<p>
 las desigualdades se invierten y la persistencia retrasa el progreso respecto del modelo independiente.</p>
-<hr>
 <h3 id="reflexión" class="relative group">Reflexión <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reflexi%c3%b3n" aria-label="Ancla">#</a></span></h3><p>Los proyectos no son eventos aislados, sino procesos formados por una sucesión de acciones. En la práctica, esas acciones rara vez son independientes: cada decisión modifica el contexto de las siguientes, para bien o para mal.</p>
 <p>Por eso, la persistencia no puede evaluarse solo en términos de cuántas veces se insiste. Persistir sin que exista dependencia entre etapas equivale a repetir sin aprendizaje. En cambio, cuando el proyecto incorpora mecanismos que hacen crecer, local o globalmente, la probabilidad de concreción, la persistencia se convierte en progreso.</p>
 <p>Desde este punto de vista, satisfacer un objetivo no es solo cuestión de resistir en el tiempo, sino de diseñar una estructura de dependencia entre acciones que permita que cada intento mejore las condiciones del siguiente. Persistencia y dependencia no son alternativas: son complementarias.</p>
