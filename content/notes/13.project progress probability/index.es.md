@@ -34,7 +34,7 @@ $$
 N := \inf\{n \in \mathbb{N} : X_n = 1 \}.
 $$
 
-La variable aleatoria $N$ no mide tiempo cronológico, sino el **despliegue efectivo de recursos** necesario para que el proyecto avance: cada intento consume tiempo, dinero, etc. y $N$ cuenta cuántos de esos intentos fueron necesarios.
+> La variable aleatoria $N$ puede intepretase no solo como una medida del tiempo cronológico, sino también el **despliegue efectivo de recursos** necesario para que el proyecto avance: cada intento consume tiempo, dinero, etc. y $N$ cuenta cuántos de esos intentos fueron necesarios.
 
 Por definición de $N$, son equivalentes los siguientes eventos 
 $$
@@ -57,12 +57,11 @@ P(N \le n) = 1 - (1-p)^n,
 $$
 
 lo que crece monótonamente con $n$. Esto muestra que la probabilidad de concreción aumenta al invertir más intentos, y que la curva $P(N \le n)$ proporciona un una garantía casi segura de éxito y un modo de acotar la cantidad de recursos necesarios en promedio, como veremos más adelante.
-Podemos hacer lo propio cando los intentos no son independientes y se definen probabilidades condicionales $p_k=P(X_k=1|X_1=0,\cdots X_k=0)$, 
+Podemos hacer lo propio aún cuando los intentos no son independientes, definiendo probabilidades condicionales $P(X_k=1|X_1=0,\cdots X_k=0)$, denotadas por $p_k$, de manera que 
 
 $$
 P(N \le n) = 1 - \prod_{k=1}^{n} (1-p_k),
 $$
-
 reflejando cómo la estructura del proyecto puede favorecer o dificultar la concreción. Si $p_k$ aumenta con $k$, la persistencia se vuelve más eficaz; si disminuye con $k$, el progreso es más incierto. Dicha expresión para $P(N\le n )$ será demostrada más adelante.
 
 En resumen, $P(N \le n)$ es una **medida acumulada de éxito**: cuantifica la probabilidad de concretar el proyecto **dentro de un límite de intentos o recursos**, y permite comparar escenarios independientes versus dependientes.
@@ -183,7 +182,7 @@ Desde esta perspectiva, introducir dependencia entre los intentos, cuando es fav
 
 
 
-### Dependencia y probabilidad condicional
+### Persistencia con dependencia
 
 Abandonamos ahora la independencia, manteniendo la misma distribución marginal:
 $$
