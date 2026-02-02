@@ -1,4 +1,4 @@
----
+§---
 title: "Transfomers borgeanos"
 subtitle: "algunos LLMs no olvidan"
 date: 2026-02-02
@@ -42,7 +42,7 @@ Sea $X$ el conjunto discreto de *prompts* posibles (vocabulario finito y ventana
 
 * **Inyectividad.** $f:X\to Y$ es inyectiva si $x_1\ne x_2 \implies f(x_1)\ne f(x_2)$. En nuestro contexto, dos *prompts* distintos no colapsan en la misma representación.
 * **Inversa por la izquierda.** Si existe $g:Y\to X$ tal que $g\circ f=\mathrm{id}_X$, decimos que $f$ tiene inversa por la izquierda.
-* **Implicación práctica.** La inyectividad garantiza existencia (y unicidad) de preimagen sobre la imagen de $f$, pero no garantiza que dicha inversa sea fácil de computar. Sin embargo, el resultado teórico viene acompañado de un algoritmo constructivo que demuestra recuperabilidad práctica en muchos casos (véase §4).
+* **Implicación práctica.** La inyectividad garantiza existencia (y unicidad) de preimagen sobre la imagen de $f$, pero no garantiza que dicha inversa sea fácil de computar. Sin embargo, el resultado teórico viene acompañado de un algoritmo constructivo que demuestra recuperabilidad práctica, ver sección siguiente.
 
 La razón por la que la inyectividad es “casi segura” en estos modelos se apoya en observaciones sobre la regularidad de los componentes (productos escalares, softmax, activaciones analíticas tipo GELU, LayerNorm, etc.) y en teoremas sobre ceros de funciones reales analíticas: para un par fijo $x\ne x'$, la ecuación $\rho(x;\theta)=\rho(x';\theta)$ define, salvo degeneración, un conjunto de parámetros de medida nula. Con inicializaciones continuas y entrenamiento “suave” (SGD y variantes), la probabilidad de caer exactamente en dichas superficies de colisión es nula y se preserva durante el flujo de entrenamiento salvo contramedidas radicales.
 
@@ -61,7 +61,7 @@ Formalmente, para $x\ne x'$ definimos
 $$h_{x,x'}(\theta) = \|\rho(x;\theta)-\rho(x';\theta)\|^2.$$
 Si $h_{x,x'}$ no es identicamente nula como función analítica de $\theta$, su conjunto de ceros tiene medida nula; extendiendo a todos los pares posibles, las colisiones son excepciones.
 (
-### algoritmo constructivo de inversión
+### Algoritmo constructivo de inversión
 
 Más allá del argumento de existencia, existe una estrategia práctica denominada SipIt (Search-based Iterative Prompt Inversion Transformer) que explota dos propiedades estructurales de los modelos decoder-only:
 
