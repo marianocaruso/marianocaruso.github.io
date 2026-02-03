@@ -115,7 +115,7 @@ La inyectividad prácticamente universal de la función que mapea *prompts* a es
 
 En términos borgianos: lo que parecía una abstracción es, en muchos casos, un mapa a escala 1:1. Esto obliga a que las estrategias de seguridad no se apoyen en la opacidad del espacio latente sino en diseños y políticas que introduzcan olvido intencional o que protejan rigurosamente las activaciones como si fueran datos en claro. En ausencia de tales medidas, la exposición de activaciones equivale a la exposición del contenido procesado: algunos LLMs no olvidan.
 
-### Referencias (selección)
+### Referencias
 
 * Vaswani, A. et al., “Attention is all you need”, NeurIPS 2017.
 * Nikolaou, G. et al., “Language Models are Injective and Hence Invertible”, arXiv:2510.15511, 2025.

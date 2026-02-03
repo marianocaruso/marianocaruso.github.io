@@ -147,7 +147,7 @@
     "keywords": ["transformers","privacy","injectivity","sipit"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1929"
+    "wordCount": "1928"
   }
   </script>
     
@@ -863,7 +863,7 @@
         <li><a href="#problemas-de-confidencialidad">Problemas de confidencialidad</a></li>
         <li><a href="#recomendaciones">Recomendaciones</a></li>
         <li><a href="#conclusiones">Conclusiones</a></li>
-        <li><a href="#referencias-selección">Referencias (selección)</a></li>
+        <li><a href="#referencias">Referencias</a></li>
       </ul>
     </li>
   </ul>
@@ -942,7 +942,7 @@ Si $h_{x,x'}$ no es identicamente nula como función analítica de $\theta$, su 
 </ul>
 <h3 id="conclusiones" class="relative group">Conclusiones <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusiones" aria-label="Ancla">#</a></span></h3><p>La inyectividad prácticamente universal de la función que mapea <em>prompts</em> a estados ocultos en muchos Transformers decoder-only destroza la intuición de que los <em>embeddings</em> o activaciones son “resúmenes” seguros. Más bien, actúan como mapas de alta fidelidad: la memoria es casi completa. Algoritmos como SipIt convierten esa propiedad en una capacidad operativa para reconstruir <em>prompts</em>.</p>
 <p>En términos borgianos: lo que parecía una abstracción es, en muchos casos, un mapa a escala 1:1. Esto obliga a que las estrategias de seguridad no se apoyen en la opacidad del espacio latente sino en diseños y políticas que introduzcan olvido intencional o que protejan rigurosamente las activaciones como si fueran datos en claro. En ausencia de tales medidas, la exposición de activaciones equivale a la exposición del contenido procesado: algunos LLMs no olvidan.</p>
-<h3 id="referencias-selección" class="relative group">Referencias (selección) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#referencias-selecci%c3%b3n" aria-label="Ancla">#</a></span></h3><ul>
+<h3 id="referencias" class="relative group">Referencias <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#referencias" aria-label="Ancla">#</a></span></h3><ul>
 <li>Vaswani, A. et al., “Attention is all you need”, NeurIPS 2017.</li>
 <li>Nikolaou, G. et al., “Language Models are Injective and Hence Invertible”, arXiv:2510.15511, 2025.</li>
 <li>Ba, J. L., Kiros, J. R., Hinton, G. E., “Layer normalization”, arXiv:1607.06450, 2016.</li>
