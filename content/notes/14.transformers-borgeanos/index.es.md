@@ -32,7 +32,7 @@ Este artículo analiza las propiedades funcionales de las arquitecturas Transfor
 
 El flujo arquitectónico clásico de un LLM —tokenización, proyección a *embeddings*, codificación posicional y un stack de capas que combinan atención multi-cabeza y redes feedforward con residuales y normalización— define un mapeo complejo desde una secuencia discreta hacia un espacio latente continuo. Tradicionalmente se pensó que este proceso actuaba como un embudo compresor: distintos *prompts* podían confluir en estados internos similares que retenían solo la esencia semántica.
 
-Recientemente se ha demostrado que, para una amplia clase de modelos decoder-only, la función $x \mapsto \rho(x;\theta)$ (donde $\rho$ es la representación oculta del último token y $\theta$ los parámetros del modelo) es casi siempre inyectiva (Nikolaou et al.). En términos prácticos, esto obliga a replantear la intuición de que los estados internos constituyen representaciones empobrecidas: en muchos casos contienen suficiente información para reconstruir el *prompt* completo.
+Recientemente se ha demostrado que, para una amplia clase de modelos decoder-only, la función $x \longmapsto \rho(x;\theta)$ (donde $\rho$ es la representación oculta del último token y $\theta$ los parámetros del modelo) es casi siempre inyectiva (Nikolaou et al.). En términos prácticos, esto obliga a replantear la intuición de que los estados internos constituyen representaciones empobrecidas: en muchos casos contienen suficiente información para reconstruir el *prompt* completo.
 
 Esa constatación tiene consecuencias directas para la privacidad: si la representación interna es (casi) invertible, quien acceda a ella y disponga de un algoritmo de inversión viable puede recuperar texto sensible y PII que se suponía “olvidado”.
 
@@ -48,24 +48,26 @@ La razón por la que la inyectividad es “casi segura” en estos modelos se ap
 
 ### Localización del problema: pipeline que importa
 
-Descomponemos el mapping $x\mapsto\rho(x;\theta)$ en etapas:
+Descomponemos el mapping $x\longmapsto\rho(x;\theta)$ en etapas:
 
 1. **Tokenización** ($\tau$): mapea texto a índices discretos.
 2. **Embeddings** ($\mathrm{Emb}$): $\{1,\dots,|V|\}^T\to\mathbb{R}^{T\times d}$.
 3. **Transformación** ($\mathcal{T}$): pila de $L$ bloques Transformer que actúan sobre $\mathbb{R}^{T\times d}$.
 4. **Proyección de salida**: afin + softmax (no es el foco aquí).
 
-La representación que nos ocupa es la fila asociada al último token $\rho_T(x;\theta)$, que ha tenido la posibilidad de atender a todos los tokens previos. Si $x\mapsto\rho(x;\theta)$ es inyectiva, entonces toda la historia del *prompt* queda codificada en ese único punto del espacio latente.
+La representación que nos ocupa es la fila asociada al último token $\rho_T(x;\theta)$, que ha tenido la posibilidad de atender a todos los tokens previos. Si $x\longmapsto\rho(x;\theta)$ es inyectiva, entonces toda la historia del *prompt* queda codificada en ese único punto del espacio latente.
 
 Formalmente, para $x\ne x'$ definimos
 $$h_{x,x'}(\theta) = \|\rho(x;\theta)-\rho(x';\theta)\|^2.$$
 Si $h_{x,x'}$ no es identicamente nula como función analítica de $\theta$, su conjunto de ceros tiene medida nula; extendiendo a todos los pares posibles, las colisiones son excepciones.
-(
+
+
+
 ### Algoritmo constructivo de inversión
 
 Más allá del argumento de existencia, existe una estrategia práctica denominada SipIt (Search-based Iterative Prompt Inversion Transformer) que explota dos propiedades estructurales de los modelos decoder-only:
 
-* la causalidad autorregresiva (la representación en la posición $k$ depende solo de $x_{\le k}$);
+* la causalidad autorregresiva (la representación en la posición $k$ depende solo de los valores en las $k-1$ posiciones anteriores);
 * la discreción del vocabulario (el espacio de candidatos por posición es finito).
 
 Idea central: reconstruir la secuencia token a token comparando representaciones parciales con la representación objetivo y utilizando **KV-caching** para evitar recomputaciones. 
