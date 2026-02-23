@@ -72,7 +72,7 @@ Más allá del argumento de existencia, existe una estrategia práctica denomina
 
 Idea central: reconstruir la secuencia token a token comparando representaciones parciales con la representación objetivo y utilizando **KV-caching** para evitar recomputaciones. 
 
-El algoritmo tiene una complejidad ingenua: $O(T\cdot|V|)$, pero mejoras prácticas (utilizando búsqueda jerárquica con ANN, filtrado por proximidad en embeddings, beam/adaptative pruning) reducen el coste efectivo, llegando a variantes $O(T\log|V|)$ en la práctica. A diferencia de optimizaciones continuas por gradiente y proyección al vocabulario, SipIt trabaja en el dominio discreto y evita no convexidades y discretizaciones fallidas.
+El algoritmo tiene una complejidad ingenua: $O(T\cdot|V|)$, pero mejoras prácticas (utilizando búsqueda jerárquica con ANN, filtrado por proximidad en embeddings, beam/adaptative pruning) reducen el coste efectivo, llegando a variantes $O(T\cdot\log|V|)$ en la práctica. A diferencia de optimizaciones continuas por gradiente y proyección al vocabulario, SipIt trabaja en el dominio discreto y evita no convexidades y discretizaciones fallidas.
 
 Crucialmente, SipIt no requiere acceso a gradientes ni reentrenamiento: basta con capacidad de evaluación (*forward pass*) y acceso a activaciones—esto lo hace potencialmente factible en escenarios de *caja gris* (APIs que devuelvan *embeddings*).
 
