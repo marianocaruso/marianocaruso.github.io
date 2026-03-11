@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Termodinámica on Mariano Caruso</title>
+    <link>https://marianocaruso.github.io/tags/termodin%C3%A1mica/</link>
+    <description>Recent content in Termodinámica on Mariano Caruso</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>© Mariano Caruso</copyright>
+    <lastBuildDate>Wed, 11 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marianocaruso.github.io/tags/termodin%C3%A1mica/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ingeniería de la precariedad</title>
+      <link>https://marianocaruso.github.io/notes/15.ingenieria-precariedad/</link>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/notes/15.ingenieria-precariedad/</guid>
+      <description>Una formalización sobre cómo la carencia transforma la reparación técnica en un laboratorio de diseño, subversión material y soberanía a la criolla.</description>
+    </item>
+  </channel>
+</rss>

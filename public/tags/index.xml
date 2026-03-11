@@ -7,8 +7,29 @@
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
-    <lastBuildDate>Mon, 02 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://marianocaruso.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bricolaje</title>
+      <link>https://marianocaruso.github.io/tags/bricolaje/</link>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/tags/bricolaje/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ontología</title>
+      <link>https://marianocaruso.github.io/tags/ontolog%C3%ADa/</link>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/tags/ontolog%C3%ADa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Termodinámica</title>
+      <link>https://marianocaruso.github.io/tags/termodin%C3%A1mica/</link>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/tags/termodin%C3%A1mica/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Injectivity</title>
       <link>https://marianocaruso.github.io/tags/injectivity/</link>

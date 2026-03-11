@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
-    <lastBuildDate>Mon, 02 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://marianocaruso.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ingeniería de la precariedad</title>
+      <link>https://marianocaruso.github.io/notes/15.ingenieria-precariedad/</link>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/notes/15.ingenieria-precariedad/</guid>
+      <description>Una formalización sobre cómo la carencia transforma la reparación técnica en un laboratorio de diseño, subversión material y soberanía a la criolla.</description>
+    </item>
     <item>
       <title>Transfomers borgeanos</title>
       <link>https://marianocaruso.github.io/notes/14.transformers-borgeanos/</link>
