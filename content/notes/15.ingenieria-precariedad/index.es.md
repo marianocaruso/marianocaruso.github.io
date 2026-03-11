@@ -20,9 +20,9 @@ En ciertos contextos, la frontera entre la "ingeniería" y la "magia" es estrict
 
 Para entender la operación básica de este taller de barrio, conviene formalizar el problema. Sea $A$ el dispositivo “legítimo” —una entidad funcional que ha perdido su integridad tras el fallo de uno de sus componentes vitales— y sea $B$ el conjunto de componentes “intrusos”: el ventilador de pie desahuciado, la radio a pilas sulfatadas, el juguete asiático con luces estridentes con pilas como nuevas.
 
-Podemos definir un dispositivo como un conjunto estructurado de módulos funcionales, $A = \{m_1, m_2, \dots, m_n\}$. Si el módulo $m_k$ falla, la industria prescribe un reemplazo $m'_k \in \mathscr{C}_A$, donde $\mathscr{C}_A$ es el catálogo oficial de partes homologadas para $A$. 
+Podemos definir un dispositivo como un conjunto estructurado de módulos funcionales, $A = \{m_1, \cdots, m_k,\cdots, m_n\}$. Si cierto módulo $m_k$ falla, la industria prescribe un reemplazo $m'_k \in \mathscr{C}_A$, donde $\mathscr{C}_A$ es el catálogo oficial de partes homologadas para $A$. 
 
-En el manual de usuario de $A$, la intersección entre la estructura de $A$ y las vísceras de $B$ tiene, por definición, medida nula. Sin embargo, la práctica del injerto subvierte esta rigidez topológica. Se define una función de mapeo de dominio precario $B$,  $\rho_k: B \to m_k$, donde se fuerza a $B$ a comportarse “isofuncionalmente” al componente faltante. 
+En el manual de usuario de $A$, la intersección entre la estructura de $A$ y las vísceras de $B$ tiene, por definición, medida nula. Sin embargo, la práctica del injerto subvierte esta rigidez topológica, una función $\rho_k$ de dominio precario $B$, $\rho_k: B \to \{m_k\}$, fuerza a encontrar en $B$ elementos que se comporten “isofuncionalmente” al componente faltante $m_k$. 
 
 No se trata de una simple reparación, sino de una afirmación ontológica: los objetos no tienen por qué morir cuando la matriz de obsolescencia lo dicta. El injerto reemplaza la máxima determinista “cada cosa para su fin” por una lógica estocástica y frankensteiniana: “cada cosa para lo que se pueda probar funcional”.
 
