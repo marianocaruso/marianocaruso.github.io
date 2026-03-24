@@ -30,7 +30,7 @@ No se trata de una simple reparación, sino de una afirmación ontológica: los 
 
 Desde la termodinámica, un electrodoméstico roto es un sistema cuya entropía ha superado el umbral de viabilidad operativa. El fabricante propone reducir esa entropía inyectando energía en forma de capital (comprar algo nuevo). 
 
-El taller precario, en cambio, opera como aquel demonio concebido por  Maxwell que toma partes de un sistema degradado $B$ (cuasi basura) y pretende acoplarlas al sistema $A$,  logrando así una reducción local de la entropía ($\Delta S < 0$) sin recurrir a la inyección de capital externo, utilizando puramente información y trabajo artesanal. El injerto retrasa la muerte térmica de los objetos cotidianos, demostrando que la vida útil no es una constante universal, sino una variable dependiente de la terquedad humana.
+El taller precario, en cambio, opera como aquel demonio concebido por Maxwell que toma partes de un sistema degradado $B$ (cuasi basura) y pretende acoplarlas al sistema $A$,  logrando así una reducción local de la entropía ($\Delta S < 0$) sin recurrir a la inyección de capital externo, utilizando puramente información y trabajo artesanal. El injerto retrasa la muerte térmica de los objetos cotidianos, demostrando que la vida útil no es una constante universal, sino una variable dependiente de la terquedad humana.
 
 ### Catálogos imposibles como guías del ingenio
 
@@ -42,7 +42,7 @@ Mientras que la industria proyecta el futuro como una progresión lineal de reem
 * $\mathtt{entrada}$: elástico de cama de hierro de los años 70 $\rightarrow$ $\mathtt{salida}$: parrilla de alta resistencia a la fatiga térmica.
 *  $\mathtt{entrada}$: sifón de vidrio con malla protectora $\rightarrow$  $\mathtt{salida}$: luminaria colgante con difusor cilíndrico de estética industrial.
 
-... y así sucesivamente, podríamos continuar una lista que toma como entradas casi caalquier cosas y devuelve como salida casi cualquier otra.
+... y así sucesivamente, podríamos continuar la lista que toma como entradas casi cualquier cosa y devuelve como salida casi cualquier otra.
 
 En este gesto hay una diferencia algorítmica con la mera improvisación: se trata de identificar el mínimo denominador común vectorial (forma, fuerza electromotriz, inercia térmica, ...) que permite la transferencia de funciones entre dispositivos que el mercado agrupa en clústeres inconexos.
 
@@ -62,4 +62,4 @@ Los dispositivos, por muy distantes que parezcan en el mercad, pueden conversar 
 
 ### Reflexión
 
-La persistencia en el uso de lo que el sistema económico etiqueta como inutil, en otras palabras, que la probabilidad de utilidad es nula, no es solo economía de trinchera; es un marco epistemológico. Al injertar elementos de $B$ en $A$, no solo estamos cerrando un circuito o reparando una máquina, estamos reescribiendo nuestra relación de dependencia con la técnica. Transformamos la carencia en un operador de diseño que desafía la obsolescencia programada con la única herramienta verdaderamente inagotable. Es una forma de combatir el aumento de entropía programado por la industria mediante la inyección de ingenio local y una profunda obstinación vital de aquello que se resiste a darse por muerto.
+La persistencia en el uso de lo que el sistema económico etiqueta como inútil, en otras palabras, que la probabilidad de utilidad es nula, no es solo economía de trinchera; es un marco epistemológico. Al injertar elementos de $B$ en $A$, no solo estamos cerrando un circuito o reparando una máquina, estamos reescribiendo nuestra relación de dependencia con la técnica. Transformamos la carencia en un operador de diseño que desafía la obsolescencia programada con la única herramienta verdaderamente inagotable. Es una forma de combatir el aumento de entropía programado por la industria mediante la inyección de ingenio local y una profunda obstinación vital de aquello que se resiste a darse por muerto.
