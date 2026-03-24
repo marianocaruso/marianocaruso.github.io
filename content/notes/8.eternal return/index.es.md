@@ -32,7 +32,7 @@ En el arte plástico, el tiempo devorador se traduce en imágenes poderosas.  Go
 
 En matemáticas y en física el teorema de recurrencia de Poincaré afirma que ciertos sistemas dinámicos, tras un tiempo finito suficientemente largo, regresan a un estado tan próximo como se desee al estado inicial en el caso de tiempo continuo o idéntico al estado inicial en el caso de tiempo discreto.
 
-Cuando decimos ciertos sistemas dinámicos nos referimos en parte a aquellos en los que *mantienen su porte* a lo largo del tiempo, i.e. en su evolución temporal conservan la medida. Formalmente necesitamos una transformación $f: X \to X$ en un espacio de medida $(X, \Sigma, \mu)$, donde $\Sigma$ es una $\sigma-$álgebra sobre el espacio medible $X$ y $\mu$ una media. Se dice que $f$ **conserva la medida** $\mu$ si para todo conjunto medible $E \in \Sigma$, se cumple que $\mu\pmb{(}f^{-1}(E)\pmb{)} = \mu(E)$.
+Cuando decimos ciertos sistemas dinámicos nos referimos en parte a aquellos en los que *mantienen su porte* a lo largo del tiempo, i.e. en su evolución temporal conservan la medida. Formalmente necesitamos una transformación $f: X \to X$ en un espacio de medida $(X, \Sigma, \mu)$, donde $\Sigma$ es una $\sigma-$álgebra sobre el espacio medible $X$ y $\mu$ una media. Se dice que $f$ **conserva la medida** $\mu$ si para todo conjunto medible $E \in \Sigma$, se cumple que $\mu\pmb{(}f^{-1}(E)\pmb{)} = \mu(E).$
 
 Este teorema de recurrencia de Poincaré puede enunciarse como:
 

@@ -38,7 +38,7 @@ Mientras que la industria proyecta el futuro como una progresión lineal de reem
 
 * $\mathtt{entrada}$: motor de secador de pelo $\rightarrow$ $\mathtt{salida}$: turbina de flujo forzado para avivar el fuego del asado
 * $\mathtt{entrada}$: CD-ROMs viejos $\rightarrow$ $\mathtt{salida}$: dispositivo estroboscópico pasivo antiaves
-* $\mathtt{entrada}$: tambor de acero inoxidable de lavarropas $\rightarrow$ $\mathtt{salida}$: Fogonero exterior con ventilación convectiva autoportante
+* $\mathtt{entrada}$: tambor de acero inoxidable de lavarropas $\rightarrow$ $\mathtt{salida}$: fogonero exterior con ventilación convectiva autoportante
 *  $\mathtt{entrada}$: sifón de vidrio con malla protectora $\rightarrow$  $\mathtt{salida}$: luminaria colgante con difusor cilíndrico de estética industrial
 * $\mathtt{entrada}$: elástico de cama de hierro de los años 70 $\rightarrow$ $\mathtt{salida}$: parrilla de alta resistencia a la fatiga térmica
 
