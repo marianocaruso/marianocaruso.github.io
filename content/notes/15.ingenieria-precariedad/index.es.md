@@ -40,7 +40,7 @@ Mientras que la industria proyecta el futuro como una progresión lineal de reem
 | $\mathtt{entrada}$ | $\mathtt{salida}$ |
 |--------|--------|
 | motor de secador de pelo | turbina para avivar el fuego del asado |
-| $\mathtt{CD-ROM}$s antiguos | dispositivo estroboscópico pasivo antiaves |
+| $\mathtt{CD{-}ROM}$s antiguos | dispositivo estroboscópico pasivo antiaves |
 | tambor de acero inoxidable de lavarropas | fogonero exterior con ventilación convectiva autoportante |
 | sifón de vidrio con malla protectora | luminaria colgante de estética industrial |
 | elástico de cama de hierro viejo | parrilla de alta resistencia a la fatiga térmica |
