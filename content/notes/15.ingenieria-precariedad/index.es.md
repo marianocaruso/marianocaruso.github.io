@@ -42,6 +42,14 @@ Mientras que la industria proyecta el futuro como una progresión lineal de reem
 * sifón de vidrio con malla protectora $\rightarrow$ luminaria colgante con difusor cilíndrico de estética industrial
 * elástico de cama de hierro de los años 70 $\rightarrow$ parrilla de alta resistencia a la fatiga térmica
 
+| \mathtt{entrada} | \mathtt{salida} |
+|--------|--------|
+| motor de secador de pelo | turbina de flujo forzado para avivar el fuego del asado |
+| CD-ROMs viejos | dispositivo estroboscópico pasivo antiaves |
+| tambor de acero inoxidable de lavarropas | fogonero exterior con ventilación convectiva autoportante |
+| sifón de vidrio con malla protectora | luminaria colgante con difusor cilíndrico de estética industrial |
+| elástico de cama de hierro de los años 70 | parrilla de alta resistencia a la fatiga térmica |
+
 ... y así sucesivamente, podríamos continuar la lista que toma como entradas casi cualquier cosa y devuelve como salida casi cualquier otra.
 
 
