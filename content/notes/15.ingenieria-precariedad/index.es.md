@@ -36,13 +36,14 @@ El taller precario, en cambio, opera como aquel demonio concebido por Maxwell qu
 
 Mientras que la industria proyecta el futuro como una progresión lineal de reemplazos homogéneos (la pieza $n$ sustituida trivialmente por la versión $n+1$), el taller precario escribe catálogos de equivalencias funcionales improbables. Aquí, el célebre "lo atamos con alambre" se eleva a la categoría de diseño sistémico:
 
-* $\mathtt{entrada}$: motor de secador de pelo $\rightarrow$ $\mathtt{salida}$: turbina sopladora de flujo forzado para apurar brasas del asado.
-* $\mathtt{entrada}$: tambor de acero inoxidable de lavarropas $\rightarrow$ $\mathtt{salida}$: Fogonero exterior con ventilación convectiva autoportante.
+* $\mathtt{entrada}$: motor de secador de pelo $\rightarrow$ $\mathtt{salida}$: turbina de flujo forzado para apurar brasas del asado.
 * $\mathtt{entrada}$: CD-ROMs viejos $\rightarrow$ $\mathtt{salida}$: dispositivo estroboscópico pasivo antiaves.
-* $\mathtt{entrada}$: elástico de cama de hierro de los años 70 $\rightarrow$ $\mathtt{salida}$: parrilla de alta resistencia a la fatiga térmica.
+* $\mathtt{entrada}$: tambor de acero inoxidable de lavarropas $\rightarrow$ $\mathtt{salida}$: Fogonero exterior con ventilación convectiva autoportante.
 *  $\mathtt{entrada}$: sifón de vidrio con malla protectora $\rightarrow$  $\mathtt{salida}$: luminaria colgante con difusor cilíndrico de estética industrial.
+* $\mathtt{entrada}$: elástico de cama de hierro de los años 70 $\rightarrow$ $\mathtt{salida}$: parrilla de alta resistencia a la fatiga térmica.
 
 ... y así sucesivamente, podríamos continuar la lista que toma como entradas casi cualquier cosa y devuelve como salida casi cualquier otra.
+
 
 En este gesto hay una diferencia algorítmica con la mera improvisación: se trata de identificar el mínimo denominador común vectorial (forma, fuerza electromotriz, inercia térmica, ...) que permite la transferencia de funciones entre dispositivos que el mercado agrupa en clústeres inconexos.
 
