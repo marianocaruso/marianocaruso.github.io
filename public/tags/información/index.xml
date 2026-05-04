@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Información on Mariano Caruso</title>
+    <link>http://localhost:1313/tags/informaci%C3%B3n/</link>
+    <description>Recent content in Información on Mariano Caruso</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>© Mariano Caruso</copyright>
+    <lastBuildDate>Wed, 25 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/informaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cómo demostrar sin mostrar</title>
+      <link>http://localhost:1313/notes/16.pruebas-conocimiento/</link>
+      <pubDate>Wed, 25 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/16.pruebas-conocimiento/</guid>
+      <description>Pruebas de conocimiento nulo</description>
+    </item>
+  </channel>
+</rss>

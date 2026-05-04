@@ -3,7 +3,7 @@ title: "Ingeniería de la precariedad"
 subtitle: "Anatomía de los injertos"
 date: 2026-03-11
 showDate: false
-summary: "Una formalización sobre cómo la carencia transforma la reparación técnica en un laboratorio de subversión material y soberanía a la criolla."
+summary: "Cómo la carencia transforma la soberanía, pero a la criolla."
 draft: false
 showReadingTime: false
 tags: [ontología, bricolaje, termodinámica]

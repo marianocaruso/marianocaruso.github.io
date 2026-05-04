@@ -7,14 +7,21 @@
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
-    <lastBuildDate>Wed, 11 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://marianocaruso.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cómo demostrar sin mostrar</title>
+      <link>https://marianocaruso.github.io/notes/16.pruebas-conocimiento/</link>
+      <pubDate>Wed, 25 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/notes/16.pruebas-conocimiento/</guid>
+      <description>Pruebas de conocimiento nulo</description>
+    </item>
     <item>
       <title>Ingeniería de la precariedad</title>
       <link>https://marianocaruso.github.io/notes/15.ingenieria-precariedad/</link>
       <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://marianocaruso.github.io/notes/15.ingenieria-precariedad/</guid>
-      <description>Una formalización sobre cómo la carencia transforma la reparación técnica en un laboratorio de subversión material y soberanía a la criolla.</description>
+      <description>Cómo la carencia transforma la soberanía, pero a la criolla.</description>
     </item>
     <item>
       <title>Transfomers borgeanos</title>

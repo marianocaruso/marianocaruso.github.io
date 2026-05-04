@@ -3,18 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
+      <url>
+            <loc>https://marianocaruso.github.io/notes/16.pruebas-conocimiento/</loc>
+            <lastmod>2026-03-25T00:00:00+00:00</lastmod>
+          </url>
+    
   
     
-      <url>
-            <loc>https://marianocaruso.github.io/notes/15.ingenieria-precariedad/</loc>
-            <lastmod>2026-03-11T00:00:00+00:00</lastmod>
-          </url>
+  
+    
+  
+    
+  
     
   
     
       <url>
             <loc>https://marianocaruso.github.io/</loc>
-            <lastmod>2026-03-11T00:00:00+00:00</lastmod>
+            <lastmod>2026-03-25T00:00:00+00:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="en"
@@ -31,7 +37,7 @@
     
       <url>
             <loc>https://marianocaruso.github.io/notes/</loc>
-            <lastmod>2026-03-11T00:00:00+00:00</lastmod>
+            <lastmod>2026-03-25T00:00:00+00:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="en"
@@ -45,6 +51,15 @@
           </url>
     
   
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://marianocaruso.github.io/notes/15.ingenieria-precariedad/</loc>
+            <lastmod>2026-03-11T00:00:00+00:00</lastmod>
+          </url>
     
   
     
