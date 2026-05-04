@@ -16,7 +16,7 @@ math: true
 ## Introducción
 
 
-Existe una forma de crueldad técnica que Jorge Luis Borges bautizó como "maestría de Dios" en su *Poema de los dones* [^1]. El autor describe la "magnífica ironía" de recibir simultáneamente los libros y la noche: la posesión de una biblioteca infinita bajo el estigma de la ceguera.
+Existe una forma de crueldad técnica que Jorge Luis Borges bautizó como "maestría de Dios" en su *Poema de los dones* [^1]. El autor describe la *magnífica ironía* de recibir simultáneamente los libros y la noche: la posesión de una biblioteca infinita bajo el estigma de la ceguera.
 
 
 Por un lado tenemos a $B$ un bibliotecario ciego que habita un paraíso de datos e información repleto de libros, en una estructura que recuerda a *La biblioteca de Babel* [^2] (sí, otro texto de Borges). $B$ habita una red de galerías hexagonales donde cada libro tiene su lugar, pero él no tiene el mapa de la locación de todos los libros. Una de las tareas más laboriosas en esta biblioteca es la reubicación de ejemplares en su correspondiente estante. Para esto $B$ decide contratar un asistente para confeccionar una metodología de reubicación adaptada a su ceguera. Por otro lado, tenemos a $A$ un aspirante de asistente, quien debe estudiar la distribución de los libros en la biblioteca y realizar una suerte de examen frente a $B$. Algo importante, $A$ quiere conservar su trabajo todo el tiempo que sea posible, por tanto querrá siempre demostrar a $B$ que conoce el camino entre dos libros dados, sin revelar nunca el camino y perpetuarse en su puesto.
