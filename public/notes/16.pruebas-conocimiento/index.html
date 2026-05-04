@@ -913,8 +913,8 @@ $$\xi = \gamma_1(\xi_1).$$<p>
 naturalmente existe camino inverso, denotado por  $\xi_1^{-1}$.</p>
 <p>$V$ emite un bit aleatorio $b \in \{0, 1\}$.</p>
 <ul>
-<li>$b = 0$: $V$ exige a $P$ que revele $\gamma_0$. Se comprueba que $\xi$ es una derivación honesta de $\xi_0$.</li>
-<li>$b = 1$: $V$ exige a $P$ que revele $\gamma_1$. Se comprueba que $\xi$ tiene una conexión válida con $\xi_1$.</li>
+<li>$b = 0$: $V$ exige a $P$ que revele $\gamma_0.$ Se comprueba que $\xi$ es una derivación honesta de $\xi_0.$</li>
+<li>$b = 1$: $V$ exige a $P$ que revele $\gamma_1.$ Se comprueba que $\xi$ tiene una conexión válida con $\xi_1.$</li>
 </ul>
 <p>La seguridad del protocolo no reside en la complejidad, sino en la imposibilidad de la síntesis. Si $P$ fuese forzado a entregar ambos isomorfismos ($\gamma_0$ y $\gamma_1$) para el mismo libro $\xi$, la propiedad de &ldquo;conocimiento nulo&rdquo; colapsaría. El verificador podría construir $\xi_1^{-1}$ y calcular $\gamma_1^{-1} \circ \gamma_0$ que resuelve precisamente el problema de encontrar $\sigma$ para conectar $\xi_0$ con $\xi_1$. Esto es así pues, dado que $\gamma_1(\xi_1) = \gamma_0(\xi_0)$ luego $\xi_1 = \gamma_1^{-1}(\gamma_0(\xi_0))$ por lo que $\sigma = \gamma_1^{-1} \circ \gamma_0$.</p>
 <p>Al recibir ambas piezas $(\gamma_0,\gamma_1)$, el verificador podría &ldquo;ver&rdquo; para convertirse en dueño del secreto. El protocolo funciona porque se realizan iteraciones de estos pasos, cambiando aleatoriamente el punto intermedio $\xi$, de manera que el verificador solo puede conocer un camino entre cada punto intermedio y uno de los elementos $\{\xi_0,\xi_1\}$ elegidos también al azar en cada ronda.</p>
