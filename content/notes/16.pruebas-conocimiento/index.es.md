@@ -44,8 +44,8 @@ La función de verificación de $B$ se basa en el punto de pivote. Para cada exa
 * compromiso: $A$ anuncia que ha llegado a esa galería intermedia y tiene acceso a cierto libro $\xi$. $B$ confirma que $A$ está efectivamente en alguna galería, pero no sabe cómo llegó allí.
 
 * desafío: $B$ lanza una moneda.
-    * si sale cara: $B$ le pide a $A$ que lo guíe desde el libro $\xi_0$ hasta el libro $\xi$. $B$ camina de la mano de $A$ por este tramo.
-    * si sale cruz: $B$ le pide a $A$ que lo guíe desde el libro $\xi$ hasta el libro $\xi_1$.
+    * si sale cara: $B$ le pide a $A$ que lo guíe desde el libro $\xi_0$ hasta el libro $\xi.$ $B$ camina de la mano de $A$ por este tramo.
+    * si sale cruz: $B$ le pide a $A$ que lo guíe desde el libro $\xi$ hasta el libro $\xi_1.$
 
 ## ¿Cómo es que funciona?
 
