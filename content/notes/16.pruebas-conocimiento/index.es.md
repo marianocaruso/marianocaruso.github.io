@@ -16,13 +16,14 @@ math: true
 ## Introducción: 
 
 
-Existe una forma de crueldad técnica que Jorge Luis Borges bautizó como "maestría de Dios" en su *Poema de los dones*. El autor describe la "magnífica ironía" de recibir simultáneamente los libros y la noche: la posesión de una biblioteca infinita bajo el estigma de la ceguera.
+Existe una forma de crueldad técnica que Jorge Luis Borges bautizó como "maestría de Dios" en su *Poema de los dones* [^1]. El autor describe la "magnífica ironía" de recibir simultáneamente los libros y la noche: la posesión de una biblioteca infinita bajo el estigma de la ceguera.
 
-Por un lado tenemos a $B$ un bibliotecario ciego que habita un paraíso de datos e información repleto de libros, en una estructura que recuerda *La biblioteca de Babel* (otro texto de Borges). $B$ habita una red de galerías hexagonales donde cada libro tiene su lugar, pero él no puede percibir los pasadizos que los conectan. Una de las tareas más laboriosas en esta biblioteca es la reubicación de ejemplares en su correspondiente estante. Para esto $B$ decide contratar un asistente para confeccionar una metodología de reubicación adaptada a su ceguera. Por otro lado, tenemos a $A$ un aspirante de asistente, quien debe estudiar la distribución de los libros en la biblioteca y realizar una suerte de examen frente a $B$. Algo importante, $A$ quiere conservar su trabajo todo el tiempo que sea posible, por tanto querrá siempre demostrar a $B$ que conoce el camino entre dos libros dados, sin revelar nunca el camino y perpetuarse en su puesto.
+
+Por un lado tenemos a $B$ un bibliotecario ciego que habita un paraíso de datos e información repleto de libros, en una estructura que recuerda a *La biblioteca de Babel* [^2] (sí, otro texto de Borges). $B$ habita una red de galerías hexagonales donde cada libro tiene su lugar, pero él no puede percibir los pasadizos que los conectan. Una de las tareas más laboriosas en esta biblioteca es la reubicación de ejemplares en su correspondiente estante. Para esto $B$ decide contratar un asistente para confeccionar una metodología de reubicación adaptada a su ceguera. Por otro lado, tenemos a $A$ un aspirante de asistente, quien debe estudiar la distribución de los libros en la biblioteca y realizar una suerte de examen frente a $B$. Algo importante, $A$ quiere conservar su trabajo todo el tiempo que sea posible, por tanto querrá siempre demostrar a $B$ que conoce el camino entre dos libros dados, sin revelar nunca el camino y perpetuarse en su puesto.
 
 > ¿Puede $A$ demostrarle consistentemente a $B$ que conoce el camino que conectan esos dos libros, sin revelarle cuál es ese camino?
 
-Esta pregunta ha sido abordada desde la criptografía y la respuesta es un rotundo sí. En este contexto criptográfico, hará falta formalizar algunas ideas mínimas y usar el relato entre $A$ y $B$ como guía en el resto de este texto. 
+Esta pregunta ha sido abordada desde la criptografía por Goldwasser, Micali y Rackoff [^3] y la respuesta es un rotundo sí. En este contexto criptográfico, hará falta formalizar algunas ideas mínimas y usar el relato entre $A$ y $B$ como guía en el resto de este texto. 
 
 
 ## Pruebas de conocimiento nulo
@@ -91,3 +92,13 @@ La prueba se verifica iterativamente, en una serie de rondas, por la acumulació
 
 
 Las pruebas de conocimiento nulo son, en esencia, un pacto sobre los límites de lo que compartimos. Nos permite validar procesos y certificar identidades sin sacrificar la privacidad, creando un puente de confianza allí donde antes solo había ceguera o desconfianza. En un entorno digital que tiende a la transparencia absoluta, estas estructuras nos devuelven el control sobre nuestra propia información. Al final, demostrar la verdad sin exponer su origen es una de las herramientas más potentes de la soberanía técnica del usuario: una forma de participar en el sistema sin quedar expuestos por él, preservando el secreto bajo la luz de una evidencia matemática.
+
+
+
+
+
+[^1]: J. L. Borges, “Poema de los dones”, en *El hacedor* (1960).
+
+[^2]: J. L. Borges, “La biblioteca de Babel”, en *Ficciones* (1944).
+
+[^3]: S. Goldwasser, S. Micali, C. Rackoff, The knowledge complexity of interactive proof-systems, in Proc. 17th ACM Symp. Theory of Computing (STOC), pp. 291--304 (1985). [doi: 10.1145/22145.22178](https://dl.acm.org/doi/10.1145/22145.22178)
