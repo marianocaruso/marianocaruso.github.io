@@ -13,7 +13,7 @@ math: true
 {{< katex >}}
 
 
-## Introducción: 
+## Introducción
 
 
 Existe una forma de crueldad técnica que Jorge Luis Borges bautizó como "maestría de Dios" en su *Poema de los dones* [^1]. El autor describe la "magnífica ironía" de recibir simultáneamente los libros y la noche: la posesión de una biblioteca infinita bajo el estigma de la ceguera.
