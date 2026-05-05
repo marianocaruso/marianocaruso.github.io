@@ -90,13 +90,7 @@ La prueba se verifica iterativamente, en una serie de rondas, por la acumulació
 
 ## Reflexión
 
-Las pruebas de conocimiento nulo no son solo una curiosidad conceptual, sino una formalización precisa de una idea poderosa: que la verificación puede desacoplarse de la revelación. En términos técnicos, separan conocimiento de evidencia transferible, rompiendo el vínculo clásico entre demostrar y mostrar.
-
-Las pruebas de conocimiento nulo son, en esencia, un pacto sobre los límites de lo que compartimos. Nos permite validar procesos y certificar identidades sin sacrificar la privacidad, creando un puente de confianza allí donde antes solo había ceguera o desconfianza. En un entorno digital que tiende a la transparencia absoluta, estas estructuras nos devuelven el control sobre nuestra propia información. 
-
-Las pruebas de conocimiento nulo permiten construir sistemas donde la validez es pública, pero el contenido permanece privado. Desde autenticación sin contraseñas hasta protocolos distribuidos, la idea subyacente es siempre la misma: convencer sin filtrar información.
-
-En última instancia, el valor de estos protocolos no está en ocultar, sino en limitar exactamente qué se revela y qué no. 
+Las pruebas de conocimiento nulo no son solo una curiosidad conceptual, sino una formalización precisa de una idea poderosa: que la verificación puede desacoplarse de la revelación. En términos técnicos, separan conocimiento de evidencia transferible, rompiendo el vínculo clásico entre demostrar y mostrar. Las pruebas de conocimiento nulo son, en esencia, un pacto sobre los límites de lo que compartimos. Nos permite validar procesos y certificar identidades sin sacrificar la privacidad, creando un puente de confianza allí donde antes solo había ceguera o desconfianza. En un entorno digital que tiende a la transparencia absoluta, estas estructuras nos devuelven el control sobre nuestra propia información. Las pruebas de conocimiento nulo permiten construir sistemas donde la validez es pública, pero el contenido permanece privado. Desde autenticación sin contraseñas hasta protocolos distribuidos, la idea subyacente es siempre la misma: convencer sin filtrar información extra. 
 
 
 
