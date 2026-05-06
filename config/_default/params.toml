@@ -84,7 +84,7 @@ description = "Research & Development"
   # script = ""
 
 #[umamiAnalytics]
-#  site = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+#  site = "55afc5e6-13f0-40b9-b209-18853418f85f"
 #  region = "eu"  # can be either "eu" or "us"
 
 [verification]
