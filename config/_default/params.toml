@@ -83,9 +83,9 @@ description = "Research & Development"
   # event = ""
   # script = ""
 
-#[umamiAnalytics]
-#  site = "55afc5e6-13f0-40b9-b209-18853418f85f"
-#  region = "eu"  # can be either "eu" or "us"
+[umamiAnalytics]
+  site = "55afc5e6-13f0-40b9-b209-18853418f85f"
+  region = "eu"  # can be either "eu" or "us"
 
 [verification]
   google = "SYbm-03Dwh4PbppJZdMEszrv-x0p59MhJ5XRzun7_o8"
