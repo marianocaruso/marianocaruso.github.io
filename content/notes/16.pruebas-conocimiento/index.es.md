@@ -74,7 +74,7 @@ $$\xi = \gamma_0(\xi_0).$$
 Debido a la conexión secreta $\sigma$, este nuevo elemento $\xi$ también está vinculado a $\xi_1$ mediante una segunda transformación $\gamma_1$. Tenemos entonces que:
 
 $$\xi = \gamma_1(\xi_1).$$
-naturalmente existe camino inverso, denotado por  $\xi_1^{-1}$.
+naturalmente existe camino inverso, denotado por  $\gamma_1^{-1}$.
 
 $V$ emite un bit aleatorio $b \in \{0, 1\}$.
 
@@ -82,7 +82,7 @@ $V$ emite un bit aleatorio $b \in \{0, 1\}$.
 * $b = 1$: $V$ exige a $P$ que revele $\gamma_1.$ Se comprueba que $\xi$ tiene una conexión válida con $\xi_1.$
 
 
-La seguridad del protocolo no reside en la complejidad, sino en la imposibilidad de la síntesis. Si $P$ fuese forzado a entregar ambos isomorfismos ($\gamma_0$ y $\gamma_1$) para el mismo libro $\xi$, la propiedad de "conocimiento nulo" colapsaría. El verificador podría construir $\xi_1^{-1}$ y calcular $\gamma_1^{-1} \circ \gamma_0$ que resuelve precisamente el problema de encontrar $\sigma$ para conectar $\xi_0$ con $\xi_1$. Esto es así pues, dado que $\gamma_1(\xi_1) = \gamma_0(\xi_0)$ luego $\xi_1 = \gamma_1^{-1}(\gamma_0(\xi_0))$ por lo que $\sigma = \gamma_1^{-1} \circ \gamma_0$.
+La seguridad del protocolo no reside en la complejidad, sino en la imposibilidad de la síntesis. Si $P$ fuese forzado a entregar ambos isomorfismos ($\gamma_0$ y $\gamma_1$) para el mismo libro $\xi$, la propiedad de "conocimiento nulo" colapsaría. El verificador podría construir $\gamma_1^{-1}$ y calcular $\gamma_1^{-1} \circ \gamma_0$ que resuelve precisamente el problema de encontrar $\sigma$ para conectar $\xi_0$ con $\xi_1$. Esto es así pues, dado que $\gamma_1(\xi_1) = \gamma_0(\xi_0)$ luego $\xi_1 = \gamma_1^{-1}(\gamma_0(\xi_0))$, de esta forma podríamos construir el camino secreto $\sigma$ mediante la composición $\gamma_1^{-1} \circ \gamma_0$.
 
 Al recibir ambas piezas $(\gamma_0,\gamma_1)$, el verificador podría "ver" para convertirse en dueño del secreto. El protocolo funciona porque se realizan iteraciones de estos pasos, cambiando aleatoriamente el punto intermedio $\xi$, de manera que el verificador solo puede conocer un camino entre cada punto intermedio y uno de los elementos $\{\xi_0,\xi_1\}$ elegidos también al azar en cada ronda.
 
