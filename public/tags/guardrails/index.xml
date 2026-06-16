@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guardrails on Mariano Caruso</title>
+    <link>https://marianocaruso.github.io/tags/guardrails/</link>
+    <description>Recent content in Guardrails on Mariano Caruso</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>© Mariano Caruso</copyright>
+    <lastBuildDate>Tue, 16 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marianocaruso.github.io/tags/guardrails/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sobreyectividad y seguridad</title>
+      <link>https://marianocaruso.github.io/notes/17.sobreyectividad-seguridad/</link>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/notes/17.sobreyectividad-seguridad/</guid>
+      <description>algunos LLMs son demostrablemente inseguros</description>
+    </item>
+    <item>
+      <title>Sobreyectividad y seguridad</title>
+      <link>https://marianocaruso.github.io/notes/17.transformers-/</link>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/notes/17.transformers-/</guid>
+      <description>algunos LLMs son demostrablemente inseguros</description>
+    </item>
+  </channel>
+</rss>
