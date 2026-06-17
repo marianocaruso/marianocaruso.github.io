@@ -3,7 +3,7 @@ title: "Transfomers borgeanos"
 subtitle: "algunos LLMs no olvidan"
 date: 2026-02-02
 showDate: false
-summary: "algunos LLMs no olvidan"
+summary: "Algunos LLMs no olvidan"
 draft: false
 showReadingTime: false
 tags: [transformers, privacy, injectivity, sipit]

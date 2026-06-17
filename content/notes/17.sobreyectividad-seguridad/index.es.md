@@ -3,7 +3,7 @@ title: "Sobreyectividad y seguridad"
 subtitle: "algunos LLMs son demostrablemente inseguros"
 date: 2026-06-16
 showDate: false
-summary: "algunos LLMs son demostrablemente inseguros"
+summary: "Algunos LLMs son demostrablemente inseguros"
 draft: false
 showReadingTime: false
 tags: [transformers, security, surjectivity, guardrails, alignment]
