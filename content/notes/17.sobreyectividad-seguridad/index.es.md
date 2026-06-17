@@ -36,6 +36,7 @@ Sea $X$ el espacio de todas las secuencias de entrada posibles (los prompts) e $
 
 $$\forall y \in Y, \exists x \in X : f(x) = y$$
 
+
 El trabajo de Jiang y Haghtalab demuestra que las arquitecturas Transformer tradicionales, particularmente aquellas que emplean la configuración Pre-LayerNorm (donde la normalización se aplica antes de los bloques de Atención y Perceptrón Multicapa), operan como funciones sobreyectivas en el dominio continuo.
 
 Esto significa que no hay "puntos ciegos" en el espacio de salida del modelo. Si definimos un subconjunto $\widetilde{Y}\subset Y$ que contiene instrucciones para fabricar armas, código malware o contenido tóxico, la sobreyectividad garantiza que este subconjunto está en la imagen de la función. Consecuentemente, debe existir inexorablemente un conjunto de entradas $\widetilde{X}\subset X$ tal que $f(\widetilde{X}) = \widetilde{Y}$.
@@ -43,7 +44,9 @@ Esto significa que no hay "puntos ciegos" en el espacio de salida del modelo. Si
 
 Bajo la luz de esta propiedad matemática, la vulnerabilidad inherente a los jailbreaks (hackeos de instrucciones) deja de ser un fallo de ingeniería para convertirse en una certeza teórica.
 
-Cuando aplicamos RLHF o Direct Preference Optimization (DPO), lo que hacemos formalmente es perturbar los parámetros $\theta$ de la función $f_{\theta}$ para modificar la distribución de probabilidad condicional $P(y|x)$. Alteramos el "relieve" del espacio para que los caminos hacia $\widetilde{Y}$ sean empinados y poco probables frente a entradas estocásticas o cotidianas.
+
+
+Cuando aplicamos RLHF, lo que hacemos formalmente es perturbar los parámetros $\theta$ que selecciona una función $f$ de entre una familia,  para modificar la distribución de probabilidad condicional $P(\mathtt{Y}=y|\mathtt{X}=x)$. Alteramos el "relieve" del espacio para que los caminos hacia $\widetilde{Y}$ sean poco probables frente a entradas estocásticas o cotidianas.
 
 No obstante, cambiar la probabilidad no altera la sobreyectividad fundamental de la arquitectura. El laberinto sigue intacto. Un atacante provisto de técnicas de optimización adversaria automatizada (como el ataque Greedy Coordinate Gradient - GCG) no explora el modelo probabilísticamente, sino que desciende por el gradiente buscando de manera determinista la combinación exacta de tokens que fuerza el paso hacia la zona prohibida. Al existir garantizadamente un $x$ para cada $y$, el optimizador adversario, con suficiente tiempo y cómputo, terminará por encontrarlo. El modelo no puede negarse a responder; su propia matemática lo obliga a obedecer.
 
@@ -51,19 +54,20 @@ No obstante, cambiar la probabilidad no altera la sobreyectividad fundamental de
 
 Asumir que el Transformer es inherentemente vulnerable desde su núcleo exige un cambio de mentalidad en el diseño de sistemas basados en LLMs. Si el motor no puede evitar producir toxicidad por sí solo, debemos encapsularlo en un sistema de tuberías deterministas. Propongo una arquitectura de defensa en profundidad basada en Guardrails:
 
-Filtros de Entrada (Input Guardrails)
+
+### Filtros de entrada
 
 Interceptación perimetral: Implementar modelos clasificadores ligeros y deterministas antes del LLM principal. Toda $x \in X$ debe pasar por una función de validación $V(x)$ que devuelva un valor booleano. Si se detectan firmas de ataques adversarios (cadenas de caracteres sin sentido aparente producto de GCG) o intenciones maliciosas, la petición se bloquea y nunca llega al espacio latente del Transformer.
 
 Saneamiento del contexto: Eliminación estricta de variables inyectadas por usuarios en entornos donde el LLM procesa documentos de terceros, evitando el Prompt Injection indirecto.
 
-Filtros de Salida (Output Guardrails)
+### Filtros de salida
 
 Cuarentena de respuestas: Dado que la entrada puede sortear el filtro inicial, la salida $y$ jamás debe fluir directamente al usuario o al entorno de ejecución. Debe atravesar un escáner de salida $S(y)$ independiente.
 
 Aserciones estructurales: Validación rigurosa de formatos (JSON, código) y filtrado de Expresiones Regulares para evitar fuga de Información Personal Identificable (PII) o violaciones explícitas de políticas corporativas.
 
-Separación de Entornos (Sandboxing)
+### Separación de entornos
 
 Principio de Mínimos Privilegios: Si el Transformer actúa como un agente (Agentic AI) con acceso a herramientas (APIs, ejecución de código), se debe asumir que eventualmente generará llamadas maliciosas. Todo código generado debe ejecutarse en sandboxes aislados y efímeros, sin acceso a red ni a los sistemas centrales.
 

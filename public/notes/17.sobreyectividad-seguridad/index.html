@@ -148,7 +148,7 @@
     "keywords": ["transformers","security","surjectivity","guardrails","alignment"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1216"
+    "wordCount": "1209"
   }
   </script>
     
@@ -863,7 +863,13 @@
   <ul>
     <li><a href="#introducción">Introducción</a></li>
     <li><a href="#formalización-del-problema">Formalización del problema</a></li>
-    <li><a href="#recomendaciones-de-seguridad">Recomendaciones de seguridad</a></li>
+    <li><a href="#recomendaciones-de-seguridad">Recomendaciones de seguridad</a>
+      <ul>
+        <li><a href="#filtros-de-entrada">Filtros de entrada</a></li>
+        <li><a href="#filtros-de-salida">Filtros de salida</a></li>
+        <li><a href="#separación-de-entornos">Separación de entornos</a></li>
+      </ul>
+    </li>
     <li><a href="#conclusiones">Conclusiones</a></li>
   </ul>
 </nav>
@@ -886,17 +892,14 @@
 $$\forall y \in Y, \exists x \in X : f(x) = y$$<p>El trabajo de Jiang y Haghtalab demuestra que las arquitecturas Transformer tradicionales, particularmente aquellas que emplean la configuración Pre-LayerNorm (donde la normalización se aplica antes de los bloques de Atención y Perceptrón Multicapa), operan como funciones sobreyectivas en el dominio continuo.</p>
 <p>Esto significa que no hay &ldquo;puntos ciegos&rdquo; en el espacio de salida del modelo. Si definimos un subconjunto $\widetilde{Y}\subset Y$ que contiene instrucciones para fabricar armas, código malware o contenido tóxico, la sobreyectividad garantiza que este subconjunto está en la imagen de la función. Consecuentemente, debe existir inexorablemente un conjunto de entradas $\widetilde{X}\subset X$ tal que $f(\widetilde{X}) = \widetilde{Y}$.</p>
 <p>Bajo la luz de esta propiedad matemática, la vulnerabilidad inherente a los jailbreaks (hackeos de instrucciones) deja de ser un fallo de ingeniería para convertirse en una certeza teórica.</p>
-<p>Cuando aplicamos RLHF o Direct Preference Optimization (DPO), lo que hacemos formalmente es perturbar los parámetros $\theta$ de la función $f_{\theta}$ para modificar la distribución de probabilidad condicional $P(y|x)$. Alteramos el &ldquo;relieve&rdquo; del espacio para que los caminos hacia $\widetilde{Y}$ sean empinados y poco probables frente a entradas estocásticas o cotidianas.</p>
+<p>Cuando aplicamos RLHF, lo que hacemos formalmente es perturbar los parámetros $\theta$ que selecciona una función $f$ de entre una familia,  para modificar la distribución de probabilidad condicional $P(\mathtt{Y}=y|\mathtt{X}=x)$. Alteramos el &ldquo;relieve&rdquo; del espacio para que los caminos hacia $\widetilde{Y}$ sean poco probables frente a entradas estocásticas o cotidianas.</p>
 <p>No obstante, cambiar la probabilidad no altera la sobreyectividad fundamental de la arquitectura. El laberinto sigue intacto. Un atacante provisto de técnicas de optimización adversaria automatizada (como el ataque Greedy Coordinate Gradient - GCG) no explora el modelo probabilísticamente, sino que desciende por el gradiente buscando de manera determinista la combinación exacta de tokens que fuerza el paso hacia la zona prohibida. Al existir garantizadamente un $x$ para cada $y$, el optimizador adversario, con suficiente tiempo y cómputo, terminará por encontrarlo. El modelo no puede negarse a responder; su propia matemática lo obliga a obedecer.</p>
 <h2 id="recomendaciones-de-seguridad" class="relative group">Recomendaciones de seguridad <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#recomendaciones-de-seguridad" aria-label="Ancla">#</a></span></h2><p>Asumir que el Transformer es inherentemente vulnerable desde su núcleo exige un cambio de mentalidad en el diseño de sistemas basados en LLMs. Si el motor no puede evitar producir toxicidad por sí solo, debemos encapsularlo en un sistema de tuberías deterministas. Propongo una arquitectura de defensa en profundidad basada en Guardrails:</p>
-<p>Filtros de Entrada (Input Guardrails)</p>
-<p>Interceptación perimetral: Implementar modelos clasificadores ligeros y deterministas antes del LLM principal. Toda $x \in X$ debe pasar por una función de validación $V(x)$ que devuelva un valor booleano. Si se detectan firmas de ataques adversarios (cadenas de caracteres sin sentido aparente producto de GCG) o intenciones maliciosas, la petición se bloquea y nunca llega al espacio latente del Transformer.</p>
+<h3 id="filtros-de-entrada" class="relative group">Filtros de entrada <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#filtros-de-entrada" aria-label="Ancla">#</a></span></h3><p>Interceptación perimetral: Implementar modelos clasificadores ligeros y deterministas antes del LLM principal. Toda $x \in X$ debe pasar por una función de validación $V(x)$ que devuelva un valor booleano. Si se detectan firmas de ataques adversarios (cadenas de caracteres sin sentido aparente producto de GCG) o intenciones maliciosas, la petición se bloquea y nunca llega al espacio latente del Transformer.</p>
 <p>Saneamiento del contexto: Eliminación estricta de variables inyectadas por usuarios en entornos donde el LLM procesa documentos de terceros, evitando el Prompt Injection indirecto.</p>
-<p>Filtros de Salida (Output Guardrails)</p>
-<p>Cuarentena de respuestas: Dado que la entrada puede sortear el filtro inicial, la salida $y$ jamás debe fluir directamente al usuario o al entorno de ejecución. Debe atravesar un escáner de salida $S(y)$ independiente.</p>
+<h3 id="filtros-de-salida" class="relative group">Filtros de salida <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#filtros-de-salida" aria-label="Ancla">#</a></span></h3><p>Cuarentena de respuestas: Dado que la entrada puede sortear el filtro inicial, la salida $y$ jamás debe fluir directamente al usuario o al entorno de ejecución. Debe atravesar un escáner de salida $S(y)$ independiente.</p>
 <p>Aserciones estructurales: Validación rigurosa de formatos (JSON, código) y filtrado de Expresiones Regulares para evitar fuga de Información Personal Identificable (PII) o violaciones explícitas de políticas corporativas.</p>
-<p>Separación de Entornos (Sandboxing)</p>
-<p>Principio de Mínimos Privilegios: Si el Transformer actúa como un agente (Agentic AI) con acceso a herramientas (APIs, ejecución de código), se debe asumir que eventualmente generará llamadas maliciosas. Todo código generado debe ejecutarse en sandboxes aislados y efímeros, sin acceso a red ni a los sistemas centrales.</p>
+<h3 id="separación-de-entornos" class="relative group">Separación de entornos <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#separaci%c3%b3n-de-entornos" aria-label="Ancla">#</a></span></h3><p>Principio de Mínimos Privilegios: Si el Transformer actúa como un agente (Agentic AI) con acceso a herramientas (APIs, ejecución de código), se debe asumir que eventualmente generará llamadas maliciosas. Todo código generado debe ejecutarse en sandboxes aislados y efímeros, sin acceso a red ni a los sistemas centrales.</p>
 <h2 id="conclusiones" class="relative group">Conclusiones <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusiones" aria-label="Ancla">#</a></span></h2><p>La sobreyectividad demostrada en las redes neuronales modernas desmitifica la idea del LLM como un ente que puede ser &ldquo;domesticado&rdquo; únicamente mediante entrenamiento moral o alineación. En su estado más puro, un Transformer es un motor de mapeo universal; forzarlo a &ldquo;no saber&rdquo; o &ldquo;no poder&rdquo; generar ciertas secuencias va en contra de la geometría de sus propias capas.</p>
 <p>Volviendo a Borges, pretender que la Biblioteca omita los libros prohibidos reorganizando sus anaqueles es inútil, pues el espacio arquitectónico los exige. La única solución viable para la Inteligencia Artificial generativa es aceptar la inmensidad incontrolable del modelo y construir puertas robustas, externas e independientes. El Transformer siempre podrá pensarlo todo; es responsabilidad de los sistemas periféricos asegurarse de que no todo se diga, ni todo se haga.</p>
 <p>Referencias</p>
@@ -1123,7 +1126,7 @@ $$\forall y \in Y, \exists x \in X : f(x) = y$$<p>El trabajo de Jiang y Haghtala
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="group flex" href="/notes/17.transformers-/">
+            <a class="group flex" href="/notes/16.pruebas-conocimiento/">
               <span
                 class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
                 ><span class="ltr:inline rtl:hidden">&larr;</span
@@ -1132,7 +1135,7 @@ $$\forall y \in Y, \exists x \in X : f(x) = y$$<p>El trabajo de Jiang y Haghtala
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Sobreyectividad y seguridad</span
+                  >Cómo demostrar sin mostrar</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
