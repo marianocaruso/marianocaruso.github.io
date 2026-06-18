@@ -19,7 +19,8 @@ math:  true
 
 Sí, seguimos con Borges, autor citado recurrentemente no solo en estas notas sino en la basta producción científica. 
 
-En el célebre cuento La biblioteca de Babel, Jorge Luis Borges imaginó un vasto universo compuesto por galerías hexagonales que contienen todos los libros posibles. Si entendemos esta biblioteca como una función matemática $f$ (el sistema generativo), donde la entrada $x$ representa el intrincado trayecto por sus pasillos (el prompt o instrucción) y la salida $y$ es el tomo exacto que extraemos de un anaquel (el texto resultante), se revela una propiedad matemática ineludible y perturbadora. El diseño del universo borgiano garantiza que, para cualquier texto concebible $y$, sin importar que contenga mentiras convincentes, incoherencias o instrucciones letales, existe obligatoriamente unas instrucciones de entrada $x$, que definen un camino para llegar a dicho texto $y$, es decir, $f(x) = y$. En esta estructura monumental, la búsqueda de sentido se confunde con el caos absoluto, porque la biblioteca no es capaz de censurar o hacer imposible ningún libro; sencillamente oculta la ruta hacia él.
+En el célebre cuento La biblioteca de Babel, Jorge Luis Borges imaginó un vasto universo compuesto por galerías hexagonales que contienen todos los libros posibles. Si entendemos esta biblioteca como una función matemática $f$ (el sistema generativo), donde la entrada $x$ representa el intrincado trayecto por sus pasillos (el prompt o instrucción) y la salida $y$ es el tomo exacto que extraemos de un anaquel (el texto resultante), se revela una propiedad matemática ineludible y perturbadora. El diseño del universo borgiano garantiza que, para cualquier texto concebible $y$, sin importar que contenga mentiras convincentes, incoherencias o instrucciones letales, existe obligatoriamente unas instrucciones de entrada $x$, que definen un camino para llegar a dicho texto $y$, es decir, $f(x) = y$. En esta estructura monumental, la búsqueda de sentido se confunde con el caos absoluto, porque la biblioteca no es capaz de censurar o hacer imposible ningún libro; sencillamente oculta la ruta hacia él. Para una experiencia "concienzuda" acerca de esta biblioteca consultar los brillantes trabajos de
+Jonathan Basile y Tom Snelling en las referencias de este texto. 
 
 La arquitectura de los Modelos de Lenguaje Grandes (LLMs) modernos, basados en la topología Transformer, comparte esta inquietante similitud matemática con la visión de Borges. Durante años, la industria de la Inteligencia Artificial ha intentado "clausurar" los pasillos oscuros de esta biblioteca mediante técnicas de alineación interna como el aprendizaje por refuerzo a partir de retroalimentación humana (RLHF) o el ajuste fino de instrucciones (system prompts). El objetivo era enseñar al modelo a comportarse éticamente, asumiendo que sus pesos internos podrían reconfigurarse para hacer imposible la generación de contenido malicioso.
 
@@ -81,9 +82,13 @@ Volviendo a Borges, pretender que la Biblioteca omita los libros prohibidos reor
 
 * Borges, J. L. (1941). "La biblioteca de Babel", El jardín de senderos que se bifurcan.
 
-* Jiang, H., & Haghtalab, N. (2024). "On Surjectivity of Neural Networks: Can you elicit any behavior from your model?". $\mathtt{arXiv:2508.19445}$.
+* Basile, J.,  et.al. [The Library of Babel](https://libraryofbabel.info/)
 
-* Zou, A., et al. (2023). "Universal and Transferable Adversarial Attacks on Aligned Language Models". $\mathtt{arXiv:2307.15043}$.
+* Snelling, T. [Library of Babel](https://libraryofbabel.app/)
 
-* Ouyang, L., et al. (2022). "Training language models to follow instructions with human feedback". NeurIPS.
+* Jiang, H., & Haghtalab, N. (2024). "On Surjectivity of Neural Networks: Can you elicit any behavior from your model?". [$\mathtt{arXiv:2508.19445}$](https://arxiv.org/abs/2508.19445).
+
+* Zou, A., et al. (2023). "Universal and Transferable Adversarial Attacks on Aligned Language Models". [$\mathtt{arXiv:2307.15043}$](https://arxiv.org/abs/2307.15043).
+
+* Ouyang, L., et al. (2022). "Training language models to follow instructions with human feedback". NeurIPS. [DOI:10.52202/068431-2011](https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf)
 

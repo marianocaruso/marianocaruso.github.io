@@ -148,7 +148,7 @@
     "keywords": ["transformers","security","surjectivity","guardrails","alignment"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1225"
+    "wordCount": "1262"
   }
   </script>
     
@@ -887,7 +887,8 @@
         
 
 <h2 id="introducción" class="relative group">Introducción <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#introducci%c3%b3n" aria-label="Ancla">#</a></span></h2><p>Sí, seguimos con Borges, autor citado recurrentemente no solo en estas notas sino en la basta producción científica.</p>
-<p>En el célebre cuento La biblioteca de Babel, Jorge Luis Borges imaginó un vasto universo compuesto por galerías hexagonales que contienen todos los libros posibles. Si entendemos esta biblioteca como una función matemática $f$ (el sistema generativo), donde la entrada $x$ representa el intrincado trayecto por sus pasillos (el prompt o instrucción) y la salida $y$ es el tomo exacto que extraemos de un anaquel (el texto resultante), se revela una propiedad matemática ineludible y perturbadora. El diseño del universo borgiano garantiza que, para cualquier texto concebible $y$, sin importar que contenga mentiras convincentes, incoherencias o instrucciones letales, existe obligatoriamente unas instrucciones de entrada $x$, que definen un camino para llegar a dicho texto $y$, es decir, $f(x) = y$. En esta estructura monumental, la búsqueda de sentido se confunde con el caos absoluto, porque la biblioteca no es capaz de censurar o hacer imposible ningún libro; sencillamente oculta la ruta hacia él.</p>
+<p>En el célebre cuento La biblioteca de Babel, Jorge Luis Borges imaginó un vasto universo compuesto por galerías hexagonales que contienen todos los libros posibles. Si entendemos esta biblioteca como una función matemática $f$ (el sistema generativo), donde la entrada $x$ representa el intrincado trayecto por sus pasillos (el prompt o instrucción) y la salida $y$ es el tomo exacto que extraemos de un anaquel (el texto resultante), se revela una propiedad matemática ineludible y perturbadora. El diseño del universo borgiano garantiza que, para cualquier texto concebible $y$, sin importar que contenga mentiras convincentes, incoherencias o instrucciones letales, existe obligatoriamente unas instrucciones de entrada $x$, que definen un camino para llegar a dicho texto $y$, es decir, $f(x) = y$. En esta estructura monumental, la búsqueda de sentido se confunde con el caos absoluto, porque la biblioteca no es capaz de censurar o hacer imposible ningún libro; sencillamente oculta la ruta hacia él. Para una experiencia &ldquo;concienzuda&rdquo; acerca de esta biblioteca consultar los brillantes trabajos de
+Jonathan Basile y Tom Snelling en las referencias de este texto.</p>
 <p>La arquitectura de los Modelos de Lenguaje Grandes (LLMs) modernos, basados en la topología Transformer, comparte esta inquietante similitud matemática con la visión de Borges. Durante años, la industria de la Inteligencia Artificial ha intentado &ldquo;clausurar&rdquo; los pasillos oscuros de esta biblioteca mediante técnicas de alineación interna como el aprendizaje por refuerzo a partir de retroalimentación humana (RLHF) o el ajuste fino de instrucciones (system prompts). El objetivo era enseñar al modelo a comportarse éticamente, asumiendo que sus pesos internos podrían reconfigurarse para hacer imposible la generación de contenido malicioso.</p>
 <p>Sin embargo, investigaciones recientes en la teoría de redes neuronales, destacando el trabajo de Jiang y Haghtalab: <strong>On Surjectivity of Neural Networks: Can you elicit any behavior from your model?</strong> (2024), demuestran una realidad topológica ineludible: para las configuraciones estándar de Transformers, el modelo es matemáticamente sobreyectivo.</p>
 <p>Esta propiedad destroza la ilusión de la seguridad por diseño interno. La sobreyectividad implica que el modelo es capaz de producir absolutamente cualquier comportamiento o salida que resida en su espacio funcional. No importa cuánta censura se intente inculcar en sus parámetros durante el entrenamiento; el camino hacia el texto prohibido no desaparece, simplemente se oculta. Siempre existirá un prompt capaz de evocar la respuesta más indeseada. Por lo tanto, confiar la seguridad a la &ldquo;buena conducta&rdquo; del modelo es una falacia arquitectónica: la protección real solo puede construirse desde fuera, mediante capas de seguridad perimetrales (guardrails).</p>
@@ -911,13 +912,19 @@ $$\forall y \in Y, \exists x \in X : f(x) = y$$<p>El trabajo de Jiang y Haghtala
 <p>Borges, J. L. (1941). &ldquo;La biblioteca de Babel&rdquo;, El jardín de senderos que se bifurcan.</p>
 </li>
 <li>
-<p>Jiang, H., &amp; Haghtalab, N. (2024). &ldquo;On Surjectivity of Neural Networks: Can you elicit any behavior from your model?&rdquo;. $\mathtt{arXiv:2508.19445}$.</p>
+<p>Basile, J.,  et.al. <a href="https://libraryofbabel.info/" target="_blank" rel="noreferrer">The Library of Babel</a></p>
 </li>
 <li>
-<p>Zou, A., et al. (2023). &ldquo;Universal and Transferable Adversarial Attacks on Aligned Language Models&rdquo;. $\mathtt{arXiv:2307.15043}$.</p>
+<p>Snelling, T. <a href="https://libraryofbabel.app/" target="_blank" rel="noreferrer">Library of Babel</a></p>
 </li>
 <li>
-<p>Ouyang, L., et al. (2022). &ldquo;Training language models to follow instructions with human feedback&rdquo;. NeurIPS.</p>
+<p>Jiang, H., &amp; Haghtalab, N. (2024). &ldquo;On Surjectivity of Neural Networks: Can you elicit any behavior from your model?&rdquo;. <a href="https://arxiv.org/abs/2508.19445" target="_blank" rel="noreferrer">$\mathtt{arXiv:2508.19445}$</a>.</p>
+</li>
+<li>
+<p>Zou, A., et al. (2023). &ldquo;Universal and Transferable Adversarial Attacks on Aligned Language Models&rdquo;. <a href="https://arxiv.org/abs/2307.15043" target="_blank" rel="noreferrer">$\mathtt{arXiv:2307.15043}$</a>.</p>
+</li>
+<li>
+<p>Ouyang, L., et al. (2022). &ldquo;Training language models to follow instructions with human feedback&rdquo;. NeurIPS. <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf" target="_blank" rel="noreferrer">DOI:10.52202/068431-2011</a></p>
 </li>
 </ul>
 
