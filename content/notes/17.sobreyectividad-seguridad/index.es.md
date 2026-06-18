@@ -75,9 +75,9 @@ Principio de Mínimos Privilegios: Si el Transformer actúa como un agente (Agen
 
 La sobreyectividad demostrada en las redes neuronales modernas desmitifica la idea del LLM como un ente que puede ser "domesticado" únicamente mediante entrenamiento moral o alineación. En su estado más puro, un Transformer es un motor de mapeo universal; forzarlo a "no saber" o "no poder" generar ciertas secuencias va en contra de la geometría de sus propias capas.
 
-Volviendo a Borges, pretender que la Biblioteca omita los libros prohibidos reorganizando sus anaqueles es inútil, pues el espacio arquitectónico los exige. La única solución viable para la Inteligencia Artificial generativa es aceptar la inmensidad incontrolable del modelo y construir puertas robustas, externas e independientes. El Transformer siempre podrá pensarlo todo; es responsabilidad de los sistemas periféricos asegurarse de que no todo se diga, ni todo se haga.
+Volviendo a Borges, pretender que la Biblioteca omita los libros prohibidos reorganizando sus anaqueles es inútil, pues el espacio arquitectónico los contiene naturalmente. Una solución viable para la inteligencia artificial generativa es aceptar la inmensidad incontrolable del modelo y construir puertas robustas, externas e independientes. El Transformer siempre podrá dar en su salida todo lo que esté permitido en el conjunto $Y$; es responsabilidad de los sistemas periféricos asegurarse de controlar y/o restringir el contenido generado.
 
-Referencias
+### Referencias
 
 * Borges, J. L. (1941). "La biblioteca de Babel", El jardín de senderos que se bifurcan.
 

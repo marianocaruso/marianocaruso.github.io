@@ -148,7 +148,7 @@
     "keywords": ["transformers","security","surjectivity","guardrails","alignment"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1219"
+    "wordCount": "1228"
   }
   </script>
     
@@ -870,7 +870,11 @@
         <li><a href="#separación-de-entornos">Separación de entornos</a></li>
       </ul>
     </li>
-    <li><a href="#conclusiones">Conclusiones</a></li>
+    <li><a href="#conclusiones">Conclusiones</a>
+      <ul>
+        <li><a href="#referencias">Referencias</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -901,9 +905,8 @@ $$\forall y \in Y, \exists x \in X : f(x) = y$$<p>El trabajo de Jiang y Haghtala
 <p>Aserciones estructurales: Validación rigurosa de formatos (JSON, código) y filtrado de Expresiones Regulares para evitar fuga de Información Personal Identificable (PII) o violaciones explícitas de políticas corporativas.</p>
 <h3 id="separación-de-entornos" class="relative group">Separación de entornos <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#separaci%c3%b3n-de-entornos" aria-label="Ancla">#</a></span></h3><p>Principio de Mínimos Privilegios: Si el Transformer actúa como un agente (Agentic AI) con acceso a herramientas (APIs, ejecución de código), se debe asumir que eventualmente generará llamadas maliciosas. Todo código generado debe ejecutarse en sandboxes aislados y efímeros, sin acceso a red ni a los sistemas centrales.</p>
 <h2 id="conclusiones" class="relative group">Conclusiones <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusiones" aria-label="Ancla">#</a></span></h2><p>La sobreyectividad demostrada en las redes neuronales modernas desmitifica la idea del LLM como un ente que puede ser &ldquo;domesticado&rdquo; únicamente mediante entrenamiento moral o alineación. En su estado más puro, un Transformer es un motor de mapeo universal; forzarlo a &ldquo;no saber&rdquo; o &ldquo;no poder&rdquo; generar ciertas secuencias va en contra de la geometría de sus propias capas.</p>
-<p>Volviendo a Borges, pretender que la Biblioteca omita los libros prohibidos reorganizando sus anaqueles es inútil, pues el espacio arquitectónico los exige. La única solución viable para la Inteligencia Artificial generativa es aceptar la inmensidad incontrolable del modelo y construir puertas robustas, externas e independientes. El Transformer siempre podrá pensarlo todo; es responsabilidad de los sistemas periféricos asegurarse de que no todo se diga, ni todo se haga.</p>
-<p>Referencias</p>
-<ul>
+<p>Volviendo a Borges, pretender que la Biblioteca omita los libros prohibidos reorganizando sus anaqueles es inútil, pues el espacio arquitectónico los contiene naturalmente. Una solución viable para la inteligencia artificial generativa es aceptar la inmensidad incontrolable del modelo y construir puertas robustas, externas e independientes. El Transformer siempre podrá dar en su salida todo lo que esté permitido en el conjunto $Y$; es responsabilidad de los sistemas periféricos asegurarse de controlar y/o restringir el contenido generado.</p>
+<h3 id="referencias" class="relative group">Referencias <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#referencias" aria-label="Ancla">#</a></span></h3><ul>
 <li>
 <p>Borges, J. L. (1941). &ldquo;La biblioteca de Babel&rdquo;, El jardín de senderos que se bifurcan.</p>
 </li>
