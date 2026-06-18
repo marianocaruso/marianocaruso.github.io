@@ -82,7 +82,7 @@ Volviendo a Borges, pretender que la Biblioteca omita los libros prohibidos reor
 
 * Borges, J. L. (1941). "La biblioteca de Babel", El jardín de senderos que se bifurcan.
 
-* Basile, J.,  et.al. [The Library of Babel](https://libraryofbabel.info/)
+* Basile, J.,  et al. [The Library of Babel](https://libraryofbabel.info/)
 
 * Snelling, T. [Library of Babel](https://libraryofbabel.app/)
 
