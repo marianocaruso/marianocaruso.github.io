@@ -32,7 +32,7 @@ Esta propiedad destroza la ilusión de la seguridad por diseño interno. La sobr
 
 Para comprender la magnitud de este problema, debemos formalizar el comportamiento del Transformer como una aplicación entre espacios.
 
-Sea $X$ el espacio de todas las secuencias de entrada posibles (los prompts) e $Y$ el espacio continuo de representaciones de salida (del cual se decodifica el texto final). Una función $f: X \to Y se define como sobreyectiva (o suprayectiva) si y solo si la imagen de la función abarca la totalidad del codominio. Es decir:
+Sea $X$ el espacio de todas las secuencias de entrada posibles (los prompts) e $Y$ el espacio continuo de representaciones de salida (del cual se decodifica el texto final). Una función $f: X \to Y$ se dice sobreyectiva si y solo si la imagen de la función abarca la totalidad del codominio. Es decir:
 
 $$\forall y \in Y, \exists x \in X : f(x) = y$$
 

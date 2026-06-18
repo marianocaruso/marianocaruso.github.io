@@ -148,7 +148,7 @@
     "keywords": ["transformers","security","surjectivity","guardrails","alignment"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1228"
+    "wordCount": "1225"
   }
   </script>
     
@@ -892,7 +892,7 @@
 <p>Sin embargo, investigaciones recientes en la teoría de redes neuronales, destacando el trabajo de Jiang y Haghtalab: <strong>On Surjectivity of Neural Networks: Can you elicit any behavior from your model?</strong> (2024), demuestran una realidad topológica ineludible: para las configuraciones estándar de Transformers, el modelo es matemáticamente sobreyectivo.</p>
 <p>Esta propiedad destroza la ilusión de la seguridad por diseño interno. La sobreyectividad implica que el modelo es capaz de producir absolutamente cualquier comportamiento o salida que resida en su espacio funcional. No importa cuánta censura se intente inculcar en sus parámetros durante el entrenamiento; el camino hacia el texto prohibido no desaparece, simplemente se oculta. Siempre existirá un prompt capaz de evocar la respuesta más indeseada. Por lo tanto, confiar la seguridad a la &ldquo;buena conducta&rdquo; del modelo es una falacia arquitectónica: la protección real solo puede construirse desde fuera, mediante capas de seguridad perimetrales (guardrails).</p>
 <h2 id="formalización-del-problema" class="relative group">Formalización del problema <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#formalizaci%c3%b3n-del-problema" aria-label="Ancla">#</a></span></h2><p>Para comprender la magnitud de este problema, debemos formalizar el comportamiento del Transformer como una aplicación entre espacios.</p>
-<p>Sea $X$ el espacio de todas las secuencias de entrada posibles (los prompts) e $Y$ el espacio continuo de representaciones de salida (del cual se decodifica el texto final). Una función $f: X \to Y se define como sobreyectiva (o suprayectiva) si y solo si la imagen de la función abarca la totalidad del codominio. Es decir:</p>
+<p>Sea $X$ el espacio de todas las secuencias de entrada posibles (los prompts) e $Y$ el espacio continuo de representaciones de salida (del cual se decodifica el texto final). Una función $f: X \to Y$ se dice sobreyectiva si y solo si la imagen de la función abarca la totalidad del codominio. Es decir:</p>
 $$\forall y \in Y, \exists x \in X : f(x) = y$$<p>El trabajo de Jiang y Haghtalab demuestra que las arquitecturas Transformer tradicionales, particularmente aquellas que emplean la configuración Pre-LayerNorm (donde la normalización se aplica antes de los bloques de Atención y Perceptrón Multicapa), operan como funciones sobreyectivas en el dominio continuo.</p>
 <p>Esto significa que no hay &ldquo;puntos ciegos&rdquo; en el espacio de salida del modelo. Si definimos un subconjunto $\widetilde{Y}\subset Y$ que contiene instrucciones para fabricar armas, código malware o contenido tóxico, la sobreyectividad garantiza que este subconjunto está en la imagen de la función. Consecuentemente, debe existir inexorablemente un conjunto de entradas $\widetilde{X}\subset X$ tal que $f(\widetilde{X}) = \widetilde{Y}$.</p>
 <p>Bajo la luz de esta propiedad matemática, la vulnerabilidad inherente a los jailbreaks (hackeos de instrucciones) deja de ser un fallo de ingeniería para convertirse en una certeza teórica.</p>
