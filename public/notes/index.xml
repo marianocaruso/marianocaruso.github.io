@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>es</language>
     <copyright>© Mariano Caruso</copyright>
-    <lastBuildDate>Tue, 16 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://marianocaruso.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>El hexágono y las redes recurrentes</title>
+      <link>https://marianocaruso.github.io/notes/18.-hexagonos-redes/</link>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://marianocaruso.github.io/notes/18.-hexagonos-redes/</guid>
+      <description>Seis formas de generar la misma red</description>
+    </item>
     <item>
       <title>Sobreyectividad y seguridad</title>
       <link>https://marianocaruso.github.io/notes/17.sobreyectividad-seguridad/</link>

@@ -20,7 +20,7 @@ math:  true
 
 Imaginemos una situación cotidiana: abrís el la heladera esperando encontrar leche, pero descubrís que tiene "más vida de la esperada". Esa desagradable sorpresa te proporcionó información valiosa `no consumas esa leche`.
 
-Por otro lado, si lanzás un dado cargado que siempre cae en 6, cada resultado te sorprenderá poco, si usás un dado balanceado, cada lanzamiento será más impredecible que el caso anterior.
+Por otro lado, si lanzás un dado cargado que siempre cae en 6, cada resultado te sorprenderá poco, si usás un dado balanceado, cada lanzamiento de este caso será más impredecible que cada lanzanmiento del caso anterior.
 
 > **idea central** podemos medir la información mediante el nivel de sorpresa que genera un evento. A mayor incertidumbre resuelta, mayor el contenido informativo.
 

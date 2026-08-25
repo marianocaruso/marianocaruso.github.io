@@ -6,7 +6,7 @@ showDate: false
 summary: "Algunos LLMs son demostrablemente inseguros"
 draft: false
 showReadingTime: false
-tags: [transformers, security, surjectivity, guardrails, alignment]
+tags: [transformers, security, surjectivity, alignment]
 math:  true
 ---
 
@@ -26,7 +26,7 @@ La arquitectura de los Modelos de Lenguaje Grandes (LLMs) modernos, basados en l
 
 Sin embargo, investigaciones recientes en la teoría de redes neuronales, destacando el trabajo de Jiang y Haghtalab: **On Surjectivity of Neural Networks: Can you elicit any behavior from your model?** (2024), demuestran una realidad topológica ineludible: para las configuraciones estándar de Transformers, el modelo es matemáticamente sobreyectivo.
 
-Esta propiedad destroza la ilusión de la seguridad por diseño interno. La sobreyectividad implica que el modelo es capaz de producir absolutamente cualquier comportamiento o salida que resida en su espacio funcional. No importa cuánta censura se intente inculcar en sus parámetros durante el entrenamiento; el camino hacia el texto prohibido no desaparece, simplemente se oculta. Siempre existirá un prompt capaz de evocar la respuesta más indeseada. Por lo tanto, confiar la seguridad a la "buena conducta" del modelo es una falacia arquitectónica: la protección real solo puede construirse desde fuera, mediante capas de seguridad perimetrales (guardrails).
+Esta propiedad destroza la ilusión de la seguridad por diseño interno. La sobreyectividad implica que el modelo es capaz de producir absolutamente cualquier comportamiento o salida que resida en su espacio funcional. No importa cuánta censura se intente inculcar en sus parámetros durante el entrenamiento; el camino hacia el texto prohibido no desaparece, simplemente se oculta. Siempre existirá un prompt capaz de evocar la respuesta más indeseada. Por lo tanto, confiar la seguridad a la "buena conducta" del modelo es una falacia arquitectónica: la protección real solo puede construirse desde fuera, mediante capas de seguridad perimetrales.
 
 ## Formalización del problema
 

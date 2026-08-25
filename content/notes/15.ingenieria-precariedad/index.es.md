@@ -14,23 +14,25 @@ math: true
 
 ### Introducción
 
-En ciertos contextos, la frontera entre la "ingeniería" y la "magia" es estrictamente presupuestaria. Cuando el sistema de suministro falla, o la moneda local colapsa frente al componente homologado, la imaginación deja de ser un proceso creativo abstracto para convertirse en una disciplina técnica de supervivencia. La precariedad no actúa aquí como un límite infranqueable, sino como un laboratorio de diseño restringido donde la necesidad obliga a redescubrir la física subyacente de lo cotidiano. Resolver un problema técnico en la escasez es, fundamentalmente, un ejercicio de optimización bajo restricciones severas.
+En ciertos contextos, la frontera entre la "ingeniería" y la "magia" es estrictamente presupuestaria. Cuando el sistema de suministro falla, o la moneda local devalua frente al componente homologado, la imaginación deja de ser un proceso creativo abstracto para convertirse en una disciplina técnica de supervivencia. La precariedad no actúa aquí como un límite infranqueable, sino como un laboratorio de diseño restringido donde la necesidad obliga a redescubrir la física subyacente en otros objetos cotidianos para buscar candidatos a repuestos. Resolver un problema técnico en la escasez es, fundamentalmente, un ejercicio de optimización bajo restricciones severas.
 
 ### Formalización y dignidad del injerto
 
-Para entender la operación básica de este taller de barrio, conviene formalizar el problema. Sea $A$ el dispositivo “legítimo” —una entidad funcional que ha perdido su integridad tras el fallo de uno de sus componentes vitales— y sea $B$ el conjunto de componentes “intrusos”: el ventilador de pie desahuciado, la radio a pilas sulfatadas, el juguete asiático con luces estridentes con pilas como nuevas.
+Para entender la operación básica de este taller de barrio, conviene formalizar el problema. Sea $A$ el dispositivo “legítimo”, una entidad funcional que ha perdido su integridad tras el fallo de uno de sus componentes vitales, y sea $B$ el conjunto de componentes “intrusos”: el ventilador de pie desahuciado, la radio a pilas sulfatadas, el juguete asiático con luces estridentes con pilas como nuevas.
 
-Podemos definir un dispositivo como un conjunto estructurado de módulos funcionales, $A = \{m_1, \cdots, m_k,\cdots, m_n\}$. Si cierto módulo $m_k$ falla, la industria prescribe un reemplazo $m'_k \in \mathscr{C}_A$, donde $\mathscr{C}_A$ es el catálogo oficial de partes homologadas para $A$. 
+Podemos dar una definición simplificada de un dispositivo $A$ como un conjunto estructurado de $n$ módulos funcionales, $\{m_k\}_{k\in \{1,\cdots,n\}}$. Si cierto módulo $m_k$ falla, la industria prescribe un reemplazo de otro equivalente $m'_k \in \mathscr{C}_A$, donde $\mathscr{C}_A$ es el catálogo oficial de partes homologadas para $A$. 
 
-En el manual de usuario de $A$, la intersección entre la estructura de $A$ y las vísceras de $B$ tiene, por definición, medida nula. Sin embargo, la práctica del injerto subvierte esta rigidez topológica, una función $\rho_k$ de dominio precario $B$, $\rho_k: B \to \{m_k\}$, fuerza a encontrar en $B$ elementos que se comporten “isofuncionalmente” al componente faltante $m_k$. 
+En el manual de usuario de $A$, la intersección entre $\mathscr{C}_A$ y $B$ tiene, por definición, medida nula. Sin embargo, la práctica del injerto subvierte esta rigidez, construyendo una función $\rho_k$ de dominio precario $B$, 
+$$\rho_k: B \to \{m_k\},$$
+fuerza a encontrar en $B$ elementos que se comporten “isofuncionalmente” al componente faltante $m_k$. 
 
-No se trata de una simple reparación, sino de una afirmación ontológica: los objetos no tienen por qué morir cuando la matriz de obsolescencia lo dicta. El injerto reemplaza la máxima determinista “cada cosa para su fin” por una lógica estocástica y frankensteiniana: “cada cosa para lo que se pueda probar funcional”.
+No se trata de una simple reparación, sino de una afirmación ontológica: los objetos no tienen por qué morir cuando la matriz de obsolescencia lo dicta. El injerto reemplaza la máxima determinista “cada cosa para su fin” por una lógica estocástica y frankensteiniana: “cada cosa para lo que se pueda encontrar funcionalidad”.
 
 ### Termodinámica del descarte
 
-Desde la termodinámica, un electrodoméstico roto es un sistema cuya entropía ha superado el umbral de viabilidad operativa. El fabricante propone reducir esa entropía inyectando energía en forma de capital (comprar algo nuevo). 
+Desde la termodinámica, un electrodoméstico roto es un sistema cuya entropía ha superado el umbral de viabilidad operativa. El fabricante propone reducir esa entropía inyectando energía en forma de capital, comprando algo nuevo. 
 
-El taller precario, en cambio, opera como aquel demonio concebido por Maxwell que toma partes de un sistema degradado $B$ (cuasi basura) y pretende acoplarlas al sistema $A$,  logrando así una reducción local de la entropía ($\Delta S < 0$) sin recurrir a la inyección de capital externo, utilizando puramente información y trabajo artesanal. El injerto retrasa la muerte térmica de los objetos cotidianos, demostrando que la vida útil no es una constante universal, sino una variable dependiente de la terquedad humana.
+El taller precario, en cambio, opera como aquel demonio concebido por Maxwell que toma partes de un sistema degradado $B$ (cuasi basura) y pretende acoplarlas al sistema $A$. De esta forma se consigue una reducción local de la entropía sin recurrir a la inyección de capital externo, utilizando puramente información y trabajo artesanal. El injerto retrasa la muerte térmica de los objetos cotidianos, demostrando que la vida útil no es una constante universal, sino una variable dependiente de la terquedad humana.
 
 ### Catálogos imposibles como guías del ingenio
 

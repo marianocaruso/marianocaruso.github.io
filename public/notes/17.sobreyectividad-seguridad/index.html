@@ -113,7 +113,6 @@
     <meta property="article:tag" content="Transformers">
     <meta property="article:tag" content="Security">
     <meta property="article:tag" content="Surjectivity">
-    <meta property="article:tag" content="Guardrails">
     <meta property="article:tag" content="Alignment">
     <meta property="og:image" content="https://marianocaruso.github.io/notes/17.sobreyectividad-seguridad/feature-sobreyectividad-seguridad.png">
 
@@ -145,10 +144,10 @@
     
     "dateModified": "2026-06-16T00:00:00\u002b00:00",
     
-    "keywords": ["transformers","security","surjectivity","guardrails","alignment"],
+    "keywords": ["transformers","security","surjectivity","alignment"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1263"
+    "wordCount": "1262"
   }
   </script>
     
@@ -891,7 +890,7 @@
 Jonathan Basile y Tom Snelling en las referencias de este texto.</p>
 <p>La arquitectura de los Modelos de Lenguaje Grandes (LLMs) modernos, basados en la topología Transformer, comparte esta inquietante similitud matemática con la visión de Borges. Durante años, la industria de la Inteligencia Artificial ha intentado &ldquo;clausurar&rdquo; los pasillos oscuros de esta biblioteca mediante técnicas de alineación interna como el aprendizaje por refuerzo a partir de retroalimentación humana (RLHF) o el ajuste fino de instrucciones (system prompts). El objetivo era enseñar al modelo a comportarse éticamente, asumiendo que sus pesos internos podrían reconfigurarse para hacer imposible la generación de contenido malicioso.</p>
 <p>Sin embargo, investigaciones recientes en la teoría de redes neuronales, destacando el trabajo de Jiang y Haghtalab: <strong>On Surjectivity of Neural Networks: Can you elicit any behavior from your model?</strong> (2024), demuestran una realidad topológica ineludible: para las configuraciones estándar de Transformers, el modelo es matemáticamente sobreyectivo.</p>
-<p>Esta propiedad destroza la ilusión de la seguridad por diseño interno. La sobreyectividad implica que el modelo es capaz de producir absolutamente cualquier comportamiento o salida que resida en su espacio funcional. No importa cuánta censura se intente inculcar en sus parámetros durante el entrenamiento; el camino hacia el texto prohibido no desaparece, simplemente se oculta. Siempre existirá un prompt capaz de evocar la respuesta más indeseada. Por lo tanto, confiar la seguridad a la &ldquo;buena conducta&rdquo; del modelo es una falacia arquitectónica: la protección real solo puede construirse desde fuera, mediante capas de seguridad perimetrales (guardrails).</p>
+<p>Esta propiedad destroza la ilusión de la seguridad por diseño interno. La sobreyectividad implica que el modelo es capaz de producir absolutamente cualquier comportamiento o salida que resida en su espacio funcional. No importa cuánta censura se intente inculcar en sus parámetros durante el entrenamiento; el camino hacia el texto prohibido no desaparece, simplemente se oculta. Siempre existirá un prompt capaz de evocar la respuesta más indeseada. Por lo tanto, confiar la seguridad a la &ldquo;buena conducta&rdquo; del modelo es una falacia arquitectónica: la protección real solo puede construirse desde fuera, mediante capas de seguridad perimetrales.</p>
 <h2 id="formalización-del-problema" class="relative group">Formalización del problema <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#formalizaci%c3%b3n-del-problema" aria-label="Ancla">#</a></span></h2><p>Para comprender la magnitud de este problema, debemos formalizar el comportamiento del Transformer como una aplicación entre espacios.</p>
 <p>Sea $X$ el espacio de todas las secuencias de entrada posibles (los prompts) e $Y$ el espacio continuo de representaciones de salida (del cual se decodifica el texto final). Una función $f: X \to Y$ se dice sobreyectiva si y solo si la imagen de la función abarca la totalidad del codominio. Es decir:</p>
 $$\forall y \in Y, \exists x \in X : f(x) = y$$<p>El trabajo de Jiang y Haghtalab demuestra que las arquitecturas Transformer tradicionales, particularmente aquellas que emplean la configuración Pre-LayerNorm (donde la normalización se aplica antes de los bloques de Atención y Perceptrón Multicapa), operan como funciones sobreyectivas en el dominio continuo.</p>
@@ -1155,6 +1154,23 @@ $$\forall y \in Y, \exists x \in X : f(x) = y$$<p>El trabajo de Jiang y Haghtala
           
         </span>
         <span>
+          
+            <a class="group flex text-right" href="/notes/18.-hexagonos-redes/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >El hexágono y las redes recurrentes</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
           
         </span>
       </div>
