@@ -29,13 +29,13 @@ que podemos abreviar mediante el operador del campo vectorial como $h'(t) = F(h(
 
 Para analizar este sistema en la práctica, recurrimos a computadoras y suelen aplicarse tres transformaciones fundamentales:
 
-1. **Reescalado temporal ($\mathscr{R}_\tau$):** Cambiamos la escala del tiempo mediante $t = \tau s$, lo que deforma la velocidad del sistema resultando en $\mathfrak{h}'(s) = \tau F(\mathfrak{h}(s), \chi(s))$.
-2. **Discretización ($\mathscr{D}_\Delta$):** Reemplazamos la derivada continua por una aproximación en diferencias finitas con paso $\Delta$ vía Forward Euler: $h(t_{k+1}) = h(t_k) + \Delta \cdot F(h(t_k), x(t_k))$.
-3. **Linealización ($\mathscr{L}$):** Asumiendo que el sistema opera en un régimen regular cerca del origen, aproximamos la activación no lineal por la identidad ($\sigma(\varphi) \mapsto \varphi$), derivando en el sistema afín $h'(t) = A h(t) + B x(t) + b$, con $A = W - \lambda I$ y $B = \tilde{W}$.
+> 1. **Reescalado temporal ($\mathscr{R}_\tau$):** cambiamos la escala del tiempo mediante $t = \tau s$, lo que deforma la velocidad del sistema resultando en $\mathfrak{h}'(s) = \tau F(\mathfrak{h}(s), \chi(s))$.
+> 2. **Discretización ($\mathscr{D}_\Delta$):** reemplazamos la derivada continua por una aproximación en diferencias finitas con paso $\Delta$ vía Forward Euler: $h(t_{k+1}) = h(t_k) + \Delta \cdot F(h(t_k), x(t_k))$.
+> 3. **Linealización ($\mathscr{L}$):** asumiendo que el sistema opera en un régimen regular cerca del origen, aproximamos la activación no lineal por la identidad ($\sigma(\varphi) \mapsto \varphi$), obtenemos $h'(t) = A h(t) + B x(t) + b$, con $A = W - \lambda I$ y $B = \tilde{W}$.
 
 La pregunta natural, que puede provenir de la duda neurótica de quien programa la simulación de estas redes, es si el orden en que aplicamos estas operaciones altera el producto final. Como las tres operaciones conmutan por pares: $(\mathscr{R}_\tau , \mathscr{D}_\Delta)$, $(\mathscr{D}_\Delta , \mathscr{L})$, $(\mathscr{L} ,\mathscr{R}_\tau )$, las seis permutaciones posibles del grupo simétrico S₃ sobre el conjunto $\{\mathscr{R}_\tau, \mathscr{D}_\Delta, \mathscr{L}\}$ colapsan en una regla de actualización única:
 
-$$\mathfrak{h}(s_{k+1}) = (I + \tau \Delta A) \mathfrak{h}(s_k) + \tau \Delta B \chi(s_k) + \tau \Delta b \quad (b) $$ 
+$$\mathfrak{h}(s_{k+1}) = (I + \tau \Delta A) \mathfrak{h}(s_k) + \tau \Delta B \chi(s_k) + \tau \Delta \cdot b \quad (b) $$ 
 
 Si etiquetamos a las operaciones $\{\mathscr{R}_\tau,\mathscr{D}_\Delta ,\mathscr{L}\}$ con $\{1,2,3\}$, podemos esquematizar como es que estas 3 operaciones, que definen 6 rutas procedimientos posibles sobre la ecuación $(a)$ dan lugar a la misma ecuación $(b)$.
 
@@ -54,9 +54,9 @@ Si etiquetamos a las operaciones $\{\mathscr{R}_\tau,\mathscr{D}_\Delta ,\mathsc
 
 Acá es donde conviene desmitificar un verso habitual en la comunidad de machine learning. Muchos asumen que usar integradores de orden superior (como Runge-Kutta de 4º orden, RK4) es siempre "mejor" porque reduce el error de truncamiento local.
 
-Sin embargo, desde el punto de vista de la estructura algebraica, la conmutatividad exacta del hexágono es un privilegio exclusivo del esquema de Euler hacia adelante. ¿Por qué? Porque Euler evalúa el campo vectorial $F$ una sola vez por paso temporal, produciendo una expresión afín en $\Delta$. Si usás un método multipaso o implícito, las evaluaciones anidadas $F(F(\cdot))$ introducen términos cruzados no lineales de orden elevado. Al intentar linealizar *después* de discretizar con RK4, te encontrás con un engendro algebraico que no coincide con el sistema obtenido al discretizar el modelo ya linealizado.
+Sin embargo, desde el punto de vista de la estructura algebraica, la conmutatividad exacta del hexágono es un privilegio exclusivo del esquema de Euler hacia adelante. ¿Por qué? Porque Euler evalúa el campo vectorial $F$ una sola vez por paso temporal.  Por el contrario, usar un método multipaso como el de Runge-Kutta implica realizar evaluaciones anidadas del tipo $F(F(\cdots))$ que introducen términos cruzados no lineales y de orden elevado. Al intentar linealizar *después* de discretizar con RK4, te encontrás con un engendro algebraico que no coincide con el sistema obtenido al discretizar el modelo ya linealizado. 
 
-En criollo: meter un integrador sofisticado para entrenar una RNN continua a menudo solo sirve para multiplicar el costo computacional del Backpropagation Through Time (BPTT) y romper las simetrías algebraicas que te garantizan que el modelo discreto se comporta como el sistema biológico continuo.
+Usar un integrador sofisticado para entrenar una RNN continua a menudo solo sirve para multiplicar el costo computacional del Backpropagation Through Time (BPTT) y romper las simetrías algebraicas que te garantizan que el modelo discreto se comporta como el sistema biológico continuo.
 
 ## Controlabilidad intacta
 
