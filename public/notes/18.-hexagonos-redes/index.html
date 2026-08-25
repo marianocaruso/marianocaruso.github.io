@@ -859,7 +859,7 @@
   <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#las-seis-avenidas-del-grupo-s_3">Las seis avenidas del grupo </a></li>
+    <li><a href="#las-seis-avenidas-del-grupo-s">Las seis avenidas del grupo S₃</a></li>
     <li><a href="#por-qué-si-euler-y-no-runge-kutta">Por qué si Euler y no Runge-Kutta</a></li>
     <li><a href="#controlabilidad-intacta">Controlabilidad intacta</a></li>
   </ul>
@@ -874,8 +874,8 @@
         
 
 <p>El hexágono pavimenta, dijo Jorge Wagensberg en su libro &ldquo;La rebelión de las formas: o cómo perservar cuando la incertidumbre aprieta&rdquo;: a base de hexagonos podemos tejer redes.
-Existe otro contexto en el que otro hexágono y otra red aparecen juntos en escena: en el ámbito de las redes neuronales recurrentes, la conmutatividad entre el reescalado temporal, la discretización y la linearización queda formalmente caracterizada por el grupo simétrico $S_3$. Recientemente hemos probado que existe un la ecuación que regula la evolución de tales sistemas bajo cualesquiera dos de estas 3 operaciones es invariante, ver <a href="https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1760701/full" target="_blank" rel="noreferrer">Analyzing rescaling, discretization, and linearization in RNNs for neural system modeling</a>.</p>
-<h2 id="las-seis-avenidas-del-grupo-s_3" class="relative group">Las seis avenidas del grupo $S_3$ <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#las-seis-avenidas-del-grupo-s_3" aria-label="Ancla">#</a></span></h2><p>Consideremos la ecuación que gobierna la capa oculta de una red recurrente en <em>tiempo continuo</em> de $N$ neuronas impulsada por $M$ señales externas $x(t)$:</p>
+Existe otro contexto en el que otro hexágono y otra red aparecen juntos en escena: en el ámbito de las redes neuronales recurrentes, la conmutatividad entre el reescalado temporal, la discretización y la linearización queda formalmente caracterizada por el grupo simétrico S₃. Recientemente hemos probado que existe un la ecuación que regula la evolución de tales sistemas bajo cualesquiera dos de estas 3 operaciones es invariante, ver <a href="https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1760701/full" target="_blank" rel="noreferrer">Analyzing rescaling, discretization, and linearization in RNNs for neural system modeling</a>.</p>
+<h2 id="las-seis-avenidas-del-grupo-s" class="relative group">Las seis avenidas del grupo S₃ <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#las-seis-avenidas-del-grupo-s" aria-label="Ancla">#</a></span></h2><p>Consideremos la ecuación que gobierna la capa oculta de una red recurrente en <em>tiempo continuo</em> de $N$ neuronas impulsada por $M$ señales externas $x(t)$:</p>
 $$h'(t) = -\lambda h(t) + \sigma\left(W h(t) + \tilde{W} x(t) + b\right) (a) $$<p>que podemos abreviar mediante el operador del campo vectorial como $h'(t) = F(h(t), x(t))$.</p>
 <p>Para analizar este sistema en la práctica, recurrimos a computadoras y suelen aplicarse tres transformaciones fundamentales:</p>
 <ol>
@@ -883,7 +883,7 @@ $$h'(t) = -\lambda h(t) + \sigma\left(W h(t) + \tilde{W} x(t) + b\right) (a) $$<
 <li><strong>Discretización ($\mathscr{D}_\Delta$):</strong> Reemplazamos la derivada continua por una aproximación en diferencias finitas con paso $\Delta$ vía Forward Euler: $h(t_{k+1}) = h(t_k) + \Delta \cdot F(h(t_k), x(t_k))$.</li>
 <li><strong>Linealización ($\mathscr{L}$):</strong> Asumiendo que el sistema opera en un régimen regular cerca del origen, aproximamos la activación no lineal por la identidad ($\sigma(\varphi) \mapsto \varphi$), derivando en el sistema afín $h'(t) = A h(t) + B x(t) + b$, con $A = W - \lambda I$ y $B = \tilde{W}$.</li>
 </ol>
-<p>La pregunta natural, que puede provenir de la duda neurótica de quien programa la simulación de estas redes, es si el orden en que aplicamos estas operaciones altera el producto final. Como las tres operaciones conmutan por pares: $(\mathscr{R}_\tau , \mathscr{D}_\Delta)$, $(\mathscr{D}_\Delta , \mathscr{L})$, $(\mathscr{L} ,\mathscr{R}_\tau )$, las seis permutaciones posibles del grupo simétrico $S_3$ sobre el conjunto $\{\mathscr{R}_\tau, \mathscr{D}_\Delta, \mathscr{L}\}$ colapsan en una regla de actualización única:</p>
+<p>La pregunta natural, que puede provenir de la duda neurótica de quien programa la simulación de estas redes, es si el orden en que aplicamos estas operaciones altera el producto final. Como las tres operaciones conmutan por pares: $(\mathscr{R}_\tau , \mathscr{D}_\Delta)$, $(\mathscr{D}_\Delta , \mathscr{L})$, $(\mathscr{L} ,\mathscr{R}_\tau )$, las seis permutaciones posibles del grupo simétrico S₃ sobre el conjunto $\{\mathscr{R}_\tau, \mathscr{D}_\Delta, \mathscr{L}\}$ colapsan en una regla de actualización única:</p>
 $$\mathfrak{h}(s_{k+1}) = (I + \tau \Delta A) \mathfrak{h}(s_k) + \tau \Delta B \chi(s_k) + \tau \Delta b \quad (b) $$<p>Si etiquetamos a las operaciones $\{\mathscr{R}_\tau,\mathscr{D}_\Delta ,\mathscr{L}\}$ con $\{1,2,3\}$, podemos esquematizar como es que estas 3 operaciones, que definen 6 rutas procedimientos posibles sobre la ecuación $(a)$ dan lugar a la misma ecuación $(b)$.</p>
 <pre tabindex="0"><code>                                (a)
                              /   |   \

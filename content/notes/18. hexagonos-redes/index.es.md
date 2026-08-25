@@ -14,12 +14,12 @@ math: true
 
 
 El hexágono pavimenta, dijo Jorge Wagensberg en su libro "La rebelión de las formas: o cómo perservar cuando la incertidumbre aprieta": a base de hexagonos podemos tejer redes. 
-Existe otro contexto en el que otro hexágono y otra red aparecen juntos en escena: en el ámbito de las redes neuronales recurrentes, la conmutatividad entre el reescalado temporal, la discretización y la linearización queda formalmente caracterizada por el grupo simétrico $S_3$. Recientemente hemos probado que existe un la ecuación que regula la evolución de tales sistemas bajo cualesquiera dos de estas 3 operaciones es invariante, ver [Analyzing rescaling, discretization, and linearization in RNNs for neural system modeling](https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1760701/full).
+Existe otro contexto en el que otro hexágono y otra red aparecen juntos en escena: en el ámbito de las redes neuronales recurrentes, la conmutatividad entre el reescalado temporal, la discretización y la linearización queda formalmente caracterizada por el grupo simétrico S₃. Recientemente hemos probado que existe un la ecuación que regula la evolución de tales sistemas bajo cualesquiera dos de estas 3 operaciones es invariante, ver [Analyzing rescaling, discretization, and linearization in RNNs for neural system modeling](https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1760701/full).
 
 
 
 
-## Las seis avenidas del grupo $S_3$
+## Las seis avenidas del grupo S₃
 
 Consideremos la ecuación que gobierna la capa oculta de una red recurrente en _tiempo continuo_ de $N$ neuronas impulsada por $M$ señales externas $x(t)$:
 
@@ -33,7 +33,7 @@ Para analizar este sistema en la práctica, recurrimos a computadoras y suelen a
 2. **Discretización ($\mathscr{D}_\Delta$):** Reemplazamos la derivada continua por una aproximación en diferencias finitas con paso $\Delta$ vía Forward Euler: $h(t_{k+1}) = h(t_k) + \Delta \cdot F(h(t_k), x(t_k))$.
 3. **Linealización ($\mathscr{L}$):** Asumiendo que el sistema opera en un régimen regular cerca del origen, aproximamos la activación no lineal por la identidad ($\sigma(\varphi) \mapsto \varphi$), derivando en el sistema afín $h'(t) = A h(t) + B x(t) + b$, con $A = W - \lambda I$ y $B = \tilde{W}$.
 
-La pregunta natural, que puede provenir de la duda neurótica de quien programa la simulación de estas redes, es si el orden en que aplicamos estas operaciones altera el producto final. Como las tres operaciones conmutan por pares: $(\mathscr{R}_\tau , \mathscr{D}_\Delta)$, $(\mathscr{D}_\Delta , \mathscr{L})$, $(\mathscr{L} ,\mathscr{R}_\tau )$, las seis permutaciones posibles del grupo simétrico $S_3$ sobre el conjunto $\{\mathscr{R}_\tau, \mathscr{D}_\Delta, \mathscr{L}\}$ colapsan en una regla de actualización única:
+La pregunta natural, que puede provenir de la duda neurótica de quien programa la simulación de estas redes, es si el orden en que aplicamos estas operaciones altera el producto final. Como las tres operaciones conmutan por pares: $(\mathscr{R}_\tau , \mathscr{D}_\Delta)$, $(\mathscr{D}_\Delta , \mathscr{L})$, $(\mathscr{L} ,\mathscr{R}_\tau )$, las seis permutaciones posibles del grupo simétrico S₃ sobre el conjunto $\{\mathscr{R}_\tau, \mathscr{D}_\Delta, \mathscr{L}\}$ colapsan en una regla de actualización única:
 
 $$\mathfrak{h}(s_{k+1}) = (I + \tau \Delta A) \mathfrak{h}(s_k) + \tau \Delta B \chi(s_k) + \tau \Delta b \quad (b) $$ 
 
