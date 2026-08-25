@@ -1,6 +1,6 @@
 ---
-title: "El hexágono y las redes recurrentes"
-subtitle: "Seis formas de generar la misma red"
+title: "El hexágono y la red"
+subtitle: "Seis formas de generar la misma red neuronal"
 date: "2026-08-24"
 showDate: false
 summary: "Seis formas de generar la misma red"
