@@ -47,7 +47,7 @@ Si etiquetamos a las operaciones $\{\mathscr{R}_\tau,\mathscr{D}_\Delta ,\mathsc
     \node[text=red!80!black] (a) at (0, 1.5) {$(a)$};
     
     % Doble barra invertida \\{ y \\} para que Hugo no las borre
-    \node (left) at (-1.8, 0) {$\\{(1 \mathscr{R}\rightarrow 2 \rightarrow 3)\\}$};
+    \node (left) at (-1.8, 0) {$\\{(1 \rightarrow 2 \rightarrow 3)\\}$};
     \node (mid) at (0, 0) {$\cdots$};
     \node (right) at (1.8, 0) {$\\{(3 \rightarrow 2 \rightarrow 1)\\}$};
     
