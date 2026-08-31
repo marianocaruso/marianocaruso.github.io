@@ -54,13 +54,13 @@ Si etiquetamos a las operaciones $\{\mathscr{R}_\tau,\mathscr{D}_\Delta ,\mathsc
     \node[text=blue!80!black] (b) at (0, -1.83) {$(b)$};
 
     % Flechas
-    \draw[->, line width=1pt] (a) to[bend right=20] (left);
-    \draw[->, line width=1pt] (a) -- (mid);
-    \draw[->, line width=1pt] (a) to[bend left=20] (right);
+    \draw[->, line width=1.2pt] (a) to[bend right=20] (left);
+    \draw[->, line width=1.2pt] (a) -- (mid);
+    \draw[->, line width=1.2pt] (a) to[bend left=20] (right);
 
-    \draw[->, line width=1pt] (left) to[bend right=20] (b);
-    \draw[->, line width=1pt] (mid) -- (b);
-    \draw[->, line width=1pt] (right) to[bend left=20] (b);
+    \draw[->, line width=1.2pt] (left) to[bend right=20] (b);
+    \draw[->, line width=1.2pt] (mid) -- (b);
+    \draw[->, line width=1.2pt] (right) to[bend left=20] (b);
 \end{tikzpicture}
 {{< /tikz >}}
 
