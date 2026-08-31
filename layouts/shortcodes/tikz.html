@@ -1,0 +1,36 @@
+<!-- Cargar librerías TikZJax solo cuando se usa el shortcode -->
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+<style>
+  /* Contenedor adaptativo centrado */
+  .tikz-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--neutral-100); /* Fondo claro en modo light */
+    border: 1px solid var(--neutral-200);
+    overflow-x: auto;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  /* Adaptación al Modo Oscuro del tema Congo */
+  .dark .tikz-container {
+    background-color: var(--neutral-800); /* Fondo oscuro suave acorde a Congo */
+    border-color: var(--neutral-700);
+  }
+
+  /* Inversión inteligente de colores para texto e hilos de las flechas TikZ en modo oscuro */
+  .dark .tikz-container svg {
+    filter: invert(0.93) hue-rotate(180deg);
+  }
+</style>
+
+<div class="tikz-container">
+  <script type="text/tikz">
+    {{ .Inner }}
+  </script>
+</div>

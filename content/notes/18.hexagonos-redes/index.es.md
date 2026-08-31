@@ -13,6 +13,8 @@ math: true
 {{< katex >}}
 
 
+
+
 El hexágono pavimenta, dijo Jorge Wagensberg en su libro "La rebelión de las formas: o cómo perservar cuando la incertidumbre aprieta": a base de hexagonos podemos tejer redes. 
 Existe otro contexto en el que otro hexágono y otra red aparecen juntos en escena: en el ámbito de las redes neuronales recurrentes, la conmutatividad entre el reescalado temporal, la discretización y la linearización queda formalmente caracterizada por el grupo simétrico S₃. Recientemente hemos probado que existe un la ecuación que regula la evolución de tales sistemas bajo cualesquiera dos de estas 3 operaciones es invariante, ver [Analyzing rescaling, discretization, and linearization in RNNs for neural system modeling](https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1760701/full).
 
@@ -38,6 +40,31 @@ La pregunta natural, que puede provenir de la duda neurótica de quien programa 
 $$\mathfrak{h}(s_{k+1}) = (I + \tau \Delta A) \mathfrak{h}(s_k) + \tau \Delta B \chi(s_k) + \tau \Delta \cdot b \quad (b) $$ 
 
 Si etiquetamos a las operaciones $\{\mathscr{R}_\tau,\mathscr{D}_\Delta ,\mathscr{L}\}$ con $\{1,2,3\}$, podemos esquematizar como es que estas 3 operaciones, que definen 6 rutas procedimientos posibles sobre la ecuación $(a)$ dan lugar a la misma ecuación $(b)$.
+
+{{< tikz >}}
+\begin{tikzpicture}[scale=1.25, transform shape, >=stealth, auto, node distance=2cm]
+    % Nodos
+    \node[text=red!80!black] (a) at (-0.02, 0.83) {$(a)$};
+    
+    % Doble barra invertida \\{ y \\} para que Hugo no las borre
+    \node (left) at (-2.3, -0.51) {$\\{\mathbf{(1} \rightarrow \mathbf{2} \rightarrow \mathbf{3)}\\}$};
+    \node (mid) at (0, -0.54) {$\cdots$};
+    \node (right) at (2.3, -0.51) {$\\{\mathbf{(3} \rightarrow \mathbf{2} \rightarrow \mathbf{1)}\\}$};
+    
+    \node[text=blue!80!black] (b) at (0, -1.83) {$(b)$};
+
+    % Flechas
+    \draw[->, line width=1pt] (a) to[bend right=20] (left);
+    \draw[->, line width=1pt] (a) -- (mid);
+    \draw[->, line width=1pt] (a) to[bend left=20] (right);
+
+    \draw[->, line width=1pt] (left) to[bend right=20] (b);
+    \draw[->, line width=1pt] (mid) -- (b);
+    \draw[->, line width=1pt] (right) to[bend left=20] (b);
+\end{tikzpicture}
+{{< /tikz >}}
+
+
 
 ```
                                 (a)
