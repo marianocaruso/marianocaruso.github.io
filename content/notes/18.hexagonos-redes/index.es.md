@@ -42,7 +42,7 @@ $$\mathfrak{h}(s_{k+1}) = (I + \tau \Delta A) \mathfrak{h}(s_k) + \tau \Delta B 
 Si etiquetamos a las operaciones $\{\mathscr{R}_\tau,\mathscr{D}_\Delta ,\mathscr{L}\}$ con $\{1,2,3\}$, podemos esquematizar como es que estas 3 operaciones, que definen 6 rutas procedimientos posibles sobre la ecuación $(a)$ dan lugar a la misma ecuación $(b)$.
 
 {{< tikz >}}
-\begin{tikzpicture}[scale=1.25, transform shape, >=stealth, auto, node distance=2cm]
+\begin{tikzpicture}[scale=1.2, transform shape, >=stealth, auto, node distance=2cm]
     % Nodos
     \node[text=red!80!black] (a) at (-0.02, 0.83) {$(a)$};
     
@@ -65,17 +65,6 @@ Si etiquetamos a las operaciones $\{\mathscr{R}_\tau,\mathscr{D}_\Delta ,\mathsc
 {{< /tikz >}}
 
 
-
-```
-                                (a)
-                             /   |   \
-                            /    |    \
-                      {1⟶2⟶3} ... {3⟶2⟶1}
-                            \    |    /
-                             \   |   /
-                                (b)
-
-```
 
 ## Por qué si Euler y no Runge-Kutta
 

@@ -146,7 +146,7 @@
     "keywords": ["RNN","sistemas dinámicos","neurociencia computacional"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "762"
+    "wordCount": "745"
   }
   </script>
     
@@ -921,7 +921,7 @@ $$\mathfrak{h}(s_{k+1}) = (I + \tau \Delta A) \mathfrak{h}(s_k) + \tau \Delta B 
 <div class="tikz-container">
   <script type="text/tikz">
     
-\begin{tikzpicture}[scale=1.25, transform shape, >=stealth, auto, node distance=2cm]
+\begin{tikzpicture}[scale=1.2, transform shape, >=stealth, auto, node distance=2cm]
     % Nodos
     \node[text=red!80!black] (a) at (-0.02, 0.83) {$(a)$};
     
@@ -944,14 +944,7 @@ $$\mathfrak{h}(s_{k+1}) = (I + \tau \Delta A) \mathfrak{h}(s_k) + \tau \Delta B 
 
   </script>
 </div>
-<pre tabindex="0"><code>                                (a)
-                             /   |   \
-                            /    |    \
-                      {1⟶2⟶3} ... {3⟶2⟶1}
-                            \    |    /
-                             \   |   /
-                                (b)
-</code></pre><h2 id="por-qué-si-euler-y-no-runge-kutta" class="relative group">Por qué si Euler y no Runge-Kutta <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#por-qu%c3%a9-si-euler-y-no-runge-kutta" aria-label="Ancla">#</a></span></h2><p>Acá es donde conviene desmitificar un verso habitual en la comunidad de machine learning. Muchos asumen que usar integradores de orden superior (como Runge-Kutta de 4º orden, RK4) es siempre &ldquo;mejor&rdquo; porque reduce el error de truncamiento local.</p>
+<h2 id="por-qué-si-euler-y-no-runge-kutta" class="relative group">Por qué si Euler y no Runge-Kutta <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#por-qu%c3%a9-si-euler-y-no-runge-kutta" aria-label="Ancla">#</a></span></h2><p>Acá es donde conviene desmitificar un verso habitual en la comunidad de machine learning. Muchos asumen que usar integradores de orden superior (como Runge-Kutta de 4º orden, RK4) es siempre &ldquo;mejor&rdquo; porque reduce el error de truncamiento local.</p>
 <p>Sin embargo, desde el punto de vista de la estructura algebraica, la conmutatividad exacta del hexágono es un privilegio exclusivo del esquema de Euler hacia adelante. ¿Por qué? Porque Euler evalúa el campo vectorial $F$ una sola vez por paso temporal.  Por el contrario, usar un método multipaso como el de Runge-Kutta implica realizar evaluaciones anidadas del tipo $F(F(\cdots))$ que introducen términos cruzados no lineales y de orden elevado. Al intentar linealizar <em>después</em> de discretizar con RK4, te encontrás con un engendro algebraico que no coincide con el sistema obtenido al discretizar el modelo ya linealizado.</p>
 <p>Usar un integrador sofisticado para entrenar una RNN continua a menudo solo sirve para multiplicar el costo computacional del Backpropagation Through Time (BPTT) y romper las simetrías algebraicas que te garantizan que el modelo discreto se comporta como el sistema biológico continuo.</p>
 <h2 id="controlabilidad-intacta" class="relative group">Controlabilidad intacta <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#controlabilidad-intacta" aria-label="Ancla">#</a></span></h2><p>Esta equivalencia operacional no es mero rigor estético; tiene consecuencias topológicas directas sobre la <em>controlabilidad</em> del sistema dinámico.</p>
