@@ -25,7 +25,7 @@ Existe otro contexto en el que otro hexágono y otra red aparecen juntos en esce
 
 Consideremos la ecuación que gobierna la capa oculta de una red recurrente en _tiempo continuo_ de $N$ neuronas impulsada por $M$ señales externas $x(t)$:
 
-$$h'(t) = -\lambda h(t) + \sigma\left(W h(t) + \tilde{W} x(t) + b\right) (a) $$
+$$h'(t) = -\lambda h(t) + \sigma\left(W h(t) + \tilde{W} x(t) + b\right) \qquad (a) $$
 
 que podemos abreviar mediante el operador del campo vectorial como $h'(t) = F(h(t), x(t))$. 
 
@@ -37,7 +37,7 @@ Para analizar este sistema en la práctica, recurrimos a computadoras y suelen a
 
 La pregunta natural, que puede provenir de la duda neurótica de quien programa la simulación de estas redes, es si el orden en que aplicamos estas operaciones altera el producto final. Como las tres operaciones conmutan por pares: $(\mathscr{R}_\tau , \mathscr{D}_\Delta)$, $(\mathscr{D}_\Delta , \mathscr{L})$, $(\mathscr{L} ,\mathscr{R}_\tau )$, las seis permutaciones posibles del grupo simétrico S₃ sobre el conjunto $\{\mathscr{R}_\tau, \mathscr{D}_\Delta, \mathscr{L}\}$ colapsan en una regla de actualización única:
 
-$$\mathfrak{h}(s_{k+1}) = (I + \tau \Delta A) \mathfrak{h}(s_k) + \tau \Delta B \chi(s_k) + \tau \Delta \cdot b \quad (b) $$ 
+$$\mathfrak{h}(s_{k+1}) = (I + \tau \Delta A) \mathfrak{h}(s_k) + \tau \Delta B \chi(s_k) + \tau \Delta \cdot b \qquad (b) $$ 
 
 Si etiquetamos a las operaciones $\{\mathscr{R}_\tau,\mathscr{D}_\Delta ,\mathscr{L}\}$ con $\{1,2,3\}$, podemos esquematizar como es que estas 3 operaciones, que definen 6 rutas procedimientos posibles sobre la ecuación $(a)$ dan lugar a la misma ecuación $(b)$.
 
