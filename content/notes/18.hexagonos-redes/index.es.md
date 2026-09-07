@@ -16,7 +16,7 @@ math: true
 
 
 El hexágono pavimenta, dijo Jorge Wagensberg en su libro "La rebelión de las formas: o cómo perservar cuando la incertidumbre aprieta": a base de hexagonos podemos tejer redes. 
-Existe otro contexto en el que otro hexágono y otra red aparecen juntos en escena: en el ámbito de las redes neuronales recurrentes, la conmutatividad entre el reescalado temporal, la discretización y la linearización queda formalmente caracterizada por el grupo simétrico S₃. Recientemente hemos probado que existe un la ecuación que regula la evolución de tales sistemas bajo cualesquiera dos de estas 3 operaciones es invariante, ver [Analyzing rescaling, discretization, and linearization in RNNs for neural system modeling](https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1760701/full).
+Existe otro contexto en el que otro hexágono y otra red aparecen juntos en escena: en el ámbito de las redes neuronales recurrentes, la conmutatividad entre el reescalado temporal, la discretización y la linearización queda formalmente caracterizada por el grupo simétrico S₃. Recientemente hemos probado que la ecuación que regula la evolución de tales sistemas queda invariante bajo cualesquiera dos de estas 3 operaciones, ver [Analyzing rescaling, discretization, and linearization in RNNs for neural system modeling](https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1760701/full).
 
 
 
