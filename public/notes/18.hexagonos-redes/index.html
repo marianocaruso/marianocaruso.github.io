@@ -146,7 +146,7 @@
     "keywords": ["RNN","sistemas dinámicos","neurociencia computacional"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "744"
+    "wordCount": "745"
   }
   </script>
     
@@ -880,7 +880,7 @@ $$h'(t) = -\lambda h(t) + \sigma\left(W h(t) + \tilde{W} x(t) + b\right) \qquad 
 <p>Para analizar este sistema en la práctica, recurrimos a computadoras y suelen aplicarse tres transformaciones fundamentales:</p>
 <blockquote>
 <ol>
-<li><strong>Reescalado temporal ($\mathscr{R}_\tau$):</strong> cambiamos la escala del tiempo mediante $t = \tau s$, lo que deforma la velocidad del sistema resultando en $\mathfrak{h}'(s) = \tau F(\mathfrak{h}(s), \chi(s))$.</li>
+<li><strong>Reescalado temporal ($\mathscr{R}_\tau$):</strong> cambiamos la escala del tiempo mediante $t = \tau s$, lo que modifica los tiempos característicos del sistema resultando en $\mathfrak{h}'(s) = \tau F(\mathfrak{h}(s), \chi(s))$.</li>
 <li><strong>Discretización ($\mathscr{D}_\Delta$):</strong> reemplazamos la derivada continua por una aproximación en diferencias finitas con paso $\Delta$ vía Forward Euler: $h(t_{k+1}) = h(t_k) + \Delta \cdot F(h(t_k), x(t_k))$.</li>
 <li><strong>Linealización ($\mathscr{L}$):</strong> asumiendo que el sistema opera en un régimen regular cerca del origen, aproximamos la activación no lineal por la identidad ($\sigma(\varphi) \mapsto \varphi$), obtenemos $h'(t) = A h(t) + B x(t) + b$, con $A = W - \lambda I$ y $B = \tilde{W}$.</li>
 </ol>

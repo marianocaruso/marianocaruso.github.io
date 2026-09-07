@@ -31,7 +31,7 @@ que podemos abreviar mediante el operador del campo vectorial como $h'(t) = F(h(
 
 Para analizar este sistema en la práctica, recurrimos a computadoras y suelen aplicarse tres transformaciones fundamentales:
 
-> 1. **Reescalado temporal ($\mathscr{R}_\tau$):** cambiamos la escala del tiempo mediante $t = \tau s$, lo que deforma la velocidad del sistema resultando en $\mathfrak{h}'(s) = \tau F(\mathfrak{h}(s), \chi(s))$.
+> 1. **Reescalado temporal ($\mathscr{R}_\tau$):** cambiamos la escala del tiempo mediante $t = \tau s$, lo que modifica los tiempos característicos del sistema resultando en $\mathfrak{h}'(s) = \tau F(\mathfrak{h}(s), \chi(s))$.
 > 2. **Discretización ($\mathscr{D}_\Delta$):** reemplazamos la derivada continua por una aproximación en diferencias finitas con paso $\Delta$ vía Forward Euler: $h(t_{k+1}) = h(t_k) + \Delta \cdot F(h(t_k), x(t_k))$.
 > 3. **Linealización ($\mathscr{L}$):** asumiendo que el sistema opera en un régimen regular cerca del origen, aproximamos la activación no lineal por la identidad ($\sigma(\varphi) \mapsto \varphi$), obtenemos $h'(t) = A h(t) + B x(t) + b$, con $A = W - \lambda I$ y $B = \tilde{W}$.
 
