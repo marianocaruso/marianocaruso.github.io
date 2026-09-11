@@ -92,6 +92,18 @@ Sabemos que $P(\alpha \leq K \leq 2\alpha) > 0$ entonces $P(\texttt{ganar}) > 1/
 
 Acabamos de extraer información útil de un valor completamente aleatorio y desconectado del sistema. No adivinamos el valor exacto de $\alpha$, pero usamos una vara de medir caótica para romper la simetría de nuestra propia ignorancia. El espejismo se disipó, y la estadística, finalmente, juega a nuestro favor.
 
+
+## Simular
+
+He aquí una forma sencilla de verficar las ideas contrastando ambas estratégias de decisión.
+
+<iframe src="/juegos/cover-vs-rand/simulador_cover-vs-rand_minimalista.html"
+        style="width: 100%; height: 900px; border: none;"
+        loading="lazy"
+        allowfullscreen>
+</iframe>
+
+
 ## Conclusión
 
 El principio de $\textit{ex nihilo nihil fit}$ permanece intacto: el mecanismo de Cover no genera información de la nada, sino que introduce una escala externa allí donde el observador carecía de marco de referencia. La variable aleatoria $K$ no adivina el contenido oculto; funciona como un sistema de coordenadas que quiebra la simetría del problema. La ventaja sobre el 50% es la consecuencia directa de contrastar un valor huérfano de contexto $x$ contra los valores para $K$ que surgen de una distribución de probabilidad bien definida.
@@ -103,3 +115,7 @@ El principio de $\textit{ex nihilo nihil fit}$ permanece intacto: el mecanismo d
 > {{< icon "youtube" >}} [Numberphile: How to Win a Guessing Game](http://www.youtube.com/watch?v=ud_frfkt1t0)
 
 > {{< icon "youtube" >}} [Vsauce2: Should You Switch? NO!](http://www.youtube.com/watch?v=5LWfXhggC70)
+
+
+
+
