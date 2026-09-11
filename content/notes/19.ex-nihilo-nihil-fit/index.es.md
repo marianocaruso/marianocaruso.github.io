@@ -95,7 +95,7 @@ Acabamos de extraer información útil de un valor completamente aleatorio y des
 
 ## Simular
 
-He aquí una forma sencilla de verficar las ideas contrastando ambas estratégias de decisión.
+Una forma de verficar las ideas contrastando ambas estratégias de decisión.
 
 <iframe src="/juegos/cover-vs-rand/simulador_cover-vs-rand_minimalista.html"
         style="width: 100%; height: 900px; border: none;"
