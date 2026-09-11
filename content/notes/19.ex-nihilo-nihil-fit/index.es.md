@@ -54,17 +54,16 @@ Bajo estas condiciones de ignorancia absoluta, Cover propuso una estrategia de u
 
 Veamos por qué esto es una estrategia ganadora analizando los tres escenarios posibles donde puede caer $K$ en relación a los desconocidos $a$ y $b$:
 
-Si $K \leq a$ o $K \geq b$, tu umbral es inútil. Cayó fuera del rango de interés. No logra discriminar nada y seguís jugando a cara o cruz, acertando el 50% de las veces.
+Si $K < a$ o $K < b$, ese umbral dado por $K$ es inútil, en cuanto a intentar aumentar la tasa de victoria. No logra discriminar nada y seguís jugando a cara o cruz, acertando el 50% de las veces.
 
-Pero si $a < K < b$, la magia ocurre. Si observaste la cantidad menor ($a$), vas a cambiar (porque $a < K$) y te llevás el mayor ($b$). Si observaste la mayor ($b$), te la quedás (porque $b > K$). En este intervalo, tu tasa de acierto es del 100%.
+Pero si $a \leq K \leq b$, algo ocurre. Si observaste la cantidad menor ($a$), vas a cambiar (porque $a \leq K$) y te llevás el mayor ($b$). Si observaste la mayor ($b$), te la quedás (porque $b \geq K$). En este intervalo, tu tasa de acierto es del 100%.
 
 Podemos demostrar que la probabilidad total de ganar el juego de Cover aplicando la Ley de Probabilidad Total sobre estos tres escenarios:
 
-{{<alert "lightbulb">}} $$\begin{aligned} P(\texttt{ganar}) = & P(\texttt{ganar} \mid K < a) {\cdot} P(K < a) + \\ & P(\texttt{ganar}\mid a \leq K \leq b) {\cdot} P(a \leq K \leq b) + \\ & P(\texttt{ganar}\mid K > b) {\cdot} P(K > b)\end{aligned}$$
+$$\begin{aligned} P(\texttt{ganar}) = & P(\texttt{ganar} \mid K < a) {\cdot} P(K < a) + \\ & P(\texttt{ganar}\mid a \leq K \leq b) {\cdot} P(a \leq K \leq b) + \\ & P(\texttt{ganar}\mid K > b) {\cdot} P(K > b)\end{aligned}$$
 
+> Notar que estamos tomando cierta licencia en la nomenclatura sobre el "evento” $\texttt{ganar}$ y su probabilidad asociada.
 
-Notar que estamos tomando cierta licencia en la nomenclatura sobre el "evento” $\texttt{ganar}$ y su probabilidad asociada.
-{{< /alert >}}
 Reemplazando por las tasas de acierto (50%, 100% y 50%):
 
 $$P(\texttt{ganar}) = \tfrac{1}{2}P(K < a) + P(a \leq K \leq b) + \tfrac{1}{2} P(K > b)$$
@@ -117,5 +116,31 @@ El principio de $\textit{ex nihilo nihil fit}$ permanece intacto: el mecanismo d
 > {{< icon "youtube" >}} [Vsauce2: Should You Switch? NO!](http://www.youtube.com/watch?v=5LWfXhggC70)
 
 
+## Demostración algo más formal
 
+La estrategia de Cover de por qué usar un umbral aleatorio garantiza que la probabilidad de elegir el número mayor sea estrictamente mayor que $1/2$. Sean $x$ e $y$ los dos números reales ocultos, donde $x < y$. Se revela uno de ellos, sea $Z$ la variable aleatoria del experimento de revelar uno de los dos números, de modo que 
+
+$$P(Z=x) = 1/2=P(Z=y).$$ 
+
+Se genera un umbral aleatorio $T$ a partir de una distribución continua cuya función de densidad sea estrictamente positiva $f(t) > 0$ para todo $t \in \mathbb{R}$. La regla de decisión es: 
+
+* si $Z > T$, entonces el número revelado se afirma como máximo. 
+* si $Z < T$, entonces el número no revelado se afirma como máximo.
+
+La probabilidad de ganar, $P(W)$, ocurre en dos escenarios mutuamente excluyentes:
+
+$$P(W) = P(Z=y \cap Z > T) + P(Z=x \cap Z < T)$$
+
+Como la elección del papel ($Z$) y la generación del umbral ($T$) son eventos independientes:
+
+$$P(W) = P(Z=y)P(y > T) + P(Z=x)P(x < T)$$
+
+Sustituyendo las probabilidades de $Z$:
+$$P(W) = \tfrac{1}{2} P(T < y) + \tfrac{1}{2} P(T > x)$$
+
+Utilizando la función de distribución acumulada para $T$: $F(t) = P(T < t)$, y sabiendo que $P(T > x) = 1 - F(x)$ se obtiene $P(W) = \tfrac{1}{2} F(y) + \tfrac{1}{2} (1 - F(x))$
+
+Finalmente 
+
+$$P(W) = \tfrac{1}{2}\left(1 + [F(y) - F(x)]\right)$$
 

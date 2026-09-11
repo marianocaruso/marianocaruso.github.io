@@ -146,7 +146,7 @@
     "keywords": ["probabilidad","teoría de la información","paradojas"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1307"
+    "wordCount": "1534"
   }
   </script>
     
@@ -869,6 +869,7 @@
     <li><a href="#simular">Simular</a></li>
     <li><a href="#conclusión">Conclusión</a></li>
     <li><a href="#referencias-para-curiosos">Referencias para curiosos:</a></li>
+    <li><a href="#demostración-algo-más-formal">Demostración algo más formal</a></li>
   </ul>
 </nav>
   </div>
@@ -905,18 +906,13 @@ $$\tfrac{1}{2}(px) + \tfrac{1}{2}(x/p) = \frac{p^2 + 1}{2p} x$$<p>Notar que para
 <p>en el primer caso $x > K$ se asume que lo que se te dio como opción es el más grande, por eso no  cambiás.</p>
 </blockquote>
 <p>Veamos por qué esto es una estrategia ganadora analizando los tres escenarios posibles donde puede caer $K$ en relación a los desconocidos $a$ y $b$:</p>
-<p>Si $K \leq a$ o $K \geq b$, tu umbral es inútil. Cayó fuera del rango de interés. No logra discriminar nada y seguís jugando a cara o cruz, acertando el 50% de las veces.</p>
-<p>Pero si $a < K < b$, la magia ocurre. Si observaste la cantidad menor ($a$), vas a cambiar (porque $a < K$) y te llevás el mayor ($b$). Si observaste la mayor ($b$), te la quedás (porque $b > K$). En este intervalo, tu tasa de acierto es del 100%.</p>
+<p>Si $K < a$ o $K < b$, ese umbral dado por $K$ es inútil, en cuanto a intentar aumentar la tasa de victoria. No logra discriminar nada y seguís jugando a cara o cruz, acertando el 50% de las veces.</p>
+<p>Pero si $a \leq K \leq b$, algo ocurre. Si observaste la cantidad menor ($a$), vas a cambiar (porque $a \leq K$) y te llevás el mayor ($b$). Si observaste la mayor ($b$), te la quedás (porque $b \geq K$). En este intervalo, tu tasa de acierto es del 100%.</p>
 <p>Podemos demostrar que la probabilidad total de ganar el juego de Cover aplicando la Ley de Probabilidad Total sobre estos tres escenarios:</p>
-<p><div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
-  <span class="pe-3 text-primary-400">
-    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg>
-</span>
-  </span>
-  <span class="dark:text-neutral-300">$$\begin{aligned} P(\texttt{ganar}) = & P(\texttt{ganar} \mid K < a) {\cdot} P(K < a) + \\ & P(\texttt{ganar}\mid a \leq K \leq b) {\cdot} P(a \leq K \leq b) + \\ & P(\texttt{ganar}\mid K > b) {\cdot} P(K > b)\end{aligned}$$<p>Notar que estamos tomando cierta licencia en la nomenclatura sobre el &ldquo;evento” $\texttt{ganar}$ y su probabilidad asociada.</p></span>
-</div>
-
-Reemplazando por las tasas de acierto (50%, 100% y 50%):</p>
+$$\begin{aligned} P(\texttt{ganar}) = & P(\texttt{ganar} \mid K < a) {\cdot} P(K < a) + \\ & P(\texttt{ganar}\mid a \leq K \leq b) {\cdot} P(a \leq K \leq b) + \\ & P(\texttt{ganar}\mid K > b) {\cdot} P(K > b)\end{aligned}$$<blockquote>
+<p>Notar que estamos tomando cierta licencia en la nomenclatura sobre el &ldquo;evento” $\texttt{ganar}$ y su probabilidad asociada.</p>
+</blockquote>
+<p>Reemplazando por las tasas de acierto (50%, 100% y 50%):</p>
 $$P(\texttt{ganar}) = \tfrac{1}{2}P(K < a) + P(a \leq K \leq b) + \tfrac{1}{2} P(K > b)$$<p>Agrupamos los términos multiplicados por $1/2$:</p>
 $$P(\texttt{ganar}) = \tfrac{1}{2} \big[ P(K < a) + P(K > b) \big] + P(a \leq K \leq b)$$<p>Dado que $P(K < a) + P(K > b) + P(a \leq K \leq b)=1$. Sustituyendo esto, llegamos a la expresión final:</p>
 $$P(\texttt{ganar}) = \tfrac{1}{2} \left[1+ P(a \leq K \leq b)\right]$$<p>Como la distribución de $K$ cubre todos los números reales, y como $a$ y $b$ son distintos (sin pérdida de generalidad $a < b$), por lo tanto $P(K \in [a,b]) > 0$, de manera que queda reducida la máxima incertidumbre sobre la elección, pues $P(\texttt{ganar})$ ahora es mayor a $1/2$.</p>
@@ -961,7 +957,17 @@ $$P(\texttt{ganar}) = \tfrac{1}{2}\left[1 + P(\alpha \leq K \leq 2\alpha)\right]
 
  <a href="http://www.youtube.com/watch?v=5LWfXhggC70" target="_blank" rel="noreferrer">Vsauce2: Should You Switch? NO!</a></p>
 </blockquote>
-
+<h2 id="demostración-algo-más-formal" class="relative group">Demostración algo más formal <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#demostraci%c3%b3n-algo-m%c3%a1s-formal" aria-label="Ancla">#</a></span></h2><p>La estrategia de Cover de por qué usar un umbral aleatorio garantiza que la probabilidad de elegir el número mayor sea estrictamente mayor que $1/2$. Sean $x$ e $y$ los dos números reales ocultos, donde $x < y$. Se revela uno de ellos, sea $Z$ la variable aleatoria del experimento de revelar uno de los dos números, de modo que</p>
+$$P(Z=x) = 1/2=P(Z=y).$$<p>Se genera un umbral aleatorio $T$ a partir de una distribución continua cuya función de densidad sea estrictamente positiva $f(t) > 0$ para todo $t \in \mathbb{R}$. La regla de decisión es:</p>
+<ul>
+<li>si $Z > T$, entonces el número revelado se afirma como máximo.</li>
+<li>si $Z < T$, entonces el número no revelado se afirma como máximo.</li>
+</ul>
+<p>La probabilidad de ganar, $P(W)$, ocurre en dos escenarios mutuamente excluyentes:</p>
+$$P(W) = P(Z=y \cap Z > T) + P(Z=x \cap Z < T)$$<p>Como la elección del papel ($Z$) y la generación del umbral ($T$) son eventos independientes:</p>
+$$P(W) = P(Z=y)P(y > T) + P(Z=x)P(x < T)$$$$P(W) = \tfrac{1}{2} P(T < y) + \tfrac{1}{2} P(T > x)$$<p>Utilizando la función de distribución acumulada para $T$: $F(t) = P(T < t)$, y sabiendo que $P(T > x) = 1 - F(x)$ se obtiene $P(W) = \tfrac{1}{2} F(y) + \tfrac{1}{2} (1 - F(x))$</p>
+<p>Finalmente</p>
+$$P(W) = \tfrac{1}{2}\left(1 + [F(y) - F(x)]\right)$$
       </div>
     </section>
     <footer class="max-w-prose pt-8 print:hidden">
