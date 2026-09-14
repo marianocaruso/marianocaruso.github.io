@@ -133,7 +133,7 @@
 
             <div class="w-full bg-black bg-opacity-30 rounded-xl border border-gray-800 relative p-4 mt-6">
                 <canvas id="chartCanvas"></canvas>
-               <div class="absolute top-4 left-6 text-xs sm:text-sm text-gray-300 font-mono tracking-wider z-10 pointer-events-none">tasa de victoria</div>
+                <div class="absolute top-4 left-6 text-xs sm:text-sm text-gray-300 font-mono tracking-normal z-10 pointer-events-none">tv(n)</div>
             </div>
         </div>
     </div>
@@ -284,7 +284,7 @@
 
             // Etiqueta visual del 50% ubicada a la DERECHA
             ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-            ctx.font = 'bold 20px "Google Sans", "Product Sans", sans-serif';
+            ctx.font = 'bold 15px "Google Sans", "Product Sans", sans-serif';
             ctx.textAlign = 'right';
             ctx.fillText('50%', w - padding, y50 - 10);
             ctx.textAlign = 'left'; // reset para futuros textos

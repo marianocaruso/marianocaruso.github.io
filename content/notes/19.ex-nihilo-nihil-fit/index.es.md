@@ -94,7 +94,9 @@ Acabamos de extraer información útil de un valor completamente aleatorio y des
 
 ## Simular
 
-Una forma de verficar las ideas contrastando ambas estratégias de decisión.
+Una forma de verficar las ideas contrastando ambas estratégias de decisión, consiste en proponer un escenario fijando a y b para realizar luego $N$ simulaciones de ambos escenarios. Se registran el número de veces que cada estrategia nos devuelve una victoria, con una variable binaria del tipo $V{\in}\{0,1\}$ y se calculan las tasas de victoria, $\mathtt{tv}$, para cada escenario $n{\in}\{1,\cdots, N\}$, usando 
+
+$$\mathtt{tv}(n)=\tfrac{1}{n}\sum_{i=1}^n V_i$$
 
 <iframe src="/juegos/cover-vs-rand/simulador_cover-vs-rand_minimalista.html"
         style="width: 100%; height: 900px; border: none;"
