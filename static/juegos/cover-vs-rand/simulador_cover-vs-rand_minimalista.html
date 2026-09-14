@@ -94,7 +94,7 @@
         <div class="panel-glass rounded-2xl p-6 sm:p-8">
             <header class="text-center mb-8">
                 <!-- Texto ampliado y actualizado -->
-                <p class="text-gray-300 text-lg sm:text-xl leading-relaxed">Definí los valores ocultos a y b. Simulá varias rondas y verificá cuál es la mejor estrategia de decisión.</p>
+                <p class="text-gray-300 text-lg sm:text-xl leading-relaxed">Definí los valores ocultos a y b, simulá varias rondas y verificá cuál es la mejor estrategia de decisión.</p>
             </header>
 
             <div class="grid grid-cols-2 gap-4 mb-6">
@@ -133,7 +133,7 @@
 
             <div class="w-full bg-black bg-opacity-30 rounded-xl border border-gray-800 relative p-4 mt-6">
                 <canvas id="chartCanvas"></canvas>
-                <div class="absolute top-4 left-6 text-[15px] text-gray-400 font-mono tracking-wider hidden sm:block">tasa de victoria</div>
+               <div class="absolute top-4 left-6 text-xs sm:text-sm text-gray-300 font-mono tracking-wider z-10 pointer-events-none">tasa de victoria</div>
             </div>
         </div>
     </div>
@@ -244,17 +244,23 @@
         function drawChart() {
             const canvas = document.getElementById('chartCanvas');
             const ctx = canvas.getContext('2d');
-            
-            // Ajustar dimensiones internas
-            canvas.width = canvas.clientWidth;
-            canvas.height = canvas.clientHeight;
-            
-            const w = canvas.width;
-            const h = canvas.height;
+            const dpr = window.devicePixelRatio || 1;
+            const rect = canvas.getBoundingClientRect();
+
+            // Asignar resolución real según los píxeles físicos de la pantalla
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+
+            // Dimensiones lógicas para mantener los cálculos existentes
+            const w = rect.width;
+            const h = rect.height;
             const padding = 20;
 
+            // Escalar el contexto al ratio del dispositivo
+            ctx.resetTransform();
+            ctx.scale(dpr, dpr);
             ctx.clearRect(0, 0, w, h);
-
+            
             if (historyCover.length === 0) return;
 
             const minY = 0.40; 
