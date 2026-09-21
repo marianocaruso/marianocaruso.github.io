@@ -28,10 +28,11 @@ El juego consiste en disponer piezas sin bordes “tradicionales” de encastre,
 
 ## jugar
 <iframe src="/juegos/puzzle_x-o/index.html"
-        style="width: 150%; height: 800px; border: none;"
-        loading="lazy"
+        style="width: 100%; height: 800px; border: none;"
         allowfullscreen>
 </iframe>
+
+
 
 
 [{{< spotify type="album" id="5iT3F2EhjVQVrO4PKhsP8c?" width="100%" height="160" >}}]:#
