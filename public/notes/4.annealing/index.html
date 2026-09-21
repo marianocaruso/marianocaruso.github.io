@@ -145,7 +145,7 @@
     "keywords": ["quantum","optimization"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "4494"
+    "wordCount": "4479"
   }
   </script>
     
@@ -871,10 +871,10 @@
     </li>
     <li><a href="#motivación-del-algoritmo">motivación del algoritmo</a>
       <ul>
-        <li><a href="#qué-busca-matemáticamente-el-algoritmo">¿qué busca matemáticamente el algoritmo?</a></li>
-        <li><a href="#como-representar-físicamente-el-algoritmo">¿como representar físicamente el algoritmo?</a>
+        <li><a href="#objetivo-del-algoritmo">objetivo del algoritmo</a></li>
+        <li><a href="#representación-física-del-algoritmo">representación física del algoritmo</a>
           <ul>
-            <li><a href="#veamos-que-f-no--debe-asociarse-al-material-físico">Veamos que  NO  debe asociarse al material físico</a></li>
+            <li><a href="#veamos-que-f-no-debe-asociarse-a-la-estructura-o-forma-del-material">veamos que  NO debe asociarse a la estructura o forma del material</a></li>
           </ul>
         </li>
       </ul>
@@ -886,7 +886,7 @@
     </li>
     <li><a href="#justificación-formal">justificación formal</a>
       <ul>
-        <li><a href="#pseudocódigo-compacto-del-simualted-annealing">pseudocódigo compacto del simualted annealing</a></li>
+        <li><a href="#pseudocódigo-compacto-del-simulated-annealing">pseudocódigo compacto del simulated annealing</a></li>
         <li><a href="#resumen">resumen:</a></li>
         <li><a href="#por-qué-usar-distribución-de-boltzmann">¿por qué usar distribución de Boltzmann?</a>
           <ul>
@@ -897,7 +897,7 @@
         </li>
       </ul>
     </li>
-    <li><a href="#falta-describir-cómo-se-realizan-estos-son-estos-3-pasos">falta describir cómo se realizan estos son estos 3 pasos</a>
+    <li><a href="#cómo-se-realizan-estos-3-pasos">cómo se realizan estos 3 pasos</a>
       <ul>
         <li><a href="#1-elección-del-valor-incial">1. elección del valor incial</a></li>
         <li><a href="#2-secuencia-de-enfriamiento">2. secuencia de enfriamiento</a>
@@ -930,7 +930,7 @@
 
 <h2 id="optimización-vía-annealing" class="relative group">optimización vía annealing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#optimizaci%c3%b3n-v%c3%ada-annealing" aria-label="Ancla">#</a></span></h2><p>Veamos cómo resolver problemas de optimización de una función $f$, usando algoritmos de annealing clásico y cuántico. Ambas familias de algoritmos tienen un origen común en basado en la termodinámica.</p>
 <h3 id="annealing-clásico" class="relative group">annealing clásico <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#annealing-cl%c3%a1sico" aria-label="Ancla">#</a></span></h3><p>El algoritmo de annealing clásico está motivado por una correspondencia con la <strong>física estadística</strong>, específicamente en el proceso de <strong>recocido de sólidos</strong>. El recocido es un proceso en el que un material se calienta a alta temperatura y luego se enfría lentamente. Este enfriamiento gradual permite que los átomos del material se reorganicen en una estructura más estable y de menor energía, lo que mejora sus propiedades. Si bien hay se han desarrollado técnicas similares, <cite>Pincus<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></cite> , <cite>Khachaturyan et.al. <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></cite>,  <cite>Khachaturyan et. al.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></cite>. Pero fue en 1983, que este enfoque fue utilizado por <cite>Kirkpatrick, Gelatt Jr., Vecchi<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></cite> para una solución del problema del viajante de comercio y allí se propuso su nombre actual: <strong>simulated annealing</strong>.</p>
-<h3 id="annealing-cuántico" class="relative group">annealing cuántico <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#annealing-cu%c3%a1ntico" aria-label="Ancla">#</a></span></h3><p>El algoritmo de quantum annealing y el término &ldquo;recocido cuántico&rdquo; fue propuesto por primera vez en 1988 por <cite> B. Apolloni, N. Cesa Bianchi y D. De Falco<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>$^,$<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup></cite> como un algoritmo clásico de inspiración cuántica. Fue formulado en su forma actual por <cite>T. Kadowaki y H. Nishimori <sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup></cite> en 1998.</p>
+<h3 id="annealing-cuántico" class="relative group">annealing cuántico <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#annealing-cu%c3%a1ntico" aria-label="Ancla">#</a></span></h3><p>El algoritmo de quantum annealing y el término &ldquo;recocido cuántico&rdquo; fue propuesto por primera vez en 1988 por <cite> B. Apolloni, N. Cesa Bianchi y D. De Falco<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>$^,$<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup></cite> como un algoritmo clásico de inspiración cuántica. Fue formulado por <cite>T. Kadowaki y H. Nishimori <sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup></cite> en 1998.</p>
 <p>En esta presentación de <strong>Nishimori</strong> (uno de los autores del quantum annealing) en Google <a href="https://www.youtube.com/watch?v=OQ91L96YWCk" target="_blank" rel="noreferrer">link youtube</a> hace un recorrido por el algoritmo de annealing clásico y cuántico.</p>
 <p>Notar que la propuesta del quantum annealing en 1998 fue realizada antes que hubieran máquinas cuánticas en las que implementarlo. La propuesta del algoritmo del quantum annealing no requiere hardware cuántico, sino que puede ser considerado hoy como un algortimo de inspiración cuántica.</p>
 <p>Se ha demostrado teórica y experimentalmente que el quantum annealing puede superar al recocido térmico (recocido simulado) en ciertos casos, especialmente cuando la función objeto consiste en barreras muy altas pero delgadas que rodean mínimos locales poco profundos.</p>
@@ -954,10 +954,10 @@ acumulan tensiones internas, debida a <em>defectos</em> (cualquier perturbación
 <p>Algo similar ocurre con otro tipo de recetas, veamos el siguiente análogo gastronómico para <strong>ablandar la milanesa</strong> como indica <a href="https://www.youtube.com/watch?v=owh4KLIewYw" target="_blank" rel="noreferrer">esta señora</a> o <a href="https://www.cronica.com.ar/cocina/Trucos-para-que-la-milanesa-salga-como-Dios-manda-tierna-y-sabrosa-20230503-0026.html" target="_blank" rel="noreferrer">este artículo de Crónica</a>. En ambos casos la energía que se agrega al material tiende a disuadir las tensiones las tensiones internas generadas por las fibras.</p>
 <h2 id="motivación-del-algoritmo" class="relative group">motivación del algoritmo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#motivaci%c3%b3n-del-algoritmo" aria-label="Ancla">#</a></span></h2><p>Veamos una manera de conectar los procedimientos de annealing con el de minimizar una función. Para ello comencemos por describir brevemente el procedimiento matemático para una función $f$. Hemos de adelantar que la cantidad que se minimiza en el proceso de annealing es la energía interna, al igual nuestra función objetivo $f$, i.e. $f \longleftrightarrow$ <strong>energía interna</strong>.</p>
 <hr>
-<h3 id="qué-busca-matemáticamente-el-algoritmo" class="relative group">¿qué busca matemáticamente el algoritmo? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#qu%c3%a9-busca-matem%c3%a1ticamente-el-algoritmo" aria-label="Ancla">#</a></span></h3><p>Supongamos una superficie dada por una función $f:D\rightarrow\mathbb{R}$, queremos encontrar el $(x_*)$ tal que $f(x_*)\leq f(x)$, $\forall x\in D$.</p>
+<h3 id="objetivo-del-algoritmo" class="relative group">objetivo del algoritmo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#objetivo-del-algoritmo" aria-label="Ancla">#</a></span></h3><p>Supongamos una superficie dada por una función $f:D\rightarrow\mathbb{R}$, queremos encontrar el $(x_*)$ tal que $f(x_*)\leq f(x)$, $\forall x\in D$.</p>
 <p><strong>nota</strong> si $D\in\mathbb{R}^n$, con $n=2$ tendríamos una superficie.</p>
 <hr>
-<h3 id="como-representar-físicamente-el-algoritmo" class="relative group">¿como representar físicamente el algoritmo? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#como-representar-f%c3%adsicamente-el-algoritmo" aria-label="Ancla">#</a></span></h3><h4 id="veamos-que-f-no--debe-asociarse-al-material-físico" class="relative group">Veamos que $f$ NO  debe asociarse al material físico <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#veamos-que-f-no--debe-asociarse-al-material-f%c3%adsico" aria-label="Ancla">#</a></span></h4><p>Dotemos de propiedades físicas al problema matemático anterior: supongamos que $f$ represente una porción de espacio en el que existe gravedad, podemos probar con tirar una bolita desde algún lugar $x_0$ y esperar que la bolita encuentre &ldquo;por si sola&rdquo; $x_*$. Lo que ocurre es que este procedimiento depende fuertemente de $x_0$, el &ldquo;lugar&rdquo; en el que sea dejada aquella bolita, y de $f$, del perfil de la superficie. Para aumentar las chances de encontrar $x_*$ podríamos repetir el procedimiento anterior cambiando en cada iteración el punto inicial $x_0$.</p>
+<h3 id="representación-física-del-algoritmo" class="relative group">representación física del algoritmo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#representaci%c3%b3n-f%c3%adsica-del-algoritmo" aria-label="Ancla">#</a></span></h3><h4 id="veamos-que-f-no-debe-asociarse-a-la-estructura-o-forma-del-material" class="relative group">veamos que $f$ NO debe asociarse a la estructura o forma del material <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#veamos-que-f-no-debe-asociarse-a-la-estructura-o-forma-del-material" aria-label="Ancla">#</a></span></h4><p>Dotemos de propiedades físicas al problema matemático anterior: supongamos que $f$ represente una porción de espacio en el que existe gravedad, podemos probar con tirar una bolita desde algún lugar $x_0$ y esperar que la bolita encuentre &ldquo;por si sola&rdquo; $x_*$. Lo que ocurre es que este procedimiento depende fuertemente de $x_0$, el &ldquo;lugar&rdquo; en el que sea dejada aquella bolita, y de $f$, del perfil de la superficie. Para aumentar las chances de encontrar $x_*$ podríamos repetir el procedimiento anterior cambiando en cada iteración el punto inicial $x_0$.</p>
 <p>Conviene no hacer alusión a que $f$ representa una superficie espacial, es decir el paisaje donde tal bolita se mueve, pues para $n>2$ no tendríamos una correspondencia realizable en este mundo. Conviene pensar en $f$ como cierto potencial, de hecho, el proceso de annealing en materiales modifica dos cosas: la energía interna (potencial en este caso) y la estructura interna del maeterial.</p>
 <p>Tampoco la idea cruzada de tomar a $f$ como energía interna (o potencial) y que las bolitas estén sometidas mecánicamente a un potencial $f$, el camino de tales objetos estría determinado unívocamente por la forma de dicho potencial $f(x)$. De hecho, el simulated annealing no se explica tirando bolitas por una cuesta sin más, aunque fueren muchas, pues surge la siguiente pregunta: ¿cómo intentar evitar que aquellas bolitas queden atrapadas en mínimos locales?</p>
 <p>En tal caso, las bolitas podrían ser realizaciones del algoritmo que simule el proceso de annealing, pero serían abstracciones de aquel pues no hay nada físico que <strong>busque</strong> el mínimo en el proceso metalúrgico, no es cierto que todas o la mayoría de las impurezas se localicen espacialmente en $x_*$. Si bien las impurezas se pueden desplazar espacialmente por el material permitiendo que la energía disminuya, el número de impurezas no es igual al número bolitas, i.e. realizaciones del algoritmo.</p>
@@ -976,45 +976,46 @@ acumulan tensiones internas, debida a <em>defectos</em> (cualquier perturbación
 <p><strong>nota</strong> hemos optado por cambiar el término vecino al de sucesor, pues el primer termino refiere o pretende una cercanía entre $(x,x')$, esto no necesariamente ocurre así.</p>
 </blockquote>
 <p>Dado que se trata de un algoritmo probabilístico que comienza con un $x$ aleatorio y luego sortea un posible sucesor, $x'$, para evaluar si hay alguna mejora entre $x'$ y $x$, podemos preguntarnos por la probabilidad $P(x'\succ x)$.</p>
-<h3 id="propuetas-de-pseudocódigo-simulated-annealing" class="relative group">propuetas de pseudocódigo simulated annealing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#propuetas-de-pseudoc%c3%b3digo-simulated-annealing" aria-label="Ancla">#</a></span></h3><p>$\mathtt{objetivo}$ minimizar $f(x)$</p>
-<hr>
-<blockquote>
-<p>$x \leftarrow x_0$  #elección del valor inicial
-for $k=1,\cdots , K$:
-$T\leftarrow T_k$ #secuencia de &ldquo;enfriamiento&rdquo;
-$x' \leftarrow \mathtt{neighbour}(x)$ #sorteo un posible sucesor de $x$
-if $f(x')- f(x)< 0$:
-then $x \leftarrow x'$ #se acepta a $x'$, pues disminuye la función de costo
-else
-case $\pmb{[}\mathtt{rand}(0, 1)\leq P(f(x'), f(x), T)\pmb{]}$:</p>
-<blockquote>
-<p>then $x \leftarrow x'$ #se acepta a $x'$, a pesar de que sea peor que $x$</p>
+<h3 id="propuetas-de-pseudocódigo-simulated-annealing" class="relative group">propuetas de pseudocódigo simulated annealing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#propuetas-de-pseudoc%c3%b3digo-simulated-annealing" aria-label="Ancla">#</a></span></h3><blockquote>
+<p>$\mathtt{objetivo}$ minimizar $f(x)$</p>
 </blockquote>
-</blockquote>
-<blockquote>
-<p>case $\pmb{[}\mathtt{rand}(0, 1)> P(f(x'), f(x), T)\pmb{]}$:</p>
-<blockquote>
-<p>then $x \leftarrow x$ # no se acepta a $x'$</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>return $x$</p>
-</blockquote>
-<hr>
+<p>introduciomos ahora el parámetro temperatura $T$, de manera que $P(x'\succ x)$ queda denotada por $P(f(x'), f(x), T)$ como la probabilidad de aceptar $x'$ como sucesor de $x$, dada la función particular $f$ y la temperatura $T$.</p>
+<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300">$x \leftarrow x_0$ #elección del valor inicial <br>
+for $k=1,\cdots , K$: <br>
+$T\leftarrow T_k$ #secuencia de &ldquo;enfriamiento&rdquo; <br>
+$x' \leftarrow \mathtt{neighbour}(x)$ #sorteo un posible sucesor de $x$ <br>
+if $f(x')- f(x)< 0$: <br>
+then $x \leftarrow x'$ #se acepta a $x'$, pues disminuye la función de costo <br>
+else <br>
+case $\pmb{[}\mathtt{rand}(0, 1)\leq P(f(x'), f(x), T)\pmb{]}$: <br>
+then $x \leftarrow x'$ #se acepta a $x'$, aunque pueda sea peor que $x$ <br>
+case $\pmb{[}\mathtt{rand}(0, 1)> P(f(x'), f(x), T)\pmb{]}$: <br>
+then $x \leftarrow x$ # no se acepta a $x'$ <br>
+return $x$</span>
+</div>
+
 <p>dado que el caso en que $\mathtt{rand}(0, 1)> P(f(x'), f(x), T)$, no actualiza el valor de $x$, podemos omitir toda esa parte y simplificar el pseudocódigo así:</p>
-<hr>
-<blockquote>
-<p>$x \leftarrow x_0$  #elección del valor inicial
-for $k=1,\cdots , K$:
-$T\leftarrow T_k$ #secuencia de &ldquo;enfriamiento&rdquo;
-$x' \leftarrow \mathtt{neighbour}(x)$ #sorteo un posible sucesor de $x$
-if $f(x')- f(x)< 0$:
-then $x \leftarrow x'$ #se acepta a $x'$, pues disminuye la función de costo
-else $\mathtt{rand}(0, 1)\leq P(f(x), f(x'), T)$:
-then $x \leftarrow x'$ #se acepta a $x'$, a pesar de que sea peor que $x$
-return $x$</p>
-</blockquote>
-<hr>
+<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300">$x \leftarrow x_0$  #elección del valor inicial <br>
+for $k=1,\cdots , K$:<br>
+$T\leftarrow T_k$ #secuencia de &ldquo;enfriamiento&rdquo;<br>
+$x' \leftarrow \mathtt{neighbour}(x)$ #sorteo un posible sucesor de $x$<br>
+if $f(x')- f(x)< 0$:<br>
+then $x \leftarrow x'$ #se acepta a $x'$, pues disminuye la función de costo<br>
+else $\mathtt{rand}(0, 1)\leq P(f(x), f(x'), T)$:<br>
+then $x \leftarrow x'$ #se acepta a $x'$, aunque sea peor que $x$<br>
+return $x$</span>
+</div>
+
 <p><strong>nota</strong> si lo que se minimiza es $f$ que es la energía interna, entonces aquellas bolitas abstractas recorren el perfil energético del material, es decir, las locaciones de tales bolitas serán las del valor inicial $x_0$ y las de los sucesores sorteados durante su ejecución.</p>
 <h2 id="justificación-formal" class="relative group">justificación formal <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#justificaci%c3%b3n-formal" aria-label="Ancla">#</a></span></h2><p>Dado que esta probabilidad depende del orden entre $f(x')\gtreqless
 f(x)$, denotando de manera compacta a $\Delta_{x'x}f:=f(x')-f(x)$ podemos expresar</p>
@@ -1022,30 +1023,25 @@ $$
 P(x'\succ x)=
 P(x'\succ x|\Delta_{x'x}f<0 , T)P(\Delta_{x'x}f<0, T)+P(x'\succ x|\Delta_{x'x}f\geq0, T)P(\Delta_{x'x}f\geq 0, T).
 $$<p>De manera que el algoritmo presenta una bifurcación según si $f(x')-f(x)<0$ o si $f(x')-f(x)\geq 0$, en cuyo caso la probabilidad de aceptar a ese $x'$ como sucesor del antiguo $x$ vendrá dada por la probabilidad condicional $P(x'\succ x|\Delta_{x'x}f\gtreqless 0\,, T)$, osea  la probabilidad de aceptar $x'$ frente a $x$ dado $\Delta_{x'x}f\gtreqless 0\,; T$, notemos que para el caso en que $\Delta_{x'x}f<0$ $x'$ se acepta siempre como sucesor de $x$, osea $P(x'\succ x)=1$, $\forall T$.</p>
-<p>Podemos compactar aún más el pseudocódigo sin denotar explícitamente la bifurcación de aceptar siempre a $x'$ como sucesor de $x$ cuando $\Delta_{x'x}f<0$ y de aceptar con cierta probabilidad probabilidad cuando $\Delta_{x'x}\geq 0$, directamente como:</p>
-<h3 id="pseudocódigo-compacto-del-simualted-annealing" class="relative group">pseudocódigo compacto del simualted annealing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#pseudoc%c3%b3digo-compacto-del-simualted-annealing" aria-label="Ancla">#</a></span></h3><p>En la propuesta anterior de pseudocódigo, faltó hacer alusión a que en cada temperatura $T_k$ deben realizarse varias rondas de búsqueda de posibles sucesores y decidir si se aceptan como sucesores o no. El lapso de tiempo que hay que esperar en cada temperatura para realizar está búsqueda viene dado por $L(T_k)$</p>
-<hr>
+<p>Podemos compactar aún más el pseudocódigo sin denotar explícitamente la bifurcación de aceptar siempre a $x'$ como sucesor de $x$ cuando $\Delta_{x'x}f<0$ y de aceptar con cierta probabilidad cuando $\Delta_{x'x}\geq 0$.</p>
+<h3 id="pseudocódigo-compacto-del-simulated-annealing" class="relative group">pseudocódigo compacto del simulated annealing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#pseudoc%c3%b3digo-compacto-del-simulated-annealing" aria-label="Ancla">#</a></span></h3><p>En la propuesta anterior de pseudocódigo, faltó hacer alusión a que en cada temperatura $T_k$ deben realizarse varias rondas de búsqueda de posibles sucesores y decidir si se aceptan o no. El número de iteraciones en cada temperatura viene dado por $L(T_k)$.</p>
+<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300">$x \leftarrow x_0$  #elección del valor inicial <br>
+for $k=1,\cdots , K$: <br>
+$\quad T \leftarrow T_k$ #secuencia de &ldquo;enfriamiento&rdquo; <br>
+$\quad$ for $l=1,\cdots , L(T_k)$: <br>
+$\quad\quad x' \leftarrow \mathtt{neighbour}(x)$ #sorteo de un posible sucesor <br>
+$\quad\quad$ if $\mathtt{rand}(0, 1)\leq P(f(x'), f(x), T)$: <br>
+$\quad\quad\quad x \leftarrow x'$ #se acepta $x'$ <br>
+return $x$</span>
+</div>
+
 <blockquote>
-<p>$x\leftarrow x_0$  #elección del valor inicial
-for $k=1,\cdots , K$:
-$T\leftarrow T_k$ #secuencia de &ldquo;enfriamiento&rdquo;
-$x' \leftarrow \mathtt{neighbour}(x)$ #sorteo un posible sucesor de $x$
-else $\mathtt{rand}(0, 1)\leq P(f(x'), f(x), T)$:
-then $x \leftarrow x'$ #se acepta a $x'$, a pesar de que pueda ser peor que $x$
-return $x$</p>
-</blockquote>
-<hr>
-<p>en este caso  $P(f(x'), f(x), T)$ denota ahora la probabilidad de aceptar $x'$ como sucesor de $x$, dada la función particular $f$ y la temperatura $T$.</p>
-<blockquote>
-<p><strong>notar</strong> que el caso en que $\Delta_{x'x}f<0$ si se acepta siempre $x'$ la línea será irrelevante</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>else $\mathtt{rand}(0, 1)\leq P(f(x'), f(x), T)$</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>pues $P(f(x'), f(x), T)=1$</p>
+<p><strong>notar</strong> que en el caso en que $\Delta_{x'x}f<0$, como $P(f(x'), f(x), T)=1$, la condición $\mathtt{rand}(0, 1)\leq 1$ se cumple siempre y $x'$ es aceptado automáticamente.</p>
 </blockquote>
 <h3 id="resumen" class="relative group">resumen: <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#resumen" aria-label="Ancla">#</a></span></h3><ol>
 <li>$\Delta_{x'x}f< 0$: $P(x'\succ x)=1$ es aceptado como  sucesor</li>
@@ -1123,14 +1119,13 @@ Hemos conectado las ideas de exponencialidad y amnesia.</p>
 <p>Podemos usar la función complementaria a la distribución acumulada $F^*(z)=\operatorname {P} [Z\leq z]$, definida como $G^*(z):=\operatorname {P} [Z>z]$ luego $G^*(z)=1-F^*(z)$ y $z$ extendida a todo $\mathbb{R}$.</p>
 \[F^*(z)=\left\{{\begin{matrix}0 &z<0\\1-e^{-\lambda z}&z\geq 0\end{matrix}}\right.\]\[G^*(z)=\left\{{\begin{matrix}1&z<0\\e^{-\lambda z}&z\geq 0\end{matrix}}\right. \]<p>De esta forma $P[Z>z]$ corresponde a las probabilidades de aceptación de $x'\succ x$ con $z=\Delta_{x'x}f$, $\lambda = 1/T$.</p>
 <p>De nuevo, esta función densidad extendida $f^*_Z(z)$ podría derivarse desde el punto de vista de la teoría de la información, como aquella que maximiza nuestra ignorancia, i.e. la entropía diferencial, ahora extendida para $z\in \mathbb{R}$ y sujeta a la restricción de tener su valor esperado acotado superiormente $E[Z]$.</p>
-<h2 id="falta-describir-cómo-se-realizan-estos-son-estos-3-pasos" class="relative group">falta describir cómo se realizan estos son estos 3 pasos <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#falta-describir-c%c3%b3mo-se-realizan-estos-son-estos-3-pasos" aria-label="Ancla">#</a></span></h2><ol>
+<h2 id="cómo-se-realizan-estos-3-pasos" class="relative group">cómo se realizan estos 3 pasos <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#c%c3%b3mo-se-realizan-estos-3-pasos" aria-label="Ancla">#</a></span></h2><ol>
 <li>$x = x_0$  #elección del valor inicial</li>
 <li>$T\leftarrow T_k$ #secuencia de &ldquo;enfriamiento&rdquo;, temperaturas inicial $T_1$ y final $T_{K}$ y los saltos $T_k\mapsto T_{k+1}$</li>
 <li>$x' \leftarrow \mathtt{neighbour}(x)$ #sorteo un posible sucesor de $x$</li>
 </ol>
 <hr>
-<h3 id="1-elección-del-valor-incial" class="relative group">1. elección del valor incial <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-elecci%c3%b3n-del-valor-incial" aria-label="Ancla">#</a></span></h3><p>en la primera ronda usar sorteo para $x_0$
-en las siguientes rondas usar el $x$ obtenido de la ronda anterior</p>
+<h3 id="1-elección-del-valor-incial" class="relative group">1. elección del valor incial <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-elecci%c3%b3n-del-valor-incial" aria-label="Ancla">#</a></span></h3><p>en la primera ronda usar sorteo para $x_0$ y en las siguientes rondas usar el $x$ obtenido de la ronda anterior</p>
 <h3 id="2-secuencia-de-enfriamiento" class="relative group">2. secuencia de enfriamiento <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-secuencia-de-enfriamiento" aria-label="Ancla">#</a></span></h3><h4 id="temperatura-inicial-t_0" class="relative group">Temperatura inicial $T_0$ <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#temperatura-inicial-t_0" aria-label="Ancla">#</a></span></h4><p>Dado que la distribución para $Z\sim \mathtt{exp}(1/T)$ esto es el exponente de la probabilidad de aceptación es adimensional $e^{-\Delta_{x'x}f/T}$ entonces las unidades de $T$ son las unidades de $z$ osea de $f(x)$, entonces conviene sortar un $x_0$ y considerar $T_0=\gamma f(x_0)$, el factor $\gamma$ suele tomarse como $0.4$.</p>
 <h4 id="temperatura-final-t_k" class="relative group">Temperatura final $T_K$ <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#temperatura-final-t_k" aria-label="Ancla">#</a></span></h4><p>idealmente conviene que $T_K=0$</p>
 <ul>

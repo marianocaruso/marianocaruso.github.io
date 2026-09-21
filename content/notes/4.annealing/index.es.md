@@ -29,7 +29,7 @@ El algoritmo de annealing clásico está motivado por una correspondencia con la
 
 ### annealing cuántico
 
-El algoritmo de quantum annealing y el término "recocido cuántico" fue propuesto por primera vez en 1988 por <cite> B. Apolloni, N. Cesa Bianchi y D. De Falco[^5]$^,$[^6]</cite> como un algoritmo clásico de inspiración cuántica. Fue formulado en su forma actual por <cite>T. Kadowaki y H. Nishimori [^7]</cite> en 1998.
+El algoritmo de quantum annealing y el término "recocido cuántico" fue propuesto por primera vez en 1988 por <cite> B. Apolloni, N. Cesa Bianchi y D. De Falco[^5]$^,$[^6]</cite> como un algoritmo clásico de inspiración cuántica. Fue formulado por <cite>T. Kadowaki y H. Nishimori [^7]</cite> en 1998.
 
 [^5]: Apolloni, Bruno; Cesa-Bianchi, Nicolo; De Falco, Diego. "A numerical implementation of quantum annealing". Stochastic Processes, Physics and Geometry, Proceedings of the Ascona-Locarno Conference.
 [^6]: Apolloni, Bruno; Carvalho, Maria C.; De Falco, Diego (1989). "Quantum stochastic optimization". Stoc. Proc. Appl. 33 (2): 233–244.
@@ -84,16 +84,16 @@ Veamos una manera de conectar los procedimientos de annealing con el de minimiza
 
 ---
 
-### ¿qué busca matemáticamente el algoritmo?
+### objetivo del algoritmo
 Supongamos una superficie dada por una función $f:D\rightarrow\mathbb{R}$, queremos encontrar el $(x_*)$ tal que $f(x_*)\leq f(x)$, $\forall x\in D$.
 
 **nota** si $D\in\mathbb{R}^n$, con $n=2$ tendríamos una superficie. 
 
 ---
 
-### ¿como representar físicamente el algoritmo?
+### representación física del algoritmo
 
-#### Veamos que $f$ NO  debe asociarse al material físico
+#### veamos que $f$ NO debe asociarse a la estructura o forma del material
 
 Dotemos de propiedades físicas al problema matemático anterior: supongamos que $f$ represente una porción de espacio en el que existe gravedad, podemos probar con tirar una bolita desde algún lugar $x_0$ y esperar que la bolita encuentre "por si sola" $x_*$. Lo que ocurre es que este procedimiento depende fuertemente de $x_0$, el "lugar" en el que sea dejada aquella bolita, y de $f$, del perfil de la superficie. Para aumentar las chances de encontrar $x_*$ podríamos repetir el procedimiento anterior cambiando en cada iteración el punto inicial $x_0$. 
 
@@ -128,39 +128,40 @@ Dado que se trata de un algoritmo probabilístico que comienza con un $x$ aleato
 
 
 ### propuetas de pseudocódigo simulated annealing
-$\mathtt{objetivo}$ minimizar $f(x)$
 
----
-> $x \leftarrow x_0$  #elección del valor inicial 
-for $k=1,\cdots , K$:
-$T\leftarrow T_k$ #secuencia de "enfriamiento"
-$x' \leftarrow \mathtt{neighbour}(x)$ #sorteo un posible sucesor de $x$ 
-if $f(x')- f(x)< 0$: 
-then $x \leftarrow x'$ #se acepta a $x'$, pues disminuye la función de costo
-else 
-case $\pmb{[}\mathtt{rand}(0, 1)\leq P(f(x'), f(x), T)\pmb{]}$: 
->> then $x \leftarrow x'$ #se acepta a $x'$, a pesar de que sea peor que $x$
+> $\mathtt{objetivo}$ minimizar $f(x)$
 
->case $\pmb{[}\mathtt{rand}(0, 1)> P(f(x'), f(x), T)\pmb{]}$:
->> then $x \leftarrow x$ # no se acepta a $x'$ 
+introduciomos ahora el parámetro temperatura $T$, de manera que $P(x'\succ x)$ queda denotada por $P(f(x'), f(x), T)$ como la probabilidad de aceptar $x'$ como sucesor de $x$, dada la función particular $f$ y la temperatura $T$. 
 
->return $x$
 
----
+{{< alert icon="quote" >}}
+$x \leftarrow x_0$ #elección del valor inicial \
+for $k=1,\cdots , K$: \
+$T\leftarrow T_k$ #secuencia de "enfriamiento" \
+$x' \leftarrow \mathtt{neighbour}(x)$ #sorteo un posible sucesor de $x$ \
+if $f(x')- f(x)< 0$: \
+then $x \leftarrow x'$ #se acepta a $x'$, pues disminuye la función de costo \
+else \
+case $\pmb{[}\mathtt{rand}(0, 1)\leq P(f(x'), f(x), T)\pmb{]}$: \
+then $x \leftarrow x'$ #se acepta a $x'$, aunque pueda sea peor que $x$ \
+case $\pmb{[}\mathtt{rand}(0, 1)> P(f(x'), f(x), T)\pmb{]}$: \
+then $x \leftarrow x$ # no se acepta a $x'$ \
+return $x$
+{{< /alert >}}
 
 dado que el caso en que $\mathtt{rand}(0, 1)> P(f(x'), f(x), T)$, no actualiza el valor de $x$, podemos omitir toda esa parte y simplificar el pseudocódigo así: 
 
----
-> $x \leftarrow x_0$  #elección del valor inicial 
-for $k=1,\cdots , K$:
-$T\leftarrow T_k$ #secuencia de "enfriamiento"
-$x' \leftarrow \mathtt{neighbour}(x)$ #sorteo un posible sucesor de $x$ 
-if $f(x')- f(x)< 0$: 
-then $x \leftarrow x'$ #se acepta a $x'$, pues disminuye la función de costo
-else $\mathtt{rand}(0, 1)\leq P(f(x), f(x'), T)$:
-then $x \leftarrow x'$ #se acepta a $x'$, a pesar de que sea peor que $x$
+{{< alert icon="info" >}}
+$x \leftarrow x_0$  #elección del valor inicial \
+for $k=1,\cdots , K$:\
+$T\leftarrow T_k$ #secuencia de "enfriamiento"\
+$x' \leftarrow \mathtt{neighbour}(x)$ #sorteo un posible sucesor de $x$\
+if $f(x')- f(x)< 0$:\
+then $x \leftarrow x'$ #se acepta a $x'$, pues disminuye la función de costo\
+else $\mathtt{rand}(0, 1)\leq P(f(x), f(x'), T)$:\
+then $x \leftarrow x'$ #se acepta a $x'$, aunque sea peor que $x$\
 return $x$
----
+{{< /alert >}}
 
 **nota** si lo que se minimiza es $f$ que es la energía interna, entonces aquellas bolitas abstractas recorren el perfil energético del material, es decir, las locaciones de tales bolitas serán las del valor inicial $x_0$ y las de los sucesores sorteados durante su ejecución.
 
@@ -177,28 +178,26 @@ $$
 
 De manera que el algoritmo presenta una bifurcación según si $f(x')-f(x)<0$ o si $f(x')-f(x)\geq 0$, en cuyo caso la probabilidad de aceptar a ese $x'$ como sucesor del antiguo $x$ vendrá dada por la probabilidad condicional $P(x'\succ x|\Delta_{x'x}f\gtreqless 0\,, T)$, osea  la probabilidad de aceptar $x'$ frente a $x$ dado $\Delta_{x'x}f\gtreqless 0\,; T$, notemos que para el caso en que $\Delta_{x'x}f<0$ $x'$ se acepta siempre como sucesor de $x$, osea $P(x'\succ x)=1$, $\forall T$.
 
-Podemos compactar aún más el pseudocódigo sin denotar explícitamente la bifurcación de aceptar siempre a $x'$ como sucesor de $x$ cuando $\Delta_{x'x}f<0$ y de aceptar con cierta probabilidad probabilidad cuando $\Delta_{x'x}\geq 0$, directamente como:
 
-### pseudocódigo compacto del simualted annealing
+Podemos compactar aún más el pseudocódigo sin denotar explícitamente la bifurcación de aceptar siempre a $x'$ como sucesor de $x$ cuando $\Delta_{x'x}f<0$ y de aceptar con cierta probabilidad cuando $\Delta_{x'x}\geq 0$.
 
-En la propuesta anterior de pseudocódigo, faltó hacer alusión a que en cada temperatura $T_k$ deben realizarse varias rondas de búsqueda de posibles sucesores y decidir si se aceptan como sucesores o no. El lapso de tiempo que hay que esperar en cada temperatura para realizar está búsqueda viene dado por $L(T_k)$
+### pseudocódigo compacto del simulated annealing
 
----
-> $x\leftarrow x_0$  #elección del valor inicial 
-for $k=1,\cdots , K$:
-$T\leftarrow T_k$ #secuencia de "enfriamiento"
-$x' \leftarrow \mathtt{neighbour}(x)$ #sorteo un posible sucesor de $x$ 
-else $\mathtt{rand}(0, 1)\leq P(f(x'), f(x), T)$:
-then $x \leftarrow x'$ #se acepta a $x'$, a pesar de que pueda ser peor que $x$
+En la propuesta anterior de pseudocódigo, faltó hacer alusión a que en cada temperatura $T_k$ deben realizarse varias rondas de búsqueda de posibles sucesores y decidir si se aceptan o no. El número de iteraciones en cada temperatura viene dado por $L(T_k)$.
+
+{{< alert icon="lightbulb" >}}
+$x \leftarrow x_0$  #elección del valor inicial \
+for $k=1,\cdots , K$: \
+$\quad T \leftarrow T_k$ #secuencia de "enfriamiento" \
+$\quad$ for $l=1,\cdots , L(T_k)$: \
+$\quad\quad x' \leftarrow \mathtt{neighbour}(x)$ #sorteo de un posible sucesor \
+$\quad\quad$ if $\mathtt{rand}(0, 1)\leq P(f(x'), f(x), T)$: \
+$\quad\quad\quad x \leftarrow x'$ #se acepta $x'$ \
 return $x$
----
-en este caso  $P(f(x'), f(x), T)$ denota ahora la probabilidad de aceptar $x'$ como sucesor de $x$, dada la función particular $f$ y la temperatura $T$. 
+{{< /alert >}}
 
-> **notar** que el caso en que $\Delta_{x'x}f<0$ si se acepta siempre $x'$ la línea será irrelevante 
+> **notar** que en el caso en que $\Delta_{x'x}f<0$, como $P(f(x'), f(x), T)=1$, la condición $\mathtt{rand}(0, 1)\leq 1$ se cumple siempre y $x'$ es aceptado automáticamente.
 
->> else $\mathtt{rand}(0, 1)\leq P(f(x'), f(x), T)$
-
-> pues $P(f(x'), f(x), T)=1$
 
 ### resumen: 
 1. $\Delta_{x'x}f< 0$: $P(x'\succ x)=1$ es aceptado como  sucesor
@@ -321,7 +320,7 @@ De esta forma $P[Z>z]$ corresponde a las probabilidades de aceptación de $x'\su
 De nuevo, esta función densidad extendida $f^*_Z(z)$ podría derivarse desde el punto de vista de la teoría de la información, como aquella que maximiza nuestra ignorancia, i.e. la entropía diferencial, ahora extendida para $z\in \mathbb{R}$ y sujeta a la restricción de tener su valor esperado acotado superiormente $E[Z]$.
 
 
-## falta describir cómo se realizan estos son estos 3 pasos
+## cómo se realizan estos 3 pasos
 
 1. $x = x_0$  #elección del valor inicial 
 2. $T\leftarrow T_k$ #secuencia de "enfriamiento", temperaturas inicial $T_1$ y final $T_{K}$ y los saltos $T_k\mapsto T_{k+1}$
@@ -332,8 +331,7 @@ De nuevo, esta función densidad extendida $f^*_Z(z)$ podría derivarse desde el
 ---
 ### 1. elección del valor incial
 
-en la primera ronda usar sorteo para $x_0$
-en las siguientes rondas usar el $x$ obtenido de la ronda anterior
+en la primera ronda usar sorteo para $x_0$ y en las siguientes rondas usar el $x$ obtenido de la ronda anterior
 
 
 ### 2. secuencia de enfriamiento
