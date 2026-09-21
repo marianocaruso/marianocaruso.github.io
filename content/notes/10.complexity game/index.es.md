@@ -27,12 +27,14 @@ Una vez comprobadas las ganas morir que entran por no completar el puzzle, se pu
 El juego consiste en disponer piezas sin bordes “tradicionales” de encastre, lo que hace que la colocación sea más libre. El desafío radica en que, conforme crece el tamaño de la rejilla (2x2, 3x3, etc.), el tiempo promedio para resolver el puzzle aumenta rápidamente, ilustrando así el fenómeno de la explosión combinatoria.
 
 ## jugar
-<iframe src="/juegos/puzzle_x-o/index.html"
-        style="width: 100%; height: 800px; border: none;"
-        allowfullscreen>
-</iframe>
 
 
+<div style="width: 100%; max-width: 100%; overflow: hidden; aspect-ratio: 1 / 1.1;">
+  <iframe src="/juegos/puzzle_x-o/index.html"
+          style="width: 150%; height: 120%; border: none; transform: scale(0.67); transform-origin: 0 0;"
+          allowfullscreen>
+  </iframe>
+</div>
 
 
 [{{< spotify type="album" id="5iT3F2EhjVQVrO4PKhsP8c?" width="100%" height="160" >}}]:#
