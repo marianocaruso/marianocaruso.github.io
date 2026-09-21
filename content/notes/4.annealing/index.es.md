@@ -179,7 +179,7 @@ $$
 De manera que el algoritmo presenta una bifurcación según si $f(x')-f(x)<0$ o si $f(x')-f(x)\geq 0$, en cuyo caso la probabilidad de aceptar a ese $x'$ como sucesor del antiguo $x$ vendrá dada por la probabilidad condicional $P(x'\succ x|\Delta_{x'x}f\gtreqless 0\,, T)$, osea  la probabilidad de aceptar $x'$ frente a $x$ dado $\Delta_{x'x}f\gtreqless 0\,; T$, notemos que para el caso en que $\Delta_{x'x}f<0$ $x'$ se acepta siempre como sucesor de $x$, osea $P(x'\succ x)=1$, $\forall T$.
 
 
-Podemos compactar aún más el pseudocódigo sin denotar explícitamente la bifurcación de aceptar siempre a $x'$ como sucesor de $x$ cuando $\Delta_{x'x}f<0$ y de aceptar con cierta probabilidad cuando $\Delta_{x'x}\geq 0$. 
+Podemos compactar aún más el pseudocódigo sin denotar explícitamente la bifurcación de aceptar siempre a $x'$ como sucesor de $x$ cuando $\Delta_{x'x}f<0$ y de aceptar con cierta probabilidad cuando $\Delta_{x'x}\geq 0$.
 
 ### pseudocódigo compacto del simulated annealing
 
