@@ -278,17 +278,17 @@ $\textbf{def.}$ Definimos a $Z$ como una variable aleatoria **amnésica** si y s
 
 Esta propiedad se interpreta como que la información de los eventos que cumplen con $Z>s$, $Z$ supera a $s$, condiciona de tal forma a $Z>t+s$, que es idéntico a superar $Z>t$, como si no importara la información que aporta $Z>s$.
 
-Dicho de otra forma aunque $s$ y $t$ no representen  tiempos, podemos interpretarla la propiedad indica que, dado que la variable $Z$ ya ha alcanzado un cierto nivel como $Z > s$, la probabilidad de que supere un valor adicional $Z > s + t$ es la misma que la probabilidad de superar ese valor adicional desde el "comienzo" $P(Z>t)$. Esto sugiere que los eventos $Z>s$ no afectan la probabilidad "futura", por lo que no hay efecto de *historia acumulada*. En otras palabras, el valor futuro de la variable no depende de cómo haya evolucionado hasta ahora, sino que es siempre como "empezar de nuevo".
+Dicho de otra forma aunque $s$ y $t$ no representen  tiempos, la propiedad indica que, dado que la variable $Z$ ya ha alcanzado un cierto nivel como $Z > s$, la probabilidad de que supere un valor adicional $Z > s + t$ es la misma que la probabilidad de superar ese valor adicional desde el "comienzo" $P(Z>t)$. Esto sugiere que los eventos $Z>s$ no afectan la probabilidad "futura", por lo que no hay efecto de *historia acumulada*. En otras palabras, el valor futuro de la variable no depende de cómo haya evolucionado hasta ahora, sino que es siempre como "empezar de nuevo".
 
 Dada la función complementaria a la distribución acumulada, denotada por $G(z)=P[Z>z]$, podemos escribir 
 
-\begin{equation}
+\begin{equation*}
 \begin{aligned}
 P[Z>t+s|Z>s]&=\frac{P[Z>t+s \bigcap  Z>s]}{P[Z>s]}\\
 &=\frac{P[Z>t+s]}{P[Z>s]}\\
 P[Z>t+s|Z>s]&=\frac{G(t+s)}{G(s)}
 \end{aligned}
-\end{equation}
+\end{equation*}
 pues si se cumple $Z>t+s$ corresponde a eventos contenidos en un conjunto incluido en el que corresponde a $Z>s$, de manera que si $Z$ es amnésica si y solo si $G(t+s)=G(t)G(s)$, $\forall s,t$. Veamos que si $s=0$ : $G(t)=G(t)G(0)$, luego $G(t)[1-G(0)]=0$ entonces o bien  $G(t)$ es idénticamente nula o bien $G(0)=1$. La primera opción queda descartada por trivial, por pretender ser $G(t)=P[Z>t]$. Además de la condición para $G$, se cumple que $G\geq 0$, pues $G(t/2+t/2)=G(t/2)G(t/2)$ luego $G(t)=G^2(t/2)\geq 0$.
 
 Entonces buscamos $G$, tal que $G(t+s)=G(t)G(s)$, $\forall s,t$ con $G(0)=1$. Si $G$ es diferenciable y usando la condición para $G$ entonces $\frac{dG(z)}{dz}|_{z=t+s}=G(t)\frac{dG(z)}{dz}|_{z=s}$, luego evaluando en $s=0$ se tiene $G'(t)=G'(0)G(t)$, luego $G(t)=e^{G'(0)t}$, como $\lim_{t\to+\infty}P[Z\leq t]=1$ luego $\lim_{t\to+\infty}P[Z>1]=0$, entonces debe ocurrir que  $G'(0)<0$, con lo cual podemos escribir $G(z)=e^{-\lambda z}$, con cierto $\lambda>0$.
@@ -301,10 +301,7 @@ Entonces buscamos $G$, tal que $G(t+s)=G(t)G(s)$, $\forall s,t$ con $G(0)=1$. Si
 
 #### Unificación
 
-Suponiendo que $Z$ tiene valor esperado acotado superiorimente, y utilizando el principio de máxima ignorancia hemos conectado las ideas de exponencialidad y 
-Hemos conectado las ideas de exponencialidad y amnesia. 
-
-Podemos unificar 
+Suponiendo que $Z$ tiene valor esperado acotado superiorimente, y utilizando el principio de máxima ignorancia podemos hemos conectado las ideas de exponencialidad y amnesia. 
 
 Otra forma de resolver de manera unificada la distribución que hemos usado en el simulated annealing y que permitía la bifurcación según  $\Delta_{x'x}f\gtreqless 0$, podría consistir en buscar la distribución que maximice nuestra ignorancia, pero permitiendo que $Z$ será una variable aleatoria continua ahora extendida sobre todo $\mathbb{R}$. 
 
@@ -389,7 +386,7 @@ Esta parte del algoritmo es la que pueda depender de la función objeto $f$, en 
 
 - si $x\in \{0,1\}^n$, entonces $x'$ podría obtenerse haciendo un un bit-flip de un bit al azar de $x$, es decir sortear un $1$ para alguna de las posiciones de $1$ a $n$, definir el vector $k=(0,\cdots,1,\cdots,0)$ y tomar $x'=x\oplus k$, de manera similar se puede hacer si $x\in\{-1,1\}^n$
 
-> **nota** si pretendemos resolver un problema en variable binaria $x\in\{0,1\}^n$ como excusa para resolver un problema en variable real $y\in\mathbb{R}^n$, podeos usar la codificación tal que cada $y_i$ se represente como una combinación de potencias de de $2$ multiplicados por una variable binaria $\{0,1\}$, hay que tener en cuenta aquí que hacer bit-flip en un bit arbitrario no es igual que tener en cuenta la jerarquía de tales bits, i.e. hay bits más representativos que otros. Podríamos pensar en hacer transiciones más (menos) violentas al principio (final), cuando la temperatura es alta (baja). Tener en cuenta que si se usa una codificación tipo complemento a1 o a2 el primer bit representa el signo con lo cual se puede pasar de $y$ a $-y$ con solo un bitflip. 
+> **nota** si pretendemos resolver un problema en variable binaria $x\in\{0,1\}^n$ con el fin de resolver un problema en variable real $y\in\mathbb{R}^n$, podemos usar la codificación tal que cada $y_i$ se represente como una combinación de potencias de de $2$ multiplicados por una variable binaria $\{0,1\}$, hay que tener en cuenta aquí que hacer bit-flip en un bit arbitrario no es igual que tener en cuenta la jerarquía de tales bits, i.e. hay bits más representativos que otros. Podríamos pensar en hacer transiciones más (menos) violentas al principio (final), cuando la temperatura es alta (baja). Tener en cuenta que si se usa una codificación tipo complemento a1 o a2 el primer bit representa el signo con lo cual se puede pasar de $y$ a $-y$ con solo un bitflip. 
 
 ---
 
@@ -440,7 +437,7 @@ En física cuántica hay un resultado importante debido a Max Born y Vladimir Fo
 
 Esto es el estado del sistema puede ser en el un estado propio instantáneo si una perturbación dada actúa sobre él con la suficiente lentitud y si existe una brecha entre el valor propio y el resto del espectro del hamiltoniano.
 
-Basado en el teorema adiabático, aquí está la relación entre descenso lento de la temperatura asociado con la evolución lenta del tiempo en el proceso adiabático...
+Basado en el teorema adiabático, aquí está la relación entre descenso lento de la temperatura asociado con la evolución lenta del tiempo en el proceso adiabático... (continuará)
 
 
 
