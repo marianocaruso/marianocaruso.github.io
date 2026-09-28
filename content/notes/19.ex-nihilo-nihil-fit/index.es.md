@@ -45,8 +45,9 @@ Bajo estas condiciones de ignorancia absoluta, Cover propuso una estrategia que 
 
 ### El algoritmo es simple:
 Dados $a,b\in\mathbb{R}$ con $ a < b $, selecciono aleatoriamete un $x\in \{a,b\}$, tomo $K$ aleatorio
-1. si $x<K$ entonces cambiás.
-2. si $x>K$ entonces no cambiás.
+
+1. si $ x<K $ entonces cambiás.
+2. si $ x>K $ entonces no cambiás.
 
 > en el primer caso $x < K$ se asume que lo que se te dio como opción es el más chico, por eso cambiás.
 
