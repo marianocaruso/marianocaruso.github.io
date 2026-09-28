@@ -146,7 +146,7 @@
     "keywords": ["probabilidad","teoría de la información","paradojas"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1587"
+    "wordCount": "658"
   }
   </script>
     
@@ -894,10 +894,11 @@ $$\tfrac{1}{2}(px) + \tfrac{1}{2}(x/p) = \frac{p^2 + 1}{2p} x$$<p>Notar que para
 <h2 id="aleatoriedad-para-romper-la-simetría" class="relative group">Aleatoriedad para romper la simetría <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#aleatoriedad-para-romper-la-simetr%c3%ada" aria-label="Ancla">#</a></span></h2><p>A lo largo de las décadas, este problema fue atendido por matemáticos, economistas y filósofos. Desde su primera iteración analizada por Maurice Kraitchik en 1943 (usando corbatas y billeteras), hasta interminables debates sobre la probabilidad bayesiana y el peligro de asignar probabilidades ingenuas a eventos desconocidos, la mayoría de los esfuerzos se centraron en explicar por qué el cálculo anterior estaba mal. Pero muy pocos se animaron a hacer la pregunta ofensiva: ¿podemos usar el valor de nuestro sobre para ganar de verdad?</p>
 <p>Si el valor observado $x$ parece no darnos información para decidir, ¿estamos condenados al 50/50? En 1987, el teórico de la información Thomas Cover demostró que no. Su formulación original, publicada en el problema Pick the Largest Number, no hablaba de sobres ni de proporciones fijas, sino de un escenario mucho más hostil que permite entender cómo hacer la transición de decidir bajo máxima incertidumbre (estar completamente a ciegas) a decidir bajo incertidumbre (donde tenés una ventaja probabilística real).</p>
 <p>Cover plantea un juego de máxima incertidumbre: un adversario escribe dos números reales distintos cualquiera, digamos $a$ y $b$ (asumamos $a < b$ sin pérdida de generalidad). No hay reglas de proporción y no existe una distribución de probabilidad conocida para la elección de estos números. Elegís uno al azar, observás su valor $x$ y tenés que adivinar si es el mayor.</p>
-<p>Bajo estas condiciones de ignorancia absoluta, Cover propuso una estrategia de una belleza cínica. Inyecta una variable aleatoria de control: generás un número aleatorio $K$ a partir de una distribución continua, sobre el conjunto de números posibles de los que fueron tomados $a$ y $b$, como una exponencial o normal. Este número $K$ subdivide el espacio del problema de decisión de 2 a 3 partes, y en particular veremos que dentro de uno de tales subespacios la probabilidad de ganar es 1.</p>
-<h3 id="el-algoritmo-es-simple" class="relative group">El algoritmo es simple: <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#el-algoritmo-es-simple" aria-label="Ancla">#</a></span></h3><ol>
-<li>Si lo que observás ($x$) es menor que $K$, entonces <strong>cambiás</strong>.</li>
-<li>Si lo que observás ($x$) es mayor que $K$, entonces <strong>no cambiás</strong>.</li>
+<p>Bajo estas condiciones de ignorancia absoluta, Cover propuso una estrategia que introduce aleatoriedad para ayudar a responder con mayor certeza. Inyecta una variable aleatoria de control: generás un número aleatorio $K$ a partir de una distribución continua, sobre el conjunto de números posibles de los que fueron tomados $a$ y $b$, como una exponencial o normal. Este número $K$ subdivide el espacio del problema de decisión de 2 a 3 partes, y en particular veremos que dentro de uno de tales subespacios la probabilidad de ganar es 1.</p>
+<h3 id="el-algoritmo-es-simple" class="relative group">El algoritmo es simple: <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#el-algoritmo-es-simple" aria-label="Ancla">#</a></span></h3><p>Dados $a,b\in\mathbb{R}$ con $a<b$, selecciono aleatoriamete un $x\in \{a,b\}$, tomo $K$ aleatorio</p>
+<ol>
+<li>si $x<K$ entonces cambiás.</li>
+<li>si $x>K$ entonces no cambiás.</li>
 </ol>
 <blockquote>
 <p>en el primer caso $x < K$ se asume que lo que se te dio como opción es el más chico, por eso cambiás.</p>

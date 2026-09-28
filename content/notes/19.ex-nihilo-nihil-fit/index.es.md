@@ -41,12 +41,12 @@ Si el valor observado $x$ parece no darnos información para decidir, ¿estamos 
 
 Cover plantea un juego de máxima incertidumbre: un adversario escribe dos números reales distintos cualquiera, digamos $a$ y $b$ (asumamos $a < b$ sin pérdida de generalidad). No hay reglas de proporción y no existe una distribución de probabilidad conocida para la elección de estos números. Elegís uno al azar, observás su valor $x$ y tenés que adivinar si es el mayor.
 
-Bajo estas condiciones de ignorancia absoluta, Cover propuso una estrategia de una belleza cínica. Inyecta una variable aleatoria de control: generás un número aleatorio $K$ a partir de una distribución continua, sobre el conjunto de números posibles de los que fueron tomados $a$ y $b$, como una exponencial o normal. Este número $K$ subdivide el espacio del problema de decisión de 2 a 3 partes, y en particular veremos que dentro de uno de tales subespacios la probabilidad de ganar es 1.
+Bajo estas condiciones de ignorancia absoluta, Cover propuso una estrategia que introduce aleatoriedad para ayudar a responder con mayor certeza. Inyecta una variable aleatoria de control: generás un número aleatorio $K$ a partir de una distribución continua, sobre el conjunto de números posibles de los que fueron tomados $a$ y $b$, como una exponencial o normal. Este número $K$ subdivide el espacio del problema de decisión de 2 a 3 partes, y en particular veremos que dentro de uno de tales subespacios la probabilidad de ganar es 1.
 
 ### El algoritmo es simple:
-
-1. Si lo que observás ($x$) es menor que $K$, entonces **cambiás**. 
-2. Si lo que observás ($x$) es mayor que $K$, entonces **no cambiás**.
+Dados $a,b\in\mathbb{R}$ con $a<b$, selecciono aleatoriamete un $x\in \{a,b\}$, tomo $K$ aleatorio
+1. si $x<K$ entonces cambiás.
+2. si $x>K$ entonces no cambiás.
 
 > en el primer caso $x < K$ se asume que lo que se te dio como opción es el más chico, por eso cambiás.
 
