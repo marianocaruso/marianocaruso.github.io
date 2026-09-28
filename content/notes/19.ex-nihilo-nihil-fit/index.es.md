@@ -44,7 +44,7 @@ Cover plantea un juego de máxima incertidumbre: un adversario escribe dos núme
 Bajo estas condiciones de ignorancia absoluta, Cover propuso una estrategia que introduce aleatoriedad para ayudar a responder con mayor certeza. Inyecta una variable aleatoria de control: generás un número aleatorio $K$ a partir de una distribución continua, sobre el conjunto de números posibles de los que fueron tomados $a$ y $b$, como una exponencial o normal. Este número $K$ subdivide el espacio del problema de decisión de 2 a 3 partes, y en particular veremos que dentro de uno de tales subespacios la probabilidad de ganar es 1.
 
 ### El algoritmo es simple:
-Dados $a,b\in\mathbb{R}$ con $a<b$, selecciono aleatoriamete un $x\in \{a,b\}$, tomo $K$ aleatorio
+Dados $a,b\in\mathbb{R}$ con $ a < b $, selecciono aleatoriamete un $x\in \{a,b\}$, tomo $K$ aleatorio
 1. si $x<K$ entonces cambiás.
 2. si $x>K$ entonces no cambiás.
 
