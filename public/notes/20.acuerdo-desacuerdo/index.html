@@ -145,7 +145,7 @@
     "keywords": ["clasificación","active learning"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1877"
+    "wordCount": "1806"
   }
   </script>
     
@@ -898,33 +898,82 @@ $$
 $$<p>La discrepancia unilateral entre ambos clasificadores se captura mediante la diferencia de conjuntos de positivos, que aísla las instancias clasificadas como positivas por el método $i$ pero rechazadas por el método $j\neq i$:</p>
 $$
 \mathscr{X}_{i \neg j} = \mathscr{X}_i - \mathscr{X}_j = \{x \in \mathscr{X} : x \in \mathscr{X}_i \land x \notin \mathscr{X}_j\}
-$$<blockquote>
-$$
-> \begin{aligned}
-> \mathscr{X}_i &= \mathscr{X}_{i\neg j} \cup (\mathscr{X}_i \cap \mathscr{X}_j) \\
-> \emptyset &= \mathscr{X}_{i\neg j} \cap (\mathscr{X}_i \cap \mathscr{X}_j)
-> \end{aligned}
-> $$</blockquote>
-$$
+$$$$
+\begin{aligned}
+\mathscr{X}_i &= \mathscr{X}_{i\neg j} \cup (\mathscr{X}_i \cap \mathscr{X}_j) \\
+\emptyset &= \mathscr{X}_{i\neg j} \cap (\mathscr{X}_i \cap \mathscr{X}_j)
+\end{aligned}
+$$$$
 \mathscr{X}_1 \cap \mathscr{X}_2 = \emptyset
 $$<p>En un escenario de clasificación binaria $\{-1, +1\}$, la región de desacuerdo bilateral global (la zona de conflicto estricto donde un modelo predice $+1$ y el otro $-1$) equivale directamente a la unión disjunta de ambas diferencias:</p>
 $$
 \text{DIS}(\{h_1, h_2\}) = \{x \in \mathscr{X} : h_1(x) \neq h_2(x)\} = \mathscr{X}_{1 \neg 2} \cup \mathscr{X}_{2 \neg 1}
-$$<p>Geométricamente, si visualizamos este espacio mediante un diagrama de Venn</p>
-<pre tabindex="0"><code>        método 1          método 2 
-   ________________   ________________
-  /                \ /                \
- /                  X                  \
-|                  / \                  |
-|                 /   \                 | 
-|                /     \                |
-|     𝒳₁¬₂     |𝒳₁ ∩ 𝒳₂|     𝒳₂¬₁     |
-|                \     /                |
-|                 \   /                 | 
-|                  \ /                  |
-\                   X                   /
- \_________________/ \_________________/   
-</code></pre><p>donde el Método 1 ocupa la izquierda y el Método 2 la derecha:</p>
+$$<p>Podemos visualizar estos conjuntos mediante esta representación</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/notes/20.acuerdo-desacuerdo/img_hu16197731620916055581.webp 330w,/notes/20.acuerdo-desacuerdo/img_hu6273598560851863243.webp 660w
+            
+              ,/notes/20.acuerdo-desacuerdo/img_hu214946474062035755.webp 1024w
+            
+            
+              ,/notes/20.acuerdo-desacuerdo/img_hu16187254820872930911.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2400"
+        height="1792"
+        class="mx-auto my-0 rounded-md"
+        alt="Geometría del desacuerdo"
+        loading="lazy" decoding="async"
+        
+          src="/notes/20.acuerdo-desacuerdo/img_hu644593204751194507.jpg"
+          srcset="/notes/20.acuerdo-desacuerdo/img_hu5933891635524757356.jpg 330w,/notes/20.acuerdo-desacuerdo/img_hu644593204751194507.jpg 660w
+          
+            ,/notes/20.acuerdo-desacuerdo/img_hu18283820882647047336.jpg 1024w
+          
+          
+            ,/notes/20.acuerdo-desacuerdo/img_hu16577982712117526093.jpg 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>donde</p>
 <ul>
 <li><strong>izquierda ($\mathscr{X}_{1 \neg 2}$):</strong> Representa el subconjunto exclusivo de positivos del Método 1 (coloreado en azul).</li>
 <li><strong>derecha ($\mathscr{X}_{2 \neg 1}$):</strong> Representa el subconjunto exclusivo de positivos del Método 2 (coloreado en rojo).</li>

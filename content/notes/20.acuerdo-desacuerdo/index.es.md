@@ -37,13 +37,13 @@ $$
 \mathscr{X}_{i \neg j} = \mathscr{X}_i - \mathscr{X}_j = \{x \in \mathscr{X} : x \in \mathscr{X}_i \land x \notin \mathscr{X}_j\}
 $$
 
-> Notar que:
-> $$
-> \begin{aligned}
-> \mathscr{X}_i &= \mathscr{X}_{i\neg j} \cup (\mathscr{X}_i \cap \mathscr{X}_j) \\
-> \emptyset &= \mathscr{X}_{i\neg j} \cap (\mathscr{X}_i \cap \mathscr{X}_j)
-> \end{aligned}
-> $$
+Notar que:
+$$
+\begin{aligned}
+\mathscr{X}_i &= \mathscr{X}_{i\neg j} \cup (\mathscr{X}_i \cap \mathscr{X}_j) \\
+\emptyset &= \mathscr{X}_{i\neg j} \cap (\mathscr{X}_i \cap \mathscr{X}_j)
+\end{aligned}
+$$
 
 
 Decimos que existe **desacuerdo total** en la clase positiva cuando la intersección de las predicciones positivas es vacía:
@@ -57,27 +57,11 @@ $$
 \text{DIS}(\{h_1, h_2\}) = \{x \in \mathscr{X} : h_1(x) \neq h_2(x)\} = \mathscr{X}_{1 \neg 2} \cup \mathscr{X}_{2 \neg 1}
 $$
 
-Geométricamente, si visualizamos este espacio mediante un diagrama de Venn 
+Podemos visualizar estos conjuntos mediante esta representación
 
+![Geometría del desacuerdo](img.jpg)
 
-```
-        método 1          método 2 
-   ________________   ________________
-  /                \ /                \
- /                  X                  \
-|                  / \                  |
-|                 /   \                 | 
-|                /     \                |
-|     𝒳₁¬₂     |𝒳₁ ∩ 𝒳₂|     𝒳₂¬₁     |
-|                \     /                |
-|                 \   /                 | 
-|                  \ /                  |
-\                   X                   /
- \_________________/ \_________________/   
-
-```
-
-donde el Método 1 ocupa la izquierda y el Método 2 la derecha:
+donde
 
 *   **izquierda ($\mathscr{X}_{1 \neg 2}$):** Representa el subconjunto exclusivo de positivos del Método 1 (coloreado en azul).
 *   **derecha ($\mathscr{X}_{2 \neg 1}$):** Representa el subconjunto exclusivo de positivos del Método 2 (coloreado en rojo).
