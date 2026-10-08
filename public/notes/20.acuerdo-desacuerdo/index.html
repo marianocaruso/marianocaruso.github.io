@@ -145,7 +145,7 @@
     "keywords": ["clasificación","active learning"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1411"
+    "wordCount": "1876"
   }
   </script>
     
@@ -858,11 +858,13 @@
   <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
+    <li><a href="#heading"></a></li>
     <li><a href="#formulación-del-problema">Formulación del problema</a></li>
-    <li><a href="#operativa-de-la-clasificación">Operativa de la clasificación</a></li>
+    <li><a href="#objetivos-de-la-clasificación">Objetivos de la clasificación</a></li>
     <li><a href="#fundamentos-teóricos">Fundamentos teóricos</a>
       <ul>
-        <li><a href="#un-teorema-importante">Un teorema importante</a></li>
+        <li><a href="#un-teorema-sobre-agentes-bayesianos">Un teorema sobre agentes bayesianos</a></li>
+        <li><a href="#clasificadores-como-agentes-bayesianos">Clasificadores como agentes bayesianos</a></li>
         <li><a href="#aprendizaje-activo-basado-en-desacuerdo">Aprendizaje activo basado en desacuerdo</a></li>
       </ul>
     </li>
@@ -880,17 +882,24 @@
       <div class="min-h-0 min-w-0 max-w-prose grow">
         
 
-<h2 id="formulación-del-problema" class="relative group">Formulación del problema <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#formulaci%c3%b3n-del-problema" aria-label="Ancla">#</a></span></h2><p>Sea $\mathscr{X}$ el espacio muestral o dominio de datos de entrada. Consideremos dos clasificadores previamente entrenados, denotados como Método 1 ($h_1$) y Método 2 ($h_2$), representados como funciones medibles $h_i: \mathscr{X} \to \{-1, +1\}$.</p>
+<h2 id="heading" class="relative group"> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#heading" aria-label="Ancla">#</a></span></h2><p>Imaginá que sometés dos modelos de clasificación distintos al mismo banco de pruebas y ambos obtienen métricas  similares: <em>accuracy</em>, curva ROC y la predicción de que exactamente doscientas muestras de una gran base de datos son candidatas positivas. En cualquier informe ejecutivo o panel de métricas agregadas, ambos algoritmos parecerían gemelos intercambiables, desde el punto de vista de la predicción de la masa.</p>
+<p>Supongamos que podemos mirar ambas listas de aquellos doscientos seleccionados por cada modelo y verificás que <strong>no comparten un solo elemento</strong>. La coincidencia es exactamente cero.</p>
+<p>La reacción intuitiva ante semejante brecha suele ser el desconcierto o la desconfianza: asumir que al menos uno de los modelos está alucinando o que el problema está saturado de ruido. Sin embargo, cuando analizamos este choque bajo el prisma de la teoría de la información bayesiana y el aprendizaje activo, la conclusión es exactamente la opuesta.</p>
+<p>El desacuerdo frontal entre clasificadores competentes rara vez es fruto del azar. Es la huella matemática de una asimetría informativa fértil: la prueba de que dos sistemas están mirando la misma realidad a través de lentes conceptuales ortogonales. Lejos de ser un fallo que deba disimularse con promedios, esa zona de conflicto es precisamente el lugar donde se esconde la mayor ganancia de información posible.</p>
+<h2 id="formulación-del-problema" class="relative group">Formulación del problema <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#formulaci%c3%b3n-del-problema" aria-label="Ancla">#</a></span></h2><p>Sea $\mathscr{X}$ el espacio muestral o dominio de datos de entrada. Consideremos dos clasificadores previamente entrenados, denotados como Método 1 ($h_1$) y Método 2 ($h_2$), representados como funciones medibles $h_i: \mathscr{X} \to Y$, en particular consideremos el caso de clasificaión binaria $Y=\{-1,1\}$.</p>
 <p>Para cada método $i \in \{1, 2\}$, el subconjunto de instancias predichas como &ldquo;positivas&rdquo; ($+1$) se define como:</p>
 $$
 \mathscr{X}_i = \{x \in \mathscr{X} : h_i(x) = +1\} \subseteq \mathscr{X}
-$$<p>La discrepancia unilateral entre ambos clasificadores se captura mediante la diferencia de conjuntos de positivos, que aísla las instancias clasificadas como positivas por el método $i$ pero rechazadas por el método $j$:</p>
+$$<p>La discrepancia unilateral entre ambos clasificadores se captura mediante la diferencia de conjuntos de positivos, que aísla las instancias clasificadas como positivas por el método $i$ pero rechazadas por el método $j\neq i$:</p>
 $$
 \mathscr{X}_{i \neg j} = \mathscr{X}_i - \mathscr{X}_j = \{x \in \mathscr{X} : x \in \mathscr{X}_i \land x \notin \mathscr{X}_j\}
-$$<p>La magnitud o volumen de esta divergencia viene dada por su cardinalidad:</p>
+$$<blockquote>
 $$
-X_{i \neg j} = \text{card}(\mathscr{X}_{i \neg j})
-$$<p>Decimos que existe <strong>desacuerdo total</strong> en la clase positiva cuando la intersección de las predicciones positivas es totalmente vacía:</p>
+> \begin{aligned}
+> \mathscr{X}_i &= \mathscr{X}_{i\neg j} \cup (\mathscr{X}_i \cap \mathscr{X}_j) \\
+> \emptyset &= \mathscr{X}_{i\neg j} \cap (\mathscr{X}_i \cap \mathscr{X}_j)
+> \end{aligned}
+> $$</blockquote>
 $$
 \mathscr{X}_1 \cap \mathscr{X}_2 = \emptyset
 $$<p>En un escenario de clasificación binaria $\{-1, +1\}$, la región de desacuerdo bilateral global (la zona de conflicto estricto donde un modelo predice $+1$ y el otro $-1$) equivale directamente a la unión disjunta de ambas diferencias:</p>
@@ -904,7 +913,7 @@ $$<p>Geométricamente, si visualizamos este espacio mediante un diagrama de Venn
 |                  / \                  |
 |                 /   \                 | 
 |                /     \                |
-|      𝒳₁¬₂    |𝒳₁ ∩ 𝒳₂|   𝒳₂¬₁       |
+|     𝒳₁¬₂     |𝒳₁ ∩ 𝒳₂|     𝒳₂¬₁     |
 |                \     /                |
 |                 \   /                 | 
 |                  \ /                  |
@@ -912,54 +921,56 @@ $$<p>Geométricamente, si visualizamos este espacio mediante un diagrama de Venn
  \_________________/ \_________________/   
 </code></pre><p>donde el Método 1 ocupa la izquierda y el Método 2 la derecha:</p>
 <ul>
-<li><strong>Medialuna izquierda ($\mathscr{X}_{1 \neg 2}$):</strong> Representa el subconjunto exclusivo de positivos del Método 1 (coloreado en azul).</li>
-<li><strong>Medialuna derecha ($\mathscr{X}_{2 \neg 1}$):</strong> Representa el subconjunto exclusivo de positivos del Método 2 (coloreado en rojo).</li>
-<li><strong>Lente central ($\mathscr{X}_1 \cap \mathscr{X}_2$):</strong> Representa la zona de consenso explícito.</li>
+<li><strong>izquierda ($\mathscr{X}_{1 \neg 2}$):</strong> Representa el subconjunto exclusivo de positivos del Método 1 (coloreado en azul).</li>
+<li><strong>derecha ($\mathscr{X}_{2 \neg 1}$):</strong> Representa el subconjunto exclusivo de positivos del Método 2 (coloreado en rojo).</li>
+<li><strong>centro ($\mathscr{X}_1 \cap \mathscr{X}_2$):</strong> Representa la zona de consenso explícito.</li>
 </ul>
-<p>Si la condición $\mathscr{X}_1 \cap \mathscr{X}_2 = \emptyset$ se cumple, equivale a un vaciamiento completo del centro: el núcleo intermedio de coincidencia se anula y la totalidad de la masa predicha se desplaza hacia las medialunas extremas azul y roja.</p>
-<h2 id="operativa-de-la-clasificación" class="relative group">Operativa de la clasificación <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#operativa-de-la-clasificaci%c3%b3n" aria-label="Ancla">#</a></span></h2><p>Para comprender las consecuencias de este desacuerdo, es indispensable distinguir el propósito operativo con el que se utiliza el sistema de clasificación: la estimación de masa poblacional frente a la selección mediante filtro individualizado.</p>
-<p>El término anodino hace referencia a aquello que resulta inofensivo, neutro o carente de impacto ostensible. En la evaluación de clasificadores a nivel macroscópico, el objetivo principal suele ser cuantificar el volumen global o la proporción de la clase positiva en la población.</p>
-<p>Si ocurre que $X_{1 \neg 2} \approx X_{2 \neg 1}$, la cardinalidad total de positivos predicha por ambos métodos resulta idéntica:</p>
+<p>Si se cumple que $\mathscr{X}_1 \cap \mathscr{X}_2 = \emptyset$, equivale a un vaciamiento completo del centro y la totalidad de la masa se desplaza hacia los extremos.</p>
+<h2 id="objetivos-de-la-clasificación" class="relative group">Objetivos de la clasificación <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#objetivos-de-la-clasificaci%c3%b3n" aria-label="Ancla">#</a></span></h2><p>Para comprender las consecuencias de este desacuerdo, es indispensable distinguir el propósito operativo con el que se utiliza el sistema de clasificación: la estimación de una característica global del conjunto frente a la selección de candidatos a nivel unitario.</p>
+<p>Supongamos que ambos métodos clasifican a la misma cantidad de elementos positivos:</p>
 $$
-\text{card}(\mathscr{X}_1) = X_{1 \neg 2} \approx X_{2 \neg 1} = \text{card}(\mathscr{X}_2)
-$$<p>Desde la perspectiva de un cuadro de mando macroscópico, el cambio del Método 1 al Método 2 se percibe como volumétricamente anodino: el sistema sigue reportando el mismo número bruto de casos positivos. Las métricas agregadas permanecen inalteradas, sugiriendo una aparente equivalencia.</p>
-<p>Sin embargo, cuando la clasificación se utiliza como un filtro de selección a nivel micro (donde cada predicción positiva dispara una acción individualizada e irreversible, como seleccionar una molécula para síntesis en laboratorio), la condición $\mathscr{X}_1 \cap \mathscr{X}_2 = \emptyset$ representa un colapso estructural del filtro.</p>
-<p>Dado que la intersección es vacía:</p>
+\mathtt{card}(\mathscr{X}_{1}) = \mathtt{card}(\mathscr{X}_{2})
+$$<p>Bajo esta condición, cada clasificador reportará de forma independiente la misma tasa de selección bruta ($\hat{p} = \mathtt{card}(\mathscr{X}_i) / |\mathscr{X}|$). Más aún: si la distribución subyacente de la clase positiva real se reparte de forma simétrica entre ambos conjuntos exclusivos $\mathscr{X}_{1\neg 2}$ y $\mathscr{X}_{2\neg 1}$, <strong>ambos modelos pueden exhibir exactamente la misma matriz de confusión global</strong>. Es decir, pueden arrojar idénticos valores de precisión, exhaustividad (<em>recall</em>), exactitud (<em>accuracy</em>) y puntuación $F_1$.</p>
+<p>Desde la perspectiva de un cuadro de mando macroscópico o una tabla de <em>benchmarking</em>, el cambio del Método 1 al Método 2 se percibe como volumétricamente anodino: el sistema reporta la misma masa agregada y la misma efectividad aparente, sugiriendo una perfecta equivalencia funcional entre algoritmos.</p>
+<p>Sin embargo, cuando la intersección es vacía ($\mathscr{X}_1 \cap \mathscr{X}_2 = \emptyset$), tales métricas provienen exclusivamente de los conjuntos disjuntos $\mathscr{X}_{1\neg 2}$ y $\mathscr{X}_{2\neg 1}$.</p>
+<p>Cuando la clasificación opera como un filtro de selección a nivel micro, donde cada predicción positiva dispara una acción irreversible y/o costosa, como seleccionar una molécula para síntesis en laboratorio o intervenir a un paciente, la condición de desacuerdo estricto representa un colapso estructural del filtro:</p>
 <ol>
-<li>El $100\%$ de los elementos seleccionados por el Método 1 ($\mathscr{X}_{1 \neg 2}$) son sistemáticamente rechazados por el Método 2.</li>
-<li>El $100\%$ de los elementos seleccionados por el Método 2 ($\mathscr{X}_{2 \neg 1}$) eran considerados negativos por el Método 1.</li>
+<li>todos los elementos seleccionados por el Método 1 ($\mathscr{X}_{1 \neg 2}$) son sistemáticamente descartados por el Método 2.</li>
+<li>todos los elementos seleccionados por el Método 2 ($\mathscr{X}_{2 \neg 1}$) eran considerados negativos por el Método 1.</li>
 </ol>
-<p>Lo que a nivel macroscópico se diagnosticó como una anodinia volumétrica, a nivel micro operacional constituye una renovación catastrófica del grupo objetivo. El filtro ha cambiado por completo la identidad de cada sujeto u objeto seleccionado.</p>
+<p>Lo que a nivel agregado se diagnostica como una anodinia volumétrica (variación nula en el total de seleccionados y paridad de rendimiento estadístico), en el plano operativo constituye una sustitución completa del grupo objetivo. El filtro ha cambiado radicalmente la identidad de cada candidato.</p>
 <h2 id="fundamentos-teóricos" class="relative group">Fundamentos teóricos <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#fundamentos-te%c3%b3ricos" aria-label="Ancla">#</a></span></h2><p>Para unificar la teoría de la información con la explotación operativa de estos modelos, requerimos de dos andamiajes teóricos complementarios.</p>
-<h3 id="un-teorema-importante" class="relative group">Un teorema importante <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#un-teorema-importante" aria-label="Ancla">#</a></span></h3><p>La información de la que dispone cada clasificador $i \in \{1, 2\}$ se representa mediante una partición $\mathscr{P}_i$ sobre $\mathscr{X}$. La probabilidad posterior asignada por el clasificador $i$ a un evento objetivo $A$ (ej. &ldquo;la molécula es candidata&rdquo;) condicionada a su partición es $q_i(x) = p(A \mid P_i(x))$.</p>
-<p>El <strong>teorema de Aumann (1976)</strong> demuestra matemáticamente la imposibilidad de que dos agentes bayesianos con un prior común discrepen en sus probabilidades posteriores si dichas probabilidades son de conocimiento común.</p>
-<p><strong>Una consecuencia para Machine Learning:</strong>
-Si el teorema postula que el desacuerdo es imposible bajo condiciones de simetría informativa, su violación en la práctica resulta reveladora. Bajo supuestos de prior común, el desacuerdo en las medialunas ($q_1(x) \neq q_2(x)$ para $x \in \mathscr{X}_{1 \neg 2} \cup \mathscr{X}_{2 \neg 1}$) no es un mero &ldquo;ruido estadístico&rdquo;; se debe estricta y necesariamente a una <strong>asimetría en la información privada o en el sesgo inductivo</strong> ($P_1(x) \neq P_2(x)$).</p>
-<p>El desacuerdo es, por tanto, la prueba matemática de una complementariedad epistémica: los modelos están particionando el espacio de características de manera ortogonal.</p>
+<h3 id="un-teorema-sobre-agentes-bayesianos" class="relative group">Un teorema sobre agentes bayesianos <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#un-teorema-sobre-agentes-bayesianos" aria-label="Ancla">#</a></span></h3><p>La información de la que dispone cada clasificador $i \in \{1, 2\}$ se representa mediante una partición $\mathscr{P}_i$ sobre $\mathscr{X}$. La probabilidad posterior asignada por el clasificador $i$ a un evento objetivo $A$ (ej. &ldquo;la molécula es candidata&rdquo;) condicionada a su partición es $q_i(x) = p(A \mid P_i(x))$.</p>
+<p>El <strong>teorema de Aumann (1976)</strong> demuestra  la imposibilidad de que dos agentes bayesianos con un prior común discrepen en sus probabilidades posteriores, cuando son de conocimiento común.</p>
+<h3 id="clasificadores-como-agentes-bayesianos" class="relative group">Clasificadores como agentes bayesianos <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#clasificadores-como-agentes-bayesianos" aria-label="Ancla">#</a></span></h3><p>En teoría de la decisión formal, un agente racional no es más que un operador matemático que evalúa la probabilidad condicional de un evento dada una partición de información. Bajo esta formulación, un clasificador $h_i$ actúa directamente como un agente durante la fase de inferencia: proyecta cada entrada $x \in \mathscr{X}$ sobre la celda $P_i(x)$ de su partición $\mathscr{P}_i$ y le asigna una probabilidad posterior $q_i(x) = P(Y = +1 \mid P_i(x))$.</p>
+<p>Dado que el teorema de Aumann afirma que el desacuerdo es imposible bajo condiciones de simetría informativa y conocimiento común, su violación en la práctica resulta reveladora. La existencia de una región de desacuerdo en las medialunas ($q_1(x) \neq q_2(x)$ para $x \in \mathscr{X}_{1 \neg 2} \cup \mathscr{X}_{2 \neg 1}$) no es un mero &ldquo;ruido estadístico&rdquo; ni un fallo de optimización; demuestra matemáticamente que el entorno de inferencia rompe las hipótesis del teorema.</p>
+<p>Los modelos discrepan estricta y necesariamente por:</p>
+<ol>
+<li>Asimetría informacional: poseen representaciones asimétricas de los datos, sus particiones informativas son distintas ($P_1(x) \neq P_2(x)$). El diseñador del sistema fija estas condiciones iniciales al seleccionar el espacio de entrada; por ejemplo, un modelo observa descriptores fisicoquímicos tradicionales mientras el otro procesa grafos topológicos o estados cuánticos. Como resultado, dos instancias colapsadas y funcionalmente indistinguibles en un mismo bloque bajo el Método 1, son resueltas y separadas por el Método 2.</li>
+<li>Priors incompatibles: tienen sesgos inductivos dispares, sus arquitecturas, funciones de pérdida y métodos de regularización imponen supuestos de partida incompatibles sobre cómo generalizar la frontera de decisión en el espacio $\mathscr{X}$. No comparten una distribución previa común sobre la regularidad del problema.</li>
+<li>Ausencia de conocimiento común: operan mediante inferencia aislada, a diferencia del postulado teórico donde el intercambio transparente de estimaciones obliga a actualizar las probabilidades hasta coincidir por completo, los clasificadores realizan predicciones de forma estática y desacoplada. No existe un protocolo de comunicación iterativo entre ellos para alcanzar el conocimiento común en tiempo real.El desacuerdo es, por tanto, la prueba computable de una complementariedad epistémica: los modelos están particionando el espacio de características de manera ortogonal. En el régimen de desacuerdo total ($\mathscr{X}_1 \cap \mathscr{X}_2 = \emptyset$), esta divergencia es la manifestación geométrica inequívoca de que cada clasificador ha descubierto reglas estructurales que el otro, por diseño, es completamente incapaz de ver.</li>
+</ol>
 <h3 id="aprendizaje-activo-basado-en-desacuerdo" class="relative group">Aprendizaje activo basado en desacuerdo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#aprendizaje-activo-basado-en-desacuerdo" aria-label="Ancla">#</a></span></h3><p>Mientras Aumann nos da el diagnóstico epistémico, Hanneke formaliza el protocolo operativo para aprovecharlo.</p>
 <p>Para nuestro comité de dos clasificadores $\{h_1, h_2\}$, la región de desacuerdo es $\text{DIS}(\{h_1, h_2\}) = \mathscr{X}_{1 \neg 2} \cup \mathscr{X}_{2 \neg 1}$. El algoritmo CAL (Cohn, Atlas, Ladner) de aprendizaje activo explota esta geometría evaluando cada punto no etiquetado $X_m$:</p>
 <ul>
 <li>si $X_m \in \text{DIS} \implies$ consultar etiqueta $Y_m$ al oráculo</li>
 <li>si $X_m \notin \text{DIS} \implies$ inferir etiqueta por consenso unánime sin consulta</li>
 </ul>
-<p>Hanneke mide la tasa de contracción de esta región mediante el coeficiente de desacuerdo $\theta$. Cuando $\theta(\epsilon) = O(1)$, la complejidad de etiquetas demanda disminuye exponencialmente respecto al aprendizaje pasivo (muestreo aleatorio), pasando de $O(1/\epsilon)$ a $O(\log(1/\epsilon))$.</p>
+<p>Hanneke mide la tasa de contracción de esta región mediante el coeficiente de desacuerdo $\theta$. Cuando $\theta(\epsilon) = O(1)$, la complejidad de etiquetas demandada disminuye exponencialmente respecto al aprendizaje pasivo (muestreo aleatorio), pasando de $O(1/\epsilon)$ a $O(\log(1/\epsilon))$.</p>
 <h2 id="explotando-el-desacuerdo" class="relative group">Explotando el desacuerdo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#explotando-el-desacuerdo" aria-label="Ancla">#</a></span></h2><p>En lugar de ver la divergencia de clasificadores como un problema de auditoría defensiva, la intersección entre la asimetría de Aumann y el muestreo de Hanneke proporciona un mapa del tesoro para la <strong>captura de valor</strong>, especialmente en dominios donde la validación es extremadamente costosa.</p>
 <p>Pensemos, por ejemplo, en una fase temprana de <em>drug discovery</em> para evaluar la inhibición de una diana terapéutica. El &ldquo;oráculo&rdquo; aquí es una síntesis en laboratorio o un ensayo <em>in vitro</em>, recursos altamente limitados. Tenemos dos modelos de clasificación (por ejemplo, un modelo clásico basado en descriptores fisicoquímicos tradicionales y un modelo emergente que emplea representaciones diferentes).</p>
 <p>Si detectamos un alto grado de divergencia ($\mathscr{X}_1 \cap \mathscr{X}_2 \approx \emptyset$), la estrategia de captura de valor dicta lo siguiente:</p>
 <ol>
-<li><strong>Consenso como explotación segura:</strong> La zona de acuerdo positivo ($\mathscr{X}_1 \cap \mathscr{X}_2$) agrupa los candidatos &ldquo;seguros&rdquo;. Ambos sesgos inductivos coinciden. Sin embargo, estas moléculas suelen pertenecer a espacios químicos bien conocidos y redundantes. Gastar presupuesto de laboratorio aquí tiene un bajo riesgo, pero también una baja ganancia de información (retorno de inversión epistémico marginal).</li>
-<li><strong>Desacuerdo como exploración</strong> Las regiones $\mathscr{X}_{1 \neg 2}$ y $\mathscr{X}_{2 \neg 1}$ no son zonas de error, sino fronteras de exploración.
+<li><strong>Consenso como explotación segura:</strong> la zona de acuerdo positivo ($\mathscr{X}_1 \cap \mathscr{X}_2$) agrupa los candidatos &ldquo;seguros&rdquo;. Ambos sesgos inductivos coinciden. Sin embargo, estas moléculas suelen pertenecer a espacios químicos bien conocidos y redundantes. Gastar presupuesto de laboratorio aquí tiene un bajo riesgo, pero también una baja ganancia de información (retorno de inversión epistémico marginal).</li>
+<li><strong>Desacuerdo como exploración:</strong> las regiones $\mathscr{X}_{1 \neg 2}$ y $\mathscr{X}_{2 \neg 1}$ no son zonas de error, sino fronteras de exploración.
 <ul>
 <li>Si muestreamos candidatos de la medialuna del nuevo modelo ($\mathscr{X}_{2 \neg 1}$) y el oráculo (el ensayo <em>in vitro</em>) confirma la positividad, habremos validado que el sesgo inductivo de $h_2$ está capturando lógicas subyacentes (topológicas, estructurales) invisibles para el modelo clásico.</li>
 <li>Esta zona concentra los candidatos más innovadores, aquellos capaces de superar los cuellos de botella clásicos del cribado.</li>
 </ul>
 </li>
 </ol>
-<h2 id="conclusiones" class="relative group">Conclusiones <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusiones" aria-label="Ancla">#</a></span></h2><ul>
-<li><strong>Comprensión de la divergencia:</strong> El desacuerdo entre dos clasificadores en las medialunas azul y roja no debe interpretarse como ruido aleatorio, sino como la manifestación geométrica de una asimetría en la información y complementariedad de sesgos inductivos (Aumann, 1976).</li>
-<li><strong>Superación de la ilusión volumétrica:</strong> Evaluar modelos mediante métricas agregadas puede enmascarar un colapso completo del filtro de selección. Un cambio &ldquo;volumétricamente anodino&rdquo; a nivel macro puede implicar descartar sistemáticamente los perfiles históricos y renovar toda la base operativa.</li>
-<li><strong>De la auditoría a la captura de valor:</strong> Delimitar formalmente la región de desacuerdo $\text{DIS}$ permite concentrar el presupuesto de validación experimental en las fronteras de conflicto (Hanneke, 2014). En dominios complejos, explotar el desacuerdo es la forma más rápida y matemáticamente óptima de transitar desde los espacios de conocimiento trillados hacia fronteras de descubrimiento de alto valor.</li>
-</ul>
+<h2 id="conclusiones" class="relative group">Conclusiones <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusiones" aria-label="Ancla">#</a></span></h2><p>El desacuerdo entre dos clasificadores en las medialunas azul y roja no debe interpretarse como ruido aleatorio, sino como la manifestación geométrica de una asimetría en la información y complementariedad de sesgos inductivos (Aumann, 1976).</p>
+<p>Delimitar formalmente la región de desacuerdo $\text{DIS}$ permite concentrar el presupuesto de validación experimental en las fronteras de conflicto (Hanneke, 2014). En dominios complejos, explotar el desacuerdo es la forma más rápida y matemáticamente óptima de transitar desde los espacios de conocimiento trillados hacia fronteras de descubrimiento de alto valor.</p>
 <h2 id="referencias-bibliográficas" class="relative group">Referencias bibliográficas <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#referencias-bibliogr%c3%a1ficas" aria-label="Ancla">#</a></span></h2><ul>
 <li>Aumann, R. J. (1976). Agreeing to disagree. <em>The Annals of Statistics</em>, 4(6), 1236–1239.</li>
 <li>Hanneke, S. (2014). Theory of disagreement-based active learning. <em>Foundations and Trends in Machine Learning</em>, 7(2–3), 131–309.</li>
