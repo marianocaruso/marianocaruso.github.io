@@ -113,7 +113,7 @@ El **teorema de Aumann (1976)** demuestra  la imposibilidad de que dos agentes b
 
 En teoría de la decisión formal, un agente racional no es más que un operador matemático que evalúa la probabilidad condicional de un evento dada una partición de información. Bajo esta formulación, un clasificador $h_i$ actúa directamente como un agente durante la fase de inferencia: proyecta cada entrada $x \in \mathscr{X}$ sobre la celda $P_i(x)$ de su partición $\mathscr{P}_i$ y le asigna una probabilidad posterior $q_i(x) = P(Y = +1 \mid P_i(x))$.
 
-Dado que el teorema de Aumann afirma que el desacuerdo es imposible bajo condiciones de simetría informativa y conocimiento común, su violación en la práctica resulta reveladora. La existencia de una región de desacuerdo en las medialunas ($q_1(x) \neq q_2(x)$ para $x \in \mathscr{X}_{1 \neg 2} \cup \mathscr{X}_{2 \neg 1}$) no es un mero "ruido estadístico" ni un fallo de optimización; demuestra matemáticamente que el entorno de inferencia rompe las hipótesis del teorema.
+Dado que el teorema de Aumann afirma que el desacuerdo es imposible bajo condiciones de simetría informativa y conocimiento común, su violación en la práctica resulta reveladora. La existencia de una región de desacuerdo ($q_1(x) \neq q_2(x)$ para $x \in \mathscr{X}_{1 \neg 2} \cup \mathscr{X}_{2 \neg 1}$) no es un mero "ruido estadístico" ni un fallo de optimización; demuestra matemáticamente que el entorno de inferencia rompe las hipótesis del teorema.
 
 Los modelos discrepan estricta y necesariamente por:
 
@@ -148,11 +148,11 @@ La zona de acuerdo positivo ($\mathscr{X}_1 \cap \mathscr{X}_2$) agrupa los cand
 
 ### 2. Desacuerdo como exploración
 
-Las regiones $\mathscr{X}_{1 \neg 2}$ y $\mathscr{X}_{2 \neg 1}$ no son zonas de error, sino fronteras de exploración. Si muestreamos candidatos de la medialuna del nuevo modelo ($\mathscr{X}_{2 \neg 1}$) y el oráculo (el ensayo *in vitro*) confirma la positividad, habremos validado que el sesgo inductivo de $h_2$ está capturando lógicas subyacentes (topológicas, estructurales) invisibles para el modelo clásico. Esta zona concentra los candidatos más innovadores, aquellos capaces de superar los cuellos de botella clásicos del cribado.
+Las regiones $\mathscr{X}_{1 \neg 2}$ y $\mathscr{X}_{2 \neg 1}$ no son zonas de error, sino fronteras de exploración. Si muestreamos candidatos en $\mathscr{X}_{2 \neg 1}$ y el oráculo  confirma la positividad, habremos validado que el sesgo inductivo de $h_2$ está capturando lógicas subyacentes (topológicas, estructurales) invisibles para el modelo clásico. Esta zona concentra los candidatos más innovadores, aquellos capaces de superar los cuellos de botella clásicos del cribado.
 
 ## Conclusiones
 
-El desacuerdo entre dos clasificadores en las medialunas azul y roja no debe interpretarse como ruido aleatorio, sino como la manifestación geométrica de una asimetría en la información y complementariedad de sesgos inductivos (Aumann, 1976).
+El desacuerdo entre dos clasificadores no debe interpretarse como ruido aleatorio, sino como la manifestación geométrica de una asimetría en la información y complementariedad de sesgos inductivos (Aumann, 1976).
 
 Delimitar formalmente la región de desacuerdo $\text{DIS}$ permite concentrar el presupuesto de validación experimental en las fronteras de conflicto (Hanneke, 2014). En dominios complejos, explotar el desacuerdo es la forma más rápida y matemáticamente óptima de transitar desde los espacios de conocimiento trillados hacia fronteras de descubrimiento de alto valor.
 
