@@ -158,10 +158,13 @@ Pensemos, por ejemplo, en una fase temprana de *drug discovery* para evaluar la 
 
 Si detectamos un alto grado de divergencia ($\mathscr{X}_1 \cap \mathscr{X}_2 \approx \emptyset$), la estrategia de captura de valor dicta lo siguiente:
 
-1.  **Consenso como explotación segura:** la zona de acuerdo positivo ($\mathscr{X}_1 \cap \mathscr{X}_2$) agrupa los candidatos "seguros". Ambos sesgos inductivos coinciden. Sin embargo, estas moléculas suelen pertenecer a espacios químicos bien conocidos y redundantes. Gastar presupuesto de laboratorio aquí tiene un bajo riesgo, pero también una baja ganancia de información (retorno de inversión epistémico marginal).
-2.  **Desacuerdo como exploración:** las regiones $\mathscr{X}_{1 \neg 2}$ y $\mathscr{X}_{2 \neg 1}$ no son zonas de error, sino fronteras de exploración. 
-    *   Si muestreamos candidatos de la medialuna del nuevo modelo ($\mathscr{X}_{2 \neg 1}$) y el oráculo (el ensayo *in vitro*) confirma la positividad, habremos validado que el sesgo inductivo de $h_2$ está capturando lógicas subyacentes (topológicas, estructurales) invisibles para el modelo clásico.
-    *   Esta zona concentra los candidatos más innovadores, aquellos capaces de superar los cuellos de botella clásicos del cribado.
+### 1. Consenso como explotación segura
+
+La zona de acuerdo positivo ($\mathscr{X}_1 \cap \mathscr{X}_2$) agrupa los candidatos "seguros". Ambos sesgos inductivos coinciden. Sin embargo, estas moléculas suelen pertenecer a espacios químicos bien conocidos y redundantes. Gastar presupuesto de laboratorio aquí tiene un bajo riesgo, pero también una baja ganancia de información (retorno de inversión epistémico marginal).
+
+### 2. Desacuerdo como exploración
+
+Las regiones $\mathscr{X}_{1 \neg 2}$ y $\mathscr{X}_{2 \neg 1}$ no son zonas de error, sino fronteras de exploración. Si muestreamos candidatos de la medialuna del nuevo modelo ($\mathscr{X}_{2 \neg 1}$) y el oráculo (el ensayo *in vitro*) confirma la positividad, habremos validado que el sesgo inductivo de $h_2$ está capturando lógicas subyacentes (topológicas, estructurales) invisibles para el modelo clásico. Esta zona concentra los candidatos más innovadores, aquellos capaces de superar los cuellos de botella clásicos del cribado.
 
 ## Conclusiones
 

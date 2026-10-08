@@ -145,7 +145,7 @@
     "keywords": ["clasificación","active learning"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1876"
+    "wordCount": "1877"
   }
   </script>
     
@@ -868,9 +868,14 @@
         <li><a href="#aprendizaje-activo-basado-en-desacuerdo">Aprendizaje activo basado en desacuerdo</a></li>
       </ul>
     </li>
-    <li><a href="#explotando-el-desacuerdo">Explotando el desacuerdo</a></li>
+    <li><a href="#explotando-el-desacuerdo">Explotando el desacuerdo</a>
+      <ul>
+        <li><a href="#1-consenso-como-explotación-segura">1. Consenso como explotación segura</a></li>
+        <li><a href="#2-desacuerdo-como-exploración">2. Desacuerdo como exploración</a></li>
+      </ul>
+    </li>
     <li><a href="#conclusiones">Conclusiones</a></li>
-    <li><a href="#referencias-bibliográficas">Referencias bibliográficas</a></li>
+    <li><a href="#referencias">Referencias</a></li>
   </ul>
 </nav>
   </div>
@@ -960,18 +965,11 @@ $$<p>Bajo esta condición, cada clasificador reportará de forma independiente l
 <h2 id="explotando-el-desacuerdo" class="relative group">Explotando el desacuerdo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#explotando-el-desacuerdo" aria-label="Ancla">#</a></span></h2><p>En lugar de ver la divergencia de clasificadores como un problema de auditoría defensiva, la intersección entre la asimetría de Aumann y el muestreo de Hanneke proporciona un mapa del tesoro para la <strong>captura de valor</strong>, especialmente en dominios donde la validación es extremadamente costosa.</p>
 <p>Pensemos, por ejemplo, en una fase temprana de <em>drug discovery</em> para evaluar la inhibición de una diana terapéutica. El &ldquo;oráculo&rdquo; aquí es una síntesis en laboratorio o un ensayo <em>in vitro</em>, recursos altamente limitados. Tenemos dos modelos de clasificación (por ejemplo, un modelo clásico basado en descriptores fisicoquímicos tradicionales y un modelo emergente que emplea representaciones diferentes).</p>
 <p>Si detectamos un alto grado de divergencia ($\mathscr{X}_1 \cap \mathscr{X}_2 \approx \emptyset$), la estrategia de captura de valor dicta lo siguiente:</p>
-<ol>
-<li><strong>Consenso como explotación segura:</strong> la zona de acuerdo positivo ($\mathscr{X}_1 \cap \mathscr{X}_2$) agrupa los candidatos &ldquo;seguros&rdquo;. Ambos sesgos inductivos coinciden. Sin embargo, estas moléculas suelen pertenecer a espacios químicos bien conocidos y redundantes. Gastar presupuesto de laboratorio aquí tiene un bajo riesgo, pero también una baja ganancia de información (retorno de inversión epistémico marginal).</li>
-<li><strong>Desacuerdo como exploración:</strong> las regiones $\mathscr{X}_{1 \neg 2}$ y $\mathscr{X}_{2 \neg 1}$ no son zonas de error, sino fronteras de exploración.
-<ul>
-<li>Si muestreamos candidatos de la medialuna del nuevo modelo ($\mathscr{X}_{2 \neg 1}$) y el oráculo (el ensayo <em>in vitro</em>) confirma la positividad, habremos validado que el sesgo inductivo de $h_2$ está capturando lógicas subyacentes (topológicas, estructurales) invisibles para el modelo clásico.</li>
-<li>Esta zona concentra los candidatos más innovadores, aquellos capaces de superar los cuellos de botella clásicos del cribado.</li>
-</ul>
-</li>
-</ol>
+<h3 id="1-consenso-como-explotación-segura" class="relative group">1. Consenso como explotación segura <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-consenso-como-explotaci%c3%b3n-segura" aria-label="Ancla">#</a></span></h3><p>La zona de acuerdo positivo ($\mathscr{X}_1 \cap \mathscr{X}_2$) agrupa los candidatos &ldquo;seguros&rdquo;. Ambos sesgos inductivos coinciden. Sin embargo, estas moléculas suelen pertenecer a espacios químicos bien conocidos y redundantes. Gastar presupuesto de laboratorio aquí tiene un bajo riesgo, pero también una baja ganancia de información (retorno de inversión epistémico marginal).</p>
+<h3 id="2-desacuerdo-como-exploración" class="relative group">2. Desacuerdo como exploración <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-desacuerdo-como-exploraci%c3%b3n" aria-label="Ancla">#</a></span></h3><p>Las regiones $\mathscr{X}_{1 \neg 2}$ y $\mathscr{X}_{2 \neg 1}$ no son zonas de error, sino fronteras de exploración. Si muestreamos candidatos de la medialuna del nuevo modelo ($\mathscr{X}_{2 \neg 1}$) y el oráculo (el ensayo <em>in vitro</em>) confirma la positividad, habremos validado que el sesgo inductivo de $h_2$ está capturando lógicas subyacentes (topológicas, estructurales) invisibles para el modelo clásico. Esta zona concentra los candidatos más innovadores, aquellos capaces de superar los cuellos de botella clásicos del cribado.</p>
 <h2 id="conclusiones" class="relative group">Conclusiones <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusiones" aria-label="Ancla">#</a></span></h2><p>El desacuerdo entre dos clasificadores en las medialunas azul y roja no debe interpretarse como ruido aleatorio, sino como la manifestación geométrica de una asimetría en la información y complementariedad de sesgos inductivos (Aumann, 1976).</p>
 <p>Delimitar formalmente la región de desacuerdo $\text{DIS}$ permite concentrar el presupuesto de validación experimental en las fronteras de conflicto (Hanneke, 2014). En dominios complejos, explotar el desacuerdo es la forma más rápida y matemáticamente óptima de transitar desde los espacios de conocimiento trillados hacia fronteras de descubrimiento de alto valor.</p>
-<h2 id="referencias-bibliográficas" class="relative group">Referencias bibliográficas <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#referencias-bibliogr%c3%a1ficas" aria-label="Ancla">#</a></span></h2><ul>
+<h2 id="referencias" class="relative group">Referencias <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#referencias" aria-label="Ancla">#</a></span></h2><ul>
 <li>Aumann, R. J. (1976). Agreeing to disagree. <em>The Annals of Statistics</em>, 4(6), 1236–1239.</li>
 <li>Hanneke, S. (2014). Theory of disagreement-based active learning. <em>Foundations and Trends in Machine Learning</em>, 7(2–3), 131–309.</li>
 </ul>
