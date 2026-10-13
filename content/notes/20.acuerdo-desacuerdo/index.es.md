@@ -11,11 +11,11 @@ math: true
 
 {{< katex >}}
 
-## 
+## Introducción 
 
-Imaginá que sometés dos modelos de clasificación distintos al mismo banco de pruebas y ambos obtienen métricas  similares: *accuracy*, curva ROC y la predicción de que exactamente doscientas muestras de una gran base de datos son candidatas positivas. En cualquier informe ejecutivo o panel de métricas agregadas, ambos algoritmos parecerían gemelos intercambiables, desde el punto de vista de la predicción de la masa.
+Imaginá que sometés dos modelos de clasificación distintos al mismo banco de pruebas y ambos obtienen métricas  similares: *accuracy*, curva ROC y la predicción de que exactamente el mismo número de muestras son candidatas *positivas*. En cualquier informe ejecutivo o panel de métricas agregadas, ambos algoritmos parecerían gemelos intercambiables, desde el punto de vista de la predicción de la masa.
 
-Supongamos que podemos mirar ambas listas de aquellos doscientos seleccionados por cada modelo y verificás que **no comparten un solo elemento**. La coincidencia es exactamente cero.
+Supongamos que podemos mirar ambas listas de aquellos seleccionados por cada modelo y verificás que **no comparten un solo elemento**.
 
 La reacción intuitiva ante semejante brecha suele ser el desconcierto o la desconfianza: asumir que al menos uno de los modelos está alucinando o que el problema está saturado de ruido. Sin embargo, cuando analizamos este choque bajo el prisma de la teoría de la información bayesiana y el aprendizaje activo, la conclusión es exactamente la opuesta.
 
@@ -121,20 +121,34 @@ Los modelos discrepan estricta y necesariamente por:
 2. Priors incompatibles: tienen sesgos inductivos dispares, sus arquitecturas, funciones de pérdida y métodos de regularización imponen supuestos de partida incompatibles sobre cómo generalizar la frontera de decisión en el espacio $\mathscr{X}$. No comparten una distribución previa común sobre la regularidad del problema.
 3. Ausencia de conocimiento común: operan mediante inferencia aislada, a diferencia del postulado teórico donde el intercambio transparente de estimaciones obliga a actualizar las probabilidades hasta coincidir por completo, los clasificadores realizan predicciones de forma estática y desacoplada. No existe un protocolo de comunicación iterativo entre ellos para alcanzar el conocimiento común en tiempo real.El desacuerdo es, por tanto, la prueba computable de una complementariedad epistémica: los modelos están particionando el espacio de características de manera ortogonal. En el régimen de desacuerdo total ($\mathscr{X}_1 \cap \mathscr{X}_2 = \emptyset$), esta divergencia es la manifestación geométrica inequívoca de que cada clasificador ha descubierto reglas estructurales que el otro, por diseño, es completamente incapaz de ver.
 
-
+---
 ### Aprendizaje activo basado en desacuerdo
 
-Mientras Aumann nos da el diagnóstico epistémico, Hanneke formaliza el protocolo operativo para aprovecharlo. 
+Mientras Aumann nos proporciona el diagnóstico epistémico sobre la génesis del conflicto, la teoría de aprendizaje activo formalizada por Steve Hanneke ofrece el protocolo operativo para capitalizarlo.
 
-Para nuestro comité de dos clasificadores $\{h_1, h_2\}$, la región de desacuerdo es $\text{DIS}(\{h_1, h_2\}) = \mathscr{X}_{1 \neg 2} \cup \mathscr{X}_{2 \neg 1}$. El algoritmo CAL (Cohn, Atlas, Ladner) de aprendizaje activo explota esta geometría evaluando cada punto no etiquetado $X_m$:
+En el aprendizaje activo basado en desacuerdo (inaugurado conceptualmente por el algoritmo CAL de Cohn, Atlas y Ladner), el objetivo no es etiquetar datos a ciegas, sino interrogar al entorno solo cuando la ambigüedad estructural lo exige. Si concebimos a $\{h_1, h_2\}$ como un comité minimal de hipótesis admisibles dentro de un espacio de versiones, la región de desacuerdo bilateral:
+
+$$
+\text{DIS}(\{h_1, h_2\}) = \mathscr{X}_{1 \neg 2} \cup \mathscr{X}_{2 \neg 1}
+$$
+
+delimita con exactitud la frontera de máxima ignorancia útil. Frente a un flujo de instancias no etiquetadas $x \in \mathscr{X}$, la regla de adquisición es binaria y elegante:
+
+* **Si $x \notin \text{DIS}(\{h_1, h_2\})$:** Existe consenso unánime ($h_1(x) = h_2(x)$). La etiqueta se infiere por acuerdo sin incurrir en gasto de supervisión. Consultar aquí a un oráculo sería redundante.
+* **Si $x \in \text{DIS}(\{h_1, h_2\})$:** El dato cae en una de las medialunas de conflicto. La etiqueta verdadera es impredecible para el sistema conjunto y se delega de forma prioritaria al oráculo (el experimento de laboratorio o la supervisión experta).
+
+La contribución fundamental de Hanneke radica en caracterizar cuándo esta estrategia supera de manera contundente al muestreo pasivo (aleatorio). Esto se cuantifica a través del **coeficiente de desacuerdo** $\theta$, un parámetro geométrico que mide a qué velocidad colapsa el volumen de la región $\text{DIS}$ en torno a la hipótesis óptima a medida que disminuye el radio de error $\epsilon$. 
+
+Cuando la geometría del problema está bien condicionada ($\theta < \infty$ y acotada respecto a $\epsilon$), la demanda de consultas al oráculo experimenta una aceleración exponencial: la complejidad de etiquetas requerida para alcanzar una precisión $\epsilon$ pasa de la escala polinómica del aprendizaje pasivo, $\mathcal{O}(1/\epsilon)$, a una escala logarítmica:
+
+$$
+\mathcal{O}\left(\theta \cdot \log \frac{1}{\epsilon}\right)
+$$
+
+Estar de acuerdo en el desacuerdo no es, por tanto, una mera postura filosófica; es la condición matemática indispensable para reducir drásticamente el coste de descubrir la verdad.
 
 
-* si $X_m \in \text{DIS} \implies$ consultar etiqueta $Y_m$ al oráculo
-* si $X_m \notin \text{DIS} \implies$ inferir etiqueta por consenso unánime sin consulta
-
-Hanneke mide la tasa de contracción de esta región mediante el coeficiente de desacuerdo $\theta$. Cuando $\theta(\epsilon) = O(1)$, la complejidad de etiquetas demandada disminuye exponencialmente respecto al aprendizaje pasivo (muestreo aleatorio), pasando de $O(1/\epsilon)$ a $O(\log(1/\epsilon))$.
-
-## Explotando el desacuerdo
+## Explotar en el acuerdo y explorar en el desacuerdo
 
 En lugar de ver la divergencia de clasificadores como un problema de auditoría defensiva, la intersección entre la asimetría de Aumann y el muestreo de Hanneke proporciona un mapa del tesoro para la **captura de valor**, especialmente en dominios donde la validación es extremadamente costosa. 
 

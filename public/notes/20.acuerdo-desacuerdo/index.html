@@ -145,7 +145,7 @@
     "keywords": ["clasificación","active learning"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1788"
+    "wordCount": "2009"
   }
   </script>
     
@@ -858,7 +858,7 @@
   <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading"></a></li>
+    <li><a href="#introducción">Introducción</a></li>
     <li><a href="#formulación-del-problema">Formulación del problema</a></li>
     <li><a href="#objetivos-de-la-clasificación">Objetivos de la clasificación</a></li>
     <li><a href="#fundamentos-teóricos">Fundamentos teóricos</a>
@@ -868,7 +868,7 @@
         <li><a href="#aprendizaje-activo-basado-en-desacuerdo">Aprendizaje activo basado en desacuerdo</a></li>
       </ul>
     </li>
-    <li><a href="#explotando-el-desacuerdo">Explotando el desacuerdo</a>
+    <li><a href="#explotar-en-el-acuerdo-y-explorar-en-el-desacuerdo">Explotar en el acuerdo y explorar en el desacuerdo</a>
       <ul>
         <li><a href="#1-consenso-como-explotación-segura">1. Consenso como explotación segura</a></li>
         <li><a href="#2-desacuerdo-como-exploración">2. Desacuerdo como exploración</a></li>
@@ -887,8 +887,8 @@
       <div class="min-h-0 min-w-0 max-w-prose grow">
         
 
-<h2 id="heading" class="relative group"> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#heading" aria-label="Ancla">#</a></span></h2><p>Imaginá que sometés dos modelos de clasificación distintos al mismo banco de pruebas y ambos obtienen métricas  similares: <em>accuracy</em>, curva ROC y la predicción de que exactamente doscientas muestras de una gran base de datos son candidatas positivas. En cualquier informe ejecutivo o panel de métricas agregadas, ambos algoritmos parecerían gemelos intercambiables, desde el punto de vista de la predicción de la masa.</p>
-<p>Supongamos que podemos mirar ambas listas de aquellos doscientos seleccionados por cada modelo y verificás que <strong>no comparten un solo elemento</strong>. La coincidencia es exactamente cero.</p>
+<h2 id="introducción" class="relative group">Introducción <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#introducci%c3%b3n" aria-label="Ancla">#</a></span></h2><p>Imaginá que sometés dos modelos de clasificación distintos al mismo banco de pruebas y ambos obtienen métricas  similares: <em>accuracy</em>, curva ROC y la predicción de que exactamente el mismo número de muestras son candidatas <em>positivas</em>. En cualquier informe ejecutivo o panel de métricas agregadas, ambos algoritmos parecerían gemelos intercambiables, desde el punto de vista de la predicción de la masa.</p>
+<p>Supongamos que podemos mirar ambas listas de aquellos seleccionados por cada modelo y verificás que <strong>no comparten un solo elemento</strong>.</p>
 <p>La reacción intuitiva ante semejante brecha suele ser el desconcierto o la desconfianza: asumir que al menos uno de los modelos está alucinando o que el problema está saturado de ruido. Sin embargo, cuando analizamos este choque bajo el prisma de la teoría de la información bayesiana y el aprendizaje activo, la conclusión es exactamente la opuesta.</p>
 <p>El desacuerdo frontal entre clasificadores competentes rara vez es fruto del azar. Es la huella matemática de una asimetría informativa fértil: la prueba de que dos sistemas están mirando la misma realidad a través de lentes conceptuales ortogonales. Lejos de ser un fallo que deba disimularse con promedios, esa zona de conflicto es precisamente el lugar donde se esconde la mayor ganancia de información posible.</p>
 <h2 id="formulación-del-problema" class="relative group">Formulación del problema <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#formulaci%c3%b3n-del-problema" aria-label="Ancla">#</a></span></h2><p>Sea $\mathscr{X}$ el espacio muestral o dominio de datos de entrada. Consideremos dos clasificadores previamente entrenados, denotados como Método 1 ($h_1$) y Método 2 ($h_2$), representados como funciones medibles $h_i: \mathscr{X} \to Y$, en particular consideremos el caso de clasificaión binaria $Y=\{-1,1\}$.</p>
@@ -1004,14 +1004,22 @@ $$<p>Bajo esta condición, cada clasificador reportará de forma independiente l
 <li>Priors incompatibles: tienen sesgos inductivos dispares, sus arquitecturas, funciones de pérdida y métodos de regularización imponen supuestos de partida incompatibles sobre cómo generalizar la frontera de decisión en el espacio $\mathscr{X}$. No comparten una distribución previa común sobre la regularidad del problema.</li>
 <li>Ausencia de conocimiento común: operan mediante inferencia aislada, a diferencia del postulado teórico donde el intercambio transparente de estimaciones obliga a actualizar las probabilidades hasta coincidir por completo, los clasificadores realizan predicciones de forma estática y desacoplada. No existe un protocolo de comunicación iterativo entre ellos para alcanzar el conocimiento común en tiempo real.El desacuerdo es, por tanto, la prueba computable de una complementariedad epistémica: los modelos están particionando el espacio de características de manera ortogonal. En el régimen de desacuerdo total ($\mathscr{X}_1 \cap \mathscr{X}_2 = \emptyset$), esta divergencia es la manifestación geométrica inequívoca de que cada clasificador ha descubierto reglas estructurales que el otro, por diseño, es completamente incapaz de ver.</li>
 </ol>
-<h3 id="aprendizaje-activo-basado-en-desacuerdo" class="relative group">Aprendizaje activo basado en desacuerdo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#aprendizaje-activo-basado-en-desacuerdo" aria-label="Ancla">#</a></span></h3><p>Mientras Aumann nos da el diagnóstico epistémico, Hanneke formaliza el protocolo operativo para aprovecharlo.</p>
-<p>Para nuestro comité de dos clasificadores $\{h_1, h_2\}$, la región de desacuerdo es $\text{DIS}(\{h_1, h_2\}) = \mathscr{X}_{1 \neg 2} \cup \mathscr{X}_{2 \neg 1}$. El algoritmo CAL (Cohn, Atlas, Ladner) de aprendizaje activo explota esta geometría evaluando cada punto no etiquetado $X_m$:</p>
+<hr>
+<h3 id="aprendizaje-activo-basado-en-desacuerdo" class="relative group">Aprendizaje activo basado en desacuerdo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#aprendizaje-activo-basado-en-desacuerdo" aria-label="Ancla">#</a></span></h3><p>Mientras Aumann nos proporciona el diagnóstico epistémico sobre la génesis del conflicto, la teoría de aprendizaje activo formalizada por Steve Hanneke ofrece el protocolo operativo para capitalizarlo.</p>
+<p>En el aprendizaje activo basado en desacuerdo (inaugurado conceptualmente por el algoritmo CAL de Cohn, Atlas y Ladner), el objetivo no es etiquetar datos a ciegas, sino interrogar al entorno solo cuando la ambigüedad estructural lo exige. Si concebimos a $\{h_1, h_2\}$ como un comité minimal de hipótesis admisibles dentro de un espacio de versiones, la región de desacuerdo bilateral:</p>
+$$
+\text{DIS}(\{h_1, h_2\}) = \mathscr{X}_{1 \neg 2} \cup \mathscr{X}_{2 \neg 1}
+$$<p>delimita con exactitud la frontera de máxima ignorancia útil. Frente a un flujo de instancias no etiquetadas $x \in \mathscr{X}$, la regla de adquisición es binaria y elegante:</p>
 <ul>
-<li>si $X_m \in \text{DIS} \implies$ consultar etiqueta $Y_m$ al oráculo</li>
-<li>si $X_m \notin \text{DIS} \implies$ inferir etiqueta por consenso unánime sin consulta</li>
+<li><strong>Si $x \notin \text{DIS}(\{h_1, h_2\})$:</strong> Existe consenso unánime ($h_1(x) = h_2(x)$). La etiqueta se infiere por acuerdo sin incurrir en gasto de supervisión. Consultar aquí a un oráculo sería redundante.</li>
+<li><strong>Si $x \in \text{DIS}(\{h_1, h_2\})$:</strong> El dato cae en una de las medialunas de conflicto. La etiqueta verdadera es impredecible para el sistema conjunto y se delega de forma prioritaria al oráculo (el experimento de laboratorio o la supervisión experta).</li>
 </ul>
-<p>Hanneke mide la tasa de contracción de esta región mediante el coeficiente de desacuerdo $\theta$. Cuando $\theta(\epsilon) = O(1)$, la complejidad de etiquetas demandada disminuye exponencialmente respecto al aprendizaje pasivo (muestreo aleatorio), pasando de $O(1/\epsilon)$ a $O(\log(1/\epsilon))$.</p>
-<h2 id="explotando-el-desacuerdo" class="relative group">Explotando el desacuerdo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#explotando-el-desacuerdo" aria-label="Ancla">#</a></span></h2><p>En lugar de ver la divergencia de clasificadores como un problema de auditoría defensiva, la intersección entre la asimetría de Aumann y el muestreo de Hanneke proporciona un mapa del tesoro para la <strong>captura de valor</strong>, especialmente en dominios donde la validación es extremadamente costosa.</p>
+<p>La contribución fundamental de Hanneke radica en caracterizar cuándo esta estrategia supera de manera contundente al muestreo pasivo (aleatorio). Esto se cuantifica a través del <strong>coeficiente de desacuerdo</strong> $\theta$, un parámetro geométrico que mide a qué velocidad colapsa el volumen de la región $\text{DIS}$ en torno a la hipótesis óptima a medida que disminuye el radio de error $\epsilon$.</p>
+<p>Cuando la geometría del problema está bien condicionada ($\theta < \infty$ y acotada respecto a $\epsilon$), la demanda de consultas al oráculo experimenta una aceleración exponencial: la complejidad de etiquetas requerida para alcanzar una precisión $\epsilon$ pasa de la escala polinómica del aprendizaje pasivo, $\mathcal{O}(1/\epsilon)$, a una escala logarítmica:</p>
+$$
+\mathcal{O}\left(\theta \cdot \log \frac{1}{\epsilon}\right)
+$$<p>Estar de acuerdo en el desacuerdo no es, por tanto, una mera postura filosófica; es la condición matemática indispensable para reducir drásticamente el coste de descubrir la verdad.</p>
+<h2 id="explotar-en-el-acuerdo-y-explorar-en-el-desacuerdo" class="relative group">Explotar en el acuerdo y explorar en el desacuerdo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#explotar-en-el-acuerdo-y-explorar-en-el-desacuerdo" aria-label="Ancla">#</a></span></h2><p>En lugar de ver la divergencia de clasificadores como un problema de auditoría defensiva, la intersección entre la asimetría de Aumann y el muestreo de Hanneke proporciona un mapa del tesoro para la <strong>captura de valor</strong>, especialmente en dominios donde la validación es extremadamente costosa.</p>
 <p>Pensemos, por ejemplo, en una fase temprana de <em>drug discovery</em> para evaluar la inhibición de una diana terapéutica. El &ldquo;oráculo&rdquo; aquí es una síntesis en laboratorio o un ensayo <em>in vitro</em>, recursos altamente limitados. Tenemos dos modelos de clasificación (por ejemplo, un modelo clásico basado en descriptores fisicoquímicos tradicionales y un modelo emergente que emplea representaciones diferentes).</p>
 <p>Si detectamos un alto grado de divergencia ($\mathscr{X}_1 \cap \mathscr{X}_2 \approx \emptyset$), la estrategia de captura de valor dicta lo siguiente:</p>
 <h3 id="1-consenso-como-explotación-segura" class="relative group">1. Consenso como explotación segura <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-consenso-como-explotaci%c3%b3n-segura" aria-label="Ancla">#</a></span></h3><p>La zona de acuerdo positivo ($\mathscr{X}_1 \cap \mathscr{X}_2$) agrupa los candidatos &ldquo;seguros&rdquo;. Ambos sesgos inductivos coinciden. Sin embargo, estas moléculas suelen pertenecer a espacios químicos bien conocidos y redundantes. Gastar presupuesto de laboratorio aquí tiene un bajo riesgo, pero también una baja ganancia de información (retorno de inversión epistémico marginal).</p>
