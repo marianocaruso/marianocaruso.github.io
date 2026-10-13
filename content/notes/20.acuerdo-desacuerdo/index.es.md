@@ -148,7 +148,7 @@ $$
 Estar de acuerdo en el desacuerdo no es, por tanto, una mera postura filosófica; es la condición matemática indispensable para reducir drásticamente el coste de descubrir la verdad.
 
 
-## Explotar en el acuerdo y explorar en el desacuerdo
+## Explotar el acuerdo y explorar el desacuerdo
 
 En lugar de ver la divergencia de clasificadores como un problema de auditoría defensiva, la intersección entre la asimetría de Aumann y el muestreo de Hanneke proporciona un mapa del tesoro para la **captura de valor**, especialmente en dominios donde la validación es extremadamente costosa. 
 

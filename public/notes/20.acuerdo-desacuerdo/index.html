@@ -145,7 +145,7 @@
     "keywords": ["clasificación","active learning"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2010"
+    "wordCount": "2008"
   }
   </script>
     
@@ -868,7 +868,7 @@
         <li><a href="#aprendizaje-activo-basado-en-desacuerdo">Aprendizaje activo basado en desacuerdo</a></li>
       </ul>
     </li>
-    <li><a href="#explotar-en-el-acuerdo-y-explorar-en-el-desacuerdo">Explotar en el acuerdo y explorar en el desacuerdo</a>
+    <li><a href="#explotar-el-acuerdo-y-explorar-el-desacuerdo">Explotar el acuerdo y explorar el desacuerdo</a>
       <ul>
         <li><a href="#1-explotación-en-el-consenso">1. Explotación en el consenso</a></li>
         <li><a href="#2-exploración-en-el-disenso">2. Exploración en el disenso</a></li>
@@ -1019,7 +1019,7 @@ $$<p>delimita con exactitud la frontera de máxima ignorancia útil. Frente a un
 $$
 \mathcal{O}\left(\theta \cdot \log \frac{1}{\epsilon}\right)
 $$<p>Estar de acuerdo en el desacuerdo no es, por tanto, una mera postura filosófica; es la condición matemática indispensable para reducir drásticamente el coste de descubrir la verdad.</p>
-<h2 id="explotar-en-el-acuerdo-y-explorar-en-el-desacuerdo" class="relative group">Explotar en el acuerdo y explorar en el desacuerdo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#explotar-en-el-acuerdo-y-explorar-en-el-desacuerdo" aria-label="Ancla">#</a></span></h2><p>En lugar de ver la divergencia de clasificadores como un problema de auditoría defensiva, la intersección entre la asimetría de Aumann y el muestreo de Hanneke proporciona un mapa del tesoro para la <strong>captura de valor</strong>, especialmente en dominios donde la validación es extremadamente costosa.</p>
+<h2 id="explotar-el-acuerdo-y-explorar-el-desacuerdo" class="relative group">Explotar el acuerdo y explorar el desacuerdo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#explotar-el-acuerdo-y-explorar-el-desacuerdo" aria-label="Ancla">#</a></span></h2><p>En lugar de ver la divergencia de clasificadores como un problema de auditoría defensiva, la intersección entre la asimetría de Aumann y el muestreo de Hanneke proporciona un mapa del tesoro para la <strong>captura de valor</strong>, especialmente en dominios donde la validación es extremadamente costosa.</p>
 <p>Pensemos, por ejemplo, en una fase temprana de <em>drug discovery</em> para evaluar la inhibición de una diana terapéutica. El &ldquo;oráculo&rdquo; aquí es una síntesis en laboratorio o un ensayo <em>in vitro</em>, recursos altamente limitados. Tenemos dos modelos de clasificación (por ejemplo, un modelo clásico basado en descriptores fisicoquímicos tradicionales y un modelo emergente que emplea representaciones diferentes).</p>
 <p>Si detectamos un alto grado de divergencia ($\mathscr{X}_1 \cap \mathscr{X}_2 \approx \emptyset$), la estrategia de captura de valor dicta lo siguiente:</p>
 <h3 id="1-explotación-en-el-consenso" class="relative group">1. Explotación en el consenso <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-explotaci%c3%b3n-en-el-consenso" aria-label="Ancla">#</a></span></h3><p>La zona de acuerdo positivo ($\mathscr{X}_1 \cap \mathscr{X}_2$) agrupa los candidatos &ldquo;seguros&rdquo;. Ambos sesgos inductivos coinciden. Sin embargo, estas moléculas suelen pertenecer a espacios químicos bien conocidos y redundantes. Gastar presupuesto de laboratorio aquí tiene un bajo riesgo, pero también una baja ganancia de información (retorno de inversión epistémico marginal).</p>
