@@ -98,7 +98,7 @@ Acabamos de extraer información útil de un valor completamente aleatorio y des
 
 ## Simular
 
-Una forma constrastar ambas estratégias de decisión, consiste en fijar $a$ y $b$, para realizar luego $n$ simulaciones de ambos escenarios. Se registran el número de veces que cada estrategia nos devuelve una victoria, con una variable binaria del tipo $V_k{\in}\{0,1\}$ y se calculan las tasas de victoria, $\mathtt{tv}$, para cada escenario $k{\in}\{1,\cdots, n\}$, usando 
+Una forma constrastar ambas estratégias de decisión: una de elección aleatoria $(\mathtt{rand})$ y otra propuesta por Cover $(\mathtt{cover})$, consiste en fijar $a$ y $b$, para realizar luego $n$ simulaciones de ambos escenarios. Se registran el número de veces que cada estrategia nos devuelve una victoria, con una variable binaria del tipo $V_k{\in}\{0,1\}$ y se calculan las tasas de victoria, $\mathtt{tv}$, para cada escenario $k{\in}\{1,\cdots, n\}$, usando 
 
 $$\mathtt{tv}(n)=\tfrac{1}{n}\sum_{k=1}^n V_k$$
 
