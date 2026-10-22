@@ -927,7 +927,7 @@ $$P(\texttt{ganar}) = \tfrac{1}{2}\left[1 + P(\alpha \leq K \leq 2\alpha)\right]
 <h2 id="simular" class="relative group">Simular <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#simular" aria-label="Ancla">#</a></span></h2><p>Denotemos ahora a ambas estrategias de decisión por</p>
 <ol>
 <li>$\mathtt{rand}$: elección aleatoria, con  probabilidad de ganar es $P(\mathtt{ganar})|_{\mathtt{rand}} = \tfrac{1}{2}$.</li>
-<li>$\mathtt{cover}$ expuesta en este texto, con probabilidad de ganar es $ 
+<li>$\mathtt{cover}$: expuesta en este texto, con probabilidad de ganar es $ 
 P(\texttt{ganar})|_{\mathtt{cover}}= \tfrac{1}{2} \left[1+ P(a \leq K \leq b)\right]$.</li>
 </ol>
 <p>Una forma constrastar ambas estratégias de decisión: consiste en fijar $a$ y $b$, para realizar luego $n$ simulaciones de ambos escenarios. Se registran el número de veces que cada estrategia nos devuelve una victoria, con una variable binaria del tipo $V_k{\in}\{0,1\}$ y se calculan las tasas de victoria, $\mathtt{tv}$, para cada escenario $k{\in}\{1,\cdots, n\}$, usando</p>
