@@ -118,7 +118,7 @@ $$
 
 ## Conclusión
 
-El principio de $\textit{ex nihilo nihil fit}$ permanece intacto: el mecanismo de Cover no genera información de la nada, sino que introduce una escala externa allí donde el observador carecía de marco de referencia. La variable aleatoria $K$ no adivina el contenido oculto; funciona como un sistema de coordenadas que quiebra la simetría del problema. La ventaja sobre el 50% es la consecuencia directa de contrastar un valor huérfano de contexto $x$ contra los valores para $K$ que surgen de una distribución de probabilidad bien definida.
+El principio ex nihilo nihil fit permanece intacto: la estrategia de Cover no obtiene información de la nada, sino que introduce una escala externa allí donde el observador carecía de marco de referencia. La variable aleatoria $K$ no adivina el contenido oculto; funciona como un sistema de coordenadas que quiebra la simetría del problema. La ventaja sobre el 50% es la consecuencia directa de contrastar un valor huérfano de contexto $x$ contra los valores para $K$ que surgen de una distribución de probabilidad bien definida.
 
 ## Referencias para curiosos:
 
