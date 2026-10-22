@@ -95,11 +95,19 @@ Sabemos que $P(\alpha \leq K \leq 2\alpha) > 0$ entonces $P(\texttt{ganar}) > 1/
 Acabamos de extraer información útil de un valor completamente aleatorio y desconectado del sistema. No adivinamos el valor exacto de $\alpha$, pero usamos una vara de medir caótica para romper la simetría de nuestra propia ignorancia. El espejismo se disipó, y la estadística, finalmente, juega a nuestro favor.
 
 
+
 ## Simular
 
 Una forma constrastar ambas estratégias de decisión, consiste en fijar $a$ y $b$, para realizar luego $N$ simulaciones de ambos escenarios. Se registran el número de veces que cada estrategia nos devuelve una victoria, con una variable binaria del tipo $V_k{\in}\{0,1\}$ y se calculan las tasas de victoria, $\mathtt{tv}$, para cada escenario $k{\in}\{1,\cdots, n\}$, usando 
 
-$$\mathtt{tv}(n)=\tfrac{1}{n}\sum_{i=1}^n V_i$$
+$$\mathtt{tv}(n)=\tfrac{1}{n}\sum_{k=1}^n V_k$$
+
+Dado que $V_k$ puede modelarse como una variable aleatoria tipo Bernoulli, con probabilidad de "ganar" dada por la estrategia utilizada, entonces $\mathtt{tv}(n)$ converge a la probabilidad de ganar de dicha estrategia. Esto proviene del hecho de que si cada tomo $n$ variables aleatorias $\{Z_k\}_{k\in\{1,\cdots,n\}}$ independientes e identicamente distribuidas $Z_k\sim \mathtt{Ber}(p)$ entonces: $E[\sum_{k=1}^n Z_k]=np$.
+
+Dado que $P(\texttt{ganar})|_{\mathtt{cover}} > P(\texttt{ganar})|_{\mathtt{rand}}$, podemos concluir que, conforme $n$ aumenta, se espera que 
+$$
+\mathtt{tv}(n)|_{\mathtt{cover}}>\mathtt{tv}(n)|_{\mathtt{rand}}
+$$
 
 <iframe src="/juegos/cover-vs-rand/simulador_cover-vs-rand_minimalista.html"
         style="width: 100%; height: 900px; border: none;"
@@ -123,9 +131,11 @@ El principio de $\textit{ex nihilo nihil fit}$ permanece intacto: el mecanismo d
 
 ## Demostración algo más formal
 
-La estrategia de Cover de por qué usar un umbral aleatorio garantiza que la probabilidad de elegir el número mayor sea estrictamente mayor que $1/2$. Sean $x$ e $y$ los dos números reales ocultos, donde $x < y$. Se revela uno de ellos, sea $Z$ la variable aleatoria del experimento de revelar uno de los dos números, de modo que 
+La estrategia de Cover de por qué usar un umbral aleatorio garantiza que la probabilidad de elegir el número mayor sea estrictamente mayor que $1/2$. Sean $x$ e $y$ los dos números reales ocultos, donde $x<y$. Se revela uno de ellos, sea $Z$ la variable aleatoria del experimento de revelar uno de los dos números, de modo que 
 
-$$P(Z=x) = 1/2=P(Z=y).$$ 
+$$
+P(Z=x) = 1/2=P(Z=y).
+$$ 
 
 Se genera un umbral aleatorio $T$ a partir de una distribución continua cuya función de densidad sea estrictamente positiva $f(t) > 0$ para todo $t \in \mathbb{R}$. La regla de decisión es: 
 
