@@ -29,9 +29,10 @@ $$\tfrac{1}{2}(px) + \tfrac{1}{2}(x/p) = \frac{p^2 + 1}{2p} x$$
 
 Notar que para cualquiera de las proporciones $p$  permitidas, el factor $\frac{p^2+1}{2p}$ es estrictamente mayor a 1. Es decir, sin importar la proporción del juego, esta formulación te va a decir que te conviene cambiar.
 
-Uno de los problemas de esta formulación, consiste en tratar a nuestra observación inicial $x$ como el centro gravitatorio del problema. El valor $x$ no es el parámetro base; es apenas un espejismo, una observación condicionada y efímera de las verdaderas cantidades subyacentes, fijas y reales que están sobre la mesa.
+Uno de los problemas de esta formulación radica en que tratar a este valor medio $x$ como el centro  del problema. 
 
-Algo en esta formulación invita a pensar que no es correcta: si realmente se presenta un sobre elegido al azar de entre las dos opciones (es decir, esto no es como en ciertos concursos televisivos, donde lo que se presenta al participante suele estar condicionado por la información de quienes han diseñado el programa) ¿cómo podría, sin más, la opción de cambiar ser la recomendable?
+Algo en esta formulación invita a dudar de no sea correcta: si realmente se presenta un sobre elegido al azar de entre las dos opciones, esto no es como en ciertos concursos televisivos, donde lo que se presenta al participante suele estar condicionado por la información de quienes han diseñado el programa
+> ¿cómo podría la opción de cambiar ser siempre la recomendable?
 
 ## Aleatoriedad para romper la simetría 
 
@@ -96,7 +97,7 @@ Acabamos de extraer información útil de un valor completamente aleatorio y des
 
 ## Simular
 
-Una forma de verficar las ideas contrastando ambas estratégias de decisión, consiste en proponer un escenario fijando a y b para realizar luego $N$ simulaciones de ambos escenarios. Se registran el número de veces que cada estrategia nos devuelve una victoria, con una variable binaria del tipo $V{\in}\{0,1\}$ y se calculan las tasas de victoria, $\mathtt{tv}$, para cada escenario $n{\in}\{1,\cdots, N\}$, usando 
+Una forma constrastar ambas estratégias de decisión, consiste en fijar $a$ y $b$, para realizar luego $N$ simulaciones de ambos escenarios. Se registran el número de veces que cada estrategia nos devuelve una victoria, con una variable binaria del tipo $V_k{\in}\{0,1\}$ y se calculan las tasas de victoria, $\mathtt{tv}$, para cada escenario $k{\in}\{1,\cdots, n\}$, usando 
 
 $$\mathtt{tv}(n)=\tfrac{1}{n}\sum_{i=1}^n V_i$$
 
