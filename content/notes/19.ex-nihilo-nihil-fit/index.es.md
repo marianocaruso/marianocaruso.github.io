@@ -98,11 +98,11 @@ Acabamos de extraer información útil de un valor completamente aleatorio y des
 
 ## Simular
 
-Una forma constrastar ambas estratégias de decisión, consiste en fijar $a$ y $b$, para realizar luego $N$ simulaciones de ambos escenarios. Se registran el número de veces que cada estrategia nos devuelve una victoria, con una variable binaria del tipo $V_k{\in}\{0,1\}$ y se calculan las tasas de victoria, $\mathtt{tv}$, para cada escenario $k{\in}\{1,\cdots, n\}$, usando 
+Una forma constrastar ambas estratégias de decisión, consiste en fijar $a$ y $b$, para realizar luego $n$ simulaciones de ambos escenarios. Se registran el número de veces que cada estrategia nos devuelve una victoria, con una variable binaria del tipo $V_k{\in}\{0,1\}$ y se calculan las tasas de victoria, $\mathtt{tv}$, para cada escenario $k{\in}\{1,\cdots, n\}$, usando 
 
 $$\mathtt{tv}(n)=\tfrac{1}{n}\sum_{k=1}^n V_k$$
 
-Dado que $V_k$ puede modelarse como una variable aleatoria tipo Bernoulli, con probabilidad de "ganar" dada por la estrategia utilizada, entonces $\mathtt{tv}(n)$ converge a la probabilidad de ganar de dicha estrategia. Esto proviene del hecho de que si cada tomo $n$ variables aleatorias $\{Z_k\}_{k\in\{1,\cdots,n\}}$ independientes e identicamente distribuidas $Z_k\sim \mathtt{Ber}(p)$ entonces: $E[\sum_{k=1}^n Z_k]=np$.
+Dado que $V_k$ puede modelarse como una variable aleatoria tipo Bernoulli, con probabilidad de $\mathtt{ganar}$ definida por la estrategia utilizada, entonces $\mathtt{tv}(n)$ converge a esa probabilidad de $\mathtt{ganar}$, conforme aumenta el número de experimentos. Esto proviene del hecho de que si cada tomo $n$ variables aleatorias $\{Z_k\}_{k\in\{1,\cdots,n\}}$ independientes e identicamente distribuidas $Z_k\sim \mathtt{Ber}(p)$ entonces: $E[\sum_{k=1}^n Z_k]=np$.
 
 Dado que $P(\texttt{ganar})|_{\mathtt{cover}} > P(\texttt{ganar})|_{\mathtt{rand}}$, podemos concluir que, conforme $n$ aumenta, se espera que 
 $$
