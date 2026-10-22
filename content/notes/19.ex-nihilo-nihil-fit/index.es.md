@@ -99,7 +99,7 @@ Acabamos de extraer información útil de un valor completamente aleatorio y des
 ## Simular
 
 Denotemos ahora a ambas estrategias de decisión por 
-1. $\mathtt{rand}$: elección aleatoria, con  probabilidad de ganar es $P(\mathtt{ganar})|_{\mathtt{rand}} = 1/2$. 
+1. $\mathtt{rand}$: elección aleatoria, con  probabilidad de ganar es $P(\mathtt{ganar})|_{\mathtt{rand}} = \tfrac{1}{2}$. 
 2. $\mathtt{cover}$ expuesta en este texto, con probabilidad de ganar es $ 
 P(\texttt{ganar})|_{\mathtt{cover}}= \tfrac{1}{2} \left[1+ P(a \leq K \leq b)\right]$.
 
